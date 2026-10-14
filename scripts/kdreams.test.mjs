@@ -8,6 +8,23 @@ import {
   parseRows, groupSeries, spreadStats, makerSpreadProxy, sumProxies, crossVenue, byBucket, candidates, feeTable, quantile, corr,
 } from './lib/kdreams-metrics.mjs';
 import { computeReport, renderSummary, renderMarkdown } from './kdreams-backtest.mjs';
+import { priorNightFates, reasoningFor } from './kdreams-nightly.mjs';
+
+test('nightly: importing the module never runs the pipeline, and helpers behave', () => {
+  // Importing above must not have filed anything or touched the ledger: the guard is the test.
+  const dir = mkdtempSync(join(tmpdir(), 'kdreams-ledger-'));
+  const header = '| Date | Deep | Finding | Issue | PR | Evaluated? | Verdict | Effect | Witness | Prior-night fates |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n';
+  writeFileSync(join(dir, 'empty.md'), header);
+  writeFileSync(join(dir, 'one.md'), header + '| 2026-10-14 | fee-modeling | Given X | #1 | NONE | no | INCONCLUSIVE | 200 rows | fc0fe92c | first night |\n');
+  writeFileSync(join(dir, 'two.md'), header + '| 2026-10-14 | a | x | #1 | NONE | no | INCONCLUSIVE | e | w | first night |\n| 2026-10-15 | lead-lag | y | #3 | #4 | no | REJECT | e | w | 2026-10-14 a INCONCLUSIVE #1 |\n');
+  assert.equal(priorNightFates(join(dir, 'missing.md')), 'first night');
+  assert.equal(priorNightFates(join(dir, 'empty.md')), 'first night');
+  assert.equal(priorNightFates(join(dir, 'one.md')), '2026-10-14 fee-modeling INCONCLUSIVE #1');
+  assert.equal(priorNightFates(join(dir, 'two.md')), '2026-10-15 lead-lag REJECT #3 #4');
+  assert.deepEqual(reasoningFor('deepseek/deepseek-v4-flash'), { effort: 'low', exclude: true });
+  assert.deepEqual(reasoningFor('openai/gpt-5-nano'), { effort: 'low', exclude: true });
+  assert.deepEqual(reasoningFor('qwen/qwen3.7-flash'), { max_tokens: 1500, exclude: true });
+});
 
 const T = (i) => `2026-10-14T${String(10 + Math.floor(i / 4)).padStart(2, '0')}:${String((i % 4) * 15).padStart(2, '0')}Z`;
 const round2 = (x) => Math.round(x * 100) / 100;

@@ -24,6 +24,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { computeReport, renderMarkdown } from './kdreams-backtest.mjs';
@@ -131,6 +132,17 @@ export function reasoningFor(model) {
   return { max_tokens: 1500, exclude: true };
 }
 
+/** Summarize the previous ledger row (date, verdict, issue) without shelling out. */
+export function priorNightFates(ledgerPath) {
+  let text = '';
+  try { text = readFileSync(ledgerPath, 'utf8'); } catch { return 'first night'; }
+  const rows = text.split('\n').map((l) => l.trim()).filter((l) => l.startsWith('|') && !/^\|\s*(Date|---)\s*\|/.test(l));
+  if (rows.length === 0) return 'first night';
+  const cells = rows[rows.length - 1].replace(/^\|/, '').replace(/\|$/, '').split('|').map((c) => c.trim());
+  const [date, deep, , issue, pr, , verdict] = cells;
+  return `${date} ${deep} ${verdict} ${issue}${pr && pr !== 'NONE' ? ` ${pr}` : ''}`.slice(0, 60);
+}
+
 function witness(reportPath, commit) {
   const reportHash = createHash('sha256').update(readFileSync(reportPath)).digest('hex');
   return { reportHash, witness: createHash('sha256').update(reportHash + commit).digest('hex') };
@@ -179,7 +191,7 @@ async function main() {
     console.log('issue:', url);
   } catch (e) { console.log('issue creation skipped:', String(e).split('\n')[0]); }
 
-  const priorFates = shSafe('bash', ['-lc', `tail -n 1 ${LEDGER} 2>/dev/null`]).split('|')[7]?.trim().slice(0, 40) || 'first night';
+  const priorFates = priorNightFates(LEDGER);
   execFileSync('node', ['packages/cli/dist/bin.js', 'ledger', 'append',
     '--path', LEDGER, '--date', ctx.date, '--deep', ctx.deep, '--finding', finding, '--issue', issueRef, '--pr', 'NONE',
     '--evaluated', evaluated, '--verdict', verdict, '--effect', `${g.rows} rows / ${g.ticks} ticks observed`,
@@ -202,4 +214,6 @@ async function main() {
   console.log(`Done. Issue ${issueRef} (evaluated=${evaluated}, verdict=${verdict}). Witness: ${w.witness}`);
 }
 
-main().catch((e) => { console.error(e); process.exit(1); });
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch((e) => { console.error(e); process.exit(1); });
+}
