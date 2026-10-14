@@ -1,0 +1,51 @@
+name: kdreams nightly (observe-only research)
+
+# The research half of the Dream Machine loop, pointed at prediction markets.
+# Runs the backtest over recorded snapshots, asks a cheap OpenRouter model for
+# observations + ONE falsifiable hypothesis, files a witnessed `kdreams` issue,
+# appends one ledger row, and opens a DRAFT PR with the report.
+#
+# Honest scope: observe-only. No order endpoint is reachable from this job.
+# Every night is INCONCLUSIVE by construction until a frozen hypothesis is
+# tested on data recorded after it. With no OPENROUTER_API_KEY it degrades to
+# LLM_EVAL=blocked and still files an honest skipped note with real evidence.
+#
+# Setup: repo secret OPENROUTER_API_KEY; optional repo var OPENROUTER_MODEL.
+
+on:
+  schedule:
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Print the report, do not file issue/PR'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+concurrency:
+  group: kdreams-nightly
+  cancel-in-progress: false
+
+jobs:
+  dream:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
+        with: { node-version: 24, cache: npm }
+      - run: npm ci
+      - run: npm run build
+      - name: Run the nightly research cycle
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL || 'deepseek/deepseek-v4-flash' }}
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/kdreams-nightly.mjs ${{ inputs.dry_run && '--dry-run' || '' }}

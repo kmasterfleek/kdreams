@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 import { describe, it, expect } from 'vitest';
 import { run, parseArgs, parsePendingFindings, VERSION, type IO } from './index.js';
 import { renderDashboard, displayWidth, pad } from './tui.js';
@@ -465,11 +466,11 @@ describe('verify-entrypoint', () => {
 });
 
 describe('self-hosted dream.config.json — darwin entrypoint contract', () => {
-  it('is idempotently re-runnable: required <repo> positional present, state reset before each invocation', async () => {
-    const { readFile } = await import('node:fs/promises');
-    const raw = await readFile(new URL('../../../dream.config.json', import.meta.url), 'utf8');
-    const config = JSON.parse(raw);
-    const darwin: string = config.evaluatorEntrypoints.darwin;
+  const selfRaw = readFileSync(new URL('../../../dream.config.json', import.meta.url), 'utf8');
+  const selfDarwin: string | undefined = JSON.parse(selfRaw).evaluatorEntrypoints?.darwin;
+  // kdreams is observe-only and configures no bounded-Darwin stage; the contract applies only when one exists.
+  it.skipIf(!selfDarwin)('is idempotently re-runnable: required <repo> positional present, state reset before each invocation', () => {
+    const darwin = selfDarwin as string;
     // Regression guard for the 2026-09-02 finding: `npx @metaharness/darwin evolve` requires
     // a `<repo>` positional (bare `--sandbox mock` silently consumes `--sandbox` as it), and
     // persists generation/child ids under `.metaharness/` in the target directory — a second

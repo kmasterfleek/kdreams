@@ -3,8 +3,10 @@ name: CI
 on:
   push:
     branches: [main]
+    paths-ignore: ['data/**', 'docs/dream-cycle/**']
   pull_request:
     branches: [main]
+    paths-ignore: ['data/**', 'docs/dream-cycle/**']
 
 # Least privilege: CI only needs to read the repo.
 permissions:

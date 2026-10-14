@@ -1,0 +1,24 @@
+{
+  "$comment": "kdreams observation watchlist. Observe-only: nothing in this repo places orders. pairs[] maps the same real-world event across venues; polymarketId is the Gamma conditionId, kalshiTicker is the Kalshi market ticker. Fee rates are published venue schedules as of 2026-10 and must be re-verified before any edge claim.",
+  "polymarket": {
+    "topByVolume24h": 100,
+    "bookDepthTop": 30,
+    "extraSlugs": []
+  },
+  "kalshi": {
+    "topByVolume24h": 100,
+    "rescanEveryMinutes": 360,
+    "extraTickers": []
+  },
+  "pairs": [],
+  "fees": {
+    "polymarketTakerRate": 0.04,
+    "polymarketMakerRate": 0,
+    "kalshiTakerRate": 0.07,
+    "kalshiMakerRate": 0.0175
+  },
+  "backtest": {
+    "days": 14,
+    "horizonTicks": 4
+  }
+}

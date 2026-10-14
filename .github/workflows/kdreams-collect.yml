@@ -1,0 +1,51 @@
+name: kdreams collect
+
+# Observe-only snapshot collector: every 15 minutes, read public top-of-book
+# from Polymarket and Kalshi (no keys, no accounts) and commit one NDJSON
+# line per watched market to data/snapshots/. Dependency-free: no npm ci.
+# GitHub cron is best-effort; gaps of a few minutes are normal.
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+    inputs:
+      rescan:
+        description: 'Force a full Kalshi open-events rescan to refresh the top list'
+        type: boolean
+        default: false
+      dry_run:
+        description: 'Fetch and print, do not write or commit'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: kdreams-collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with: { node-version: 24 }
+      - name: Snapshot both venues
+        run: node scripts/kdreams-collect.mjs ${{ inputs.rescan && '--rescan' || '' }} ${{ inputs.dry_run && '--dry-run' || '' }}
+      - name: Commit snapshot
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name 'kdreams[bot]'
+          git config user.email 'kdreams@users.noreply.github.com'
+          git add data
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          git commit -m "data: snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep $((i * 5))
+          done
+          echo "push failed after retries" && exit 1

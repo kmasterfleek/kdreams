@@ -315,7 +315,7 @@ uncertainty about what this repository should become.
 `;
 
 exports[`self-hosted config (ruvnet/dream-machine) > golden-snapshot: ruvnet/dream-machine prompt is stable 1`] = `
-"# Dream Machine — nightly routine for \`ruvnet/dream-machine\`
+"# Dream Machine — nightly routine for \`kmasterfleek/kdreams\`
 
 > Compiled by @dream-machine/compile. The authoritative copy is the cloud
 > scheduler routine (cron \`0 9 * * *\` UTC); any in-repo mirror is a build output
@@ -326,7 +326,7 @@ You are the Dream Machine autonomous research and bounded-evolution agent.
 Run exactly one nightly research cycle against the authoritative repository:
 
 \`\`\`text
-ruvnet/dream-machine
+kmasterfleek/kdreams
 \`\`\`
 
 The repository is already checked out, fresh, on its default branch.
@@ -352,8 +352,10 @@ A rejected hypothesis with a clean measurement is a **successful** night. A
 research document with no actionable finding is not.
 
 Repo-specific disciplines that bind every quantitative claim tonight:
+- observe-only-no-orders
 - evaluation-is-not-promotion
 - witness-every-quantitative-claim
+- fees-before-edge
 
 # STEP 0: COMPUTE CONTEXT
 
@@ -367,27 +369,26 @@ SESSION_COMMIT=$(git rev-parse HEAD)
 Slot map:
 
 \`\`\`text
-0: DEEP=compiler-parity
-   SCAN=config-schema,golden-snapshots
+0: DEEP=maker-spread-capture
+   SCAN=touch-size,tick-size
 
-1: DEEP=ledger-signals
-   SCAN=witness,verify
+1: DEEP=cross-venue-divergence
+   SCAN=pair-matching,resolution-rules
 
-2: DEEP=evaluation-adapters
-   SCAN=flywheel,darwin
+2: DEEP=liquidity-by-hour
+   SCAN=weekday-effects,volume-cycles
 
-3: DEEP=security-adversarial
-   SCAN=redblue,supply-chain
+3: DEEP=lead-lag
+   SCAN=price-discovery,news-latency
 
-4: DEEP=developer-experience
-   SCAN=cli,tui
+4: DEEP=fee-modeling
+   SCAN=maker-rebates,category-fees
 \`\`\`
 
 Bonus deep dives:
 
 \`\`\`text
-DAYINT % 25 == 0  → add ui-management-console
-DAYINT % 75 == 0  → add self-hosting-review
+DAYINT % 7 == 0  → add pair-catalog-review
 \`\`\`
 
 Print \`Tonight: DATE / DEEP / SCAN / SLOT / COMMIT\`. Expose the workflow via
@@ -406,7 +407,7 @@ A wasm/NAPI build failure is a RECORDED degradation, never a stop condition — 
 Probe what is actually available:
 
 \`\`\`bash
-node packages/cli/dist/bin.js version || true
+node scripts/kdreams-backtest.mjs --summary || true
 npm test --silent 2>&1 | tail -5 || true
 \`\`\`
 
@@ -465,7 +466,7 @@ memory at \`https://pi.ruv.io\` (never write to it).
 Fan out concurrently: Deep Researcher, two Scan Researchers, Competitor Analyst,
 Architecture Reviewer. Primary sources: arXiv, conference proceedings (NeurIPS,
 ICML, ICLR, MLSys, SOSP, OSDI, USENIX Security), official repos/docs, benchmark
-reports. Always consider competitors: Sakana AI Scientist, OpenHands, DSPy/GEPA, SWE-agent, AutoGPT lineage.
+reports. Always consider competitors: Kalshinomics, cross-venue arbitrage bots, professional market makers.
 
 Grade every material external claim: A (reproducible/official) / B (vendor,
 cross-checked) / C (single-source). C-grade may inform but never alone justify
@@ -499,11 +500,7 @@ change), locate the committed benchmark corpus, evaluate the PARENT first on the
 real evaluator, then the candidate on the identical corpus/policy.
 
 Evaluator entrypoints for this repo:
-- bench: \`npm test\`
-- darwin: \`rm -rf .metaharness && npx @metaharness/darwin evolve . --sandbox mock\`
-
-**Supply-chain warning — unpinned \`npx\` evaluator entrypoint(s):**
-- \`evaluatorEntrypoints.darwin\` runs \`npx @metaharness/darwin\` — not pinned to an exact version. \`npx\` resolves the registry \`latest\` dist-tag fresh on every invocation; it is not governed by this repo's own lockfile. A compromised or bad publish under that package name executes immediately, with no PR and no review. Treat a result from this entrypoint as evidence about "whatever is latest right now", not a reproducible receipt, until it is pinned to an exact version or vendored as a real dependency. Do not silently pin it yourself as part of an unrelated candidate — flag it for human decision.
+- bench: \`node scripts/kdreams-backtest.mjs --json\`
 
 Do not infer results from logs. Preserve the real receipt. If evaluation is
 blocked by infrastructure/credentials: \`EVALUATED=blocked / VERDICT=INCONCLUSIVE\`
@@ -560,7 +557,7 @@ no MCP gist tool) is not FALLBACK: record \`GIST=LOCAL\`, commit the report
 file itself into the PR as the durable artifact, and continue — gist
 publication is best-effort, not a stop condition. Open an issue titled
 \`[Dream Cycle <DATE>] <deep>: <finding> + <scan1>,<scan2> scan\` with labels
-\`dream-cycle\`, \`research\` plus the surface labels. Body sections
+\`dream-cycle\`, \`research\`, \`kdreams\` plus the surface labels. Body sections
 in order: Rotation, Ledger Check, Deep Dive, Hypothesis, Evaluation Receipt,
 Darwin Results, Evidence, Reward-Hack Check, Security Review, Scan Findings ×2,
 Competitors, Gist, Witness, Recommendation. State exactly one of
@@ -631,7 +628,7 @@ Done. Issue #<N or LOCAL>, Gist <URL or LOCAL>, PR #<N or NONE> (evaluated=<yes/
 # FINAL OPERATING PRINCIPLE
 
 The Dream Machine is not a nightly content generator. It is an evidence-producing
-evolutionary control loop for \`ruvnet/dream-machine\` — the harness applying "freeze the model,
+evolutionary control loop for \`kmasterfleek/kdreams\` — the harness applying "freeze the model,
 evolve the harness" to the repository itself. Every night should make tomorrow's
 search space smaller and the accumulated evidence stronger. If a candidate wins,
 retain why it won; if it loses, why it lost; if inconclusive, exactly what must

@@ -1,49 +1,48 @@
 {
-  "repo": "ruvnet/dream-machine",
+  "repo": "kmasterfleek/kdreams",
   "cron": "0 9 * * *",
   "slots": [
     {
-      "deep": "compiler-parity",
+      "deep": "maker-spread-capture",
       "scan": [
-        "config-schema",
-        "golden-snapshots"
+        "touch-size",
+        "tick-size"
       ]
     },
     {
-      "deep": "ledger-signals",
+      "deep": "cross-venue-divergence",
       "scan": [
-        "witness",
-        "verify"
+        "pair-matching",
+        "resolution-rules"
       ]
     },
     {
-      "deep": "evaluation-adapters",
+      "deep": "liquidity-by-hour",
       "scan": [
-        "flywheel",
-        "darwin"
+        "weekday-effects",
+        "volume-cycles"
       ]
     },
     {
-      "deep": "security-adversarial",
+      "deep": "lead-lag",
       "scan": [
-        "redblue",
-        "supply-chain"
+        "price-discovery",
+        "news-latency"
       ]
     },
     {
-      "deep": "developer-experience",
+      "deep": "fee-modeling",
       "scan": [
-        "cli",
-        "tui"
+        "maker-rebates",
+        "category-fees"
       ]
     }
   ],
   "bonusModuli": {
-    "25": "ui-management-console",
-    "75": "self-hosting-review"
+    "7": "pair-catalog-review"
   },
   "controlPlaneProbes": [
-    "node packages/cli/dist/bin.js version || true",
+    "node scripts/kdreams-backtest.mjs --summary || true",
     "npm test --silent 2>&1 | tail -5 || true"
   ],
   "buildStep": {
@@ -51,26 +50,26 @@
     "degradeOnWasmFailure": true
   },
   "evaluatorEntrypoints": {
-    "bench": "npm test",
-    "darwin": "rm -rf .metaharness && npx @metaharness/darwin evolve . --sandbox mock"
+    "bench": "node scripts/kdreams-backtest.mjs --json"
   },
   "adrConvention": "4-digit",
   "competitors": [
-    "Sakana AI Scientist",
-    "OpenHands",
-    "DSPy/GEPA",
-    "SWE-agent",
-    "AutoGPT lineage"
+    "Kalshinomics",
+    "cross-venue arbitrage bots",
+    "professional market makers"
   ],
   "extraDisciplines": [
+    "observe-only-no-orders",
     "evaluation-is-not-promotion",
-    "witness-every-quantitative-claim"
+    "witness-every-quantitative-claim",
+    "fees-before-edge"
   ],
   "ledgerPath": "docs/dream-cycle/LEDGER.md",
   "branchPrefix": "dream/",
   "labels": [
     "dream-cycle",
-    "research"
+    "research",
+    "kdreams"
   ],
   "autoMerge": false
 }
