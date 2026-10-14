@@ -17,7 +17,7 @@ one.
 | Job | Cadence | What it does | Cost |
 |---|---|---|---|
 | `kdreams collect` | every 15 min | Snapshots top-of-book for the 100 highest-volume markets on each venue (no keys, no accounts) and commits one NDJSON line per market to `data/snapshots/`. | free CI minutes |
-| `kdreams nightly` | 09:00 UTC | Runs the backtest over the last 14 days, hands the evidence to a cheap OpenRouter model for observations plus one hypothesis, files a witnessed issue, appends one ledger row, opens a **draft** PR. | ~$0.0003 / night on DeepSeek v4 flash |
+| `kdreams nightly` | 09:00 UTC | Runs the backtest over the last 14 days, hands the evidence to a cheap OpenRouter model for observations plus one hypothesis, files a witnessed issue, appends one ledger row, opens a **draft** PR. | ~$0.001 / night on DeepSeek v4 flash (falls back to Qwen 3.7 flash, then GPT-5 nano) |
 
 Every night ends in exactly one verdict: **ACCEPT**, **REJECT**, or
 **INCONCLUSIVE**. In this observe-only phase every night is INCONCLUSIVE by
@@ -62,7 +62,9 @@ npm run check                                     # typecheck, build, lint, test
 ```
 
 Set `OPENROUTER_API_KEY` in the environment for a model-backed dry run;
-without it the nightly still runs and reports `LLM_EVAL=blocked`.
+without it the nightly still runs and reports `LLM_EVAL=blocked`. The model
+chain is `OPENROUTER_MODEL` then `OPENROUTER_FALLBACKS`; each report records
+which model and provider actually answered and what it cost.
 
 ## Data layout
 

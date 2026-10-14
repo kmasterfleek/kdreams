@@ -15,10 +15,15 @@
  * still files an honest skipped note.
  *
  * Env: OPENROUTER_API_KEY (optional), OPENROUTER_MODEL (default deepseek/deepseek-v4-flash),
- *      GH_TOKEN (for gh), DREAM_CONFIG (default dream.config.json), DREAM_DATE (override)
+ *      OPENROUTER_FALLBACKS (comma list tried in order when the primary route fails;
+ *      default qwen/qwen3.7-flash,openai/gpt-5-nano), GH_TOKEN (for gh),
+ *      DREAM_CONFIG (default dream.config.json), DREAM_DATE (override)
+ * The report records which model and provider actually answered.
  * Usage: node scripts/kdreams-nightly.mjs [--dry-run]
  */
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { computeReport, renderMarkdown } from './kdreams-backtest.mjs';
@@ -26,6 +31,7 @@ import { computeReport, renderMarkdown } from './kdreams-backtest.mjs';
 const DRY = process.argv.includes('--dry-run');
 const CONFIG = process.env.DREAM_CONFIG || 'dream.config.json';
 const MODEL = process.env.OPENROUTER_MODEL || 'deepseek/deepseek-v4-flash';
+const FALLBACKS = (process.env.OPENROUTER_FALLBACKS ?? 'qwen/qwen3.7-flash,openai/gpt-5-nano').split(',').map((s) => s.trim()).filter(Boolean);
 const KEY = process.env.OPENROUTER_API_KEY || '';
 const LEDGER = 'docs/dream-cycle/LEDGER.md';
 const MAX_EVIDENCE_CHARS = 7000;
@@ -75,22 +81,54 @@ async function research(ctx, ev) {
     `## Next observation — one sentence: what to record or compute over the next 7 days to test it (no trading).\n` +
     `## Pair candidates — up to 3 lines "KALSHI_TICKER <-> polymarket id prefix — why" where the catalog excerpt shows the same real-world event on both venues, else "none found".`;
 
-  const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${KEY}`, 'HTTP-Referer': `https://github.com/${ctx.cfg.repo}`, 'X-Title': 'kdreams nightly (observe-only)' },
-    body: JSON.stringify({ model: MODEL, messages: [{ role: 'system', content: sys }, { role: 'user', content: user }], max_tokens: 900, temperature: 0.3 }),
-  });
-  if (!res.ok) {
-    const t = await res.text().catch(() => '');
-    return { blocked: true, body: `**LLM_EVAL=blocked** — OpenRouter request failed (${res.status}). ${t.slice(0, 200)}\n\n${ev.md}`, finding: `research failed (${res.status}) on ${ctx.deep}` };
+  // Try each model in turn with its own reasoning settings. Reasoning models cannot disable
+  // thinking: DeepSeek honors a low effort hint, Qwen only honors an explicit token budget and
+  // otherwise burns the whole output cap thinking. Empty content counts as a failure.
+  const chain = [MODEL, ...FALLBACKS.filter((m) => m !== MODEL)];
+  const messages = [{ role: 'system', content: sys }, { role: 'user', content: user }];
+  const headers = { 'Content-Type': 'application/json', Authorization: `Bearer ${KEY}`, 'HTTP-Referer': `https://github.com/${ctx.cfg.repo}`, 'X-Title': 'kdreams nightly (observe-only)' };
+  const failures = [];
+  let json = null;
+  for (const model of chain) {
+    for (let attempt = 0; attempt < 2 && !json; attempt++) {
+      const payload = { model, messages, max_tokens: 6000, temperature: 0.3, reasoning: reasoningFor(model) };
+      try {
+        const res = await fetch('https://openrouter.ai/api/v1/chat/completions', { method: 'POST', headers, body: JSON.stringify(payload) });
+        const j = await res.json().catch(() => null);
+        const content = j?.choices?.[0]?.message?.content?.trim();
+        if (res.ok && !j?.error && content) { json = j; break; }
+        const why = j?.error?.message || (content ? '' : `empty content (finish=${j?.choices?.[0]?.finish_reason})`) || `HTTP ${res.status}`;
+        failures.push(`${model}: ${String(why).slice(0, 120)}`);
+      } catch (e) { failures.push(`${model}: ${String(e.message || e).slice(0, 120)}`); }
+      await new Promise((r) => setTimeout(r, 3000 * (attempt + 1)));
+    }
+    if (json) break;
   }
-  const json = await res.json();
-  const body = (json.choices?.[0]?.message?.content?.trim() || '(empty model response)') + `\n\n${ev.md}`;
+  if (!json) {
+    return { blocked: true, body: `**LLM_EVAL=blocked** — every model route failed:\n${failures.map((f) => `- ${f}`).join('\n')}\n\n${ev.md}`, finding: `research failed on ${ctx.deep}` };
+  }
+  const served = `${json.model || MODEL}${json.provider ? ` via ${json.provider}` : ''}`;
+  const body = json.choices[0].message.content.trim() + `\n\n${ev.md}`;
   const lines = body.split('\n').map((l) => l.trim()).filter(Boolean);
   const hypo = lines.find((l) => /^Given\b/i.test(l.replace(/^["*_\-\s]+/, '')));
   const firstProse = lines.find((l) => !/^#{1,6}\s|^[-*]\s*$/.test(l)) || `research on ${ctx.deep}`;
-  const finding = (hypo || firstProse).replace(/^[#>*_\-\s"]+/, '').slice(0, 80);
-  return { blocked: false, body, finding, usage: json.usage };
+  const finding = trimWords((hypo || firstProse).replace(/^[#>*_\-\s"]+/, ''), 80);
+  return { blocked: false, body, finding, usage: json.usage, served };
+}
+
+/** Cut to at most `max` chars on a word boundary. */
+function trimWords(text, max) {
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max);
+  const at = cut.lastIndexOf(' ');
+  return (at > max / 2 ? cut.slice(0, at) : cut).replace(/[,;:]$/, '') + '…';
+}
+
+/** Per-model reasoning settings (see research()). */
+export function reasoningFor(model) {
+  if (model.startsWith('deepseek/')) return { effort: 'low', exclude: true };
+  if (model.startsWith('openai/')) return { effort: 'low', exclude: true };
+  return { max_tokens: 1500, exclude: true };
 }
 
 function witness(reportPath, commit) {
@@ -100,7 +138,7 @@ function witness(reportPath, commit) {
 
 async function main() {
   const ctx = tonight();
-  console.log(`Tonight: DATE=${ctx.date} DEEP=${ctx.deep} SCAN=${(ctx.scan || []).join(',')} COMMIT=${ctx.commit.slice(0, 8)} MODEL=${KEY ? MODEL : 'none'}`);
+  console.log(`Tonight: DATE=${ctx.date} DEEP=${ctx.deep} SCAN=${(ctx.scan || []).join(',')} COMMIT=${ctx.commit.slice(0, 8)} MODEL=${KEY ? [MODEL, ...FALLBACKS].join(' -> ') : 'none'}`);
   const ev = evidence();
   const g = ev.report.generatedFrom;
   console.log(`Evidence: ${g.rows} rows, ${g.ticks} ticks, ${g.marketsPm} pm + ${g.marketsKs} ks markets`);
@@ -108,13 +146,15 @@ async function main() {
   const r = await research(ctx, ev);
   const evaluated = r.blocked ? 'blocked' : 'no';
   const verdict = 'INCONCLUSIVE'; // observe-only research night by construction
-  const cost = r.usage ? ` (${r.usage.total_tokens} tokens)` : '';
+  const cost = r.usage ? ` (${r.usage.total_tokens} tokens${r.usage.cost !== undefined ? `, $${Number(r.usage.cost).toFixed(5)}` : ''})` : '';
 
-  mkdirSync('docs/dream-cycle', { recursive: true });
-  const reportPath = `docs/dream-cycle/${ctx.date}-${ctx.deep}-report.md`;
+  // Dry runs never leave a report behind in the repo.
+  const reportDir = DRY ? tmpdir() : 'docs/dream-cycle';
+  mkdirSync(reportDir, { recursive: true });
+  const reportPath = join(reportDir, `${ctx.date}-${ctx.deep}-report.md`);
   const report = [
     `# ${ctx.deep} — kdreams nightly research (${ctx.date})`, ``,
-    `> kdreams nightly (GitHub Actions, observe-only research). Model: ${r.blocked ? 'none' : MODEL}${cost}.`,
+    `> kdreams nightly (GitHub Actions, observe-only research). Model: ${r.blocked ? 'none' : r.served}${cost}.`,
     `> Nothing here placed an order. Verdict is INCONCLUSIVE by construction: the hypothesis`,
     `> below is frozen tonight and can only be tested on snapshots recorded after it.`, ``,
     r.body, ``, `## Witness`, `- session commit: \`${ctx.commit}\``,
