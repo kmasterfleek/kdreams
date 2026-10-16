@@ -17,7 +17,7 @@ one.
 | Job | Cadence | What it does | Cost |
 |---|---|---|---|
 | `kdreams collect` | every 15 min, inside a ~6 h loop | Snapshots top-of-book for the 100 highest-volume markets on each venue plus the pinned pair markets (no keys, no accounts) and commits one NDJSON line per market to `data/snapshots/`. GitHub drops most high-frequency cron runs, so each run loops on the quarter hour for up to 340 minutes and an hourly cron restarts it. | free CI minutes (public repo) |
-| `kdreams nightly` | 09:00 UTC | Runs the backtest over the last 14 days, re-tests still-open frozen hypotheses on post-freeze snapshots, hands the evidence to a cheap OpenRouter model for re-test grades, observations and one new hypothesis, files a witnessed issue, and commits the report, one ledger row and `docs/dream-cycle/hypotheses.json` to main. | ~$0.001 / night on DeepSeek v4 flash (falls back to Qwen 3.7 flash, then GPT-5 nano) |
+| `kdreams nightly` | 09:00 UTC | Runs the backtest over the last 14 days, re-tests still-open frozen hypotheses on post-freeze snapshots, hands the evidence to an OpenRouter model (GPT-6 Sol) for re-test grades, observations and one new hypothesis, files a witnessed issue, and commits the report, one ledger row and `docs/dream-cycle/hypotheses.json` to main. | ~$0.014 / night (~$0.40 / month) on GPT-6 Sol; falls back to Qwen 3.7 flash, then GPT-5 nano |
 
 Every night ends in exactly one verdict: **ACCEPT**, **REJECT**, or
 **INCONCLUSIVE**. In this observe-only phase tonight's own row is always INCONCLUSIVE:
@@ -68,7 +68,18 @@ npm run check                                     # typecheck, build, lint, test
 Set `OPENROUTER_API_KEY` in the environment for a model-backed dry run;
 without it the nightly still runs and reports `LLM_EVAL=blocked`. The model
 chain is `OPENROUTER_MODEL` then `OPENROUTER_FALLBACKS`; each report records
-which model and provider actually answered and what it cost.
+which model and provider actually answered, what it cost, and any routes that
+failed before it.
+
+The scheduled nightly takes its primary model from the repo variable
+`OPENROUTER_MODEL`, currently `openai/gpt-6-sol` (about $2 / $10 per million
+input / output tokens on OpenRouter, roughly 4-7k tokens a night). The cheap
+models stay in the chain only as fallbacks: grading frozen hypotheses
+against post-freeze evidence needs more reasoning than the flash-tier models
+showed (night 3 on Qwen paired a Republican market with a Democratic one).
+If the variable is unset, the script falls back to its built-in default,
+`deepseek/deepseek-v4-flash`. Change the model with
+`gh variable set OPENROUTER_MODEL --body <openrouter-model-id>`.
 
 ## Data layout
 
@@ -89,7 +100,7 @@ watchlist, and only then does the cross-venue surface measure it.
 
 ## Setup on a fork
 
-1. Add the repo secret `OPENROUTER_API_KEY` (and optionally the repo variable `OPENROUTER_MODEL`).
+1. Add the repo secret `OPENROUTER_API_KEY` and the repo variable `OPENROUTER_MODEL` (this repo uses `openai/gpt-6-sol`).
 2. Allow Actions to create pull requests (Settings → Actions → General → Workflow permissions).
 3. Run `kdreams collect` once by hand from the Actions tab, then let the schedules take over.
 
