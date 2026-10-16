@@ -5,10 +5,10 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { bestOfBook, mapPolymarket, mapKalshi, isPlainBinary, round } from './kdreams-collect.mjs';
 import {
-  parseRows, groupSeries, spreadStats, makerSpreadProxy, sumProxies, crossVenue, byBucket, candidates, feeTable, quantile, corr,
+  parseRows, groupSeries, spreadStats, makerSpreadProxy, sumProxies, crossVenue, byBucket, candidates, feeTable, quantile, corr, medianGapMinutes,
 } from './lib/kdreams-metrics.mjs';
 import { computeReport, renderSummary, renderMarkdown } from './kdreams-backtest.mjs';
-import { priorNightFates, reasoningFor } from './kdreams-nightly.mjs';
+import { priorNightFates, reasoningFor, extractHypothesis, parseRetests, planRetests, fatesSummary, cell } from './kdreams-nightly.mjs';
 
 test('nightly: importing the module never runs the pipeline, and helpers behave', () => {
   // Importing above must not have filed anything or touched the ledger: the guard is the test.
@@ -24,6 +24,31 @@ test('nightly: importing the module never runs the pipeline, and helpers behave'
   assert.deepEqual(reasoningFor('deepseek/deepseek-v4-flash'), { effort: 'low', exclude: true });
   assert.deepEqual(reasoningFor('openai/gpt-5-nano'), { effort: 'low', exclude: true });
   assert.deepEqual(reasoningFor('qwen/qwen3.7-flash'), { max_tokens: 1500, exclude: true });
+});
+
+test('nightly: hypothesis extraction, re-test parsing, planning and ledger summary', () => {
+  assert.equal(extractHypothesis('## Hypothesis\n**Given A, when B, then C.**\n## Next'), 'Given A, when B, then C.');
+  assert.equal(extractHypothesis('no hypothesis here'), null);
+  const grades = parseRetests('## Re-tests\n- H 2026-10-14: REFUTED — fill 2% vs >15%\n**H 2026-10-15**: inconclusive - metric not measured\nH 2026-10-14: SUPPORTED dup ignored');
+  assert.deepEqual(grades.get('2026-10-14'), { verdict: 'REFUTED', note: 'fill 2% vs >15%' });
+  assert.equal(grades.get('2026-10-15').verdict, 'INCONCLUSIVE');
+  assert.equal(cell('a | b\n c'), 'a / b c');
+  const hyps = [
+    { id: '2026-09-01', date: '2026-09-01', frozenAt: '2026-09-01T10:00Z', status: 'open' },
+    { id: '2026-10-14', date: '2026-10-14', frozenAt: '2026-10-14T19:13Z', status: 'open' },
+    { id: '2026-10-15', date: '2026-10-15', frozenAt: '2026-10-15T10:10Z', status: 'open' },
+    { id: '2026-10-16', date: '2026-10-16', frozenAt: '2026-10-16T09:38Z', status: 'open' },
+    { id: '2026-10-10', date: '2026-10-10', frozenAt: '2026-10-10T09:00Z', status: 'REFUTED' },
+  ];
+  const ticks = { '2026-10-14': 60, '2026-10-15': 50, '2026-10-16': 3 };
+  const plan = planRetests(hyps, { date: '2026-10-17', days: 14, minTicks: 48, maxOpen: 5 }, (h) => ticks[h.id]);
+  assert.deepEqual(plan.expired.map((h) => h.id), ['2026-09-01']);
+  assert.deepEqual(plan.due.map((x) => x.h.id), ['2026-10-15', '2026-10-14']);
+  assert.deepEqual(plan.tooSoon.map((x) => x.h.id), ['2026-10-16']);
+  // Tonight's own (re-run) hypothesis is never re-tested against itself.
+  assert.equal(planRetests(hyps, { date: '2026-10-16' }, () => 99).due.some((x) => x.h.id === '2026-10-16'), false);
+  assert.equal(fatesSummary([{ id: '2026-10-15', verdict: 'REFUTED', ticks: 50 }, { id: '2026-09-01', verdict: 'EXPIRED' }]), '10-15 REFUTED (50t); 09-01 EXPIRED');
+  assert.equal(fatesSummary([]), '');
 });
 
 const T = (i) => `2026-10-14T${String(10 + Math.floor(i / 4)).padStart(2, '0')}:${String((i % 4) * 15).padStart(2, '0')}Z`;
@@ -85,6 +110,23 @@ test('metrics: makerSpreadProxy fills only when price trades through, round-trip
   assert.equal(stuck.fills, 1); assert.equal(stuck.roundTrips, 0); assert.equal(stuck.mtmCents, -5); assert.equal(stuck.netCents, -5);
   const sum = sumProxies([r, k]);
   assert.equal(sum.attempts, 6); assert.equal(sum.roundTrips, 2);
+  // The last one-tick snapshot has nothing after it: unobservable, not a missed fill.
+  assert.equal(r.unobserved, 0); assert.equal(none.unobserved, 1); assert.equal(none.attempts, 2);
+});
+
+test('metrics: makerSpreadProxy with horizonMinutes ignores snapshots beyond the wall-clock window', () => {
+  // Same fill-then-exit path, but the fill arrives 5 hours later: outside a 60-minute horizon.
+  const at = (t, b, a) => ({ ...pm(0, b, a), t });
+  const late = [at('2026-10-14T10:00Z', 0.5, 0.51), at('2026-10-14T15:00Z', 0.49, 0.5), at('2026-10-14T20:00Z', 0.51, 0.52)];
+  const byTicks = makerSpreadProxy(late, { horizon: 4 });
+  assert.equal(byTicks.roundTrips, 1);
+  const byMinutes = makerSpreadProxy(late, { horizonMinutes: 60 });
+  assert.equal(byMinutes.attempts, 0); assert.equal(byMinutes.unobserved, 3); assert.equal(byMinutes.fillRate, null);
+  // 15-minute cadence: fill at +15, exit at +30, both inside 60 minutes.
+  const fast = [at('2026-10-14T10:00Z', 0.5, 0.51), at('2026-10-14T10:15Z', 0.49, 0.5), at('2026-10-14T10:30Z', 0.51, 0.52), at('2026-10-14T12:00Z', 0.6, 0.62)];
+  const f = makerSpreadProxy(fast, { horizonMinutes: 60 });
+  assert.equal(f.roundTrips, 1); assert.equal(f.grossCents, 1);
+  assert.equal(medianGapMinutes(['2026-10-14T10:00Z', '2026-10-14T10:15Z', '2026-10-14T10:30Z', '2026-10-14T15:00Z']), 15);
 });
 
 test('metrics: crossVenue computes divergence, both-sides net, and lead-lag', () => {
@@ -132,6 +174,10 @@ test('backtest: computeReport over a temp data dir and renders', () => {
   const summary = renderSummary(r);
   assert.match(summary, /Coverage: 20 rows, 10 ticks/); assert.match(summary, /Pair KX-1/);
   assert.match(renderMarkdown(r), /proxy/);
+  assert.equal(r.generatedFrom.medianGapMinutes, 15);
+  const after = computeReport({ dataDir: dir, watchlist: {}, days: 14, since: T(6) });
+  assert.equal(after.generatedFrom.ticks, 3); assert.equal(after.generatedFrom.firstTick, T(7));
+  assert.match(renderSummary(after), new RegExp(`after ${T(6)}`));
   const empty = computeReport({ dataDir: join(dir, 'nope'), watchlist: {}, days: 14 });
   assert.equal(empty.generatedFrom.rows, 0); assert.match(renderSummary(empty), /no pairs configured/);
 });

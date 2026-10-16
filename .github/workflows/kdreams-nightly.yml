@@ -1,14 +1,17 @@
 name: kdreams nightly (observe-only research)
 
 # The research half of the Dream Machine loop, pointed at prediction markets.
-# Runs the backtest over recorded snapshots, asks a cheap OpenRouter model for
-# observations + ONE falsifiable hypothesis, files a witnessed `kdreams` issue,
-# appends one ledger row, and opens a DRAFT PR with the report.
+# Runs the backtest over recorded snapshots, re-tests still-open frozen
+# hypotheses on snapshots recorded after each was frozen, asks a cheap
+# OpenRouter model for re-test grades + observations + ONE new falsifiable
+# hypothesis, files a witnessed `kdreams` issue, and commits the report, one
+# ledger row and docs/dream-cycle/hypotheses.json straight to main so the next
+# night sees them. Only research artifacts are committed; code never changes.
 #
 # Honest scope: observe-only. No order endpoint is reachable from this job.
-# Every night is INCONCLUSIVE by construction until a frozen hypothesis is
-# tested on data recorded after it. With no OPENROUTER_API_KEY it degrades to
-# LLM_EVAL=blocked and still files an honest skipped note with real evidence.
+# A frozen hypothesis stays INCONCLUSIVE until it has backtest.retestMinTicks
+# post-freeze ticks. With no OPENROUTER_API_KEY it degrades to LLM_EVAL=blocked
+# and still files an honest skipped note with real evidence.
 #
 # Setup: repo secret OPENROUTER_API_KEY; optional repo var OPENROUTER_MODEL.
 
@@ -18,14 +21,13 @@ on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: 'Print the report, do not file issue/PR'
+        description: 'Print the report, do not file the issue or commit'
         type: boolean
         default: false
 
 permissions:
   contents: write
   issues: write
-  pull-requests: write
 
 concurrency:
   group: kdreams-nightly

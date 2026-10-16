@@ -1,13 +1,18 @@
 name: kdreams collect
 
-# Observe-only snapshot collector: every 15 minutes, read public top-of-book
-# from Polymarket and Kalshi (no keys, no accounts) and commit one NDJSON
-# line per watched market to data/snapshots/. Dependency-free: no npm ci.
-# GitHub cron is best-effort; gaps of a few minutes are normal.
+# Observe-only snapshot collector: read public top-of-book from Polymarket and
+# Kalshi (no keys, no accounts) and commit one NDJSON line per watched market
+# to data/snapshots/. Dependency-free: no npm ci.
+#
+# GitHub drops most runs of a high-frequency cron (a */15 schedule landed
+# about every 4-5 hours), so each run is a long-lived loop instead: it takes a
+# snapshot on every quarter hour for up to LOOP_MINUTES, committing each one.
+# The hourly cron only has to land once every ~6 hours to keep coverage
+# continuous; the concurrency group queues at most one run behind the live one.
 
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '7 * * * *'
   workflow_dispatch:
     inputs:
       rescan:
@@ -15,9 +20,13 @@ on:
         type: boolean
         default: false
       dry_run:
-        description: 'Fetch and print, do not write or commit'
+        description: 'Fetch and print once, do not write or commit'
         type: boolean
         default: false
+      loop_minutes:
+        description: 'How long to keep snapshotting (0 = one snapshot)'
+        type: string
+        default: '340'
 
 permissions:
   contents: write
@@ -29,23 +38,40 @@ concurrency:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 355
+    env:
+      LOOP_MINUTES: ${{ inputs.dry_run && '0' || inputs.loop_minutes || '340' }}
+      EVERY_SECONDS: 900
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
         with: { node-version: 24 }
-      - name: Snapshot both venues
-        run: node scripts/kdreams-collect.mjs ${{ inputs.rescan && '--rescan' || '' }} ${{ inputs.dry_run && '--dry-run' || '' }}
-      - name: Commit snapshot
-        if: ${{ !inputs.dry_run }}
+      - name: Snapshot both venues on every quarter hour
         run: |
           git config user.name 'kdreams[bot]'
           git config user.email 'kdreams@users.noreply.github.com'
-          git add data
-          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
-          git commit -m "data: snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
-          for i in 1 2 3; do
-            git pull --rebase origin main && git push origin HEAD:main && exit 0
-            sleep $((i * 5))
+          deadline=$(( $(date +%s) + LOOP_MINUTES * 60 ))
+          flags="${{ inputs.rescan && '--rescan' || '' }} ${{ inputs.dry_run && '--dry-run' || '' }}"
+          while :; do
+            # A failed tick (venue outage, push race) is logged and skipped; the next tick retries.
+            if node scripts/kdreams-collect.mjs $flags && [ -z "${{ inputs.dry_run && 'dry' || '' }}" ]; then
+              git add data
+              if git diff --cached --quiet; then echo "nothing to commit"
+              else
+                git commit -q -m "data: snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
+                for i in 1 2 3; do
+                  git pull -q --rebase origin main && git push -q origin HEAD:main && break
+                  sleep $((i * 5))
+                done
+              fi
+            fi
+            flags=""
+            now=$(date +%s)
+            next=$(( (now / EVERY_SECONDS + 1) * EVERY_SECONDS ))
+            [ "$next" -ge "$deadline" ] && break
+            sleep $(( next - now ))
           done
-          echo "push failed after retries" && exit 1
+          # Anything still unpushed (all retries lost the race) goes out now or fails the run.
+          if [ "$(git rev-list --count origin/main..HEAD 2>/dev/null || echo 0)" != "0" ]; then
+            git pull -q --rebase origin main && git push -q origin HEAD:main
+          fi

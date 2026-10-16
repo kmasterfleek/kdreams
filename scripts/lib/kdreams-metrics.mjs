@@ -87,31 +87,57 @@ export function spreadStats(rows) {
   };
 }
 
+/** Minutes between two snapshot timestamps. */
+export function minutesBetween(t0, t1) {
+  return (Date.parse(t1) - Date.parse(t0)) / 60000;
+}
+
+/** Median minutes between consecutive distinct ticks (the real collector cadence). */
+export function medianGapMinutes(ticks) {
+  const gaps = [];
+  for (let i = 1; i < ticks.length; i++) gaps.push(minutesBetween(ticks[i - 1], ticks[i]));
+  return round(quantile(gaps, 0.5), 1);
+}
+
 /**
  * Maker spread-capture PROXY for one series.
  * At each snapshot where the spread is exactly one tick, imagine resting a bid
- * at the best bid. It "fills" if within `horizon` later snapshots the best ask
- * reaches our price (the market traded through our level). After a fill we rest
- * an ask one tick higher; it "fills" if the best bid later reaches that price.
- * Unexited fills are marked to the last mid inside the horizon.
+ * at the best bid. It "fills" if within the horizon the best ask reaches our
+ * price (the market traded through our level). After a fill we rest an ask one
+ * tick higher; it "fills" if the best bid later reaches that price. Unexited
+ * fills are marked to the last mid inside the horizon.
+ *
+ * The horizon is `horizonMinutes` of wall-clock time when given (snapshots are
+ * irregular, so a tick count can silently stretch to many hours), else
+ * `horizon` snapshots. An attempt with no later snapshot inside the window is
+ * unobservable: it is counted in `unobserved`, not in `attempts`.
  */
-export function makerSpreadProxy(series, { horizon = 4, tick = 0.01, makerFeeRate = 0 } = {}) {
-  let attempts = 0, fills = 0, roundTrips = 0, mtmCents = 0, feeCents = 0;
+export function makerSpreadProxy(series, { horizon = 4, horizonMinutes = null, tick = 0.01, makerFeeRate = 0 } = {}) {
+  let attempts = 0, unobserved = 0, fills = 0, roundTrips = 0, mtmCents = 0, feeCents = 0;
   const n = series.length;
+  // Last index still inside the horizon that starts at index `from`.
+  const lastInside = (from) => {
+    if (horizonMinutes === null || horizonMinutes === undefined) return Math.min(from + horizon, n - 1);
+    let j = from;
+    while (j + 1 < n && minutesBetween(series[from].t, series[j + 1].t) <= horizonMinutes + EPS) j++;
+    return j;
+  };
   for (let i = 0; i < n; i++) {
     const p = series[i];
     if (!twoSided(p) || p.a - p.b > tick + EPS) continue;
+    const fillEnd = lastInside(i);
+    if (fillEnd <= i) { unobserved++; continue; }
     attempts++;
     const bid = p.b;
     let filledAt = -1;
-    for (let j = i + 1; j <= Math.min(i + horizon, n - 1); j++) {
+    for (let j = i + 1; j <= fillEnd; j++) {
       if (series[j].a !== null && series[j].a !== undefined && series[j].a <= bid + EPS) { filledAt = j; break; }
     }
     if (filledAt < 0) continue;
     fills++;
     const exitPx = bid + tick;
     let exited = false;
-    const end = Math.min(filledAt + horizon, n - 1);
+    const end = lastInside(filledAt);
     for (let k = filledAt + 1; k <= end; k++) {
       if (series[k].b !== null && series[k].b !== undefined && series[k].b >= exitPx - EPS) { exited = true; break; }
     }
@@ -123,7 +149,7 @@ export function makerSpreadProxy(series, { horizon = 4, tick = 0.01, makerFeeRat
   const netCents = grossCents - feeCents + mtmCents;
   return {
     model: 'proxy: fill when price trades through our level; no queue position',
-    attempts, fills, roundTrips,
+    attempts, unobserved, fills, roundTrips,
     fillRate: attempts ? round(fills / attempts, 3) : null,
     roundTripRate: fills ? round(roundTrips / fills, 3) : null,
     grossCents: round(grossCents), feeCents: round(feeCents), mtmCents: round(mtmCents), netCents: round(netCents),
@@ -133,7 +159,7 @@ export function makerSpreadProxy(series, { horizon = 4, tick = 0.01, makerFeeRat
 
 /** Sum a list of makerSpreadProxy results. */
 export function sumProxies(list) {
-  const s = { attempts: 0, fills: 0, roundTrips: 0, grossCents: 0, feeCents: 0, mtmCents: 0, netCents: 0 };
+  const s = { attempts: 0, unobserved: 0, fills: 0, roundTrips: 0, grossCents: 0, feeCents: 0, mtmCents: 0, netCents: 0 };
   for (const r of list) for (const k of Object.keys(s)) s[k] += r[k] || 0;
   return {
     ...s, grossCents: round(s.grossCents), feeCents: round(s.feeCents), mtmCents: round(s.mtmCents), netCents: round(s.netCents),

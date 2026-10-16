@@ -5,34 +5,37 @@
  *
  * Observe-only. The maker model is a labeled proxy. No orders, no credentials.
  *
- * Usage: node scripts/kdreams-backtest.mjs [--json] [--summary] [--days N] [--out FILE]
+ * Usage: node scripts/kdreams-backtest.mjs [--json] [--summary] [--days N] [--since ISO] [--out FILE]
  * Env:   KDREAMS_DATA (default data), KDREAMS_WATCHLIST (default config/kdreams.watchlist.json)
  */
 import { readFileSync, readdirSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import {
-  parseRows, groupSeries, spreadStats, makerSpreadProxy, sumProxies, crossVenue, byBucket, candidates, feeTable, mid, round,
+  parseRows, groupSeries, spreadStats, makerSpreadProxy, sumProxies, crossVenue, byBucket, candidates, feeTable, mid, round, medianGapMinutes,
 } from './lib/kdreams-metrics.mjs';
 
 function loadJson(path, fallback) {
   try { return JSON.parse(readFileSync(path, 'utf8')); } catch { return fallback; }
 }
 
-export function loadRows(dataDir, days) {
+/** Rows from the last `days` day files; with `since`, only rows strictly after that tick. */
+export function loadRows(dataDir, days, since = null) {
   const dir = join(dataDir, 'snapshots');
   if (!existsSync(dir)) return { rows: [], files: [] };
-  const files = readdirSync(dir).filter((f) => /^\d{4}-\d{2}-\d{2}\.ndjson$/.test(f)).sort().slice(-days);
+  const files = readdirSync(dir).filter((f) => /^\d{4}-\d{2}-\d{2}\.ndjson$/.test(f)).sort().slice(-days)
+    .filter((f) => !since || f.slice(0, 10) >= since.slice(0, 10));
   const rows = [];
-  for (const f of files) rows.push(...parseRows(readFileSync(join(dir, f), 'utf8')));
+  for (const f of files) rows.push(...parseRows(readFileSync(join(dir, f), 'utf8')).filter((r) => !since || r.t > since));
   return { rows, files };
 }
 
-export function computeReport({ dataDir = 'data', watchlist = {}, days = 14 } = {}) {
-  const { rows, files } = loadRows(dataDir, days);
+export function computeReport({ dataDir = 'data', watchlist = {}, days = 14, since = null } = {}) {
+  const { rows, files } = loadRows(dataDir, days, since);
   const catalogs = { pm: loadJson(join(dataDir, 'catalog', 'polymarket.json'), {}), ks: loadJson(join(dataDir, 'catalog', 'kalshi.json'), {}) };
   const fees = watchlist.fees || {};
   const horizon = watchlist.backtest?.horizonTicks ?? 4;
+  const horizonMinutes = watchlist.backtest?.horizonMinutes ?? null;
   const series = groupSeries(rows);
   const ticks = [...new Set(rows.map((r) => r.t))].sort();
   const pmRows = rows.filter((r) => r.v === 'pm'), ksRows = rows.filter((r) => r.v === 'ks');
@@ -40,7 +43,7 @@ export function computeReport({ dataDir = 'data', watchlist = {}, days = 14 } = 
   const proxy = { pm: [], ks: [] };
   for (const [key, s] of series) {
     const v = key.slice(0, 2);
-    proxy[v].push(makerSpreadProxy(s, { horizon, tick: 0.01, makerFeeRate: v === 'pm' ? (fees.polymarketMakerRate ?? 0) : (fees.kalshiMakerRate ?? 0.0175) }));
+    proxy[v].push(makerSpreadProxy(s, { horizon, horizonMinutes, tick: 0.01, makerFeeRate: v === 'pm' ? (fees.polymarketMakerRate ?? 0) : (fees.kalshiMakerRate ?? 0.0175) }));
   }
 
   const pairs = (watchlist.pairs || []).map((p) => {
@@ -54,10 +57,10 @@ export function computeReport({ dataDir = 'data', watchlist = {}, days = 14 } = 
     .map((r) => ({ id: r.id, title: catalogs[v][r.id]?.title || r.id, mid: round(mid(r), 3), spreadCents: r.a !== null && r.b !== null ? round((r.a - r.b) * 100) : null, v24: round(r.v24) }));
 
   return {
-    generatedFrom: { files, days, rows: rows.length, ticks: ticks.length, firstTick: ticks[0] || null, lastTick: lastT || null,
+    generatedFrom: { files, days, since, rows: rows.length, medianGapMinutes: medianGapMinutes(ticks), ticks: ticks.length, firstTick: ticks[0] || null, lastTick: lastT || null,
       marketsPm: [...series.keys()].filter((k) => k.startsWith('pm:')).length, marketsKs: [...series.keys()].filter((k) => k.startsWith('ks:')).length },
     spread: { pm: spreadStats(pmRows), ks: spreadStats(ksRows) },
-    makerSpreadProxy: { horizonTicks: horizon, pm: sumProxies(proxy.pm), ks: sumProxies(proxy.ks) },
+    makerSpreadProxy: { horizonTicks: horizon, horizonMinutes, pm: sumProxies(proxy.pm), ks: sumProxies(proxy.ks) },
     crossVenue: pairs,
     byHour: { pm: byBucket(pmRows, 'hour'), ks: byBucket(ksRows, 'hour') },
     byWeekday: { pm: byBucket(pmRows, 'weekday'), ks: byBucket(ksRows, 'weekday') },
@@ -73,11 +76,12 @@ function num(x) { return x === null || x === undefined ? 'n/a' : String(x); }
 export function renderSummary(r) {
   const g = r.generatedFrom;
   const L = [];
-  L.push(`Coverage: ${g.rows} rows, ${g.ticks} ticks, ${g.marketsPm} Polymarket + ${g.marketsKs} Kalshi markets, ${g.firstTick || '-'} .. ${g.lastTick || '-'} (${g.files.length} day files).`);
+  L.push(`Coverage: ${g.rows} rows, ${g.ticks} ticks, ${g.marketsPm} Polymarket + ${g.marketsKs} Kalshi markets, ${g.firstTick || '-'} .. ${g.lastTick || '-'} (${g.files.length} day files${g.since ? `, after ${g.since}` : ''}); median gap between ticks ${num(g.medianGapMinutes)} min.`);
+  const h = r.makerSpreadProxy.horizonMinutes ? `${r.makerSpreadProxy.horizonMinutes}-minute` : `${r.makerSpreadProxy.horizonTicks}-tick`;
   for (const v of ['pm', 'ks']) {
     const s = r.spread[v], m = r.makerSpreadProxy[v], name = v === 'pm' ? 'Polymarket' : 'Kalshi';
     L.push(`${name} spread: median ${num(s.medianCents)}c (p25 ${num(s.p25Cents)}, p75 ${num(s.p75Cents)}), one-tick ${pct(s.fracOneCent)} of ${s.twoSided} two-sided rows; touch median bid ${num(s.medianBidSize)} / ask ${num(s.medianAskSize)}.`);
-    L.push(`${name} maker proxy (${r.makerSpreadProxy.horizonTicks}-tick horizon): ${m.attempts} attempts, fill ${pct(m.fillRate)}, round-trip ${pct(m.roundTripRate)}, net ${num(m.netCents)}c total = ${num(m.netCentsPerAttempt)}c/attempt (gross ${num(m.grossCents)}, fees ${num(m.feeCents)}, mark ${num(m.mtmCents)}).`);
+    L.push(`${name} maker proxy (${h} horizon): ${m.attempts} attempts (${m.unobserved ?? 0} unobservable: no later snapshot inside the horizon), fill ${pct(m.fillRate)}, round-trip ${pct(m.roundTripRate)}, net ${num(m.netCents)}c total = ${num(m.netCentsPerAttempt)}c/attempt (gross ${num(m.grossCents)}, fees ${num(m.feeCents)}, mark ${num(m.mtmCents)}).`);
   }
   if (r.crossVenue.length === 0) L.push('Cross-venue: no pairs configured in config/kdreams.watchlist.json yet.');
   for (const p of r.crossVenue) {
@@ -106,7 +110,7 @@ export function main(argv = process.argv.slice(2)) {
   const get = (f) => { const i = argv.indexOf(f); return i >= 0 ? argv[i + 1] : undefined; };
   const watchlist = loadJson(process.env.KDREAMS_WATCHLIST || 'config/kdreams.watchlist.json', {});
   const days = Number(get('--days') || watchlist.backtest?.days || 14);
-  const report = computeReport({ dataDir: process.env.KDREAMS_DATA || 'data', watchlist, days });
+  const report = computeReport({ dataDir: process.env.KDREAMS_DATA || 'data', watchlist, days, since: get('--since') || null });
   const out = get('--out');
   if (out) writeFileSync(out, JSON.stringify(report, null, 2) + '\n');
   if (argv.includes('--json')) console.log(JSON.stringify(report, null, 2));

@@ -16,13 +16,17 @@ one.
 
 | Job | Cadence | What it does | Cost |
 |---|---|---|---|
-| `kdreams collect` | every 15 min | Snapshots top-of-book for the 100 highest-volume markets on each venue (no keys, no accounts) and commits one NDJSON line per market to `data/snapshots/`. | free CI minutes |
-| `kdreams nightly` | 09:00 UTC | Runs the backtest over the last 14 days, hands the evidence to a cheap OpenRouter model for observations plus one hypothesis, files a witnessed issue, appends one ledger row, opens a **draft** PR. | ~$0.001 / night on DeepSeek v4 flash (falls back to Qwen 3.7 flash, then GPT-5 nano) |
+| `kdreams collect` | every 15 min, inside a ~6 h loop | Snapshots top-of-book for the 100 highest-volume markets on each venue plus the pinned pair markets (no keys, no accounts) and commits one NDJSON line per market to `data/snapshots/`. GitHub drops most high-frequency cron runs, so each run loops on the quarter hour for up to 340 minutes and an hourly cron restarts it. | free CI minutes (public repo) |
+| `kdreams nightly` | 09:00 UTC | Runs the backtest over the last 14 days, re-tests still-open frozen hypotheses on post-freeze snapshots, hands the evidence to a cheap OpenRouter model for re-test grades, observations and one new hypothesis, files a witnessed issue, and commits the report, one ledger row and `docs/dream-cycle/hypotheses.json` to main. | ~$0.001 / night on DeepSeek v4 flash (falls back to Qwen 3.7 flash, then GPT-5 nano) |
 
 Every night ends in exactly one verdict: **ACCEPT**, **REJECT**, or
-**INCONCLUSIVE**. In this observe-only phase every night is INCONCLUSIVE by
-construction: a hypothesis frozen tonight can only be tested on snapshots
-recorded after it. The point of the first month is to accumulate those
+**INCONCLUSIVE**. In this observe-only phase tonight's own row is always INCONCLUSIVE:
+a hypothesis frozen tonight can only be tested on snapshots recorded after it.
+Each later night re-tests it on exactly those snapshots and records the grade
+(SUPPORTED, REFUTED or INCONCLUSIVE) in the ledger's prior-night fates column,
+on the hypothesis's issue, and in `docs/dream-cycle/hypotheses.json`. Below
+`backtest.retestMinTicks` post-freeze ticks (48, about 12 hours at full
+cadence) the grade is a code-enforced INCONCLUSIVE and the model never sees it. The point of the first month is to accumulate those
 snapshots and sharpen the hypotheses, not to produce trades.
 
 ## Research surfaces (nightly rotation)
@@ -92,7 +96,7 @@ watchlist, and only then does the cross-venue surface measure it.
 ## Safety
 
 - **Observe-only.** No order endpoint, wallet, or venue credential exists anywhere in this repository or its workflows.
-- **Human merge authority.** Auto-merge is off; the nightly opens draft PRs only.
+- **Human merge authority.** Auto-merge is off. The nightly commits only research artifacts (report, ledger row, hypothesis registry) to main; any code or config change goes through a human-reviewed PR.
 - **Witnessed provenance.** Every report is bound to its commit by a reproducible double-sha256.
 - **Honest degradation.** No API key, a failed venue, or an empty data directory produce a recorded `blocked` night, never a fabricated finding.
 
