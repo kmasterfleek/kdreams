@@ -1,116 +1,126 @@
 {
-  "scannedAt": "2026-10-17T05:15Z",
+  "scannedAt": "2026-10-17T16:15Z",
   "tickers": [
-    "KXMLBGAME-26OCT161800TBCLE-TB",
     "KXNCAAFGAME-26OCT16CHSOCLEM-CHSO",
+    "KXMLBGAME-26OCT161800TBCLE-TB",
+    "KXNCAAFGAME-26OCT17OSUIND-OSU",
+    "KXNCAAFSPREAD-26OCT17OSUIND-OSU3",
     "KXMLBGAME-26OCT161800TBCLE-CLE",
+    "KXNCAAFGAME-26OCT16MSSTLSU-MSST",
+    "KXLIGUE1GAME-26OCT17RCSPSG-PSG",
+    "KXNCAAFGAME-26OCT17OSUIND-IND",
+    "KXNCAAFGAME-26OCT17CITTXAM-CIT",
+    "KXLALIGAGAME-26OCT17RBBBAR-BAR",
+    "KXATPCHALLENGERMATCH-26OCT17BUDMAR-BUD",
     "KXMLBTOTAL-26OCT161800TBCLE-7",
-    "KXWTAMATCH-26OCT16ITOGRA-GRA",
+    "KXT20MATCH-26OCT170930WIIND-WI",
+    "KXNCAAFSPREAD-26OCT17OSUIND-OSU4",
+    "KXNCAAFGAME-26OCT16FLATEX-FLA",
+    "KXLALIGAGAME-26OCT17RBBBAR-TIE",
     "KXZACHARIAOUT-26OCT-26OCT20",
     "KXNFLGAME-26OCT18BALCLE-CLE",
+    "KXATPCHALLENGERMATCH-26OCT17BUDMAR-MAR",
+    "KXATPMATCH-26OCT17COPGUE-GUE",
+    "KXT20MATCH-26OCT170930WIIND-IND",
+    "KXNCAAFSPREAD-26OCT17MSSTLSU-LSU17",
     "CONTROLH-2026-R",
-    "KXNCAAFGAME-26OCT17OSUIND-OSU",
-    "KXNCAAFGAME-26OCT17CITTXAM-CIT",
-    "SENATETX-26-R",
-    "KXWTAMATCH-26OCT16ITOGRA-ITO",
+    "KXATPMATCH-26OCT17COPGUE-COP",
+    "KXNCAAFSPREAD-26OCT17FLATEX-TEX12",
     "KXMLBRFI-26OCT161800TBCLE",
-    "KXNCAAFSPREAD-26OCT17OSUIND-OSU3",
-    "KXMLB-26-MIL",
-    "KXNCAAFSPREAD-26OCT17UNLVAFA-UNLV2",
-    "KXBALANCEPOWERCOMBO-27FEB-RR",
-    "KXMAYORLA-26-KBAS",
-    "KXWTAMATCH-26OCT16KRAKOB-KOB",
-    "KXZACHARIAOUT-26OCT-26NOV01",
-    "KXLALIGAGAME-26OCT17RBBBAR-BAR",
-    "KXMMAFIGHT-26OCT16CARMOUBISHOP-BISHOP",
-    "KXNCAAFGAME-26OCT16MSSTLSU-MSST",
-    "KXFEDDECISION-26OCT-H25",
-    "KXGOVCA-26-SHIL",
-    "KXNCAAFGAME-26OCT17OSUIND-IND",
-    "KXMLB-26-TB",
-    "KXBALANCEPOWERCOMBO-27FEB-RD",
-    "KXMLBSPREAD-26OCT161800TBCLE-TB2",
-    "KXZACHARIAOUT-26OCT-26DEC01",
-    "KXEPLGAME-26OCT17EVECFC-CFC",
-    "KXALEAGUEGAME-26OCT17AUCMEL-AUC",
-    "KXWTAMATCH-26OCT16DARSAI-SAI",
-    "KXSB-27-CAR",
-    "KXWTAMATCH-26OCT16LIUSAW-SAW",
-    "KXEPLGAME-26OCT17MCIIPS-MCI",
+    "SENATETX-26-R",
     "KXNCAAFGAME-26OCT16MSSTLSU-LSU",
-    "KXAAAGASWNJ-26OCT19-4.4200",
-    "KXMLBHR-26OCT161800TBCLE-TBJCAMINERO13-1",
+    "KXNCAAFSPREAD-26OCT17UNLVAFA-UNLV2",
+    "KXNCAAFSPREAD-26OCT17MSSTLSU-LSU18",
+    "KXODIMATCH-26OCT170130ZIMBAN-ZIM",
+    "KXNCAAFGAME-26OCT16NWMSU-NW",
+    "KXBUNDESLIGAGAME-26OCT17BMURBL-TIE",
+    "KXSB-27-CAR",
+    "KXNCAAFGAME-26OCT17NDBYU-BYU",
+    "KXNCAAFTOTAL-26OCT17FAUARMY-56",
+    "KXBALANCEPOWERCOMBO-27FEB-RR",
+    "CONTROLH-2026-D",
+    "KXNCAAFTOTAL-26OCT17OSUIND-51",
+    "KXZACHARIAOUT-26OCT-26NOV01",
+    "KXMAYORLA-26-KBAS",
+    "KXWTADOUBLES-26OCT17HUNSINERRPAO-HUNSIN",
+    "KXITFWMATCH-26OCT17SANCIN-SAN",
+    "KXLALIGAGAME-26OCT17RBBBAR-RBB",
+    "KXWTADOUBLES-26OCT17HUNSINERRPAO-ERRPAO",
+    "KXNCAAFSPREAD-26OCT17OSUIND-OSU7",
+    "KXNCAAFTOTAL-26OCT17GASTJMU-58",
+    "KXNCAAFGAME-26OCT16FLATEX-TEX",
+    "KXMLB-26-MIL",
+    "KXEPLGAME-26OCT17NEWAVL-AVL",
+    "KXMLBSPREAD-26OCT161800TBCLE-TB2",
+    "KXNCAAFSPREAD-26OCT17NWMSU-NW8",
+    "KXZACHARIAOUT-26OCT-26DEC01",
+    "KXITFWMATCH-26OCT17SANCIN-CIN",
+    "KXNCAAFGAME-26OCT16UKOKLA-UK",
+    "KXLALIGASPREAD-26OCT17RBBBAR-BAR2",
     "GOVPARTYNY-26-R",
-    "KXLALIGAGAME-26OCT17ESPATM-ATM",
+    "KXBALANCEPOWERCOMBO-27FEB-RD",
+    "KXNCAAFGAME-26OCT16GASTJMU-GAST",
+    "KXAAAGASWNJ-26OCT19-4.4200",
+    "KXNCAAFGAME-26OCT17FAUARMY-FAU",
+    "KXODIMATCH-26OCT170130ZIMBAN-BAN",
+    "KXNCAAFGAME-26OCT17ALATENN-TENN",
+    "KXMLBHR-26OCT161800TBCLE-TBJCAMINERO13-1",
+    "KXNCAAFSPREAD-26OCT17FLATEX-TEX14",
+    "KXMLBF5-26OCT161800TBCLE-TB",
+    "KXNCAAFGAME-26OCT17FAUARMY-ARMY",
+    "KXNCAAFSPREAD-26OCT17NWMSU-NW7",
+    "KXNCAAFSPREAD-26OCT17WISUCLA-UCLA3",
+    "KXMLB-26-TB",
+    "KXZACHARIAOUT-26OCT-26OCT24",
     "SENATETX-26-D",
     "KXNFLGAME-26OCT18CARPHI-PHI",
-    "KXDPWORLDTOUR-DPWIC26-MSIE",
-    "KXMLBF5-26OCT161800TBCLE-TB",
-    "KXMLB-26-CLE",
-    "KXWTAMATCH-26OCT16KUDSAW-SAW",
-    "KXT20MATCH-26OCT170930WIIND-WI",
-    "KXMMAFIGHT-26OCT16CARMOUBISHOP-CARMOU",
-    "KXNCAAFTOTAL-26OCT17GASTJMU-58",
-    "KXNCAAFSPREAD-26OCT17OSUIND-OSU4",
-    "SENATEIA-26-R",
-    "KXSB-27-SEA",
-    "CONTROLH-2026-D",
-    "KXZACHARIAOUT-26OCT-26OCT24",
+    "KXNFLGAME-26OCT18NONYG-NYG",
     "KXMLBSPREAD-26OCT161800TBCLE-CLE2",
+    "KXNCAAFGAME-26OCT16UVASMU-SMU",
+    "KXPRESPERSON-28-NHAL",
+    "KXNCAAFTOTAL-26OCT17CINWVU-64",
     "KXPRESNOMD-28-JS",
-    "KXFEDDECISION-26OCT-H0",
-    "KXWTAMATCH-26OCT17KAROST-KAR",
-    "KXNCAAFGAME-26OCT17NDBYU-BYU",
-    "KXMLBAL-26-TB",
-    "KXNCAAFGAME-26OCT16NWMSU-NW",
+    "KXNCAAFTOTAL-26OCT17OSUIND-50",
     "KXBALLONDOR-26-LMES",
-    "KXWTAMATCH-26OCT17KAROST-OST",
-    "KXDPWORLDTOUR-DPWIC26-RMCI",
-    "KXMAYORLA-26-NRAM",
-    "KXODIMATCH-26OCT161930BULRED-RED",
-    "KXATPMATCH-26OCT17ZVEDAV-ZVE",
-    "KXODIMATCH-26OCT161930BULRED-BUL",
-    "KXNFLGAME-26OCT18ARILAR-ARI",
-    "KXWTAMATCH-26OCT16PARVAN-PAR",
-    "KXRAIN-26OCT16-CHI",
-    "KXDPWORLDTOUR-DPWIC26-AMER",
-    "KXBALANCEPOWERCOMBO-27FEB-DD",
-    "KXZACHARIAOUT-26OCT-27JAN01",
-    "KXWTAMATCH-26OCT16KRAKOB-KRA",
-    "KXNCAAFGAME-26OCT16FLATEX-FLA",
-    "KXMLBF5TOTAL-26OCT161800TBCLE-4",
-    "SENATESC-26-D",
-    "KXBTC2026200-27JAN01-200000",
+    "KXNCAAFSPREAD-26OCT17KUKSU-KSU4",
+    "KXNCAAFTOTAL-26OCT17MIZZMISS-59",
+    "KXBTCD-26OCT1717-T81499.99",
     "KXNCAAFSPREAD-26OCT17RUTGMD-MD6",
+    "KXNCAAFSPREAD-26OCT17PITTBC-PITT7",
+    "KXBTCD-26OCT1717-T81999.99",
+    "KXNCAAFGAME-26OCT17NEBORE-NEB",
+    "KXNCAAF1HSPREAD-26OCT17OSUIND-OSU2",
+    "KXPRESNOMD-28-MC",
+    "KXMLBAL-26-TB",
     "CONTROLS-2026-R",
-    "KXMLBHR-26OCT161800TBCLE-CLEJRAMREZ11-1",
-    "KXOSCARPIC-27-YOU",
-    "KXBRPRES-26-LULA",
-    "KXRAIN-26OCT16-STL",
-    "KXEPLGAME-26OCT17BRELFC-LFC",
-    "KXNFLGAME-26OCT18CARPHI-CAR",
-    "SENATEMI-26-D",
-    "KXMLBKS-26OCT161800TBCLE-TBNMARTINEZ28-3",
-    "KXLALIGASPREAD-26OCT17RBBBAR-BAR2",
-    "SENATEMN-26-R",
-    "KXDPWORLDTOUR-DPWIC26-ELOP",
-    "KXMLBTOTAL-26OCT161800TBCLE-6",
-    "KXMLBTOTAL-26OCT161800TBCLE-8",
-    "KXDPWORLDTOUR-DPWIC26-TLAW",
-    "KXNCAAFGAME-26OCT16UKOKLA-UK",
-    "KXWTAMATCH-26OCT16KUDSAW-KUD",
-    "SENATEIA-26-D",
-    "KXLOLGAME-26OCT170500WEFOX-WE"
+    "KXMAYORLA-26-NRAM",
+    "KXNCAAFSPREAD-26OCT17GASTJMU-JMU10",
+    "KXNCAAFGAME-26OCT16WISUCLA-UCLA",
+    "KXDPWORLDTOUR-DPWIC26-RMCI",
+    "KXNCAAFTOTAL-26OCT17MSSTLSU-58",
+    "KXNCAAFSPREAD-26OCT17UVASMU-SMU10",
+    "KXNCAAFGAME-26OCT16MIZZMISS-MIZZ",
+    "KXNCAAFGAME-26OCT16CHSOCLEM-CLEM"
   ],
   "events": {
+    "KXNCAAFGAME-26OCT16CHSOCLEM-CHSO": {
+      "title": "Charleston Southern vs Clemson",
+      "series_ticker": "KXNCAAFGAME",
+      "category": "Sports"
+    },
     "KXMLBGAME-26OCT161800TBCLE-TB": {
       "title": "Game 4: Tampa Bay vs Cleveland",
       "series_ticker": "KXMLBGAME",
       "category": "Sports"
     },
-    "KXNCAAFGAME-26OCT16CHSOCLEM-CHSO": {
-      "title": "Charleston Southern vs Clemson",
+    "KXNCAAFGAME-26OCT17OSUIND-OSU": {
+      "title": "Ohio St. vs Indiana",
       "series_ticker": "KXNCAAFGAME",
+      "category": "Sports"
+    },
+    "KXNCAAFSPREAD-26OCT17OSUIND-OSU3": {
+      "title": "Ohio St. vs Indiana: Spread",
+      "series_ticker": "KXNCAAFSPREAD",
       "category": "Sports"
     },
     "KXMLBGAME-26OCT161800TBCLE-CLE": {
@@ -118,14 +128,59 @@
       "series_ticker": "KXMLBGAME",
       "category": "Sports"
     },
+    "KXNCAAFGAME-26OCT16MSSTLSU-MSST": {
+      "title": "Mississippi St. vs LSU",
+      "series_ticker": "KXNCAAFGAME",
+      "category": "Sports"
+    },
+    "KXLIGUE1GAME-26OCT17RCSPSG-PSG": {
+      "title": "Strasbourg Alsace vs PSG",
+      "series_ticker": "KXLIGUE1GAME",
+      "category": "Sports"
+    },
+    "KXNCAAFGAME-26OCT17OSUIND-IND": {
+      "title": "Ohio St. vs Indiana",
+      "series_ticker": "KXNCAAFGAME",
+      "category": "Sports"
+    },
+    "KXNCAAFGAME-26OCT17CITTXAM-CIT": {
+      "title": "The Citadel vs Texas A&M",
+      "series_ticker": "KXNCAAFGAME",
+      "category": "Sports"
+    },
+    "KXLALIGAGAME-26OCT17RBBBAR-BAR": {
+      "title": "Real Betis vs Barcelona",
+      "series_ticker": "KXLALIGAGAME",
+      "category": "Sports"
+    },
+    "KXATPCHALLENGERMATCH-26OCT17BUDMAR-BUD": {
+      "title": "Budkov Kjaer vs Martineau",
+      "series_ticker": "KXATPCHALLENGERMATCH",
+      "category": "Sports"
+    },
     "KXMLBTOTAL-26OCT161800TBCLE-7": {
       "title": "Tampa Bay vs Cleveland: Total Runs",
       "series_ticker": "KXMLBTOTAL",
       "category": "Sports"
     },
-    "KXWTAMATCH-26OCT16ITOGRA-GRA": {
-      "title": "Ito vs Grant",
-      "series_ticker": "KXWTAMATCH",
+    "KXT20MATCH-26OCT170930WIIND-WI": {
+      "title": "India vs West Indies",
+      "series_ticker": "KXT20MATCH",
+      "category": "Sports"
+    },
+    "KXNCAAFSPREAD-26OCT17OSUIND-OSU4": {
+      "title": "Ohio St. vs Indiana: Spread",
+      "series_ticker": "KXNCAAFSPREAD",
+      "category": "Sports"
+    },
+    "KXNCAAFGAME-26OCT16FLATEX-FLA": {
+      "title": "Florida vs Texas",
+      "series_ticker": "KXNCAAFGAME",
+      "category": "Sports"
+    },
+    "KXLALIGAGAME-26OCT17RBBBAR-TIE": {
+      "title": "Real Betis vs Barcelona",
+      "series_ticker": "KXLALIGAGAME",
       "category": "Sports"
     },
     "KXZACHARIAOUT-26OCT-26OCT20": {
@@ -138,29 +193,39 @@
       "series_ticker": "KXNFLGAME",
       "category": "Sports"
     },
+    "KXATPCHALLENGERMATCH-26OCT17BUDMAR-MAR": {
+      "title": "Budkov Kjaer vs Martineau",
+      "series_ticker": "KXATPCHALLENGERMATCH",
+      "category": "Sports"
+    },
+    "KXATPMATCH-26OCT17COPGUE-GUE": {
+      "title": "Coppejans vs Guerrieri",
+      "series_ticker": "KXATPMATCH",
+      "category": "Sports"
+    },
+    "KXT20MATCH-26OCT170930WIIND-IND": {
+      "title": "India vs West Indies",
+      "series_ticker": "KXT20MATCH",
+      "category": "Sports"
+    },
+    "KXNCAAFSPREAD-26OCT17MSSTLSU-LSU17": {
+      "title": "Mississippi St. vs LSU: Spread",
+      "series_ticker": "KXNCAAFSPREAD",
+      "category": "Sports"
+    },
     "CONTROLH-2026-R": {
       "title": "Which party will win the U.S. House?",
       "series_ticker": "CONTROLH",
       "category": "Elections"
     },
-    "KXNCAAFGAME-26OCT17OSUIND-OSU": {
-      "title": "Ohio St. vs Indiana",
-      "series_ticker": "KXNCAAFGAME",
+    "KXATPMATCH-26OCT17COPGUE-COP": {
+      "title": "Coppejans vs Guerrieri",
+      "series_ticker": "KXATPMATCH",
       "category": "Sports"
     },
-    "KXNCAAFGAME-26OCT17CITTXAM-CIT": {
-      "title": "The Citadel vs Texas A&M",
-      "series_ticker": "KXNCAAFGAME",
-      "category": "Sports"
-    },
-    "SENATETX-26-R": {
-      "title": "Texas Senate winner?",
-      "series_ticker": "SENATETX",
-      "category": "Elections"
-    },
-    "KXWTAMATCH-26OCT16ITOGRA-ITO": {
-      "title": "Ito vs Grant",
-      "series_ticker": "KXWTAMATCH",
+    "KXNCAAFSPREAD-26OCT17FLATEX-TEX12": {
+      "title": "Florida vs Texas: Spread",
+      "series_ticker": "KXNCAAFSPREAD",
       "category": "Sports"
     },
     "KXMLBRFI-26OCT161800TBCLE": {
@@ -168,14 +233,14 @@
       "series_ticker": "KXMLBRFI",
       "category": "Sports"
     },
-    "KXNCAAFSPREAD-26OCT17OSUIND-OSU3": {
-      "title": "Ohio St. vs Indiana: Spread",
-      "series_ticker": "KXNCAAFSPREAD",
-      "category": "Sports"
+    "SENATETX-26-R": {
+      "title": "Texas Senate winner?",
+      "series_ticker": "SENATETX",
+      "category": "Elections"
     },
-    "KXMLB-26-MIL": {
-      "title": "Pro Baseball Champion",
-      "series_ticker": "KXMLB",
+    "KXNCAAFGAME-26OCT16MSSTLSU-LSU": {
+      "title": "Mississippi St. vs LSU",
+      "series_ticker": "KXNCAAFGAME",
       "category": "Sports"
     },
     "KXNCAAFSPREAD-26OCT17UNLVAFA-UNLV2": {
@@ -183,89 +248,24 @@
       "series_ticker": "KXNCAAFSPREAD",
       "category": "Sports"
     },
-    "KXBALANCEPOWERCOMBO-27FEB-RR": {
-      "title": "2026 Midterms: Congress Balance of Power?",
-      "series_ticker": "KXBALANCEPOWERCOMBO",
-      "category": "Elections"
-    },
-    "KXMAYORLA-26-KBAS": {
-      "title": "Los Angeles Mayor winner?",
-      "series_ticker": "KXMAYORLA",
-      "category": "Elections"
-    },
-    "KXWTAMATCH-26OCT16KRAKOB-KOB": {
-      "title": "Kraus vs Kobori",
-      "series_ticker": "KXWTAMATCH",
+    "KXNCAAFSPREAD-26OCT17MSSTLSU-LSU18": {
+      "title": "Mississippi St. vs LSU: Spread",
+      "series_ticker": "KXNCAAFSPREAD",
       "category": "Sports"
     },
-    "KXZACHARIAOUT-26OCT-26NOV01": {
-      "title": "Katie Zacharia out as White House Press Secretary?",
-      "series_ticker": "KXZACHARIAOUT",
-      "category": "Politics"
-    },
-    "KXLALIGAGAME-26OCT17RBBBAR-BAR": {
-      "title": "Real Betis vs Barcelona",
-      "series_ticker": "KXLALIGAGAME",
+    "KXODIMATCH-26OCT170130ZIMBAN-ZIM": {
+      "title": "Bangladesh vs Zimbabwe",
+      "series_ticker": "KXODIMATCH",
       "category": "Sports"
     },
-    "KXMMAFIGHT-26OCT16CARMOUBISHOP-BISHOP": {
-      "title": "PFL: Liz Carmouche vs Jena Bishop",
-      "series_ticker": "KXMMAFIGHT",
-      "category": "Sports"
-    },
-    "KXNCAAFGAME-26OCT16MSSTLSU-MSST": {
-      "title": "Mississippi St. vs LSU",
+    "KXNCAAFGAME-26OCT16NWMSU-NW": {
+      "title": "Northwestern vs Michigan St.",
       "series_ticker": "KXNCAAFGAME",
       "category": "Sports"
     },
-    "KXFEDDECISION-26OCT-H25": {
-      "title": "Fed decision in Oct 2026?",
-      "series_ticker": "KXFEDDECISION",
-      "category": "Economics"
-    },
-    "KXGOVCA-26-SHIL": {
-      "title": "California Governor winner? (Person)",
-      "series_ticker": "KXGOVCA",
-      "category": "Elections"
-    },
-    "KXNCAAFGAME-26OCT17OSUIND-IND": {
-      "title": "Ohio St. vs Indiana",
-      "series_ticker": "KXNCAAFGAME",
-      "category": "Sports"
-    },
-    "KXMLB-26-TB": {
-      "title": "Pro Baseball Champion",
-      "series_ticker": "KXMLB",
-      "category": "Sports"
-    },
-    "KXBALANCEPOWERCOMBO-27FEB-RD": {
-      "title": "2026 Midterms: Congress Balance of Power?",
-      "series_ticker": "KXBALANCEPOWERCOMBO",
-      "category": "Elections"
-    },
-    "KXMLBSPREAD-26OCT161800TBCLE-TB2": {
-      "title": "Tampa Bay vs Cleveland: Spread",
-      "series_ticker": "KXMLBSPREAD",
-      "category": "Sports"
-    },
-    "KXZACHARIAOUT-26OCT-26DEC01": {
-      "title": "Katie Zacharia out as White House Press Secretary?",
-      "series_ticker": "KXZACHARIAOUT",
-      "category": "Politics"
-    },
-    "KXEPLGAME-26OCT17EVECFC-CFC": {
-      "title": "Everton vs Chelsea",
-      "series_ticker": "KXEPLGAME",
-      "category": "Sports"
-    },
-    "KXALEAGUEGAME-26OCT17AUCMEL-AUC": {
-      "title": "Auckland vs Melbourne City",
-      "series_ticker": "KXALEAGUEGAME",
-      "category": "Sports"
-    },
-    "KXWTAMATCH-26OCT16DARSAI-SAI": {
-      "title": "Dart vs Saigo",
-      "series_ticker": "KXWTAMATCH",
+    "KXBUNDESLIGAGAME-26OCT17BMURBL-TIE": {
+      "title": "Bayern Munich vs Leipzig",
+      "series_ticker": "KXBUNDESLIGAGAME",
       "category": "Sports"
     },
     "KXSB-27-CAR": {
@@ -273,18 +273,128 @@
       "series_ticker": "KXSB",
       "category": "Sports"
     },
-    "KXWTAMATCH-26OCT16LIUSAW-SAW": {
-      "title": "Liu vs Sawashiro",
-      "series_ticker": "KXWTAMATCH",
+    "KXNCAAFGAME-26OCT17NDBYU-BYU": {
+      "title": "Notre Dame vs BYU",
+      "series_ticker": "KXNCAAFGAME",
       "category": "Sports"
     },
-    "KXEPLGAME-26OCT17MCIIPS-MCI": {
-      "title": "Manchester City vs Ipswich Town",
+    "KXNCAAFTOTAL-26OCT17FAUARMY-56": {
+      "title": "Florida Atlantic vs Army: Total Points",
+      "series_ticker": "KXNCAAFTOTAL",
+      "category": "Sports"
+    },
+    "KXBALANCEPOWERCOMBO-27FEB-RR": {
+      "title": "2026 Midterms: Congress Balance of Power?",
+      "series_ticker": "KXBALANCEPOWERCOMBO",
+      "category": "Elections"
+    },
+    "CONTROLH-2026-D": {
+      "title": "Which party will win the U.S. House?",
+      "series_ticker": "CONTROLH",
+      "category": "Elections"
+    },
+    "KXNCAAFTOTAL-26OCT17OSUIND-51": {
+      "title": "Ohio St. vs Indiana: Total Points",
+      "series_ticker": "KXNCAAFTOTAL",
+      "category": "Sports"
+    },
+    "KXZACHARIAOUT-26OCT-26NOV01": {
+      "title": "Katie Zacharia out as White House Press Secretary?",
+      "series_ticker": "KXZACHARIAOUT",
+      "category": "Politics"
+    },
+    "KXMAYORLA-26-KBAS": {
+      "title": "Los Angeles Mayor winner?",
+      "series_ticker": "KXMAYORLA",
+      "category": "Elections"
+    },
+    "KXWTADOUBLES-26OCT17HUNSINERRPAO-HUNSIN": {
+      "title": "Hunter / Siniakova vs Errani / Paolini",
+      "series_ticker": "KXWTADOUBLES",
+      "category": "Sports"
+    },
+    "KXITFWMATCH-26OCT17SANCIN-SAN": {
+      "title": "Sanchez vs Cinalli",
+      "series_ticker": "KXITFWMATCH",
+      "category": "Sports"
+    },
+    "KXLALIGAGAME-26OCT17RBBBAR-RBB": {
+      "title": "Real Betis vs Barcelona",
+      "series_ticker": "KXLALIGAGAME",
+      "category": "Sports"
+    },
+    "KXWTADOUBLES-26OCT17HUNSINERRPAO-ERRPAO": {
+      "title": "Hunter / Siniakova vs Errani / Paolini",
+      "series_ticker": "KXWTADOUBLES",
+      "category": "Sports"
+    },
+    "KXNCAAFSPREAD-26OCT17OSUIND-OSU7": {
+      "title": "Ohio St. vs Indiana: Spread",
+      "series_ticker": "KXNCAAFSPREAD",
+      "category": "Sports"
+    },
+    "KXNCAAFTOTAL-26OCT17GASTJMU-58": {
+      "title": "Georgia St. vs James Madison: Total Points",
+      "series_ticker": "KXNCAAFTOTAL",
+      "category": "Sports"
+    },
+    "KXNCAAFGAME-26OCT16FLATEX-TEX": {
+      "title": "Florida vs Texas",
+      "series_ticker": "KXNCAAFGAME",
+      "category": "Sports"
+    },
+    "KXMLB-26-MIL": {
+      "title": "Pro Baseball Champion",
+      "series_ticker": "KXMLB",
+      "category": "Sports"
+    },
+    "KXEPLGAME-26OCT17NEWAVL-AVL": {
+      "title": "Newcastle vs Aston Villa",
       "series_ticker": "KXEPLGAME",
       "category": "Sports"
     },
-    "KXNCAAFGAME-26OCT16MSSTLSU-LSU": {
-      "title": "Mississippi St. vs LSU",
+    "KXMLBSPREAD-26OCT161800TBCLE-TB2": {
+      "title": "Tampa Bay vs Cleveland: Spread",
+      "series_ticker": "KXMLBSPREAD",
+      "category": "Sports"
+    },
+    "KXNCAAFSPREAD-26OCT17NWMSU-NW8": {
+      "title": "Northwestern vs Michigan St.: Spread",
+      "series_ticker": "KXNCAAFSPREAD",
+      "category": "Sports"
+    },
+    "KXZACHARIAOUT-26OCT-26DEC01": {
+      "title": "Katie Zacharia out as White House Press Secretary?",
+      "series_ticker": "KXZACHARIAOUT",
+      "category": "Politics"
+    },
+    "KXITFWMATCH-26OCT17SANCIN-CIN": {
+      "title": "Sanchez vs Cinalli",
+      "series_ticker": "KXITFWMATCH",
+      "category": "Sports"
+    },
+    "KXNCAAFGAME-26OCT16UKOKLA-UK": {
+      "title": "Kentucky vs Oklahoma",
+      "series_ticker": "KXNCAAFGAME",
+      "category": "Sports"
+    },
+    "KXLALIGASPREAD-26OCT17RBBBAR-BAR2": {
+      "title": "Real Betis vs Barcelona: Spread",
+      "series_ticker": "KXLALIGASPREAD",
+      "category": "Sports"
+    },
+    "GOVPARTYNY-26-R": {
+      "title": "New York Governor winner?",
+      "series_ticker": "GOVPARTYNY",
+      "category": "Elections"
+    },
+    "KXBALANCEPOWERCOMBO-27FEB-RD": {
+      "title": "2026 Midterms: Congress Balance of Power?",
+      "series_ticker": "KXBALANCEPOWERCOMBO",
+      "category": "Elections"
+    },
+    "KXNCAAFGAME-26OCT16GASTJMU-GAST": {
+      "title": "Georgia St. vs James Madison",
       "series_ticker": "KXNCAAFGAME",
       "category": "Sports"
     },
@@ -293,20 +403,60 @@
       "series_ticker": "KXAAAGASWNJ",
       "category": "Economics"
     },
+    "KXNCAAFGAME-26OCT17FAUARMY-FAU": {
+      "title": "Florida Atlantic vs Army",
+      "series_ticker": "KXNCAAFGAME",
+      "category": "Sports"
+    },
+    "KXODIMATCH-26OCT170130ZIMBAN-BAN": {
+      "title": "Bangladesh vs Zimbabwe",
+      "series_ticker": "KXODIMATCH",
+      "category": "Sports"
+    },
+    "KXNCAAFGAME-26OCT17ALATENN-TENN": {
+      "title": "Alabama vs Tennessee",
+      "series_ticker": "KXNCAAFGAME",
+      "category": "Sports"
+    },
     "KXMLBHR-26OCT161800TBCLE-TBJCAMINERO13-1": {
       "title": "Tampa Bay vs Cleveland: Home Runs",
       "series_ticker": "KXMLBHR",
       "category": "Sports"
     },
-    "GOVPARTYNY-26-R": {
-      "title": "New York Governor winner?",
-      "series_ticker": "GOVPARTYNY",
-      "category": "Elections"
-    },
-    "KXLALIGAGAME-26OCT17ESPATM-ATM": {
-      "title": "Espanyol vs Atletico",
-      "series_ticker": "KXLALIGAGAME",
+    "KXNCAAFSPREAD-26OCT17FLATEX-TEX14": {
+      "title": "Florida vs Texas: Spread",
+      "series_ticker": "KXNCAAFSPREAD",
       "category": "Sports"
+    },
+    "KXMLBF5-26OCT161800TBCLE-TB": {
+      "title": "Tampa Bay vs Cleveland: First 5 Innings",
+      "series_ticker": "KXMLBF5",
+      "category": "Sports"
+    },
+    "KXNCAAFGAME-26OCT17FAUARMY-ARMY": {
+      "title": "Florida Atlantic vs Army",
+      "series_ticker": "KXNCAAFGAME",
+      "category": "Sports"
+    },
+    "KXNCAAFSPREAD-26OCT17NWMSU-NW7": {
+      "title": "Northwestern vs Michigan St.: Spread",
+      "series_ticker": "KXNCAAFSPREAD",
+      "category": "Sports"
+    },
+    "KXNCAAFSPREAD-26OCT17WISUCLA-UCLA3": {
+      "title": "Wisconsin vs UCLA: Spread",
+      "series_ticker": "KXNCAAFSPREAD",
+      "category": "Sports"
+    },
+    "KXMLB-26-TB": {
+      "title": "Pro Baseball Champion",
+      "series_ticker": "KXMLB",
+      "category": "Sports"
+    },
+    "KXZACHARIAOUT-26OCT-26OCT24": {
+      "title": "Katie Zacharia out as White House Press Secretary?",
+      "series_ticker": "KXZACHARIAOUT",
+      "category": "Politics"
     },
     "SENATETX-26-D": {
       "title": "Texas Senate winner?",
@@ -318,69 +468,29 @@
       "series_ticker": "KXNFLGAME",
       "category": "Sports"
     },
-    "KXDPWORLDTOUR-DPWIC26-MSIE": {
-      "title": "DP World India Championship Winner",
-      "series_ticker": "KXDPWORLDTOUR",
+    "KXNFLGAME-26OCT18NONYG-NYG": {
+      "title": "NOLA Saints vs NY Giants",
+      "series_ticker": "KXNFLGAME",
       "category": "Sports"
-    },
-    "KXMLBF5-26OCT161800TBCLE-TB": {
-      "title": "Tampa Bay vs Cleveland: First 5 Innings",
-      "series_ticker": "KXMLBF5",
-      "category": "Sports"
-    },
-    "KXMLB-26-CLE": {
-      "title": "Pro Baseball Champion",
-      "series_ticker": "KXMLB",
-      "category": "Sports"
-    },
-    "KXWTAMATCH-26OCT16KUDSAW-SAW": {
-      "title": "Kudermetova vs Sawangkaew",
-      "series_ticker": "KXWTAMATCH",
-      "category": "Sports"
-    },
-    "KXT20MATCH-26OCT170930WIIND-WI": {
-      "title": "India vs West Indies",
-      "series_ticker": "KXT20MATCH",
-      "category": "Sports"
-    },
-    "KXMMAFIGHT-26OCT16CARMOUBISHOP-CARMOU": {
-      "title": "PFL: Liz Carmouche vs Jena Bishop",
-      "series_ticker": "KXMMAFIGHT",
-      "category": "Sports"
-    },
-    "KXNCAAFTOTAL-26OCT17GASTJMU-58": {
-      "title": "Georgia St. vs James Madison: Total Points",
-      "series_ticker": "KXNCAAFTOTAL",
-      "category": "Sports"
-    },
-    "KXNCAAFSPREAD-26OCT17OSUIND-OSU4": {
-      "title": "Ohio St. vs Indiana: Spread",
-      "series_ticker": "KXNCAAFSPREAD",
-      "category": "Sports"
-    },
-    "SENATEIA-26-R": {
-      "title": "Iowa Senate winner?",
-      "series_ticker": "SENATEIA",
-      "category": "Elections"
-    },
-    "KXSB-27-SEA": {
-      "title": "2027 Pro Football Champion",
-      "series_ticker": "KXSB",
-      "category": "Sports"
-    },
-    "CONTROLH-2026-D": {
-      "title": "Which party will win the U.S. House?",
-      "series_ticker": "CONTROLH",
-      "category": "Elections"
-    },
-    "KXZACHARIAOUT-26OCT-26OCT24": {
-      "title": "Katie Zacharia out as White House Press Secretary?",
-      "series_ticker": "KXZACHARIAOUT",
-      "category": "Politics"
     },
     "KXMLBSPREAD-26OCT161800TBCLE-CLE2": {
       "title": "Tampa Bay vs Cleveland: Spread",
       "series_ticker": "KXMLBSPREAD",
+      "category": "Sports"
+    },
+    "KXNCAAFGAME-26OCT16UVASMU-SMU": {
+      "title": "Virginia vs SMU",
+      "series_ticker": "KXNCAAFGAME",
+      "category": "Sports"
+    },
+    "KXPRESPERSON-28-NHAL": {
+      "title": "2028 U.S. Presidential Election winner?",
+      "series_ticker": "KXPRESPERSON",
+      "category": "Elections"
+    },
+    "KXNCAAFTOTAL-26OCT17CINWVU-64": {
+      "title": "Cincinnati vs West Virginia: Total Points",
+      "series_ticker": "KXNCAAFTOTAL",
       "category": "Sports"
     },
     "KXPRESNOMD-28-JS": {
@@ -388,29 +498,9 @@
       "series_ticker": "KXPRESNOMD",
       "category": "Elections"
     },
-    "KXFEDDECISION-26OCT-H0": {
-      "title": "Fed decision in Oct 2026?",
-      "series_ticker": "KXFEDDECISION",
-      "category": "Economics"
-    },
-    "KXWTAMATCH-26OCT17KAROST-KAR": {
-      "title": "Kartal vs Ostapenko",
-      "series_ticker": "KXWTAMATCH",
-      "category": "Sports"
-    },
-    "KXNCAAFGAME-26OCT17NDBYU-BYU": {
-      "title": "Notre Dame vs BYU",
-      "series_ticker": "KXNCAAFGAME",
-      "category": "Sports"
-    },
-    "KXMLBAL-26-TB": {
-      "title": "American League Champion",
-      "series_ticker": "KXMLBAL",
-      "category": "Sports"
-    },
-    "KXNCAAFGAME-26OCT16NWMSU-NW": {
-      "title": "Northwestern vs Michigan St.",
-      "series_ticker": "KXNCAAFGAME",
+    "KXNCAAFTOTAL-26OCT17OSUIND-50": {
+      "title": "Ohio St. vs Indiana: Total Points",
+      "series_ticker": "KXNCAAFTOTAL",
       "category": "Sports"
     },
     "KXBALLONDOR-26-LMES": {
@@ -418,89 +508,19 @@
       "series_ticker": "KXBALLONDOR",
       "category": "Sports"
     },
-    "KXWTAMATCH-26OCT17KAROST-OST": {
-      "title": "Kartal vs Ostapenko",
-      "series_ticker": "KXWTAMATCH",
+    "KXNCAAFSPREAD-26OCT17KUKSU-KSU4": {
+      "title": "Kansas vs Kansas St.: Spread",
+      "series_ticker": "KXNCAAFSPREAD",
       "category": "Sports"
     },
-    "KXDPWORLDTOUR-DPWIC26-RMCI": {
-      "title": "DP World India Championship Winner",
-      "series_ticker": "KXDPWORLDTOUR",
+    "KXNCAAFTOTAL-26OCT17MIZZMISS-59": {
+      "title": "Missouri vs Ole Miss: Total Points",
+      "series_ticker": "KXNCAAFTOTAL",
       "category": "Sports"
     },
-    "KXMAYORLA-26-NRAM": {
-      "title": "Los Angeles Mayor winner?",
-      "series_ticker": "KXMAYORLA",
-      "category": "Elections"
-    },
-    "KXODIMATCH-26OCT161930BULRED-RED": {
-      "title": "South Australia Redbacks vs Queensland Bulls",
-      "series_ticker": "KXODIMATCH",
-      "category": "Sports"
-    },
-    "KXATPMATCH-26OCT17ZVEDAV-ZVE": {
-      "title": "Zverev vs Davidovich Fokina",
-      "series_ticker": "KXATPMATCH",
-      "category": "Sports"
-    },
-    "KXODIMATCH-26OCT161930BULRED-BUL": {
-      "title": "South Australia Redbacks vs Queensland Bulls",
-      "series_ticker": "KXODIMATCH",
-      "category": "Sports"
-    },
-    "KXNFLGAME-26OCT18ARILAR-ARI": {
-      "title": "ARI Cardinals vs LA Rams",
-      "series_ticker": "KXNFLGAME",
-      "category": "Sports"
-    },
-    "KXWTAMATCH-26OCT16PARVAN-PAR": {
-      "title": "Parks vs Vandromme",
-      "series_ticker": "KXWTAMATCH",
-      "category": "Sports"
-    },
-    "KXRAIN-26OCT16-CHI": {
-      "title": "Where will it rain on Oct 16, 2026?",
-      "series_ticker": "KXRAIN",
-      "category": "Climate and Weather"
-    },
-    "KXDPWORLDTOUR-DPWIC26-AMER": {
-      "title": "DP World India Championship Winner",
-      "series_ticker": "KXDPWORLDTOUR",
-      "category": "Sports"
-    },
-    "KXBALANCEPOWERCOMBO-27FEB-DD": {
-      "title": "2026 Midterms: Congress Balance of Power?",
-      "series_ticker": "KXBALANCEPOWERCOMBO",
-      "category": "Elections"
-    },
-    "KXZACHARIAOUT-26OCT-27JAN01": {
-      "title": "Katie Zacharia out as White House Press Secretary?",
-      "series_ticker": "KXZACHARIAOUT",
-      "category": "Politics"
-    },
-    "KXWTAMATCH-26OCT16KRAKOB-KRA": {
-      "title": "Kraus vs Kobori",
-      "series_ticker": "KXWTAMATCH",
-      "category": "Sports"
-    },
-    "KXNCAAFGAME-26OCT16FLATEX-FLA": {
-      "title": "Florida vs Texas",
-      "series_ticker": "KXNCAAFGAME",
-      "category": "Sports"
-    },
-    "KXMLBF5TOTAL-26OCT161800TBCLE-4": {
-      "title": "Tampa Bay vs Cleveland: First 5 Innings Total",
-      "series_ticker": "KXMLBF5TOTAL",
-      "category": "Sports"
-    },
-    "SENATESC-26-D": {
-      "title": "South Carolina Senate winner?",
-      "series_ticker": "SENATESC",
-      "category": "Elections"
-    },
-    "KXBTC2026200-27JAN01-200000": {
-      "title": "Will Bitcoin be above $200k by 2027?",
-      "series_ticker": "KXBTC2026200",
+    "KXBTCD-26OCT1717-T81499.99": {
+      "title": "BTC price on Oct 17, 2026 at 5pm EDT?",
+      "series_ticker": "KXBTCD",
       "category": "Crypto"
     },
     "KXNCAAFSPREAD-26OCT17RUTGMD-MD6": {
@@ -508,99 +528,79 @@
       "series_ticker": "KXNCAAFSPREAD",
       "category": "Sports"
     },
+    "KXNCAAFSPREAD-26OCT17PITTBC-PITT7": {
+      "title": "Pittsburgh vs Boston College: Spread",
+      "series_ticker": "KXNCAAFSPREAD",
+      "category": "Sports"
+    },
+    "KXBTCD-26OCT1717-T81999.99": {
+      "title": "BTC price on Oct 17, 2026 at 5pm EDT?",
+      "series_ticker": "KXBTCD",
+      "category": "Crypto"
+    },
+    "KXNCAAFGAME-26OCT17NEBORE-NEB": {
+      "title": "Nebraska vs Oregon",
+      "series_ticker": "KXNCAAFGAME",
+      "category": "Sports"
+    },
+    "KXNCAAF1HSPREAD-26OCT17OSUIND-OSU2": {
+      "title": "Ohio St. vs Indiana: 1st Half Spread",
+      "series_ticker": "KXNCAAF1HSPREAD",
+      "category": "Sports"
+    },
+    "KXPRESNOMD-28-MC": {
+      "title": "2028 Democratic presidential nominee",
+      "series_ticker": "KXPRESNOMD",
+      "category": "Elections"
+    },
+    "KXMLBAL-26-TB": {
+      "title": "American League Champion",
+      "series_ticker": "KXMLBAL",
+      "category": "Sports"
+    },
     "CONTROLS-2026-R": {
       "title": "Which party will win the U.S. Senate?",
       "series_ticker": "CONTROLS",
       "category": "Elections"
     },
-    "KXMLBHR-26OCT161800TBCLE-CLEJRAMREZ11-1": {
-      "title": "Tampa Bay vs Cleveland: Home Runs",
-      "series_ticker": "KXMLBHR",
-      "category": "Sports"
-    },
-    "KXOSCARPIC-27-YOU": {
-      "title": "Oscar Winner: Best Picture",
-      "series_ticker": "KXOSCARPIC",
-      "category": "Entertainment"
-    },
-    "KXBRPRES-26-LULA": {
-      "title": "Brazil Presidential election winner?",
-      "series_ticker": "KXBRPRES",
+    "KXMAYORLA-26-NRAM": {
+      "title": "Los Angeles Mayor winner?",
+      "series_ticker": "KXMAYORLA",
       "category": "Elections"
     },
-    "KXRAIN-26OCT16-STL": {
-      "title": "Where will it rain on Oct 16, 2026?",
-      "series_ticker": "KXRAIN",
-      "category": "Climate and Weather"
-    },
-    "KXEPLGAME-26OCT17BRELFC-LFC": {
-      "title": "Brentford vs Liverpool",
-      "series_ticker": "KXEPLGAME",
+    "KXNCAAFSPREAD-26OCT17GASTJMU-JMU10": {
+      "title": "Georgia St. vs James Madison: Spread",
+      "series_ticker": "KXNCAAFSPREAD",
       "category": "Sports"
     },
-    "KXNFLGAME-26OCT18CARPHI-CAR": {
-      "title": "CAR Panthers vs PHI Eagles",
-      "series_ticker": "KXNFLGAME",
-      "category": "Sports"
-    },
-    "SENATEMI-26-D": {
-      "title": "Michigan Senate winner?",
-      "series_ticker": "SENATEMI",
-      "category": "Elections"
-    },
-    "KXMLBKS-26OCT161800TBCLE-TBNMARTINEZ28-3": {
-      "title": "Tampa Bay vs Cleveland: Strikeouts",
-      "series_ticker": "KXMLBKS",
-      "category": "Sports"
-    },
-    "KXLALIGASPREAD-26OCT17RBBBAR-BAR2": {
-      "title": "Real Betis vs Barcelona: Spread",
-      "series_ticker": "KXLALIGASPREAD",
-      "category": "Sports"
-    },
-    "SENATEMN-26-R": {
-      "title": "Minnesota Senate winner?",
-      "series_ticker": "SENATEMN",
-      "category": "Elections"
-    },
-    "KXDPWORLDTOUR-DPWIC26-ELOP": {
-      "title": "DP World India Championship Winner",
-      "series_ticker": "KXDPWORLDTOUR",
-      "category": "Sports"
-    },
-    "KXMLBTOTAL-26OCT161800TBCLE-6": {
-      "title": "Tampa Bay vs Cleveland: Total Runs",
-      "series_ticker": "KXMLBTOTAL",
-      "category": "Sports"
-    },
-    "KXMLBTOTAL-26OCT161800TBCLE-8": {
-      "title": "Tampa Bay vs Cleveland: Total Runs",
-      "series_ticker": "KXMLBTOTAL",
-      "category": "Sports"
-    },
-    "KXDPWORLDTOUR-DPWIC26-TLAW": {
-      "title": "DP World India Championship Winner",
-      "series_ticker": "KXDPWORLDTOUR",
-      "category": "Sports"
-    },
-    "KXNCAAFGAME-26OCT16UKOKLA-UK": {
-      "title": "Kentucky vs Oklahoma",
+    "KXNCAAFGAME-26OCT16WISUCLA-UCLA": {
+      "title": "Wisconsin vs UCLA",
       "series_ticker": "KXNCAAFGAME",
       "category": "Sports"
     },
-    "KXWTAMATCH-26OCT16KUDSAW-KUD": {
-      "title": "Kudermetova vs Sawangkaew",
-      "series_ticker": "KXWTAMATCH",
+    "KXDPWORLDTOUR-DPWIC26-RMCI": {
+      "title": "DP World India Championship Winner",
+      "series_ticker": "KXDPWORLDTOUR",
       "category": "Sports"
     },
-    "SENATEIA-26-D": {
-      "title": "Iowa Senate winner?",
-      "series_ticker": "SENATEIA",
-      "category": "Elections"
+    "KXNCAAFTOTAL-26OCT17MSSTLSU-58": {
+      "title": "Mississippi St. vs LSU: Total Points",
+      "series_ticker": "KXNCAAFTOTAL",
+      "category": "Sports"
     },
-    "KXLOLGAME-26OCT170500WEFOX-WE": {
-      "title": "Team WE vs. BNK FEARX",
-      "series_ticker": "KXLOLGAME",
+    "KXNCAAFSPREAD-26OCT17UVASMU-SMU10": {
+      "title": "Virginia vs SMU: Spread",
+      "series_ticker": "KXNCAAFSPREAD",
+      "category": "Sports"
+    },
+    "KXNCAAFGAME-26OCT16MIZZMISS-MIZZ": {
+      "title": "Missouri vs Ole Miss",
+      "series_ticker": "KXNCAAFGAME",
+      "category": "Sports"
+    },
+    "KXNCAAFGAME-26OCT16CHSOCLEM-CLEM": {
+      "title": "Charleston Southern vs Clemson",
+      "series_ticker": "KXNCAAFGAME",
       "category": "Sports"
     }
   }
