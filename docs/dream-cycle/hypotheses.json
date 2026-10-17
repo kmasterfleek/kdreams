@@ -7,7 +7,15 @@
     "text": "Given Polymarket markets with a 1c spread and mid price between 0.2 and 0.8 (to avoid binary extremes), when we simulate a limit order at the best bid for 1 contract and record whether it is filled within the next 4 ticks (using continuous Level 2 snapshots), then the observed fill rate should be >0% vs the 0% rate from prior 15-min snapshots, subject to queue position risk and the fact that the earlier proxy used only top-of-book.",
     "frozenAt": "2026-10-14T19:13Z",
     "status": "open",
-    "retests": []
+    "retests": [
+      {
+        "date": "2026-10-17",
+        "ticks": 59,
+        "verdict": "INCONCLUSIVE",
+        "by": "model",
+        "note": "post-freeze fill was 14% using a top-of-book proxy, not the proposed continuous Level 2 test."
+      }
+    ]
   },
   {
     "id": "2026-10-15",
@@ -17,7 +25,15 @@
     "text": "Given Polymarket markets with mid-price > 0.10 and spread = 1c, when placing a limit order at the best bid during UTC 5h–10h, then the net profit per attempt should exceed 0.8c vs the baseline of -0.674c, subject to the 0c maker fee invariant and no queue position guarantee.",
     "frozenAt": "2026-10-15T10:10Z",
     "status": "open",
-    "retests": []
+    "retests": [
+      {
+        "date": "2026-10-17",
+        "ticks": 54,
+        "verdict": "INCONCLUSIVE",
+        "by": "model",
+        "note": "post-freeze net was -0.709c/attempt overall, not for the specified bid, spread, mid-price, and UTC-window subset."
+      }
+    ]
   },
   {
     "id": "2026-10-16",
@@ -26,6 +42,24 @@
     "issue": "#9",
     "text": "Given high-volume Polymarket binary events with median 1c spread and mid-prices between 0.1 and 0.9, when placing a maker bid at the touch price (bid side), then the round-trip fill rate should exceed 15% (vs current 9% baseline) during UTC 5h–9h windows, subject to the invariant that total fees remain below 1c per contract filled.",
     "frozenAt": "2026-10-16T09:38Z",
+    "status": "open",
+    "retests": [
+      {
+        "date": "2026-10-17",
+        "ticks": 48,
+        "verdict": "INCONCLUSIVE",
+        "by": "model",
+        "note": "post-freeze maker fill was 14% overall; the specified UTC window, market subset, and round-trip fill metric were not reported."
+      }
+    ]
+  },
+  {
+    "id": "2026-10-17",
+    "date": "2026-10-17",
+    "deep": "liquidity-by-hour",
+    "issue": "#11",
+    "text": "Given two-sided Polymarket markets observed during UTC 8h–10h, when filtering snapshots to those hours, then the one-tick share should remain above the 93% overall baseline, subject to the invariant that this spread metric implies neither a fill nor net profit after fees.",
+    "frozenAt": "2026-10-17T10:45Z",
     "status": "open",
     "retests": []
   }
