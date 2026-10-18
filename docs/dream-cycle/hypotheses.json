@@ -22,7 +22,8 @@
         "by": "model",
         "note": "post-freeze fill is 15% under a top-of-book proxy; the proposed continuous Level 2 fill metric is not measured."
       }
-    ]
+    ],
+    "specNote": "needs continuous Level 2 snapshots; the collector records top-of-book only"
   },
   {
     "id": "2026-10-15",
@@ -47,7 +48,21 @@
         "by": "model",
         "note": "post-freeze net is -1.037c/attempt overall, not for the specified mid-price, spread, and UTC-hour subset."
       }
-    ]
+    ],
+    "spec": {
+      "metric": "maker.netCentsPerAttempt",
+      "venue": "pm",
+      "slice": {
+        "hoursUtc": [
+          5,
+          10
+        ],
+        "midMin": 0.1
+      },
+      "op": ">",
+      "threshold": 0.8
+    },
+    "specSource": "hand-translated 2026-10-18 from the frozen text; thresholds and slices taken verbatim"
   },
   {
     "id": "2026-10-16",
@@ -72,7 +87,22 @@
         "by": "model",
         "note": "post-freeze round-trip rate is 20% overall, but the specified UTC 5h–9h, high-volume subset is not measured."
       }
-    ]
+    ],
+    "spec": {
+      "metric": "maker.roundTripRate",
+      "venue": "pm",
+      "slice": {
+        "hoursUtc": [
+          5,
+          9
+        ],
+        "midMin": 0.1,
+        "midMax": 0.9
+      },
+      "op": ">",
+      "threshold": 0.15
+    },
+    "specSource": "hand-translated 2026-10-18 from the frozen text; thresholds and slices taken verbatim (\"high-volume\" dropped: every watched market is already top-100 by volume)"
   },
   {
     "id": "2026-10-17",
@@ -90,7 +120,20 @@
         "by": "rule",
         "note": "only 46 post-freeze ticks (< 48)"
       }
-    ]
+    ],
+    "spec": {
+      "metric": "spread.fracOneCent",
+      "venue": "pm",
+      "slice": {
+        "hoursUtc": [
+          8,
+          10
+        ]
+      },
+      "op": ">",
+      "threshold": 0.93
+    },
+    "specSource": "hand-translated 2026-10-18 from the frozen text; thresholds and slices taken verbatim"
   },
   {
     "id": "2026-10-18",
@@ -100,6 +143,7 @@
     "text": "Given the configured cross-venue control-of-House pairs, when observing synchronized quote updates at finer-than-15-minute cadence, then the >2c divergence rate should be >0% vs the recorded 0% baseline, subject to a both-sides net-positive-after-fees invariant.",
     "frozenAt": "2026-10-18T08:45Z",
     "status": "open",
-    "retests": []
+    "retests": [],
+    "specNote": "needs finer-than-15-minute cadence; the collector records every 15 minutes"
   }
 ]

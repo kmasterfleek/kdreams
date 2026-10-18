@@ -5,10 +5,10 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { bestOfBook, mapPolymarket, mapKalshi, isPlainBinary, round } from './kdreams-collect.mjs';
 import {
-  parseRows, groupSeries, spreadStats, makerSpreadProxy, sumProxies, crossVenue, byBucket, candidates, feeTable, quantile, corr, medianGapMinutes, mid,
+  parseRows, groupSeries, spreadStats, makerSpreadProxy, sumProxies, crossVenue, byBucket, candidates, feeTable, quantile, corr, medianGapMinutes, mid, sliceFilter,
 } from './lib/kdreams-metrics.mjs';
-import { computeReport, renderSummary, renderMarkdown } from './kdreams-backtest.mjs';
-import { priorNightFates, reasoningFor, extractHypothesis, parseRetests, planRetests, fatesSummary, cell } from './kdreams-nightly.mjs';
+import { computeReport, renderSummary, renderMarkdown, validateSpec, measureSpecRows, gradeSpec, describeSpec } from './kdreams-backtest.mjs';
+import { priorNightFates, reasoningFor, extractHypothesis, extractSpec, specInstructions, planRetests, fatesSummary, cell } from './kdreams-nightly.mjs';
 
 test('nightly: importing the module never runs the pipeline, and helpers behave', () => {
   // Importing above must not have filed anything or touched the ledger: the guard is the test.
@@ -29,9 +29,10 @@ test('nightly: importing the module never runs the pipeline, and helpers behave'
 test('nightly: hypothesis extraction, re-test parsing, planning and ledger summary', () => {
   assert.equal(extractHypothesis('## Hypothesis\n**Given A, when B, then C.**\n## Next'), 'Given A, when B, then C.');
   assert.equal(extractHypothesis('no hypothesis here'), null);
-  const grades = parseRetests('## Re-tests\n- H 2026-10-14: REFUTED — fill 2% vs >15%\n**H 2026-10-15**: inconclusive - metric not measured\nH 2026-10-14: SUPPORTED dup ignored');
-  assert.deepEqual(grades.get('2026-10-14'), { verdict: 'REFUTED', note: 'fill 2% vs >15%' });
-  assert.equal(grades.get('2026-10-15').verdict, 'INCONCLUSIVE');
+  assert.deepEqual(extractSpec('## Hypothesis spec\n```json\n{"metric": "maker.fillRate", "venue": "pm", "op": ">", "threshold": 0.2}\n```'), { metric: 'maker.fillRate', venue: 'pm', op: '>', threshold: 0.2 });
+  assert.equal(extractSpec('```json\n{not json}\n```'), null);
+  assert.equal(extractSpec('no block'), null);
+  assert.match(specInstructions([{ name: 'house-r' }]), /maker\.netCentsPerAttempt[\s\S]*Configured pair names: house-r/);
   assert.equal(cell('a | b\n c'), 'a / b c');
   const hyps = [
     { id: '2026-09-01', date: '2026-09-01', frozenAt: '2026-09-01T10:00Z', status: 'open' },
@@ -184,4 +185,41 @@ test('backtest: computeReport over a temp data dir and renders', () => {
   assert.match(renderSummary(after), new RegExp(`after ${T(6)}`));
   const empty = computeReport({ dataDir: join(dir, 'nope'), watchlist: {}, days: 14 });
   assert.equal(empty.generatedFrom.rows, 0); assert.match(renderSummary(empty), /no pairs configured/);
+});
+
+test('specs: validation, slicing, measurement and grading are arithmetic, not judgment', () => {
+  const pairs = [{ name: 'p1', polymarketId: 'c1', kalshiTicker: 'KX-1' }];
+  assert.equal(validateSpec({ metric: 'maker.fillRate', venue: 'pm', op: '>', threshold: 0.1 }, pairs), null);
+  assert.match(validateSpec({ metric: 'volume.tier', venue: 'pm', op: '>', threshold: 1 }, pairs), /unknown metric/);
+  assert.match(validateSpec({ metric: 'maker.fillRate', op: '>', threshold: 1 }, pairs), /needs venue/);
+  assert.match(validateSpec({ metric: 'pair.meanAbsCents', pair: 'nope', op: '<', threshold: 1 }, pairs), /configured pair/);
+  assert.match(validateSpec({ metric: 'maker.fillRate', venue: 'pm', op: '>=', threshold: 1 }, pairs), /op must/);
+  assert.match(validateSpec({ metric: 'maker.fillRate', venue: 'pm', op: '>', threshold: 1, slice: { hoursUtc: [5, 5] } }, pairs), /hoursUtc/);
+  assert.match(validateSpec({ metric: 'maker.fillRate', venue: 'pm', op: '>', threshold: 1, slice: { volume: 1 } }, pairs), /unknown slice key/);
+  assert.equal(validateSpec(null), 'no spec');
+
+  // Hour windows are [from, to) and wrap past midnight.
+  const at = (h) => ({ ...pm(0, 0.5, 0.51), t: `2026-10-14T${String(h).padStart(2, '0')}:00Z` });
+  assert.deepEqual([4, 5, 9, 10].map((h) => sliceFilter({ hoursUtc: [5, 10] })(at(h))), [false, true, true, false]);
+  assert.deepEqual([21, 22, 3, 4].map((h) => sliceFilter({ hoursUtc: [22, 4] })(at(h))), [false, true, true, false]);
+  assert.equal(sliceFilter({ midMin: 0.6 })(at(5)), false);
+
+  // Measurement: spread and maker metrics on a venue, divergence on a pair.
+  const rows = [];
+  for (let i = 0; i < 10; i++) { rows.push(pm(i, 0.5, 0.51)); rows.push(ks(i, 0.52, 0.53)); }
+  const wl = { pairs, fees: {}, backtest: { horizonTicks: 4 } };
+  assert.deepEqual(measureSpecRows(rows, { metric: 'spread.fracOneCent', venue: 'pm' }, wl), { value: 1, n: 10 });
+  assert.deepEqual(measureSpecRows(rows, { metric: 'spread.fracOneCent', venue: 'pm', slice: { midMin: 0.6 } }, wl), { value: null, n: 0 });
+  assert.deepEqual(measureSpecRows(rows, { metric: 'pair.meanAbsCents', pair: 'p1' }, wl), { value: 2, n: 10 });
+  const maker = measureSpecRows(rows, { metric: 'maker.fillRate', venue: 'pm' }, wl);
+  assert.equal(maker.n, 9); assert.equal(maker.value, 0);
+
+  // Grading: below the sample floor stays INCONCLUSIVE; at or above it the threshold decides.
+  const spec = { metric: 'maker.fillRate', venue: 'pm', op: '>', threshold: 0.2, minN: 50 };
+  assert.equal(gradeSpec(spec, { value: 0.5, n: 120 }, 100).verdict, 'SUPPORTED');
+  assert.equal(gradeSpec(spec, { value: 0.1, n: 120 }, 100).verdict, 'REFUTED');
+  assert.equal(gradeSpec(spec, { value: 0.5, n: 99 }, 100).verdict, 'INCONCLUSIVE');
+  assert.equal(gradeSpec({ ...spec, minN: 500 }, { value: 0.5, n: 120 }, 100).verdict, 'INCONCLUSIVE');
+  assert.equal(gradeSpec(spec, { value: null, n: 0 }, 100).verdict, 'INCONCLUSIVE');
+  assert.equal(describeSpec({ ...spec, slice: { hoursUtc: [5, 10] } }), 'maker.fillRate > 0.2 (venue pm, UTC 5h-10h, n>=50)');
 });

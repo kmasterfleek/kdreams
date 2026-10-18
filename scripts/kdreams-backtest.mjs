@@ -12,7 +12,7 @@ import { readFileSync, readdirSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import {
-  parseRows, groupSeries, spreadStats, makerSpreadProxy, sumProxies, crossVenue, byBucket, candidates, feeTable, mid, round, medianGapMinutes,
+  parseRows, groupSeries, spreadStats, makerSpreadProxy, sumProxies, crossVenue, byBucket, candidates, feeTable, mid, round, medianGapMinutes, sliceFilter,
 } from './lib/kdreams-metrics.mjs';
 
 function loadJson(path, fallback) {
@@ -68,6 +68,88 @@ export function computeReport({ dataDir = 'data', watchlist = {}, days = 14, sin
     feeTable: feeTable(fees),
     topMarkets: { pm: topMarkets('pm'), ks: topMarkets('ks') },
   };
+}
+
+// ---------------------------------------------------------------------------
+// Gradeable hypotheses. A spec names one number this evaluator computes, the
+// slice it is computed on, and a threshold, so a re-test is arithmetic on
+// post-freeze rows rather than a judgment call.
+
+/** Metrics a hypothesis spec may name: kind says whether it needs `venue` or `pair`; n is what counts as the sample. */
+export const SPEC_METRICS = {
+  'spread.fracOneCent': { kind: 'venue', n: 'two-sided rows', unit: 'share 0..1 of two-sided rows at a one-tick spread' },
+  'spread.medianCents': { kind: 'venue', n: 'two-sided rows', unit: 'cents' },
+  'maker.fillRate': { kind: 'venue', n: 'attempts', unit: 'share 0..1 of maker-proxy attempts that filled' },
+  'maker.roundTripRate': { kind: 'venue', n: 'fills', unit: 'share 0..1 of fills that exited one tick higher' },
+  'maker.netCentsPerAttempt': { kind: 'venue', n: 'attempts', unit: 'cents per maker-proxy attempt after maker fees and marks' },
+  'pair.meanAbsCents': { kind: 'pair', n: 'aligned snapshots', unit: 'cents of mean |mid difference|' },
+  'pair.fracAbsGt2c': { kind: 'pair', n: 'aligned snapshots', unit: 'share 0..1 of aligned snapshots more than 2c apart' },
+  'pair.bothSidesFracNetPositive': { kind: 'pair', n: 'both-sides checks', unit: 'share 0..1 of buy-both-sides checks net positive after taker fees' },
+};
+
+/** Why a spec cannot be graded, or null when it can. */
+export function validateSpec(spec, pairs = []) {
+  if (!spec || typeof spec !== 'object') return 'no spec';
+  const m = SPEC_METRICS[spec.metric];
+  if (!m) return `unknown metric "${spec.metric}"`;
+  if (m.kind === 'venue' && !['pm', 'ks'].includes(spec.venue)) return `${spec.metric} needs venue "pm" or "ks"`;
+  if (m.kind === 'pair' && !pairs.some((p) => p.name === spec.pair)) return `${spec.metric} needs a configured pair name (${pairs.map((p) => p.name).join(', ') || 'none configured'})`;
+  if (!['>', '<'].includes(spec.op)) return 'op must be ">" or "<"';
+  if (!Number.isFinite(spec.threshold)) return 'threshold must be a number';
+  const sl = spec.slice || {};
+  for (const k of Object.keys(sl)) if (!['hoursUtc', 'midMin', 'midMax'].includes(k)) return `unknown slice key "${k}"`;
+  if (sl.hoursUtc !== undefined && !(Array.isArray(sl.hoursUtc) && sl.hoursUtc.length === 2 && sl.hoursUtc.every((x) => Number.isInteger(x) && x >= 0 && x <= 24) && sl.hoursUtc[0] !== sl.hoursUtc[1])) return 'slice.hoursUtc must be [from, to] whole UTC hours, from != to';
+  for (const k of ['midMin', 'midMax']) if (sl[k] !== undefined && !(Number.isFinite(sl[k]) && sl[k] >= 0 && sl[k] <= 1)) return `slice.${k} must be within 0..1`;
+  if (spec.minN !== undefined && !(Number.isInteger(spec.minN) && spec.minN > 0)) return 'minN must be a positive integer';
+  return null;
+}
+
+/** The spec's metric and sample size over `rows`. Assumes validateSpec passed. */
+export function measureSpecRows(rows, spec, watchlist = {}) {
+  const def = SPEC_METRICS[spec.metric];
+  const keep = sliceFilter(spec.slice || {});
+  const fees = watchlist.fees || {};
+  const field = spec.metric.split('.')[1];
+  if (def.kind === 'pair') {
+    const p = (watchlist.pairs || []).find((x) => x.name === spec.pair);
+    const series = groupSeries(rows);
+    const cv = crossVenue((series.get(`pm:${p.polymarketId}`) || []).filter(keep), (series.get(`ks:${p.kalshiTicker}`) || []).filter(keep), fees);
+    if (field === 'bothSidesFracNetPositive') return { value: cv.bothSides.fracNetPositive, n: cv.bothSides.checks };
+    return { value: cv[field], n: cv.n };
+  }
+  const venueRows = rows.filter((r) => r.v === spec.venue);
+  if (spec.metric.startsWith('spread.')) {
+    const st = spreadStats(venueRows.filter(keep));
+    return { value: st[field], n: st.twoSided };
+  }
+  const bt = watchlist.backtest || {};
+  const makerFeeRate = spec.venue === 'pm' ? (fees.polymarketMakerRate ?? 0) : (fees.kalshiMakerRate ?? 0.0175);
+  const sum = sumProxies([...groupSeries(venueRows).values()].map((s) => makerSpreadProxy(s, {
+    horizon: bt.horizonTicks ?? 4, horizonMinutes: bt.horizonMinutes ?? null, tick: 0.01, makerFeeRate, entryFilter: keep,
+  })));
+  return { value: sum[field], n: field === 'roundTripRate' ? sum.fills : sum.attempts };
+}
+
+export function measureSpec({ dataDir = 'data', watchlist = {}, days = 14, since = null, spec }) {
+  return measureSpecRows(loadRows(dataDir, days, since).rows, spec, watchlist);
+}
+
+/** SUPPORTED / REFUTED once the sample reaches max(spec.minN, floor); INCONCLUSIVE below it. */
+export function gradeSpec(spec, { value, n }, floor = 100) {
+  const need = Math.max(spec.minN ?? 0, floor);
+  if (value === null || value === undefined) return { verdict: 'INCONCLUSIVE', note: `${spec.metric} not measurable on post-freeze data (n=${n})` };
+  if (n < need) return { verdict: 'INCONCLUSIVE', note: `${spec.metric} = ${value} on n=${n}, below the n>=${need} needed` };
+  const holds = spec.op === '>' ? value > spec.threshold : value < spec.threshold;
+  return { verdict: holds ? 'SUPPORTED' : 'REFUTED', note: `${spec.metric} = ${value} vs ${spec.op} ${spec.threshold} on n=${n}` };
+}
+
+/** One line naming exactly what a spec measures. */
+export function describeSpec(spec) {
+  const sl = spec.slice || {};
+  const parts = [spec.venue ? `venue ${spec.venue}` : `pair ${spec.pair}`];
+  if (sl.hoursUtc) parts.push(`UTC ${sl.hoursUtc[0]}h-${sl.hoursUtc[1]}h`);
+  if (sl.midMin !== undefined || sl.midMax !== undefined) parts.push(`mid ${sl.midMin ?? 0}..${sl.midMax ?? 1}`);
+  return `${spec.metric} ${spec.op} ${spec.threshold} (${parts.join(', ')}${spec.minN ? `, n>=${spec.minN}` : ''})`;
 }
 
 function pct(x) { return x === null || x === undefined ? 'n/a' : `${Math.round(x * 100)}%`; }

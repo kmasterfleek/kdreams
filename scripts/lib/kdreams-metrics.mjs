@@ -113,7 +113,7 @@ export function medianGapMinutes(ticks) {
  * `horizon` snapshots. An attempt with no later snapshot inside the window is
  * unobservable: it is counted in `unobserved`, not in `attempts`.
  */
-export function makerSpreadProxy(series, { horizon = 4, horizonMinutes = null, tick = 0.01, makerFeeRate = 0 } = {}) {
+export function makerSpreadProxy(series, { horizon = 4, horizonMinutes = null, tick = 0.01, makerFeeRate = 0, entryFilter = null } = {}) {
   let attempts = 0, unobserved = 0, fills = 0, roundTrips = 0, mtmCents = 0, feeCents = 0;
   const n = series.length;
   // Last index still inside the horizon that starts at index `from`.
@@ -126,6 +126,7 @@ export function makerSpreadProxy(series, { horizon = 4, horizonMinutes = null, t
   for (let i = 0; i < n; i++) {
     const p = series[i];
     if (!twoSided(p) || p.a - p.b > tick + EPS) continue;
+    if (entryFilter && !entryFilter(p)) continue;
     const fillEnd = lastInside(i);
     if (fillEnd <= i) { unobserved++; continue; }
     attempts++;
@@ -273,4 +274,25 @@ export function feeTable(fees = {}) {
     ksTaker: round(takerFeeCents(ksT, p)), ksMaker: round(takerFeeCents(ksM, p)),
     oneCentMakerRoundTripNet: { polymarket: round(1 - 2 * takerFeeCents(pmM, p)), kalshi: round(1 - 2 * takerFeeCents(ksM, p)) },
   }));
+}
+
+/**
+ * Row predicate for a hypothesis slice: { hoursUtc: [from, to], midMin, midMax }.
+ * hoursUtc keeps rows with from <= UTC hour < to, wrapping past midnight when from > to.
+ * Mid bounds are inclusive and use mid(), so a row without a real quote fails them.
+ */
+export function sliceFilter(slice = {}) {
+  const h = slice.hoursUtc;
+  const hasMid = slice.midMin !== undefined || slice.midMax !== undefined;
+  return (r) => {
+    if (h) {
+      const hour = new Date(r.t).getUTCHours();
+      if (h[0] <= h[1] ? hour < h[0] || hour >= h[1] : hour < h[0] && hour >= h[1]) return false;
+    }
+    if (hasMid) {
+      const m = mid(r);
+      if (m === null || (slice.midMin !== undefined && m < slice.midMin - EPS) || (slice.midMax !== undefined && m > slice.midMax + EPS)) return false;
+    }
+    return true;
+  };
 }

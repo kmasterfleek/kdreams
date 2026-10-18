@@ -17,16 +17,33 @@ one.
 | Job | Cadence | What it does | Cost |
 |---|---|---|---|
 | `kdreams collect` | every 15 min, inside a ~6 h loop | Snapshots top-of-book for the 100 highest-volume markets on each venue plus the pinned pair markets (no keys, no accounts) and commits one NDJSON line per market to `data/snapshots/`. GitHub drops most high-frequency cron runs, so each run loops on the quarter hour for up to 340 minutes and an hourly cron restarts it. | free CI minutes (public repo) |
-| `kdreams nightly` | 09:00 UTC | Runs the backtest over the last 14 days, re-tests still-open frozen hypotheses on post-freeze snapshots, hands the evidence to an OpenRouter model (GPT-6 Sol) for re-test grades, observations and one new hypothesis, files a witnessed issue, and commits the report, one ledger row and `docs/dream-cycle/hypotheses.json` to main. | ~$0.014 / night (~$0.40 / month) on GPT-6 Sol; falls back to Qwen 3.7 flash, then GPT-5 nano |
+| `kdreams nightly` | 09:00 UTC | Runs the backtest over the last 14 days, grades still-open frozen hypotheses on post-freeze snapshots (in code), hands the evidence and those grades to an OpenRouter model (GPT-6 Sol) for observations and one new hypothesis with a machine-readable spec, files a witnessed issue, and commits the report, one ledger row and `docs/dream-cycle/hypotheses.json` to main. | ~$0.014 / night (~$0.40 / month) on GPT-6 Sol; falls back to Qwen 3.7 flash, then GPT-5 nano |
 
 Every night ends in exactly one verdict: **ACCEPT**, **REJECT**, or
 **INCONCLUSIVE**. In this observe-only phase tonight's own row is always INCONCLUSIVE:
 a hypothesis frozen tonight can only be tested on snapshots recorded after it.
-Each later night re-tests it on exactly those snapshots and records the grade
-(SUPPORTED, REFUTED or INCONCLUSIVE) in the ledger's prior-night fates column,
-on the hypothesis's issue, and in `docs/dream-cycle/hypotheses.json`. Below
-`backtest.retestMinTicks` post-freeze ticks (48, about 12 hours at full
-cadence) the grade is a code-enforced INCONCLUSIVE and the model never sees it. The point of the first month is to accumulate those
+Every hypothesis carries a spec: one metric the evaluator computes, a venue
+or a configured pair, an optional slice (UTC hour window, mid-price range) and
+a threshold, for example
+
+```json
+{"metric": "maker.netCentsPerAttempt", "venue": "pm", "slice": {"hoursUtc": [5, 10], "midMin": 0.1}, "op": ">", "threshold": 0.8}
+```
+
+Grading is arithmetic, not model judgment. Each later night computes exactly
+that number on snapshots recorded after the freeze and grades it **SUPPORTED**
+or **REFUTED** once there are `backtest.retestMinTicks` post-freeze ticks (48,
+about 12 hours) and the metric's sample reaches `max(spec.minN,
+backtest.retestMinN)` (at least 100 attempts, rows or checks). Before that it
+stays **INCONCLUSIVE**. A hypothesis whose spec is missing or names something
+the evaluator cannot measure (volume tiers, sub-15-minute cadence, depth beyond
+the touch) is frozen as **UNGRADEABLE** and never graded. Grades land in the
+ledger's prior-night fates column, in `docs/dream-cycle/hypotheses.json`, and
+as a comment on the hypothesis's issue, which is then closed. The model sees
+past grades the next night so it does not re-propose a refuted idea.
+
+A SUPPORTED grade means the stated number held, nothing more: a higher round-
+trip rate can still lose money per attempt. Read the spec, not the sentence. The point of the first month is to accumulate those
 snapshots and sharpen the hypotheses, not to produce trades.
 
 ## Research surfaces (nightly rotation)
@@ -74,9 +91,9 @@ failed before it.
 The scheduled nightly takes its primary model from the repo variable
 `OPENROUTER_MODEL`, currently `openai/gpt-6-sol` (about $2 / $10 per million
 input / output tokens on OpenRouter, roughly 4-7k tokens a night). The cheap
-models stay in the chain only as fallbacks: grading frozen hypotheses
-against post-freeze evidence needs more reasoning than the flash-tier models
-showed (night 3 on Qwen paired a Republican market with a Democratic one).
+models stay in the chain only as fallbacks: proposing a sound, measurable
+hypothesis needs more reasoning than the flash-tier models showed (night 3 on
+Qwen paired a Republican market with a Democratic one).
 If the variable is unset, the script falls back to its built-in default,
 `deepseek/deepseek-v4-flash`. Change the model with
 `gh variable set OPENROUTER_MODEL --body <openrouter-model-id>`.

@@ -1,5 +1,5 @@
 {
-  "$comment": "kdreams observation watchlist. Observe-only: nothing in this repo places orders. pairs[] maps the same real-world event across venues; polymarketId is the Gamma conditionId, kalshiTicker is the Kalshi market ticker. Fee rates are published venue schedules as of 2026-10 and must be re-verified before any edge claim. backtest.horizonMinutes bounds the maker proxy in wall-clock time (snapshots are irregular); retestMinTicks is how many post-freeze ticks a frozen hypothesis needs before it is graded.",
+  "$comment": "kdreams observation watchlist. Observe-only: nothing in this repo places orders. pairs[] maps the same real-world event across venues; polymarketId is the Gamma conditionId, kalshiTicker is the Kalshi market ticker. Fee rates are published venue schedules as of 2026-10 and must be re-verified before any edge claim. backtest.horizonMinutes bounds the maker proxy in wall-clock time (snapshots are irregular); retestMinTicks is how many post-freeze ticks a frozen hypothesis needs before it is graded; retestMinN is the smallest sample a spec metric may be graded on.",
   "polymarket": {
     "topByVolume24h": 100,
     "bookDepthTop": 30,
@@ -41,6 +41,7 @@
     "horizonTicks": 4,
     "horizonMinutes": 60,
     "retestMinTicks": 48,
-    "retestMaxOpen": 5
+    "retestMaxOpen": 5,
+    "retestMinN": 100
   }
 }
