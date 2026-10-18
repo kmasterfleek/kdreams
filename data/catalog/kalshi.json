@@ -57,7 +57,7 @@
   "event": "CONTROLH-2026",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXMLBGAME-26OCT142000MILLAD-LAD": {
   "title": "Game 3: Milwaukee vs Los Angeles D — Los Angeles D",
@@ -105,7 +105,7 @@
   "event": "KXSB-27",
   "category": "Sports",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXWTACHALLENGERMATCH-26OCT14MATMAR-MAT": {
   "title": "Matoula vs Maristany Zuleta de Reales — Martha Matoula",
@@ -213,7 +213,7 @@
   "event": "SENATETX-26",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFGAME-26OCT16CHSOCLEM-CHSO": {
   "title": "Charleston Southern vs Clemson — Charleston Southern",
@@ -417,7 +417,7 @@
   "event": "KXBALANCEPOWERCOMBO-27FEB",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNFLGAME-26OCT15SEADEN-SEA": {
   "title": "SEA Seahawks vs DEN Broncos — Seattle",
@@ -501,7 +501,7 @@
   "event": "CONTROLH-2026",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXMAYORLA-26-KBAS": {
   "title": "Los Angeles Mayor winner? — Karen Bass",
@@ -573,7 +573,7 @@
   "event": "KXMLB-26",
   "category": "Sports",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXATPCHALLENGERMATCH-26OCT14ZEIMIG-MIG": {
   "title": "Zeitune vs Miguel — Luis Guto Miguel",
@@ -789,7 +789,7 @@
   "event": "KXNCAAF-27",
   "category": "Sports",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXMLBAL-26-TB": {
   "title": "American League Champion — Tampa Bay",
@@ -1089,7 +1089,7 @@
   "event": "KXMLB-26",
   "category": "Sports",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFGAME-26OCT14WKUSHSU-WKU": {
   "title": "Western Kentucky vs Sam Houston — Western Kentucky",
@@ -1821,7 +1821,7 @@
   "event": "KXSB-27",
   "category": "Sports",
   "firstSeen": "2026-10-15T05:16Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXWTAMATCH-26OCT14POHSAK-POH": {
   "title": "Pohankova vs Sakkari — Mia Pohankova",
@@ -2049,7 +2049,7 @@
   "event": "KXDPWORLDTOUR-DPWIC26",
   "category": "Sports",
   "firstSeen": "2026-10-15T15:00Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXATPCHALLENGERMATCH-26OCT15BOYGAU-BOY": {
   "title": "Boyer vs Gaubas — Tristan Boyer",
@@ -2385,7 +2385,7 @@
   "event": "KXNFLGAME-26OCT18CARPHI",
   "category": "Sports",
   "firstSeen": "2026-10-15T22:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXITFWMATCH-26OCT14FOJPIK-PIK": {
   "title": "Fojcik vs Pikkaart — Charlotte Pikkaart",
@@ -3177,7 +3177,7 @@
   "event": "KXMLBGAME-26OCT161800TBCLE",
   "category": "Sports",
   "firstSeen": "2026-10-16T04:59Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXBTCD-26OCT1601-T81899.99": {
   "title": "BTC price on Oct 16, 2026 at 1am EDT? — $81,900 or above",
@@ -3417,7 +3417,7 @@
   "event": "KXNCAAFGAME-26OCT17NDBYU",
   "category": "Sports",
   "firstSeen": "2026-10-16T04:59Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNHLTOTAL-26OCT15CGYVGK-6": {
   "title": "Calgary vs Vegas: Total Goals — Over 5.5 goals scored",
@@ -3477,7 +3477,7 @@
   "event": "KXNFLGAME-26OCT18ARILAR",
   "category": "Sports",
   "firstSeen": "2026-10-16T04:59Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXDPWORLDTOUR-DPWIC26-JGUM": {
   "title": "DP World India Championship Winner — Jordan Gumberg",
@@ -3657,7 +3657,7 @@
   "event": "KXMLBGAME-26OCT161800TBCLE",
   "category": "Sports",
   "firstSeen": "2026-10-16T14:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXT20MATCH-26OCT160700ECILIMP-LIMP": {
   "title": "Limpopo Impalas vs Eastern Cape Iinyathi — Limpopo Impalas",
@@ -3837,7 +3837,7 @@
   "event": "SENATEMN-26",
   "category": "Elections",
   "firstSeen": "2026-10-16T14:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXITFWMATCH-26OCT16SANSOU-SOU": {
   "title": "Sanchez vs Souza — Marjorie Souza",
@@ -4629,7 +4629,7 @@
   "event": "KXMLBSPREAD-26OCT161800TBCLE",
   "category": "Sports",
   "firstSeen": "2026-10-17T05:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXEPLGAME-26OCT17EVECFC-CFC": {
   "title": "Everton vs Chelsea — Chelsea",
@@ -4713,7 +4713,7 @@
   "event": "KXMLBHR-26OCT161800TBCLE",
   "category": "Sports",
   "firstSeen": "2026-10-17T05:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXLALIGAGAME-26OCT17ESPATM-ATM": {
   "title": "Espanyol vs Atletico — Atletico",
@@ -4797,7 +4797,7 @@
   "event": "KXMLBSPREAD-26OCT161800TBCLE",
   "category": "Sports",
   "firstSeen": "2026-10-17T05:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXPRESNOMD-28-JS": {
   "title": "2028 Democratic presidential nominee — Josh Shapiro",
@@ -5001,7 +5001,7 @@
   "event": "KXMLBHR-26OCT161800TBCLE",
   "category": "Sports",
   "firstSeen": "2026-10-17T05:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXOSCARPIC-27-YOU": {
   "title": "Oscar Winner: Best Picture — You Can See Everything",
@@ -5625,7 +5625,7 @@
   "event": "KXNCAAFGAME-26OCT17NEBORE",
   "category": "Sports",
   "firstSeen": "2026-10-17T16:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAF1HSPREAD-26OCT17OSUIND-OSU2": {
   "title": "Ohio St. vs Indiana: 1st Half Spread — Ohio St. wins by over 1.5 points",
@@ -5733,7 +5733,7 @@
   "event": "KXNCAAFGAME-26OCT17NDBYU",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFSPREAD-26OCT17NDBYU-ND11": {
   "title": "Notre Dame vs BYU: Spread — Notre Dame wins by over 10.5 points",
@@ -5745,7 +5745,7 @@
   "event": "KXNCAAFSPREAD-26OCT17NDBYU",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNFLSPREAD-26OCT18BUFLV-LV4": {
   "title": "Buffalo vs Las Vegas: Spread — Las Vegas wins by over 3.5 points",
@@ -5757,7 +5757,7 @@
   "event": "KXNFLSPREAD-26OCT18BUFLV",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNFLSPREAD-26OCT18HOUJAC-HOU4": {
   "title": "Houston vs Jacksonville: Spread — Houston wins by over 3.5 points",
@@ -5769,7 +5769,7 @@
   "event": "KXNFLSPREAD-26OCT18HOUJAC",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFGAME-26OCT16UTAHCOLO-COLO": {
   "title": "Utah vs Colorado — Colorado",
@@ -5781,7 +5781,7 @@
   "event": "KXNCAAFGAME-26OCT16UTAHCOLO",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFSPREAD-26OCT17NEBORE-ORE7": {
   "title": "Nebraska vs Oregon: Spread — Oregon wins by over 6.5 points",
@@ -5793,7 +5793,7 @@
   "event": "KXNCAAFSPREAD-26OCT17NEBORE",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXHEISMAN-27-BBAC": {
   "title": "Heisman Trophy Winner — Bear Bachmeier",
@@ -5805,7 +5805,7 @@
   "event": "KXHEISMAN-27",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNFLSPREAD-26OCT18TENIND-TEN4": {
   "title": "Tennessee vs Indianapolis: Spread — Tennessee wins by over 3.5 points",
@@ -5817,7 +5817,7 @@
   "event": "KXNFLSPREAD-26OCT18TENIND",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXMLBGAME-26OCT172000TBCLE-TB": {
   "title": "Game 5: Tampa Bay vs Cleveland — Tampa Bay",
@@ -5829,7 +5829,7 @@
   "event": "KXMLBGAME-26OCT172000TBCLE",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNFLSPREAD-26OCT18PITTB-TB4": {
   "title": "Pittsburgh vs Tampa Bay: Spread — Tampa Bay wins by over 3.5 points",
@@ -5841,7 +5841,7 @@
   "event": "KXNFLSPREAD-26OCT18PITTB",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXLIGAMXGAME-26OCT17CRAJUA-CRA": {
   "title": "Cruz Azul vs Juarez — Cruz Azul",
@@ -5853,7 +5853,7 @@
   "event": "KXLIGAMXGAME-26OCT17CRAJUA",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFSPREAD-26OCT17NDBYU-ND10": {
   "title": "Notre Dame vs BYU: Spread — Notre Dame wins by over 9.5 points",
@@ -5865,7 +5865,7 @@
   "event": "KXNCAAFSPREAD-26OCT17NDBYU",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNFLSPREAD-26OCT18NYJNE-NE15": {
   "title": "New York J vs New England: Spread — New England wins by over 14.5 points",
@@ -5877,7 +5877,7 @@
   "event": "KXNFLSPREAD-26OCT18NYJNE",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNFLSPREAD-26OCT18DALGB-GB8": {
   "title": "Dallas vs Green Bay: Spread — Green Bay wins by over 7.5 points",
@@ -5889,7 +5889,7 @@
   "event": "KXNFLSPREAD-26OCT18DALGB",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXMLSGAME-26OCT17SJNSH-NSH": {
   "title": "San Jose vs Nashville — Nashville",
@@ -5901,7 +5901,7 @@
   "event": "KXMLSGAME-26OCT17SJNSH",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNFLSPREAD-26OCT18BALCLE-CLE4": {
   "title": "Baltimore vs Cleveland: Spread — Cleveland wins by over 3.5 points",
@@ -5913,7 +5913,7 @@
   "event": "KXNFLSPREAD-26OCT18BALCLE",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNHLGAME-26OCT17BOSLA-BOS": {
   "title": "Boston vs Los Angeles — Boston",
@@ -5925,7 +5925,7 @@
   "event": "KXNHLGAME-26OCT17BOSLA",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXBOXING-26OCT17FUNDORHADRIB-HADRIB": {
   "title": "Sebastian Fundora vs Ermal Hadribeaj — Ermal Hadribeaj",
@@ -5937,7 +5937,7 @@
   "event": "KXBOXING-26OCT17FUNDORHADRIB",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXMLBGAME-26OCT172000TBCLE-CLE": {
   "title": "Game 5: Tampa Bay vs Cleveland — Cleveland",
@@ -5949,7 +5949,7 @@
   "event": "KXMLBGAME-26OCT172000TBCLE",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFSPREAD-26OCT17NDBYU-ND7": {
   "title": "Notre Dame vs BYU: Spread — Notre Dame wins by over 6.5 points",
@@ -5961,7 +5961,7 @@
   "event": "KXNCAAFSPREAD-26OCT17NDBYU",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNFLGAME-26OCT18HOUJAC-HOU": {
   "title": "HOU Texans vs JAC Jaguars — Houston",
@@ -5973,19 +5973,19 @@
   "event": "KXNFLGAME-26OCT18HOUJAC",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFGAME-26OCT16NAVYUTSA-NAVY": {
   "title": "Navy vs UTSA — Navy",
   "sub": "Navy",
-  "closeTime": "2026-10-19T00:00:00Z",
+  "closeTime": "2026-10-18T03:39:49Z",
   "tick": 0.01,
   "minSize": 1,
   "series": "KXNCAAFGAME",
   "event": "KXNCAAFGAME-26OCT16NAVYUTSA",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFGAME-26OCT16OHIOSAC-SAC": {
   "title": "Ohio vs Sacramento St. — Sacramento St.",
@@ -5997,7 +5997,7 @@
   "event": "KXNCAAFGAME-26OCT16OHIOSAC",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNHLGAME-26OCT17BOSLA-LA": {
   "title": "Boston vs Los Angeles — Los Angeles",
@@ -6009,7 +6009,7 @@
   "event": "KXNHLGAME-26OCT17BOSLA",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNFLSPREAD-26OCT18CHIATL-CHI8": {
   "title": "Chicago vs Atlanta: Spread — Chicago wins by over 7.5 points",
@@ -6021,7 +6021,7 @@
   "event": "KXNFLSPREAD-26OCT18CHIATL",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAF-27-TENN": {
   "title": "College Football National Championship Winner — Tennessee",
@@ -6033,7 +6033,7 @@
   "event": "KXNCAAF-27",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFSPREAD-26OCT17NDBYU-BYU4": {
   "title": "Notre Dame vs BYU: Spread — BYU wins by over 3.5 points",
@@ -6045,7 +6045,7 @@
   "event": "KXNCAAFSPREAD-26OCT17NDBYU",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFTOTAL-26OCT17NDBYU-48": {
   "title": "Notre Dame vs BYU: Total Points — Over 47.5 points",
@@ -6057,19 +6057,19 @@
   "event": "KXNCAAFTOTAL-26OCT17NDBYU",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFGAME-26OCT16NAVYUTSA-UTSA": {
   "title": "Navy vs UTSA — UTSA",
   "sub": "UTSA",
-  "closeTime": "2026-10-19T00:00:00Z",
+  "closeTime": "2026-10-18T03:39:49Z",
   "tick": 0.01,
   "minSize": 1,
   "series": "KXNCAAFGAME",
   "event": "KXNCAAFGAME-26OCT16NAVYUTSA",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAF-27-UCLA": {
   "title": "College Football National Championship Winner — UCLA",
@@ -6081,7 +6081,7 @@
   "event": "KXNCAAF-27",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFSPREAD-26OCT17NDBYU-ND4": {
   "title": "Notre Dame vs BYU: Spread — Notre Dame wins by over 3.5 points",
@@ -6093,7 +6093,7 @@
   "event": "KXNCAAFSPREAD-26OCT17NDBYU",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXLALIGAGAME-26OCT18RMASEV-SEV": {
   "title": "Real Madrid vs Sevilla — Sevilla",
@@ -6105,7 +6105,7 @@
   "event": "KXLALIGAGAME-26OCT18RMASEV",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFGAME-26OCT16WAKECAL-CAL": {
   "title": "Wake Forest vs California — California",
@@ -6117,7 +6117,7 @@
   "event": "KXNCAAFGAME-26OCT16WAKECAL",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNFLSPREAD-26OCT18CARPHI-PHI4": {
   "title": "Carolina vs Philadelphia: Spread — Philadelphia wins by over 3.5 points",
@@ -6129,7 +6129,7 @@
   "event": "KXNFLSPREAD-26OCT18CARPHI",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAF-27-LSU": {
   "title": "College Football National Championship Winner — LSU",
@@ -6141,7 +6141,7 @@
   "event": "KXNCAAF-27",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXBOXING-26OCT17FUNDORHADRIB-FUNDOR": {
   "title": "Sebastian Fundora vs Ermal Hadribeaj — Sebastian Fundora",
@@ -6153,7 +6153,7 @@
   "event": "KXBOXING-26OCT17FUNDORHADRIB",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNFLSPREAD-26OCT18ARILAR-LAR24": {
   "title": "Arizona vs Los Angeles R: Spread — Los Angeles R wins by over 23.5 points",
@@ -6165,7 +6165,7 @@
   "event": "KXNFLSPREAD-26OCT18ARILAR",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFGAME-26OCT16UNMHAW-HAW": {
   "title": "New Mexico vs Hawai'i — Hawai'i",
@@ -6177,7 +6177,7 @@
   "event": "KXNCAAFGAME-26OCT16UNMHAW",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFGAME-26OCT16UTAHCOLO-UTAH": {
   "title": "Utah vs Colorado — Utah",
@@ -6189,7 +6189,7 @@
   "event": "KXNCAAFGAME-26OCT16UTAHCOLO",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFSPREAD-26OCT17UTAHCOLO-UTAH16": {
   "title": "Utah vs Colorado: Spread — Utah wins by over 15.5 points",
@@ -6201,7 +6201,7 @@
   "event": "KXNCAAFSPREAD-26OCT17UTAHCOLO",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFTOTAL-26OCT17NEBORE-52": {
   "title": "Nebraska vs Oregon: Total Points — Over 51.5 points",
@@ -6213,7 +6213,7 @@
   "event": "KXNCAAFTOTAL-26OCT17NEBORE",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFGAME-26OCT17NEBORE-ORE": {
   "title": "Nebraska vs Oregon — Oregon",
@@ -6225,7 +6225,7 @@
   "event": "KXNCAAFGAME-26OCT17NEBORE",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXEPLGAME-26OCT18NFOARS-ARS": {
   "title": "Nottingham Forest vs Arsenal — Arsenal",
@@ -6237,7 +6237,7 @@
   "event": "KXEPLGAME-26OCT18NFOARS",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXITFMATCH-26OCT17BORDEL-BOR": {
   "title": "Borisiouk vs Dellavedova — Martin Borisiouk",
@@ -6249,7 +6249,7 @@
   "event": "KXITFMATCH-26OCT17BORDEL",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFSPREAD-26OCT17WAKECAL-WAKE11": {
   "title": "Wake Forest vs California: Spread — Wake Forest wins by over 10.5 points",
@@ -6261,7 +6261,7 @@
   "event": "KXNCAAFSPREAD-26OCT17WAKECAL",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAF-27-FLA": {
   "title": "College Football National Championship Winner — Florida",
@@ -6273,7 +6273,7 @@
   "event": "KXNCAAF-27",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNFLGAME-26OCT18HOUJAC-JAC": {
   "title": "HOU Texans vs JAC Jaguars — Jacksonville",
@@ -6285,7 +6285,7 @@
   "event": "KXNFLGAME-26OCT18HOUJAC",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXMLSGAME-26OCT17LAGSD-LAG": {
   "title": "Los Angeles G vs San Diego FC — Los Angeles G",
@@ -6297,7 +6297,7 @@
   "event": "KXMLSGAME-26OCT17LAGSD",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFSPREAD-26OCT17OHIOSAC-OHIO17": {
   "title": "Ohio vs Sacramento St.: Spread — Ohio wins by over 16.5 points",
@@ -6309,7 +6309,7 @@
   "event": "KXNCAAFSPREAD-26OCT17OHIOSAC",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNHLGAME-26OCT17PITVGK-PIT": {
   "title": "Pittsburgh vs Vegas — Pittsburgh",
@@ -6321,7 +6321,7 @@
   "event": "KXNHLGAME-26OCT17PITVGK",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFGAME-26OCT17SJSUUTEP-SJSU": {
   "title": "San Jose St. vs UTEP — San Jose St.",
@@ -6333,7 +6333,7 @@
   "event": "KXNCAAFGAME-26OCT17SJSUUTEP",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXLIGAMXGAME-26OCT17CRAJUA-JUA": {
   "title": "Cruz Azul vs Juarez — Juarez",
@@ -6345,7 +6345,7 @@
   "event": "KXLIGAMXGAME-26OCT17CRAJUA",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXRAIN-26OCT17-PHX": {
   "title": "Where will it rain on Oct 17, 2026? — Phoenix",
@@ -6357,7 +6357,7 @@
   "event": "KXRAIN-26OCT17",
   "category": "Climate and Weather",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAF-27-UGA": {
   "title": "College Football National Championship Winner — Georgia",
@@ -6369,7 +6369,7 @@
   "event": "KXNCAAF-27",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXAAAGASD-26OCT18-4.3050": {
   "title": "US gas prices tomorrow — Above 4.3050",
@@ -6381,7 +6381,7 @@
   "event": "KXAAAGASD-26OCT18",
   "category": "Economics",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXHEISMAN-27-ASIM": {
   "title": "Heisman Trophy Winner — Austin Simmons",
@@ -6393,7 +6393,7 @@
   "event": "KXHEISMAN-27",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFSPREAD-26OCT17NDBYU-ND5": {
   "title": "Notre Dame vs BYU: Spread — Notre Dame wins by over 4.5 points",
@@ -6405,7 +6405,7 @@
   "event": "KXNCAAFSPREAD-26OCT17NDBYU",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFSPREAD-26OCT17UNMHAW-UNM15": {
   "title": "New Mexico vs Hawai'i: Spread — New Mexico wins by over 14.5 points",
@@ -6417,7 +6417,7 @@
   "event": "KXNCAAFSPREAD-26OCT17UNMHAW",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXRAIN-26OCT17-LV": {
   "title": "Where will it rain on Oct 17, 2026? — Las Vegas",
@@ -6429,7 +6429,7 @@
   "event": "KXRAIN-26OCT17",
   "category": "Climate and Weather",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFSPREAD-26OCT17NEBORE-ORE6": {
   "title": "Nebraska vs Oregon: Spread — Oregon wins by over 5.5 points",
@@ -6441,7 +6441,7 @@
   "event": "KXNCAAFSPREAD-26OCT17NEBORE",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXWNBASERIESSPREAD-26ATLGSFIN-ATL4": {
   "title": "Series Game Spread: Atlanta vs Golden State — Atlanta -3.5 games",
@@ -6453,7 +6453,7 @@
   "event": "KXWNBASERIESSPREAD-26ATLGSFIN",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXHEISMAN-27-JSMIT": {
   "title": "Heisman Trophy Winner — Jeremiah Smith",
@@ -6465,7 +6465,7 @@
   "event": "KXHEISMAN-27",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAF-27-OSU": {
   "title": "College Football National Championship Winner — Ohio St.",
@@ -6477,7 +6477,7 @@
   "event": "KXNCAAF-27",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFSPREAD-26OCT17NDBYU-ND12": {
   "title": "Notre Dame vs BYU: Spread — Notre Dame wins by over 11.5 points",
@@ -6489,19 +6489,19 @@
   "event": "KXNCAAFSPREAD-26OCT17NDBYU",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFSPREAD-26OCT17NAVYUTSA-UTSA7": {
   "title": "Navy vs UTSA: Spread — UTSA wins by over 6.5 points",
   "sub": "UTSA wins by over 6.5 points",
-  "closeTime": "2026-10-20T00:00:00Z",
+  "closeTime": "2026-10-18T03:39:46Z",
   "tick": 0.01,
   "minSize": 1,
   "series": "KXNCAAFSPREAD",
   "event": "KXNCAAFSPREAD-26OCT17NAVYUTSA",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFSPREAD-26OCT17UTAHCOLO-UTAH14": {
   "title": "Utah vs Colorado: Spread — Utah wins by over 13.5 points",
@@ -6513,7 +6513,7 @@
   "event": "KXNCAAFSPREAD-26OCT17UTAHCOLO",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAF-27-ALA": {
   "title": "College Football National Championship Winner — Alabama",
@@ -6525,7 +6525,7 @@
   "event": "KXNCAAF-27",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFSPREAD-26OCT17NDBYU-ND3": {
   "title": "Notre Dame vs BYU: Spread — Notre Dame wins by over 2.5 points",
@@ -6537,7 +6537,7 @@
   "event": "KXNCAAFSPREAD-26OCT17NDBYU",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFSPREAD-26OCT17NDBYU-ND8": {
   "title": "Notre Dame vs BYU: Spread — Notre Dame wins by over 7.5 points",
@@ -6549,7 +6549,7 @@
   "event": "KXNCAAFSPREAD-26OCT17NDBYU",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXMLBSPREAD-26OCT161800TBCLE-TB4": {
   "title": "Tampa Bay vs Cleveland: Spread — Tampa Bay wins by over 3.5 runs",
@@ -6561,7 +6561,7 @@
   "event": "KXMLBSPREAD-26OCT161800TBCLE",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXHEISMAN-27-MTONE": {
   "title": "Heisman Trophy Winner — Malachi Toney",
@@ -6573,7 +6573,7 @@
   "event": "KXHEISMAN-27",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXMLSGAME-26OCT17PORCOL-POR": {
   "title": "Portland vs Colorado — Portland",
@@ -6585,7 +6585,7 @@
   "event": "KXMLSGAME-26OCT17PORCOL",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFGAME-26OCT17SJSUUTEP-UTEP": {
   "title": "San Jose St. vs UTEP — UTEP",
@@ -6597,7 +6597,7 @@
   "event": "KXNCAAFGAME-26OCT17SJSUUTEP",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFSPREAD-26OCT17NDBYU-BYU3": {
   "title": "Notre Dame vs BYU: Spread — BYU wins by over 2.5 points",
@@ -6609,7 +6609,7 @@
   "event": "KXNCAAFSPREAD-26OCT17NDBYU",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXMLSGAME-26OCT17SEAMTL-SEA": {
   "title": "Seattle vs Montreal — Seattle",
@@ -6621,7 +6621,7 @@
   "event": "KXMLSGAME-26OCT17SEAMTL",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFSPREAD-26OCT17NDBYU-BYU5": {
   "title": "Notre Dame vs BYU: Spread — BYU wins by over 4.5 points",
@@ -6633,7 +6633,7 @@
   "event": "KXNCAAFSPREAD-26OCT17NDBYU",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNFLTD-26OCT18CARPHI-PHICSTEELE34-1": {
   "title": "Carolina vs Philadelphia: Touchdowns — Carson Steele: 1+",
@@ -6645,7 +6645,7 @@
   "event": "KXNFLTD-26OCT18CARPHI",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXMLSGAME-26OCT17PORCOL-COL": {
   "title": "Portland vs Colorado — Colorado",
@@ -6657,7 +6657,7 @@
   "event": "KXMLSGAME-26OCT17PORCOL",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  },
  "KXNCAAFSPREAD-26OCT17NDBYU-ND2": {
   "title": "Notre Dame vs BYU: Spread — Notre Dame wins by over 1.5 points",
@@ -6669,6 +6669,6 @@
   "event": "KXNCAAFSPREAD-26OCT17NDBYU",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-18T03:30Z"
+  "lastSeen": "2026-10-18T03:45Z"
  }
 }
