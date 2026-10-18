@@ -28,7 +28,7 @@ export function parseRows(text) {
 }
 
 export function mid(r) {
-  if (r.b !== null && r.b !== undefined && r.a !== null && r.a !== undefined) return (r.b + r.a) / 2;
+  if (twoSided(r)) return (r.b + r.a) / 2;
   if (r.last !== null && r.last !== undefined) return r.last;
   return null;
 }
@@ -68,8 +68,9 @@ export function corr(xs, ys) {
   return sxy / Math.sqrt(sxx * syy);
 }
 
+/** A real quote on both sides. Kalshi reports an empty side as bid 0 / ask 1, which is not a quote. */
 function twoSided(r) {
-  return r.b !== null && r.b !== undefined && r.a !== null && r.a !== undefined && r.a >= r.b;
+  return r.b !== null && r.b !== undefined && r.a !== null && r.a !== undefined && r.b > EPS && r.a < 1 - EPS && r.a >= r.b;
 }
 
 /** Spread distribution (cents) + touch size for one series or a flat list of rows. */

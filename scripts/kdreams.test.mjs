@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { bestOfBook, mapPolymarket, mapKalshi, isPlainBinary, round } from './kdreams-collect.mjs';
 import {
-  parseRows, groupSeries, spreadStats, makerSpreadProxy, sumProxies, crossVenue, byBucket, candidates, feeTable, quantile, corr, medianGapMinutes,
+  parseRows, groupSeries, spreadStats, makerSpreadProxy, sumProxies, crossVenue, byBucket, candidates, feeTable, quantile, corr, medianGapMinutes, mid,
 } from './lib/kdreams-metrics.mjs';
 import { computeReport, renderSummary, renderMarkdown } from './kdreams-backtest.mjs';
 import { priorNightFates, reasoningFor, extractHypothesis, parseRetests, planRetests, fatesSummary, cell } from './kdreams-nightly.mjs';
@@ -92,6 +92,10 @@ test('metrics: spreadStats and quantile', () => {
   assert.equal(quantile([1, 2, 3, 4], 0.5), 2.5);
   const s = spreadStats([pm(0, 0.5, 0.51), pm(1, 0.5, 0.52), pm(2, null, 0.5), pm(3, 0.5, 0.51)]);
   assert.equal(s.n, 4); assert.equal(s.twoSided, 3); assert.equal(s.medianCents, 1); assert.equal(s.fracOneCent, 0.667); assert.equal(s.medianBidSize, 1000);
+  // Kalshi reports an empty side as bid 0 / ask 1: not a quote, and no fake 0.50 mid.
+  const e = spreadStats([ks(0, 0, 1), ks(1, 0, 0.02), ks(2, 0.4, 0.41)]);
+  assert.equal(e.twoSided, 1); assert.equal(e.medianCents, 1);
+  assert.equal(mid(ks(0, 0, 1, { last: 0.07 })), 0.07);
 });
 
 test('metrics: makerSpreadProxy fills only when price trades through, round-trips one tick', () => {
