@@ -9002,7 +9002,7 @@
  "KXEPLGAME-26OCT19TOTCOV-COV": {
   "title": "Tottenham vs Coventry — Coventry",
   "sub": "Coventry",
-  "closeTime": "2026-10-21T19:00:00Z",
+  "closeTime": "2026-10-19T21:00:10Z",
   "tick": 0.01,
   "minSize": 1,
   "series": "KXEPLGAME",
@@ -9482,7 +9482,7 @@
  "KXEPLGAME-26OCT19TOTCOV-TOT": {
   "title": "Tottenham vs Coventry — Tottenham",
   "sub": "Tottenham",
-  "closeTime": "2026-10-21T19:00:00Z",
+  "closeTime": "2026-10-19T21:00:10Z",
   "tick": 0.01,
   "minSize": 1,
   "series": "KXEPLGAME",
