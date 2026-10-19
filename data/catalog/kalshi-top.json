@@ -1,241 +1,111 @@
 {
-  "scannedAt": "2026-10-18T20:30Z",
+  "scannedAt": "2026-10-19T02:45Z",
   "tickers": [
-    "KXNFLGAME-26OCT18PITTB-PIT",
-    "KXNFLGAME-26OCT18PITTB-TB",
-    "KXLALIGAGAME-26OCT18RMASEV-SEV",
-    "KXLALIGAGAME-26OCT18RMASEV-RMA",
-    "KXNCAAF-27-BYU",
-    "KXNFLGAME-26OCT18ARILAR-ARI",
-    "KXMLBGAME-26OCT172000TBCLE-TB",
-    "KXLIGUE1GAME-26OCT18OLNIC-OL",
-    "KXNFLSPREAD-26OCT18BUFLV-LV4",
-    "KXNFLGAME-26OCT18LACKC-LAC",
-    "KXNFLGAME-26OCT18BUFLV-LV",
-    "KXSERIEAGAME-26OCT18JUVLAZ-JUV",
-    "KXNFLSPREAD-26OCT18CARPHI-CAR4",
-    "KXSERIEAGAME-26OCT18JUVLAZ-LAZ",
-    "KXHEISMAN-27-BBAC",
-    "KXNFLTOTAL-26OCT18CARPHI-40",
-    "KXNFLSPREAD-26OCT18PITTB-TB4",
-    "KXNFLSPREAD-26OCT18BUFLV-BUF5",
-    "KXMLBGAME-26OCT172000TBCLE-CLE",
-    "KXNFLSPREAD-26OCT18PITTB-PIT3",
-    "KXNFLGAME-26OCT18ARILAR-LAR",
-    "KXNFLSPREAD-26OCT18CARPHI-CAR3",
-    "KXNFLGAME-26OCT18LACKC-KC",
-    "KXNFLSPREAD-26OCT18DALGB-GB8",
-    "KXNFLSPREAD-26OCT18ARILAR-LAR24",
-    "KXNFLGAME-26OCT18BUFLV-BUF",
-    "KXNFLSPREAD-26OCT18LACKC-KC8",
-    "KXNFLGAME-26OCT18DALGB-GB",
-    "KXSB-27-HOU",
-    "KXLALIGAGAME-26OCT18RMASEV-TIE",
-    "KXNFLSPREAD-26OCT18ARILAR-LAR13",
-    "KXLOLGAME-26OCT181400MVKKC-MVK",
-    "KXNFLSPREAD-26OCT18PITTB-TB7",
     "KXNFLGAME-26OCT18DALGB-DAL",
-    "KXNFLTD-26OCT18NONYG-NYGMNABERS1-1",
-    "KXATPCHALLENGERMATCH-26OCT18WOEART-ART",
-    "KXATPCHALLENGERMATCH-26OCT18WOEART-WOE",
-    "KXNCAAF-27-TENN",
-    "KXNCAAF-27-UCLA",
-    "KXNCAAF-27-OSU",
-    "KXSERIEAGAME-26OCT18JUVLAZ-TIE",
-    "KXNFLSPREAD-26OCT18CARPHI-PHI4",
-    "KXBTCD-26OCT1817-T80999.99",
-    "CONTROLH-2026-R",
-    "KXNFLSPREAD-26OCT18NONYG-NYG2",
-    "KXPRESNOMD-28-AELS",
-    "KXNFLSPREAD-26OCT18LACKC-KC7",
-    "KXNCAAF-27-LSU",
-    "KXBALANCEPOWERCOMBO-27FEB-RD",
-    "KXLALIGABTTS-26OCT18RMASEV-BTTS",
-    "KXNFLSPREAD-26OCT18CARPHI-CAR7",
-    "KXCS2GAME-26OCT181100BBFURIA-FURIA",
-    "KXBTCD-26OCT1817-T80749.99",
-    "KXBTCD-26OCT1817-T81249.99",
-    "KXLIGUE1GAME-26OCT18OLNIC-NIC",
-    "KXCS2GAME-26OCT181100BBFURIA-BB",
-    "SENATETX-26-R",
-    "KXNFLTOTAL-26OCT18BUFLV-54",
-    "KXLALIGASPREAD-26OCT18RMASEV-RMA2",
-    "KXBTCD-26OCT1817-T81499.99",
-    "KXLALIGATOTAL-26OCT18RMASEV-4",
-    "KXLALIGATOTAL-26OCT18RMASEV-3",
-    "KXNFLSPREAD-26OCT18BUFLV-BUF6",
-    "KXNFLTD-26OCT18CARPHI-PHICSTEELE34-1",
-    "KXNFLSPREAD-26OCT18CARPHI-CAR2",
-    "KXNFLTOTAL-26OCT18LACKC-42",
-    "KXITFWMATCH-26OCT18PENMAX-PEN",
-    "KXNFLAFCSOUTH-27-HOU",
-    "KXMLBSPREAD-26OCT172000TBCLE-TB2",
-    "KXNFLSPREAD-26OCT18NONYG-NYG4",
-    "KXNFLTD-26OCT18BUFLV-BUFKCOLEMAN0-1",
-    "KXMLB-26-MIL",
-    "KXNFLAFCSOUTH-27-JAC",
-    "KXNFLSPREAD-26OCT18ARILAR-ARI8",
-    "KXUCLGAME-26OCT20PSGBAR-BAR",
-    "KXHEISMAN-27-MTONE",
-    "KXLALIGATOTAL-26OCT18RMASEV-2",
-    "KXNFLSPREAD-26OCT18PITTB-PIT4",
-    "KXNFLSPREAD-26OCT18NONYG-NO2",
-    "KXNFLSPREAD-26OCT18CARPHI-CAR6",
+    "KXNFLGAME-26OCT18DALGB-GB",
+    "KXNFLTOTAL-26OCT18DALGB-54",
+    "KXLIGAMXGAME-26OCT18MONPAC-PAC",
+    "KXLIGAMXGAME-26OCT18MONPAC-MON",
+    "KXNFLSPREAD-26OCT18DALGB-DAL2",
+    "KXNCAAF-27-BYU",
+    "KXSB-27-LAR",
+    "KXNFLTOTAL-26OCT18DALGB-55",
     "KXNFLSPREAD-26OCT18DALGB-GB2",
-    "KXWNBASERIESSPREAD-26ATLGSFIN-ATL4",
-    "KXMLBRFI-26OCT172000TBCLE",
-    "KXNFLTD-26OCT18BUFLV-BUFJCOOK4-1",
+    "KXNFLTD-26OCT18DALGB-GBCWATSON9-1",
+    "KXNFLSPREAD-26OCT18DALGB-GB14",
+    "KXNFLSPREAD-26OCT18DALGB-GB8",
+    "KXNFLTD-26OCT18DALGB-DALCLAMB88-1",
+    "KXNFLSPREAD-26OCT18DALGB-GB7",
+    "KXNFLSPREAD-26OCT18DALGB-GB4",
+    "KXPRESNOMD-28-AELS",
+    "KXNFLSPREAD-26OCT18DALGB-GB3",
+    "KXNFLTOTAL-26OCT18DALGB-47",
+    "KXNFLGAME-26OCT19WASSF-WAS",
+    "KXNFLTOTAL-26OCT18DALGB-53",
     "KXNFLTD-26OCT18DALGB-DALJFERGUSON87-1",
-    "KXNFLTOTAL-26OCT18PITTB-39",
-    "KXNFLSPREAD-26OCT18CARPHI-CAR5",
-    "KXBRASILEIROGAME-26OCT18FLUSAN-SAN",
-    "KXNFLRSHYDS-26OCT18CARPHI-CARCHUBBARD30-70",
-    "KXNFLTD-26OCT18CHIATL-ATLDLONDON5-1",
+    "KXLIGAMXGAME-26OCT18MONPAC-TIE",
+    "KXSB-27-HOU",
     "KXSB-27-GB",
-    "KXMLBTOTAL-26OCT172000TBCLE-8",
-    "KXNFLTD-26OCT18LACKC-LACOHAMPTON8-1",
-    "KXNCAAF-27-UGA",
-    "KXNFL1HSPREAD-26OCT18ARILAR-LAR7",
-    "KXNFLTD-26OCT18NONYG-NYGCSKATTEBO44-1",
+    "KXNFLTD-26OCT18DALGB-GBPSTRONG22-1",
+    "KXNFLTOTAL-26OCT18DALGB-52",
+    "KXNFLTOTAL-26OCT18DALGB-44",
+    "CONTROLH-2026-R",
+    "KXDIMAYORGAME-26OCT18CALJUN-CAL",
+    "KXNFLSPREAD-26OCT18DALGB-GB10",
+    "KXNFLGAME-26OCT19WASSF-SF",
+    "KXNFLTD-26OCT18DALGB-GBMGOLDEN0-2",
+    "KXNCAAF-27-OSU",
+    "KXNFLSPREAD-26OCT18DALGB-DAL3",
+    "KXNFLSPREAD-26OCT18DALGB-GB15",
+    "KXSB-27-BAL",
+    "KXNFLSPREAD-26OCT18DALGB-GB11",
+    "KXNFLTOTAL-26OCT18DALGB-50",
+    "KXNFLTD-26OCT18DALGB-GBMLLOYD32-1",
+    "KXNFLTD-26OCT18DALGB-GBTKRAFT85-1",
+    "KXNFLOT-26OCT18DALGB-Y",
+    "KXNFLTOTAL-26OCT18DALGB-51",
+    "KXUCLGAME-26OCT20PSGBAR-BAR",
+    "KXNFLTD-26OCT18DALGB-DALKTURPIN9-1",
+    "KXSB-27-KC",
+    "SENATETX-26-R",
+    "KXITFWMATCH-26OCT18XUXSHA-SHA",
+    "KXNFLSPREAD-26OCT18DALGB-GB5",
+    "KXMLB-26-CLE",
+    "KXNFLTD-26OCT18DALGB-DALGPICKENS3-1",
+    "KXNFLSPREAD-26OCT18DALGB-DAL7",
+    "KXNFLTD-26OCT18DALGB-GBCWATSON9-2",
+    "KXDIMAYORGAME-26OCT18CALJUN-JUN",
+    "KXNFLTD-26OCT18DALGB-GBSWILLIAMS83-1",
+    "KXNFLAFCSOUTH-27-HOU",
+    "KXNFLAFCSOUTH-27-JAC",
+    "KXNFLTOTAL-26OCT18DALGB-41",
+    "KXMLB-26-MIL",
+    "KXNFLTD-26OCT18DALGB-GBMLLOYD32-2",
+    "KXNFLTOTAL-26OCT18DALGB-38",
+    "KXNFLRECYDS-26OCT18DALGB-GBMGOLDEN0-60",
+    "KXNFLTD-26OCT18DALGB-DALBSPANNFORD89-1",
+    "KXNFLSPREAD-26OCT18DALGB-DAL4",
+    "KXSB-27-DAL",
+    "KXNFLTD-26OCT18DALGB-DALJWILLIAMS33-2",
+    "KXNFLTD-26OCT18DALGB-DALDPRESCOTT4-1",
+    "CONTROLH-2026-D",
+    "KXBTCD-26OCT1823-T82399.99",
+    "KXNFLTD-26OCT18DALGB-GBJLOVE10-2",
+    "KXSB-27-CAR",
+    "KXNFLSPREAD-26OCT18DALGB-GB6",
+    "KXSB-27-PHI",
+    "KXNCAAF-27-UCLA",
+    "KXSB-27-SF",
+    "KXHEISMAN-27-BBAC",
+    "KXITFWMATCH-26OCT18PODNAI-NAI",
+    "KXLIGAMXBTTS-26OCT18MONPAC-BTTS",
+    "KXNFLSPREAD-26OCT18DALGB-GB18",
     "KXMLB-26-TB",
-    "KXNFLTD-26OCT18TENIND-INDKALLEN10-1",
-    "KXNFLNFCCHAMP-27-NYG",
-    "KXMLBAL-26-TB"
+    "KXRAIN-26OCT18-WPB",
+    "SENATETX-26-D",
+    "KXBTCD-26OCT1823-T82299.99",
+    "KXNCAAF-27-ORE",
+    "KXNFLTOTAL-26OCT18DALGB-35",
+    "KXNFLTD-26OCT18DALGB-GBJWHYLE81-1",
+    "KXBALANCEPOWERCOMBO-27FEB-RR",
+    "KXNFLTD-26OCT18DALGB-GBKJOHNSON26-1",
+    "KXNFLTOTAL-26OCT18DALGB-56",
+    "KXGOVCA-26-SHIL",
+    "KXRAIN-26OCT18-PHX",
+    "KXNFLTOTAL-26OCT18DALGB-59",
+    "KXLIGAMXSPREAD-26OCT18MONPAC-MON2",
+    "KXLALIGAGAME-26OCT25BARRMA-RMA",
+    "KXNFLMATCHUP-27SB-KCGB",
+    "KXNFLTIE-26OCT18DALGB-Y",
+    "KXAAAGASW-26OCT19-4.3100",
+    "KXNFL2HSPREAD-26OCT18DALGB-DAL4",
+    "KXNFLSPREAD-26OCT18DALGB-GB17",
+    "KXNFLTD-26OCT18DALGB-DALCLAMB88-2"
   ],
   "events": {
-    "KXNFLGAME-26OCT18PITTB-PIT": {
-      "title": "PIT Steelers vs TB Buccaneers",
+    "KXNFLGAME-26OCT18DALGB-DAL": {
+      "title": "DAL Cowboys vs GB Packers",
       "series_ticker": "KXNFLGAME",
-      "category": "Sports"
-    },
-    "KXNFLGAME-26OCT18PITTB-TB": {
-      "title": "PIT Steelers vs TB Buccaneers",
-      "series_ticker": "KXNFLGAME",
-      "category": "Sports"
-    },
-    "KXLALIGAGAME-26OCT18RMASEV-SEV": {
-      "title": "Real Madrid vs Sevilla",
-      "series_ticker": "KXLALIGAGAME",
-      "category": "Sports"
-    },
-    "KXLALIGAGAME-26OCT18RMASEV-RMA": {
-      "title": "Real Madrid vs Sevilla",
-      "series_ticker": "KXLALIGAGAME",
-      "category": "Sports"
-    },
-    "KXNCAAF-27-BYU": {
-      "title": "College Football National Championship Winner",
-      "series_ticker": "KXNCAAF",
-      "category": "Sports"
-    },
-    "KXNFLGAME-26OCT18ARILAR-ARI": {
-      "title": "ARI Cardinals vs LA Rams",
-      "series_ticker": "KXNFLGAME",
-      "category": "Sports"
-    },
-    "KXMLBGAME-26OCT172000TBCLE-TB": {
-      "title": "Game 5: Tampa Bay vs Cleveland",
-      "series_ticker": "KXMLBGAME",
-      "category": "Sports"
-    },
-    "KXLIGUE1GAME-26OCT18OLNIC-OL": {
-      "title": "Lyon vs Nice",
-      "series_ticker": "KXLIGUE1GAME",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26OCT18BUFLV-LV4": {
-      "title": "Buffalo vs Las Vegas: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXNFLGAME-26OCT18LACKC-LAC": {
-      "title": "LA Chargers vs KC Chiefs",
-      "series_ticker": "KXNFLGAME",
-      "category": "Sports"
-    },
-    "KXNFLGAME-26OCT18BUFLV-LV": {
-      "title": "BUF Bills vs LV Raiders",
-      "series_ticker": "KXNFLGAME",
-      "category": "Sports"
-    },
-    "KXSERIEAGAME-26OCT18JUVLAZ-JUV": {
-      "title": "Juventus vs Lazio",
-      "series_ticker": "KXSERIEAGAME",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26OCT18CARPHI-CAR4": {
-      "title": "Carolina vs Philadelphia: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXSERIEAGAME-26OCT18JUVLAZ-LAZ": {
-      "title": "Juventus vs Lazio",
-      "series_ticker": "KXSERIEAGAME",
-      "category": "Sports"
-    },
-    "KXHEISMAN-27-BBAC": {
-      "title": "Heisman Trophy Winner",
-      "series_ticker": "KXHEISMAN",
-      "category": "Sports"
-    },
-    "KXNFLTOTAL-26OCT18CARPHI-40": {
-      "title": "Carolina vs Philadelphia: Total Points",
-      "series_ticker": "KXNFLTOTAL",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26OCT18PITTB-TB4": {
-      "title": "Pittsburgh vs Tampa Bay: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26OCT18BUFLV-BUF5": {
-      "title": "Buffalo vs Las Vegas: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXMLBGAME-26OCT172000TBCLE-CLE": {
-      "title": "Game 5: Tampa Bay vs Cleveland",
-      "series_ticker": "KXMLBGAME",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26OCT18PITTB-PIT3": {
-      "title": "Pittsburgh vs Tampa Bay: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXNFLGAME-26OCT18ARILAR-LAR": {
-      "title": "ARI Cardinals vs LA Rams",
-      "series_ticker": "KXNFLGAME",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26OCT18CARPHI-CAR3": {
-      "title": "Carolina vs Philadelphia: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXNFLGAME-26OCT18LACKC-KC": {
-      "title": "LA Chargers vs KC Chiefs",
-      "series_ticker": "KXNFLGAME",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26OCT18DALGB-GB8": {
-      "title": "Dallas vs Green Bay: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26OCT18ARILAR-LAR24": {
-      "title": "Arizona vs Los Angeles R: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXNFLGAME-26OCT18BUFLV-BUF": {
-      "title": "BUF Bills vs LV Raiders",
-      "series_ticker": "KXNFLGAME",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26OCT18LACKC-KC8": {
-      "title": "Los Angeles C vs Kansas City: Spread",
-      "series_ticker": "KXNFLSPREAD",
       "category": "Sports"
     },
     "KXNFLGAME-26OCT18DALGB-GB": {
@@ -243,88 +113,73 @@
       "series_ticker": "KXNFLGAME",
       "category": "Sports"
     },
-    "KXSB-27-HOU": {
+    "KXNFLTOTAL-26OCT18DALGB-54": {
+      "title": "Dallas vs Green Bay: Total Points",
+      "series_ticker": "KXNFLTOTAL",
+      "category": "Sports"
+    },
+    "KXLIGAMXGAME-26OCT18MONPAC-PAC": {
+      "title": "Monterrey vs Pachuca",
+      "series_ticker": "KXLIGAMXGAME",
+      "category": "Sports"
+    },
+    "KXLIGAMXGAME-26OCT18MONPAC-MON": {
+      "title": "Monterrey vs Pachuca",
+      "series_ticker": "KXLIGAMXGAME",
+      "category": "Sports"
+    },
+    "KXNFLSPREAD-26OCT18DALGB-DAL2": {
+      "title": "Dallas vs Green Bay: Spread",
+      "series_ticker": "KXNFLSPREAD",
+      "category": "Sports"
+    },
+    "KXNCAAF-27-BYU": {
+      "title": "College Football National Championship Winner",
+      "series_ticker": "KXNCAAF",
+      "category": "Sports"
+    },
+    "KXSB-27-LAR": {
       "title": "2027 Pro Football Champion",
       "series_ticker": "KXSB",
       "category": "Sports"
     },
-    "KXLALIGAGAME-26OCT18RMASEV-TIE": {
-      "title": "Real Madrid vs Sevilla",
-      "series_ticker": "KXLALIGAGAME",
+    "KXNFLTOTAL-26OCT18DALGB-55": {
+      "title": "Dallas vs Green Bay: Total Points",
+      "series_ticker": "KXNFLTOTAL",
       "category": "Sports"
     },
-    "KXNFLSPREAD-26OCT18ARILAR-LAR13": {
-      "title": "Arizona vs Los Angeles R: Spread",
+    "KXNFLSPREAD-26OCT18DALGB-GB2": {
+      "title": "Dallas vs Green Bay: Spread",
       "series_ticker": "KXNFLSPREAD",
       "category": "Sports"
     },
-    "KXLOLGAME-26OCT181400MVKKC-MVK": {
-      "title": "MVK Esports vs. Karmine Corp",
-      "series_ticker": "KXLOLGAME",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26OCT18PITTB-TB7": {
-      "title": "Pittsburgh vs Tampa Bay: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXNFLGAME-26OCT18DALGB-DAL": {
-      "title": "DAL Cowboys vs GB Packers",
-      "series_ticker": "KXNFLGAME",
-      "category": "Sports"
-    },
-    "KXNFLTD-26OCT18NONYG-NYGMNABERS1-1": {
-      "title": "New Orleans vs New York G: Touchdowns",
+    "KXNFLTD-26OCT18DALGB-GBCWATSON9-1": {
+      "title": "Dallas vs Green Bay: Touchdowns",
       "series_ticker": "KXNFLTD",
       "category": "Sports"
     },
-    "KXATPCHALLENGERMATCH-26OCT18WOEART-ART": {
-      "title": "Woestendick vs Artnak",
-      "series_ticker": "KXATPCHALLENGERMATCH",
-      "category": "Sports"
-    },
-    "KXATPCHALLENGERMATCH-26OCT18WOEART-WOE": {
-      "title": "Woestendick vs Artnak",
-      "series_ticker": "KXATPCHALLENGERMATCH",
-      "category": "Sports"
-    },
-    "KXNCAAF-27-TENN": {
-      "title": "College Football National Championship Winner",
-      "series_ticker": "KXNCAAF",
-      "category": "Sports"
-    },
-    "KXNCAAF-27-UCLA": {
-      "title": "College Football National Championship Winner",
-      "series_ticker": "KXNCAAF",
-      "category": "Sports"
-    },
-    "KXNCAAF-27-OSU": {
-      "title": "College Football National Championship Winner",
-      "series_ticker": "KXNCAAF",
-      "category": "Sports"
-    },
-    "KXSERIEAGAME-26OCT18JUVLAZ-TIE": {
-      "title": "Juventus vs Lazio",
-      "series_ticker": "KXSERIEAGAME",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26OCT18CARPHI-PHI4": {
-      "title": "Carolina vs Philadelphia: Spread",
+    "KXNFLSPREAD-26OCT18DALGB-GB14": {
+      "title": "Dallas vs Green Bay: Spread",
       "series_ticker": "KXNFLSPREAD",
       "category": "Sports"
     },
-    "KXBTCD-26OCT1817-T80999.99": {
-      "title": "BTC price on Oct 18, 2026 at 5pm EDT?",
-      "series_ticker": "KXBTCD",
-      "category": "Crypto"
+    "KXNFLSPREAD-26OCT18DALGB-GB8": {
+      "title": "Dallas vs Green Bay: Spread",
+      "series_ticker": "KXNFLSPREAD",
+      "category": "Sports"
     },
-    "CONTROLH-2026-R": {
-      "title": "Which party will win the U.S. House?",
-      "series_ticker": "CONTROLH",
-      "category": "Elections"
+    "KXNFLTD-26OCT18DALGB-DALCLAMB88-1": {
+      "title": "Dallas vs Green Bay: Touchdowns",
+      "series_ticker": "KXNFLTD",
+      "category": "Sports"
     },
-    "KXNFLSPREAD-26OCT18NONYG-NYG2": {
-      "title": "New Orleans vs New York G: Spread",
+    "KXNFLSPREAD-26OCT18DALGB-GB7": {
+      "title": "Dallas vs Green Bay: Spread",
+      "series_ticker": "KXNFLSPREAD",
+      "category": "Sports"
+    },
+    "KXNFLSPREAD-26OCT18DALGB-GB4": {
+      "title": "Dallas vs Green Bay: Spread",
       "series_ticker": "KXNFLSPREAD",
       "category": "Sports"
     },
@@ -333,194 +188,24 @@
       "series_ticker": "KXPRESNOMD",
       "category": "Elections"
     },
-    "KXNFLSPREAD-26OCT18LACKC-KC7": {
-      "title": "Los Angeles C vs Kansas City: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXNCAAF-27-LSU": {
-      "title": "College Football National Championship Winner",
-      "series_ticker": "KXNCAAF",
-      "category": "Sports"
-    },
-    "KXBALANCEPOWERCOMBO-27FEB-RD": {
-      "title": "2026 Midterms: Congress Balance of Power?",
-      "series_ticker": "KXBALANCEPOWERCOMBO",
-      "category": "Elections"
-    },
-    "KXLALIGABTTS-26OCT18RMASEV-BTTS": {
-      "title": "Real Madrid vs Sevilla: BTTS",
-      "series_ticker": "KXLALIGABTTS",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26OCT18CARPHI-CAR7": {
-      "title": "Carolina vs Philadelphia: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXCS2GAME-26OCT181100BBFURIA-FURIA": {
-      "title": "BetBoom Team vs. FURIA",
-      "series_ticker": "KXCS2GAME",
-      "category": "Sports"
-    },
-    "KXBTCD-26OCT1817-T80749.99": {
-      "title": "BTC price on Oct 18, 2026 at 5pm EDT?",
-      "series_ticker": "KXBTCD",
-      "category": "Crypto"
-    },
-    "KXBTCD-26OCT1817-T81249.99": {
-      "title": "BTC price on Oct 18, 2026 at 5pm EDT?",
-      "series_ticker": "KXBTCD",
-      "category": "Crypto"
-    },
-    "KXLIGUE1GAME-26OCT18OLNIC-NIC": {
-      "title": "Lyon vs Nice",
-      "series_ticker": "KXLIGUE1GAME",
-      "category": "Sports"
-    },
-    "KXCS2GAME-26OCT181100BBFURIA-BB": {
-      "title": "BetBoom Team vs. FURIA",
-      "series_ticker": "KXCS2GAME",
-      "category": "Sports"
-    },
-    "SENATETX-26-R": {
-      "title": "Texas Senate winner?",
-      "series_ticker": "SENATETX",
-      "category": "Elections"
-    },
-    "KXNFLTOTAL-26OCT18BUFLV-54": {
-      "title": "Buffalo vs Las Vegas: Total Points",
-      "series_ticker": "KXNFLTOTAL",
-      "category": "Sports"
-    },
-    "KXLALIGASPREAD-26OCT18RMASEV-RMA2": {
-      "title": "Real Madrid vs Sevilla: Spread",
-      "series_ticker": "KXLALIGASPREAD",
-      "category": "Sports"
-    },
-    "KXBTCD-26OCT1817-T81499.99": {
-      "title": "BTC price on Oct 18, 2026 at 5pm EDT?",
-      "series_ticker": "KXBTCD",
-      "category": "Crypto"
-    },
-    "KXLALIGATOTAL-26OCT18RMASEV-4": {
-      "title": "Real Madrid vs Sevilla: Total Goals",
-      "series_ticker": "KXLALIGATOTAL",
-      "category": "Sports"
-    },
-    "KXLALIGATOTAL-26OCT18RMASEV-3": {
-      "title": "Real Madrid vs Sevilla: Total Goals",
-      "series_ticker": "KXLALIGATOTAL",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26OCT18BUFLV-BUF6": {
-      "title": "Buffalo vs Las Vegas: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXNFLTD-26OCT18CARPHI-PHICSTEELE34-1": {
-      "title": "Carolina vs Philadelphia: Touchdowns",
-      "series_ticker": "KXNFLTD",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26OCT18CARPHI-CAR2": {
-      "title": "Carolina vs Philadelphia: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXNFLTOTAL-26OCT18LACKC-42": {
-      "title": "Los Angeles C vs Kansas City: Total Points",
-      "series_ticker": "KXNFLTOTAL",
-      "category": "Sports"
-    },
-    "KXITFWMATCH-26OCT18PENMAX-PEN": {
-      "title": "Penickova vs Ma",
-      "series_ticker": "KXITFWMATCH",
-      "category": "Sports"
-    },
-    "KXNFLAFCSOUTH-27-HOU": {
-      "title": "AFC South Division Winner",
-      "series_ticker": "KXNFLAFCSOUTH",
-      "category": "Sports"
-    },
-    "KXMLBSPREAD-26OCT172000TBCLE-TB2": {
-      "title": "Tampa Bay vs Cleveland: Spread",
-      "series_ticker": "KXMLBSPREAD",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26OCT18NONYG-NYG4": {
-      "title": "New Orleans vs New York G: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXNFLTD-26OCT18BUFLV-BUFKCOLEMAN0-1": {
-      "title": "Buffalo vs Las Vegas: Touchdowns",
-      "series_ticker": "KXNFLTD",
-      "category": "Sports"
-    },
-    "KXMLB-26-MIL": {
-      "title": "Pro Baseball Champion",
-      "series_ticker": "KXMLB",
-      "category": "Sports"
-    },
-    "KXNFLAFCSOUTH-27-JAC": {
-      "title": "AFC South Division Winner",
-      "series_ticker": "KXNFLAFCSOUTH",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26OCT18ARILAR-ARI8": {
-      "title": "Arizona vs Los Angeles R: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXUCLGAME-26OCT20PSGBAR-BAR": {
-      "title": "PSG vs Barcelona",
-      "series_ticker": "KXUCLGAME",
-      "category": "Sports"
-    },
-    "KXHEISMAN-27-MTONE": {
-      "title": "Heisman Trophy Winner",
-      "series_ticker": "KXHEISMAN",
-      "category": "Sports"
-    },
-    "KXLALIGATOTAL-26OCT18RMASEV-2": {
-      "title": "Real Madrid vs Sevilla: Total Goals",
-      "series_ticker": "KXLALIGATOTAL",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26OCT18PITTB-PIT4": {
-      "title": "Pittsburgh vs Tampa Bay: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26OCT18NONYG-NO2": {
-      "title": "New Orleans vs New York G: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26OCT18CARPHI-CAR6": {
-      "title": "Carolina vs Philadelphia: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26OCT18DALGB-GB2": {
+    "KXNFLSPREAD-26OCT18DALGB-GB3": {
       "title": "Dallas vs Green Bay: Spread",
       "series_ticker": "KXNFLSPREAD",
       "category": "Sports"
     },
-    "KXWNBASERIESSPREAD-26ATLGSFIN-ATL4": {
-      "title": "Series Game Spread: Atlanta vs Golden State",
-      "series_ticker": "KXWNBASERIESSPREAD",
+    "KXNFLTOTAL-26OCT18DALGB-47": {
+      "title": "Dallas vs Green Bay: Total Points",
+      "series_ticker": "KXNFLTOTAL",
       "category": "Sports"
     },
-    "KXMLBRFI-26OCT172000TBCLE": {
-      "title": "Tampa Bay vs Cleveland: First Inning Run",
-      "series_ticker": "KXMLBRFI",
+    "KXNFLGAME-26OCT19WASSF-WAS": {
+      "title": "WAS Commanders vs SF 49ers",
+      "series_ticker": "KXNFLGAME",
       "category": "Sports"
     },
-    "KXNFLTD-26OCT18BUFLV-BUFJCOOK4-1": {
-      "title": "Buffalo vs Las Vegas: Touchdowns",
-      "series_ticker": "KXNFLTD",
+    "KXNFLTOTAL-26OCT18DALGB-53": {
+      "title": "Dallas vs Green Bay: Total Points",
+      "series_ticker": "KXNFLTOTAL",
       "category": "Sports"
     },
     "KXNFLTD-26OCT18DALGB-DALJFERGUSON87-1": {
@@ -528,29 +213,14 @@
       "series_ticker": "KXNFLTD",
       "category": "Sports"
     },
-    "KXNFLTOTAL-26OCT18PITTB-39": {
-      "title": "Pittsburgh vs Tampa Bay: Total Points",
-      "series_ticker": "KXNFLTOTAL",
+    "KXLIGAMXGAME-26OCT18MONPAC-TIE": {
+      "title": "Monterrey vs Pachuca",
+      "series_ticker": "KXLIGAMXGAME",
       "category": "Sports"
     },
-    "KXNFLSPREAD-26OCT18CARPHI-CAR5": {
-      "title": "Carolina vs Philadelphia: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXBRASILEIROGAME-26OCT18FLUSAN-SAN": {
-      "title": "Fluminense vs Santos",
-      "series_ticker": "KXBRASILEIROGAME",
-      "category": "Sports"
-    },
-    "KXNFLRSHYDS-26OCT18CARPHI-CARCHUBBARD30-70": {
-      "title": "Carolina vs Philadelphia: Rushing Yards",
-      "series_ticker": "KXNFLRSHYDS",
-      "category": "Sports"
-    },
-    "KXNFLTD-26OCT18CHIATL-ATLDLONDON5-1": {
-      "title": "Chicago vs Atlanta: Touchdowns",
-      "series_ticker": "KXNFLTD",
+    "KXSB-27-HOU": {
+      "title": "2027 Pro Football Champion",
+      "series_ticker": "KXSB",
       "category": "Sports"
     },
     "KXSB-27-GB": {
@@ -558,29 +228,274 @@
       "series_ticker": "KXSB",
       "category": "Sports"
     },
-    "KXMLBTOTAL-26OCT172000TBCLE-8": {
-      "title": "Tampa Bay vs Cleveland: Total Runs",
-      "series_ticker": "KXMLBTOTAL",
-      "category": "Sports"
-    },
-    "KXNFLTD-26OCT18LACKC-LACOHAMPTON8-1": {
-      "title": "Los Angeles C vs Kansas City: Touchdowns",
+    "KXNFLTD-26OCT18DALGB-GBPSTRONG22-1": {
+      "title": "Dallas vs Green Bay: Touchdowns",
       "series_ticker": "KXNFLTD",
       "category": "Sports"
     },
-    "KXNCAAF-27-UGA": {
+    "KXNFLTOTAL-26OCT18DALGB-52": {
+      "title": "Dallas vs Green Bay: Total Points",
+      "series_ticker": "KXNFLTOTAL",
+      "category": "Sports"
+    },
+    "KXNFLTOTAL-26OCT18DALGB-44": {
+      "title": "Dallas vs Green Bay: Total Points",
+      "series_ticker": "KXNFLTOTAL",
+      "category": "Sports"
+    },
+    "CONTROLH-2026-R": {
+      "title": "Which party will win the U.S. House?",
+      "series_ticker": "CONTROLH",
+      "category": "Elections"
+    },
+    "KXDIMAYORGAME-26OCT18CALJUN-CAL": {
+      "title": "Cali vs Junior",
+      "series_ticker": "KXDIMAYORGAME",
+      "category": "Sports"
+    },
+    "KXNFLSPREAD-26OCT18DALGB-GB10": {
+      "title": "Dallas vs Green Bay: Spread",
+      "series_ticker": "KXNFLSPREAD",
+      "category": "Sports"
+    },
+    "KXNFLGAME-26OCT19WASSF-SF": {
+      "title": "WAS Commanders vs SF 49ers",
+      "series_ticker": "KXNFLGAME",
+      "category": "Sports"
+    },
+    "KXNFLTD-26OCT18DALGB-GBMGOLDEN0-2": {
+      "title": "Dallas vs Green Bay: Touchdowns",
+      "series_ticker": "KXNFLTD",
+      "category": "Sports"
+    },
+    "KXNCAAF-27-OSU": {
       "title": "College Football National Championship Winner",
       "series_ticker": "KXNCAAF",
       "category": "Sports"
     },
-    "KXNFL1HSPREAD-26OCT18ARILAR-LAR7": {
-      "title": "Arizona vs Los Angeles R: 1st Half Spread",
-      "series_ticker": "KXNFL1HSPREAD",
+    "KXNFLSPREAD-26OCT18DALGB-DAL3": {
+      "title": "Dallas vs Green Bay: Spread",
+      "series_ticker": "KXNFLSPREAD",
       "category": "Sports"
     },
-    "KXNFLTD-26OCT18NONYG-NYGCSKATTEBO44-1": {
-      "title": "New Orleans vs New York G: Touchdowns",
+    "KXNFLSPREAD-26OCT18DALGB-GB15": {
+      "title": "Dallas vs Green Bay: Spread",
+      "series_ticker": "KXNFLSPREAD",
+      "category": "Sports"
+    },
+    "KXSB-27-BAL": {
+      "title": "2027 Pro Football Champion",
+      "series_ticker": "KXSB",
+      "category": "Sports"
+    },
+    "KXNFLSPREAD-26OCT18DALGB-GB11": {
+      "title": "Dallas vs Green Bay: Spread",
+      "series_ticker": "KXNFLSPREAD",
+      "category": "Sports"
+    },
+    "KXNFLTOTAL-26OCT18DALGB-50": {
+      "title": "Dallas vs Green Bay: Total Points",
+      "series_ticker": "KXNFLTOTAL",
+      "category": "Sports"
+    },
+    "KXNFLTD-26OCT18DALGB-GBMLLOYD32-1": {
+      "title": "Dallas vs Green Bay: Touchdowns",
       "series_ticker": "KXNFLTD",
+      "category": "Sports"
+    },
+    "KXNFLTD-26OCT18DALGB-GBTKRAFT85-1": {
+      "title": "Dallas vs Green Bay: Touchdowns",
+      "series_ticker": "KXNFLTD",
+      "category": "Sports"
+    },
+    "KXNFLOT-26OCT18DALGB-Y": {
+      "title": "Dallas vs Green Bay: Overtime",
+      "series_ticker": "KXNFLOT",
+      "category": "Sports"
+    },
+    "KXNFLTOTAL-26OCT18DALGB-51": {
+      "title": "Dallas vs Green Bay: Total Points",
+      "series_ticker": "KXNFLTOTAL",
+      "category": "Sports"
+    },
+    "KXUCLGAME-26OCT20PSGBAR-BAR": {
+      "title": "PSG vs Barcelona",
+      "series_ticker": "KXUCLGAME",
+      "category": "Sports"
+    },
+    "KXNFLTD-26OCT18DALGB-DALKTURPIN9-1": {
+      "title": "Dallas vs Green Bay: Touchdowns",
+      "series_ticker": "KXNFLTD",
+      "category": "Sports"
+    },
+    "KXSB-27-KC": {
+      "title": "2027 Pro Football Champion",
+      "series_ticker": "KXSB",
+      "category": "Sports"
+    },
+    "SENATETX-26-R": {
+      "title": "Texas Senate winner?",
+      "series_ticker": "SENATETX",
+      "category": "Elections"
+    },
+    "KXITFWMATCH-26OCT18XUXSHA-SHA": {
+      "title": "Xu vs Shan",
+      "series_ticker": "KXITFWMATCH",
+      "category": "Sports"
+    },
+    "KXNFLSPREAD-26OCT18DALGB-GB5": {
+      "title": "Dallas vs Green Bay: Spread",
+      "series_ticker": "KXNFLSPREAD",
+      "category": "Sports"
+    },
+    "KXMLB-26-CLE": {
+      "title": "Pro Baseball Champion",
+      "series_ticker": "KXMLB",
+      "category": "Sports"
+    },
+    "KXNFLTD-26OCT18DALGB-DALGPICKENS3-1": {
+      "title": "Dallas vs Green Bay: Touchdowns",
+      "series_ticker": "KXNFLTD",
+      "category": "Sports"
+    },
+    "KXNFLSPREAD-26OCT18DALGB-DAL7": {
+      "title": "Dallas vs Green Bay: Spread",
+      "series_ticker": "KXNFLSPREAD",
+      "category": "Sports"
+    },
+    "KXNFLTD-26OCT18DALGB-GBCWATSON9-2": {
+      "title": "Dallas vs Green Bay: Touchdowns",
+      "series_ticker": "KXNFLTD",
+      "category": "Sports"
+    },
+    "KXDIMAYORGAME-26OCT18CALJUN-JUN": {
+      "title": "Cali vs Junior",
+      "series_ticker": "KXDIMAYORGAME",
+      "category": "Sports"
+    },
+    "KXNFLTD-26OCT18DALGB-GBSWILLIAMS83-1": {
+      "title": "Dallas vs Green Bay: Touchdowns",
+      "series_ticker": "KXNFLTD",
+      "category": "Sports"
+    },
+    "KXNFLAFCSOUTH-27-HOU": {
+      "title": "AFC South Division Winner",
+      "series_ticker": "KXNFLAFCSOUTH",
+      "category": "Sports"
+    },
+    "KXNFLAFCSOUTH-27-JAC": {
+      "title": "AFC South Division Winner",
+      "series_ticker": "KXNFLAFCSOUTH",
+      "category": "Sports"
+    },
+    "KXNFLTOTAL-26OCT18DALGB-41": {
+      "title": "Dallas vs Green Bay: Total Points",
+      "series_ticker": "KXNFLTOTAL",
+      "category": "Sports"
+    },
+    "KXMLB-26-MIL": {
+      "title": "Pro Baseball Champion",
+      "series_ticker": "KXMLB",
+      "category": "Sports"
+    },
+    "KXNFLTD-26OCT18DALGB-GBMLLOYD32-2": {
+      "title": "Dallas vs Green Bay: Touchdowns",
+      "series_ticker": "KXNFLTD",
+      "category": "Sports"
+    },
+    "KXNFLTOTAL-26OCT18DALGB-38": {
+      "title": "Dallas vs Green Bay: Total Points",
+      "series_ticker": "KXNFLTOTAL",
+      "category": "Sports"
+    },
+    "KXNFLRECYDS-26OCT18DALGB-GBMGOLDEN0-60": {
+      "title": "Dallas vs Green Bay: Receiving Yards",
+      "series_ticker": "KXNFLRECYDS",
+      "category": "Sports"
+    },
+    "KXNFLTD-26OCT18DALGB-DALBSPANNFORD89-1": {
+      "title": "Dallas vs Green Bay: Touchdowns",
+      "series_ticker": "KXNFLTD",
+      "category": "Sports"
+    },
+    "KXNFLSPREAD-26OCT18DALGB-DAL4": {
+      "title": "Dallas vs Green Bay: Spread",
+      "series_ticker": "KXNFLSPREAD",
+      "category": "Sports"
+    },
+    "KXSB-27-DAL": {
+      "title": "2027 Pro Football Champion",
+      "series_ticker": "KXSB",
+      "category": "Sports"
+    },
+    "KXNFLTD-26OCT18DALGB-DALJWILLIAMS33-2": {
+      "title": "Dallas vs Green Bay: Touchdowns",
+      "series_ticker": "KXNFLTD",
+      "category": "Sports"
+    },
+    "KXNFLTD-26OCT18DALGB-DALDPRESCOTT4-1": {
+      "title": "Dallas vs Green Bay: Touchdowns",
+      "series_ticker": "KXNFLTD",
+      "category": "Sports"
+    },
+    "CONTROLH-2026-D": {
+      "title": "Which party will win the U.S. House?",
+      "series_ticker": "CONTROLH",
+      "category": "Elections"
+    },
+    "KXBTCD-26OCT1823-T82399.99": {
+      "title": "BTC price on Oct 18, 2026 at 11pm EDT?",
+      "series_ticker": "KXBTCD",
+      "category": "Crypto"
+    },
+    "KXNFLTD-26OCT18DALGB-GBJLOVE10-2": {
+      "title": "Dallas vs Green Bay: Touchdowns",
+      "series_ticker": "KXNFLTD",
+      "category": "Sports"
+    },
+    "KXSB-27-CAR": {
+      "title": "2027 Pro Football Champion",
+      "series_ticker": "KXSB",
+      "category": "Sports"
+    },
+    "KXNFLSPREAD-26OCT18DALGB-GB6": {
+      "title": "Dallas vs Green Bay: Spread",
+      "series_ticker": "KXNFLSPREAD",
+      "category": "Sports"
+    },
+    "KXSB-27-PHI": {
+      "title": "2027 Pro Football Champion",
+      "series_ticker": "KXSB",
+      "category": "Sports"
+    },
+    "KXNCAAF-27-UCLA": {
+      "title": "College Football National Championship Winner",
+      "series_ticker": "KXNCAAF",
+      "category": "Sports"
+    },
+    "KXSB-27-SF": {
+      "title": "2027 Pro Football Champion",
+      "series_ticker": "KXSB",
+      "category": "Sports"
+    },
+    "KXHEISMAN-27-BBAC": {
+      "title": "Heisman Trophy Winner",
+      "series_ticker": "KXHEISMAN",
+      "category": "Sports"
+    },
+    "KXITFWMATCH-26OCT18PODNAI-NAI": {
+      "title": "Podgorichani vs Naik",
+      "series_ticker": "KXITFWMATCH",
+      "category": "Sports"
+    },
+    "KXLIGAMXBTTS-26OCT18MONPAC-BTTS": {
+      "title": "Monterrey vs Pachuca: BTTS",
+      "series_ticker": "KXLIGAMXBTTS",
+      "category": "Sports"
+    },
+    "KXNFLSPREAD-26OCT18DALGB-GB18": {
+      "title": "Dallas vs Green Bay: Spread",
+      "series_ticker": "KXNFLSPREAD",
       "category": "Sports"
     },
     "KXMLB-26-TB": {
@@ -588,19 +503,104 @@
       "series_ticker": "KXMLB",
       "category": "Sports"
     },
-    "KXNFLTD-26OCT18TENIND-INDKALLEN10-1": {
-      "title": "Tennessee vs Indianapolis: Touchdowns",
+    "KXRAIN-26OCT18-WPB": {
+      "title": "Where will it rain on Oct 18, 2026?",
+      "series_ticker": "KXRAIN",
+      "category": "Climate and Weather"
+    },
+    "SENATETX-26-D": {
+      "title": "Texas Senate winner?",
+      "series_ticker": "SENATETX",
+      "category": "Elections"
+    },
+    "KXBTCD-26OCT1823-T82299.99": {
+      "title": "BTC price on Oct 18, 2026 at 11pm EDT?",
+      "series_ticker": "KXBTCD",
+      "category": "Crypto"
+    },
+    "KXNCAAF-27-ORE": {
+      "title": "College Football National Championship Winner",
+      "series_ticker": "KXNCAAF",
+      "category": "Sports"
+    },
+    "KXNFLTOTAL-26OCT18DALGB-35": {
+      "title": "Dallas vs Green Bay: Total Points",
+      "series_ticker": "KXNFLTOTAL",
+      "category": "Sports"
+    },
+    "KXNFLTD-26OCT18DALGB-GBJWHYLE81-1": {
+      "title": "Dallas vs Green Bay: Touchdowns",
       "series_ticker": "KXNFLTD",
       "category": "Sports"
     },
-    "KXNFLNFCCHAMP-27-NYG": {
-      "title": "NFC Championship Winner",
-      "series_ticker": "KXNFLNFCCHAMP",
+    "KXBALANCEPOWERCOMBO-27FEB-RR": {
+      "title": "2026 Midterms: Congress Balance of Power?",
+      "series_ticker": "KXBALANCEPOWERCOMBO",
+      "category": "Elections"
+    },
+    "KXNFLTD-26OCT18DALGB-GBKJOHNSON26-1": {
+      "title": "Dallas vs Green Bay: Touchdowns",
+      "series_ticker": "KXNFLTD",
       "category": "Sports"
     },
-    "KXMLBAL-26-TB": {
-      "title": "American League Champion",
-      "series_ticker": "KXMLBAL",
+    "KXNFLTOTAL-26OCT18DALGB-56": {
+      "title": "Dallas vs Green Bay: Total Points",
+      "series_ticker": "KXNFLTOTAL",
+      "category": "Sports"
+    },
+    "KXGOVCA-26-SHIL": {
+      "title": "California Governor winner? (Person)",
+      "series_ticker": "KXGOVCA",
+      "category": "Elections"
+    },
+    "KXRAIN-26OCT18-PHX": {
+      "title": "Where will it rain on Oct 18, 2026?",
+      "series_ticker": "KXRAIN",
+      "category": "Climate and Weather"
+    },
+    "KXNFLTOTAL-26OCT18DALGB-59": {
+      "title": "Dallas vs Green Bay: Total Points",
+      "series_ticker": "KXNFLTOTAL",
+      "category": "Sports"
+    },
+    "KXLIGAMXSPREAD-26OCT18MONPAC-MON2": {
+      "title": "Monterrey vs Pachuca: Spread",
+      "series_ticker": "KXLIGAMXSPREAD",
+      "category": "Sports"
+    },
+    "KXLALIGAGAME-26OCT25BARRMA-RMA": {
+      "title": "Barcelona vs Real Madrid",
+      "series_ticker": "KXLALIGAGAME",
+      "category": "Sports"
+    },
+    "KXNFLMATCHUP-27SB-KCGB": {
+      "title": "Pro Football Championship Game Matchup",
+      "series_ticker": "KXNFLMATCHUP",
+      "category": "Sports"
+    },
+    "KXNFLTIE-26OCT18DALGB-Y": {
+      "title": "Dallas vs Green Bay: Tie",
+      "series_ticker": "KXNFLTIE",
+      "category": "Sports"
+    },
+    "KXAAAGASW-26OCT19-4.3100": {
+      "title": "US gas prices this week",
+      "series_ticker": "KXAAAGASW",
+      "category": "Economics"
+    },
+    "KXNFL2HSPREAD-26OCT18DALGB-DAL4": {
+      "title": "Dallas vs Green Bay: 2nd Half Spread",
+      "series_ticker": "KXNFL2HSPREAD",
+      "category": "Sports"
+    },
+    "KXNFLSPREAD-26OCT18DALGB-GB17": {
+      "title": "Dallas vs Green Bay: Spread",
+      "series_ticker": "KXNFLSPREAD",
+      "category": "Sports"
+    },
+    "KXNFLTD-26OCT18DALGB-DALCLAMB88-2": {
+      "title": "Dallas vs Green Bay: Touchdowns",
+      "series_ticker": "KXNFLTD",
       "category": "Sports"
     }
   }

@@ -57,7 +57,7 @@
   "event": "CONTROLH-2026",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-19T02:30Z"
+  "lastSeen": "2026-10-19T02:45Z"
  },
  "KXMLBGAME-26OCT142000MILLAD-LAD": {
   "title": "Game 3: Milwaukee vs Los Angeles D — Los Angeles D",
@@ -105,7 +105,7 @@
   "event": "KXSB-27",
   "category": "Sports",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-19T02:30Z"
+  "lastSeen": "2026-10-19T02:45Z"
  },
  "KXWTACHALLENGERMATCH-26OCT14MATMAR-MAT": {
   "title": "Matoula vs Maristany Zuleta de Reales — Martha Matoula",
@@ -177,7 +177,7 @@
   "event": "KXBALANCEPOWERCOMBO-27FEB",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-17T21:45Z"
+  "lastSeen": "2026-10-19T02:45Z"
  },
  "KXMLBTOTAL-26OCT142000MILLAD-8": {
   "title": "Milwaukee vs Los Angeles D: Total Runs — Over 7.5 runs scored",
@@ -213,7 +213,7 @@
   "event": "SENATETX-26",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-19T02:30Z"
+  "lastSeen": "2026-10-19T02:45Z"
  },
  "KXNCAAFGAME-26OCT16CHSOCLEM-CHSO": {
   "title": "Charleston Southern vs Clemson — Charleston Southern",
@@ -492,7 +492,7 @@
   "lastSeen": "2026-10-15T00:42Z"
  },
  "CONTROLH-2026-D": {
-  "title": "Will Democrats win the House in 2026?",
+  "title": "Which party will win the U.S. House? — Democratic Party",
   "sub": "Democratic Party",
   "closeTime": "2027-02-01T15:00:00Z",
   "tick": 0.01,
@@ -501,7 +501,7 @@
   "event": "CONTROLH-2026",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-19T02:30Z"
+  "lastSeen": "2026-10-19T02:45Z"
  },
  "KXMAYORLA-26-KBAS": {
   "title": "Los Angeles Mayor winner? — Karen Bass",
@@ -573,7 +573,7 @@
   "event": "KXMLB-26",
   "category": "Sports",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-19T02:30Z"
+  "lastSeen": "2026-10-19T02:45Z"
  },
  "KXATPCHALLENGERMATCH-26OCT14ZEIMIG-MIG": {
   "title": "Zeitune vs Miguel — Luis Guto Miguel",
@@ -633,7 +633,7 @@
   "event": "KXMLB-26",
   "category": "Sports",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-17T10:45Z"
+  "lastSeen": "2026-10-19T02:45Z"
  },
  "KXBTCD-26OCT1417-T81499.99": {
   "title": "BTC price on Oct 14, 2026 at 5pm EDT? — $81,500 or above",
@@ -789,7 +789,7 @@
   "event": "KXNCAAF-27",
   "category": "Sports",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-19T02:30Z"
+  "lastSeen": "2026-10-19T02:45Z"
  },
  "KXMLBAL-26-TB": {
   "title": "American League Champion — Tampa Bay",
@@ -861,7 +861,7 @@
   "event": "SENATETX-26",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-18T20:15Z"
+  "lastSeen": "2026-10-19T02:45Z"
  },
  "KXBTCD-26OCT1417-T82749.99": {
   "title": "BTC price on Oct 14, 2026 at 5pm EDT? — $82,750 or above",
@@ -993,7 +993,7 @@
   "event": "KXGOVCA-26",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-17T10:45Z"
+  "lastSeen": "2026-10-19T02:45Z"
  },
  "KXSB-27-MIN": {
   "title": "2027 Pro Football Champion — Minnesota",
@@ -1089,7 +1089,7 @@
   "event": "KXMLB-26",
   "category": "Sports",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-19T02:30Z"
+  "lastSeen": "2026-10-19T02:45Z"
  },
  "KXNCAAFGAME-26OCT14WKUSHSU-WKU": {
   "title": "Western Kentucky vs Sam Houston — Western Kentucky",
@@ -1557,7 +1557,7 @@
   "event": "KXSB-27",
   "category": "Sports",
   "firstSeen": "2026-10-15T05:16Z",
-  "lastSeen": "2026-10-16T23:45Z"
+  "lastSeen": "2026-10-19T02:45Z"
  },
  "KXNFLOPOTY-27-DLON": {
   "title": "Offensive Player of the Year Winner? — Drake London",
@@ -1677,7 +1677,7 @@
   "event": "KXSB-27",
   "category": "Sports",
   "firstSeen": "2026-10-15T05:16Z",
-  "lastSeen": "2026-10-16T20:15Z"
+  "lastSeen": "2026-10-19T02:45Z"
  },
  "KXNCAAFGAME-26OCT17CITTXAM-CIT": {
   "title": "The Citadel vs Texas A&M — The Citadel",
@@ -1821,7 +1821,7 @@
   "event": "KXSB-27",
   "category": "Sports",
   "firstSeen": "2026-10-15T05:16Z",
-  "lastSeen": "2026-10-18T20:15Z"
+  "lastSeen": "2026-10-19T02:45Z"
  },
  "KXWTAMATCH-26OCT14POHSAK-POH": {
   "title": "Pohankova vs Sakkari — Mia Pohankova",
@@ -2169,7 +2169,7 @@
   "event": "KXUCLGAME-26OCT20PSGBAR",
   "category": "Sports",
   "firstSeen": "2026-10-15T15:00Z",
-  "lastSeen": "2026-10-19T02:30Z"
+  "lastSeen": "2026-10-19T02:45Z"
  },
  "KXMARMAD-27-FSU": {
   "title": "Men's 2027 College Basketball Champion — Florida St.",
@@ -3873,7 +3873,7 @@
   "event": "KXSB-27",
   "category": "Sports",
   "firstSeen": "2026-10-16T14:15Z",
-  "lastSeen": "2026-10-19T02:30Z"
+  "lastSeen": "2026-10-19T02:45Z"
  },
  "KXNFLSPREAD-26OCT18CARPHI-CAR3": {
   "title": "Carolina vs Philadelphia: Spread — Carolina wins by over 2.5 points",
@@ -5805,7 +5805,7 @@
   "event": "KXHEISMAN-27",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-19T02:30Z"
+  "lastSeen": "2026-10-19T02:45Z"
  },
  "KXNFLSPREAD-26OCT18TENIND-TEN4": {
   "title": "Tennessee vs Indianapolis: Spread — Tennessee wins by over 3.5 points",
@@ -5889,7 +5889,7 @@
   "event": "KXNFLSPREAD-26OCT18DALGB",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-19T02:30Z"
+  "lastSeen": "2026-10-19T02:45Z"
  },
  "KXMLSGAME-26OCT17SJNSH-NSH": {
   "title": "San Jose vs Nashville — Nashville",
@@ -6081,7 +6081,7 @@
   "event": "KXNCAAF-27",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-19T02:30Z"
+  "lastSeen": "2026-10-19T02:45Z"
  },
  "KXNCAAFSPREAD-26OCT17NDBYU-ND4": {
   "title": "Notre Dame vs BYU: Spread — Notre Dame wins by over 3.5 points",
@@ -6477,7 +6477,7 @@
   "event": "KXNCAAF-27",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-19T02:30Z"
+  "lastSeen": "2026-10-19T02:45Z"
  },
  "KXNCAAFSPREAD-26OCT17NDBYU-ND12": {
   "title": "Notre Dame vs BYU: Spread — Notre Dame wins by over 11.5 points",
@@ -7185,7 +7185,7 @@
   "event": "KXNFLGAME-26OCT18DALGB",
   "category": "Sports",
   "firstSeen": "2026-10-18T14:15Z",
-  "lastSeen": "2026-10-19T02:30Z"
+  "lastSeen": "2026-10-19T02:45Z"
  },
  "KXNCAAF-27-MIA": {
   "title": "College Football National Championship Winner — Miami (FL)",
@@ -7413,7 +7413,7 @@
   "event": "KXNFLGAME-26OCT18DALGB",
   "category": "Sports",
   "firstSeen": "2026-10-18T20:30Z",
-  "lastSeen": "2026-10-19T02:30Z"
+  "lastSeen": "2026-10-19T02:45Z"
  },
  "KXLALIGAGAME-26OCT18RMASEV-TIE": {
   "title": "Real Madrid vs Sevilla — Tie",
@@ -7533,7 +7533,7 @@
   "event": "KXPRESNOMD-28",
   "category": "Elections",
   "firstSeen": "2026-10-18T20:30Z",
-  "lastSeen": "2026-10-19T02:30Z"
+  "lastSeen": "2026-10-19T02:45Z"
  },
  "KXNFLSPREAD-26OCT18LACKC-KC7": {
   "title": "Los Angeles C vs Kansas City: Spread — Kansas City wins by over 6.5 points",
@@ -7737,7 +7737,7 @@
   "event": "KXNFLAFCSOUTH-27",
   "category": "Sports",
   "firstSeen": "2026-10-18T20:30Z",
-  "lastSeen": "2026-10-19T02:30Z"
+  "lastSeen": "2026-10-19T02:45Z"
  },
  "KXNFLSPREAD-26OCT18NONYG-NYG4": {
   "title": "New Orleans vs New York G: Spread — New York G wins by over 3.5 points",
@@ -7773,7 +7773,7 @@
   "event": "KXNFLAFCSOUTH-27",
   "category": "Sports",
   "firstSeen": "2026-10-18T20:30Z",
-  "lastSeen": "2026-10-19T02:30Z"
+  "lastSeen": "2026-10-19T02:45Z"
  },
  "KXNFLSPREAD-26OCT18ARILAR-ARI8": {
   "title": "Arizona vs Los Angeles R: Spread — Arizona wins by over 7.5 points",
@@ -7845,7 +7845,7 @@
   "event": "KXNFLSPREAD-26OCT18DALGB",
   "category": "Sports",
   "firstSeen": "2026-10-18T20:30Z",
-  "lastSeen": "2026-10-19T02:30Z"
+  "lastSeen": "2026-10-19T02:45Z"
  },
  "KXMLBRFI-26OCT172000TBCLE": {
   "title": "Tampa Bay vs Cleveland: First Inning Run — Over 0.5 runs",
@@ -7881,7 +7881,7 @@
   "event": "KXNFLTD-26OCT18DALGB",
   "category": "Sports",
   "firstSeen": "2026-10-18T20:30Z",
-  "lastSeen": "2026-10-19T02:30Z"
+  "lastSeen": "2026-10-19T02:45Z"
  },
  "KXNFLTOTAL-26OCT18PITTB-39": {
   "title": "Pittsburgh vs Tampa Bay: Total Points — Over 38.5 points",
@@ -8014,5 +8014,881 @@
   "category": "Sports",
   "firstSeen": "2026-10-18T20:30Z",
   "lastSeen": "2026-10-19T02:30Z"
+ },
+ "KXNFLTOTAL-26OCT18DALGB-54": {
+  "title": "Dallas vs Green Bay: Total Points — Over 53.5 points",
+  "sub": "Over 53.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTOTAL",
+  "event": "KXNFLTOTAL-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXLIGAMXGAME-26OCT18MONPAC-PAC": {
+  "title": "Monterrey vs Pachuca — Pachuca",
+  "sub": "Pachuca",
+  "closeTime": "2026-10-21T01:00:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXLIGAMXGAME",
+  "event": "KXLIGAMXGAME-26OCT18MONPAC",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXLIGAMXGAME-26OCT18MONPAC-MON": {
+  "title": "Monterrey vs Pachuca — Monterrey",
+  "sub": "Monterrey",
+  "closeTime": "2026-10-21T01:00:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXLIGAMXGAME",
+  "event": "KXLIGAMXGAME-26OCT18MONPAC",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLSPREAD-26OCT18DALGB-DAL2": {
+  "title": "Dallas vs Green Bay: Spread — Dallas wins by over 1.5 points",
+  "sub": "Dallas wins by over 1.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLSPREAD",
+  "event": "KXNFLSPREAD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXSB-27-LAR": {
+  "title": "2027 Pro Football Champion — Los Angeles R",
+  "sub": "Los Angeles R",
+  "closeTime": "2029-02-13T23:30:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXSB",
+  "event": "KXSB-27",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTOTAL-26OCT18DALGB-55": {
+  "title": "Dallas vs Green Bay: Total Points — Over 54.5 points",
+  "sub": "Over 54.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTOTAL",
+  "event": "KXNFLTOTAL-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTD-26OCT18DALGB-GBCWATSON9-1": {
+  "title": "Dallas vs Green Bay: Touchdowns — Christian Watson: 1+",
+  "sub": "Christian Watson: 1+",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTD",
+  "event": "KXNFLTD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLSPREAD-26OCT18DALGB-GB14": {
+  "title": "Dallas vs Green Bay: Spread — Green Bay wins by over 13.5 points",
+  "sub": "Green Bay wins by over 13.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLSPREAD",
+  "event": "KXNFLSPREAD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTD-26OCT18DALGB-DALCLAMB88-1": {
+  "title": "Dallas vs Green Bay: Touchdowns — CeeDee Lamb: 1+",
+  "sub": "CeeDee Lamb: 1+",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTD",
+  "event": "KXNFLTD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLSPREAD-26OCT18DALGB-GB7": {
+  "title": "Dallas vs Green Bay: Spread — Green Bay wins by over 6.5 points",
+  "sub": "Green Bay wins by over 6.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLSPREAD",
+  "event": "KXNFLSPREAD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLSPREAD-26OCT18DALGB-GB4": {
+  "title": "Dallas vs Green Bay: Spread — Green Bay wins by over 3.5 points",
+  "sub": "Green Bay wins by over 3.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLSPREAD",
+  "event": "KXNFLSPREAD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLSPREAD-26OCT18DALGB-GB3": {
+  "title": "Dallas vs Green Bay: Spread — Green Bay wins by over 2.5 points",
+  "sub": "Green Bay wins by over 2.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLSPREAD",
+  "event": "KXNFLSPREAD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTOTAL-26OCT18DALGB-47": {
+  "title": "Dallas vs Green Bay: Total Points — Over 46.5 points",
+  "sub": "Over 46.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTOTAL",
+  "event": "KXNFLTOTAL-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLGAME-26OCT19WASSF-WAS": {
+  "title": "WAS Commanders vs SF 49ers — Washington",
+  "sub": "Washington",
+  "closeTime": "2026-10-22T00:15:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLGAME",
+  "event": "KXNFLGAME-26OCT19WASSF",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTOTAL-26OCT18DALGB-53": {
+  "title": "Dallas vs Green Bay: Total Points — Over 52.5 points",
+  "sub": "Over 52.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTOTAL",
+  "event": "KXNFLTOTAL-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXLIGAMXGAME-26OCT18MONPAC-TIE": {
+  "title": "Monterrey vs Pachuca — Tie",
+  "sub": "Tie",
+  "closeTime": "2026-10-21T01:00:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXLIGAMXGAME",
+  "event": "KXLIGAMXGAME-26OCT18MONPAC",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTD-26OCT18DALGB-GBPSTRONG22-1": {
+  "title": "Dallas vs Green Bay: Touchdowns — Pierre Strong Jr.: 1+",
+  "sub": "Pierre Strong Jr.: 1+",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTD",
+  "event": "KXNFLTD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTOTAL-26OCT18DALGB-52": {
+  "title": "Dallas vs Green Bay: Total Points — Over 51.5 points",
+  "sub": "Over 51.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTOTAL",
+  "event": "KXNFLTOTAL-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTOTAL-26OCT18DALGB-44": {
+  "title": "Dallas vs Green Bay: Total Points — Over 43.5 points",
+  "sub": "Over 43.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTOTAL",
+  "event": "KXNFLTOTAL-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXDIMAYORGAME-26OCT18CALJUN-CAL": {
+  "title": "Cali vs Junior — Cali",
+  "sub": "Cali",
+  "closeTime": "2026-10-21T01:10:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXDIMAYORGAME",
+  "event": "KXDIMAYORGAME-26OCT18CALJUN",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLSPREAD-26OCT18DALGB-GB10": {
+  "title": "Dallas vs Green Bay: Spread — Green Bay wins by over 9.5 points",
+  "sub": "Green Bay wins by over 9.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLSPREAD",
+  "event": "KXNFLSPREAD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLGAME-26OCT19WASSF-SF": {
+  "title": "WAS Commanders vs SF 49ers — San Francisco",
+  "sub": "San Francisco",
+  "closeTime": "2026-10-22T00:15:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLGAME",
+  "event": "KXNFLGAME-26OCT19WASSF",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTD-26OCT18DALGB-GBMGOLDEN0-2": {
+  "title": "Dallas vs Green Bay: Touchdowns — Matthew Golden: 2+",
+  "sub": "Matthew Golden: 2+",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTD",
+  "event": "KXNFLTD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLSPREAD-26OCT18DALGB-DAL3": {
+  "title": "Dallas vs Green Bay: Spread — Dallas wins by over 2.5 points",
+  "sub": "Dallas wins by over 2.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLSPREAD",
+  "event": "KXNFLSPREAD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLSPREAD-26OCT18DALGB-GB15": {
+  "title": "Dallas vs Green Bay: Spread — Green Bay wins by over 14.5 points",
+  "sub": "Green Bay wins by over 14.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLSPREAD",
+  "event": "KXNFLSPREAD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXSB-27-BAL": {
+  "title": "2027 Pro Football Champion — Baltimore",
+  "sub": "Baltimore",
+  "closeTime": "2029-02-13T23:30:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXSB",
+  "event": "KXSB-27",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLSPREAD-26OCT18DALGB-GB11": {
+  "title": "Dallas vs Green Bay: Spread — Green Bay wins by over 10.5 points",
+  "sub": "Green Bay wins by over 10.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLSPREAD",
+  "event": "KXNFLSPREAD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTOTAL-26OCT18DALGB-50": {
+  "title": "Dallas vs Green Bay: Total Points — Over 49.5 points",
+  "sub": "Over 49.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTOTAL",
+  "event": "KXNFLTOTAL-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTD-26OCT18DALGB-GBMLLOYD32-1": {
+  "title": "Dallas vs Green Bay: Touchdowns — MarShawn Lloyd: 1+",
+  "sub": "MarShawn Lloyd: 1+",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTD",
+  "event": "KXNFLTD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTD-26OCT18DALGB-GBTKRAFT85-1": {
+  "title": "Dallas vs Green Bay: Touchdowns — Tucker Kraft: 1+",
+  "sub": "Tucker Kraft: 1+",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTD",
+  "event": "KXNFLTD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLOT-26OCT18DALGB-Y": {
+  "title": "Dallas vs Green Bay: Overtime — Game goes to overtime",
+  "sub": "Game goes to overtime",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLOT",
+  "event": "KXNFLOT-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTOTAL-26OCT18DALGB-51": {
+  "title": "Dallas vs Green Bay: Total Points — Over 50.5 points",
+  "sub": "Over 50.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTOTAL",
+  "event": "KXNFLTOTAL-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTD-26OCT18DALGB-DALKTURPIN9-1": {
+  "title": "Dallas vs Green Bay: Touchdowns — KaVontae Turpin: 1+",
+  "sub": "KaVontae Turpin: 1+",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTD",
+  "event": "KXNFLTD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXSB-27-KC": {
+  "title": "2027 Pro Football Champion — Kansas City",
+  "sub": "Kansas City",
+  "closeTime": "2029-02-13T23:30:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXSB",
+  "event": "KXSB-27",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXITFWMATCH-26OCT18XUXSHA-SHA": {
+  "title": "Xu vs Shan — Yu Shan",
+  "sub": "Yu Shan",
+  "closeTime": "2026-11-02T02:00:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXITFWMATCH",
+  "event": "KXITFWMATCH-26OCT18XUXSHA",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLSPREAD-26OCT18DALGB-GB5": {
+  "title": "Dallas vs Green Bay: Spread — Green Bay wins by over 4.5 points",
+  "sub": "Green Bay wins by over 4.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLSPREAD",
+  "event": "KXNFLSPREAD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTD-26OCT18DALGB-DALGPICKENS3-1": {
+  "title": "Dallas vs Green Bay: Touchdowns — George Pickens: 1+",
+  "sub": "George Pickens: 1+",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTD",
+  "event": "KXNFLTD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLSPREAD-26OCT18DALGB-DAL7": {
+  "title": "Dallas vs Green Bay: Spread — Dallas wins by over 6.5 points",
+  "sub": "Dallas wins by over 6.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLSPREAD",
+  "event": "KXNFLSPREAD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTD-26OCT18DALGB-GBCWATSON9-2": {
+  "title": "Dallas vs Green Bay: Touchdowns — Christian Watson: 2+",
+  "sub": "Christian Watson: 2+",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTD",
+  "event": "KXNFLTD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXDIMAYORGAME-26OCT18CALJUN-JUN": {
+  "title": "Cali vs Junior — Junior",
+  "sub": "Junior",
+  "closeTime": "2026-10-21T01:10:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXDIMAYORGAME",
+  "event": "KXDIMAYORGAME-26OCT18CALJUN",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTD-26OCT18DALGB-GBSWILLIAMS83-1": {
+  "title": "Dallas vs Green Bay: Touchdowns — Savion Williams: 1+",
+  "sub": "Savion Williams: 1+",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTD",
+  "event": "KXNFLTD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTOTAL-26OCT18DALGB-41": {
+  "title": "Dallas vs Green Bay: Total Points — Over 40.5 points",
+  "sub": "Over 40.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTOTAL",
+  "event": "KXNFLTOTAL-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTD-26OCT18DALGB-GBMLLOYD32-2": {
+  "title": "Dallas vs Green Bay: Touchdowns — MarShawn Lloyd: 2+",
+  "sub": "MarShawn Lloyd: 2+",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTD",
+  "event": "KXNFLTD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTOTAL-26OCT18DALGB-38": {
+  "title": "Dallas vs Green Bay: Total Points — Over 37.5 points",
+  "sub": "Over 37.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTOTAL",
+  "event": "KXNFLTOTAL-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLRECYDS-26OCT18DALGB-GBMGOLDEN0-60": {
+  "title": "Dallas vs Green Bay: Receiving Yards — Matthew Golden: 60+",
+  "sub": "Matthew Golden: 60+",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLRECYDS",
+  "event": "KXNFLRECYDS-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTD-26OCT18DALGB-DALBSPANNFORD89-1": {
+  "title": "Dallas vs Green Bay: Touchdowns — Brevyn Spann-Ford: 1+",
+  "sub": "Brevyn Spann-Ford: 1+",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTD",
+  "event": "KXNFLTD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLSPREAD-26OCT18DALGB-DAL4": {
+  "title": "Dallas vs Green Bay: Spread — Dallas wins by over 3.5 points",
+  "sub": "Dallas wins by over 3.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLSPREAD",
+  "event": "KXNFLSPREAD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXSB-27-DAL": {
+  "title": "2027 Pro Football Champion — Dallas",
+  "sub": "Dallas",
+  "closeTime": "2029-02-13T23:30:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXSB",
+  "event": "KXSB-27",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTD-26OCT18DALGB-DALJWILLIAMS33-2": {
+  "title": "Dallas vs Green Bay: Touchdowns — Javonte Williams: 2+",
+  "sub": "Javonte Williams: 2+",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTD",
+  "event": "KXNFLTD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTD-26OCT18DALGB-DALDPRESCOTT4-1": {
+  "title": "Dallas vs Green Bay: Touchdowns — Dak Prescott: 1+",
+  "sub": "Dak Prescott: 1+",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTD",
+  "event": "KXNFLTD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXBTCD-26OCT1823-T82399.99": {
+  "title": "BTC price on Oct 18, 2026 at 11pm EDT? — $82,400 or above",
+  "sub": "$82,400 or above",
+  "closeTime": "2026-10-19T03:00:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXBTCD",
+  "event": "KXBTCD-26OCT1823",
+  "category": "Crypto",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTD-26OCT18DALGB-GBJLOVE10-2": {
+  "title": "Dallas vs Green Bay: Touchdowns — Jordan Love: 2+",
+  "sub": "Jordan Love: 2+",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTD",
+  "event": "KXNFLTD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLSPREAD-26OCT18DALGB-GB6": {
+  "title": "Dallas vs Green Bay: Spread — Green Bay wins by over 5.5 points",
+  "sub": "Green Bay wins by over 5.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLSPREAD",
+  "event": "KXNFLSPREAD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXITFWMATCH-26OCT18PODNAI-NAI": {
+  "title": "Podgorichani vs Naik — Amodini Naik",
+  "sub": "Amodini Naik",
+  "closeTime": "2026-11-02T02:00:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXITFWMATCH",
+  "event": "KXITFWMATCH-26OCT18PODNAI",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXLIGAMXBTTS-26OCT18MONPAC-BTTS": {
+  "title": "Monterrey vs Pachuca: BTTS — Both Teams To Score",
+  "sub": "Both Teams To Score",
+  "closeTime": "2026-10-21T01:00:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXLIGAMXBTTS",
+  "event": "KXLIGAMXBTTS-26OCT18MONPAC",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLSPREAD-26OCT18DALGB-GB18": {
+  "title": "Dallas vs Green Bay: Spread — Green Bay wins by over 17.5 points",
+  "sub": "Green Bay wins by over 17.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLSPREAD",
+  "event": "KXNFLSPREAD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXRAIN-26OCT18-WPB": {
+  "title": "Where will it rain on Oct 18, 2026? — West Palm Beach",
+  "sub": "West Palm Beach",
+  "closeTime": "2026-10-19T05:00:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXRAIN",
+  "event": "KXRAIN-26OCT18",
+  "category": "Climate and Weather",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXBTCD-26OCT1823-T82299.99": {
+  "title": "BTC price on Oct 18, 2026 at 11pm EDT? — $82,300 or above",
+  "sub": "$82,300 or above",
+  "closeTime": "2026-10-19T03:00:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXBTCD",
+  "event": "KXBTCD-26OCT1823",
+  "category": "Crypto",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNCAAF-27-ORE": {
+  "title": "College Football National Championship Winner — Oregon",
+  "sub": "Oregon",
+  "closeTime": "2027-02-23T04:00:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNCAAF",
+  "event": "KXNCAAF-27",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTOTAL-26OCT18DALGB-35": {
+  "title": "Dallas vs Green Bay: Total Points — Over 34.5 points",
+  "sub": "Over 34.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTOTAL",
+  "event": "KXNFLTOTAL-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTD-26OCT18DALGB-GBJWHYLE81-1": {
+  "title": "Dallas vs Green Bay: Touchdowns — Josh Whyle: 1+",
+  "sub": "Josh Whyle: 1+",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTD",
+  "event": "KXNFLTD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTD-26OCT18DALGB-GBKJOHNSON26-1": {
+  "title": "Dallas vs Green Bay: Touchdowns — Kaleb Johnson: 1+",
+  "sub": "Kaleb Johnson: 1+",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTD",
+  "event": "KXNFLTD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTOTAL-26OCT18DALGB-56": {
+  "title": "Dallas vs Green Bay: Total Points — Over 55.5 points",
+  "sub": "Over 55.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTOTAL",
+  "event": "KXNFLTOTAL-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXRAIN-26OCT18-PHX": {
+  "title": "Where will it rain on Oct 18, 2026? — Phoenix",
+  "sub": "Phoenix",
+  "closeTime": "2026-10-19T07:00:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXRAIN",
+  "event": "KXRAIN-26OCT18",
+  "category": "Climate and Weather",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTOTAL-26OCT18DALGB-59": {
+  "title": "Dallas vs Green Bay: Total Points — Over 58.5 points",
+  "sub": "Over 58.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTOTAL",
+  "event": "KXNFLTOTAL-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXLIGAMXSPREAD-26OCT18MONPAC-MON2": {
+  "title": "Monterrey vs Pachuca: Spread — Monterrey wins by more than 1.5 goals",
+  "sub": "Monterrey wins by more than 1.5 goals",
+  "closeTime": "2026-10-21T01:00:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXLIGAMXSPREAD",
+  "event": "KXLIGAMXSPREAD-26OCT18MONPAC",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXLALIGAGAME-26OCT25BARRMA-RMA": {
+  "title": "Barcelona vs Real Madrid — Real Madrid",
+  "sub": "Real Madrid",
+  "closeTime": "2026-10-27T20:00:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXLALIGAGAME",
+  "event": "KXLALIGAGAME-26OCT25BARRMA",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLMATCHUP-27SB-KCGB": {
+  "title": "Pro Football Championship Game Matchup — Kansas City vs Green Bay",
+  "sub": "Kansas City vs Green Bay",
+  "closeTime": "2027-02-21T23:30:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLMATCHUP",
+  "event": "KXNFLMATCHUP-27SB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTIE-26OCT18DALGB-Y": {
+  "title": "Dallas vs Green Bay: Tie — Game to end in a tie",
+  "sub": "Game to end in a tie",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTIE",
+  "event": "KXNFLTIE-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXAAAGASW-26OCT19-4.3100": {
+  "title": "US gas prices this week — Above 4.3100",
+  "sub": "Above 4.3100",
+  "closeTime": "2026-10-19T03:59:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXAAAGASW",
+  "event": "KXAAAGASW-26OCT19",
+  "category": "Economics",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFL2HSPREAD-26OCT18DALGB-DAL4": {
+  "title": "Dallas vs Green Bay: 2nd Half Spread — Dallas wins by over 3.5 points",
+  "sub": "Dallas wins by over 3.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFL2HSPREAD",
+  "event": "KXNFL2HSPREAD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLSPREAD-26OCT18DALGB-GB17": {
+  "title": "Dallas vs Green Bay: Spread — Green Bay wins by over 16.5 points",
+  "sub": "Green Bay wins by over 16.5 points",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLSPREAD",
+  "event": "KXNFLSPREAD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
+ },
+ "KXNFLTD-26OCT18DALGB-DALCLAMB88-2": {
+  "title": "Dallas vs Green Bay: Touchdowns — CeeDee Lamb: 2+",
+  "sub": "CeeDee Lamb: 2+",
+  "closeTime": "2026-10-21T00:20:00Z",
+  "tick": 0.01,
+  "minSize": 1,
+  "series": "KXNFLTD",
+  "event": "KXNFLTD-26OCT18DALGB",
+  "category": "Sports",
+  "firstSeen": "2026-10-19T02:45Z",
+  "lastSeen": "2026-10-19T02:45Z"
  }
 }
