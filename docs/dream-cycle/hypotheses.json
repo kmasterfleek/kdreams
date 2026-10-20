@@ -219,6 +219,42 @@
       "value": -2.452,
       "n": 5272
     },
+    "status": "REFUTED",
+    "retests": [
+      {
+        "date": "2026-10-20",
+        "ticks": 87,
+        "value": -2.543,
+        "n": 2327,
+        "verdict": "REFUTED",
+        "by": "code",
+        "note": "maker.netCentsPerAttempt = -2.543 vs > 0 on n=2327"
+      }
+    ],
+    "settledOn": "2026-10-20"
+  },
+  {
+    "id": "2026-10-20",
+    "date": "2026-10-20",
+    "deep": "maker-spread-capture",
+    "issue": "#14",
+    "text": "Given Kalshi markets with entry mids from 0.1 to 0.9, when evaluating the recorded 60-minute maker proxy at the touch, then maker.netCentsPerAttempt should be < 0 vs the all-market Kalshi baseline of -1.247c, subject to maker fees and exit marks being included.",
+    "spec": {
+      "metric": "maker.netCentsPerAttempt",
+      "venue": "ks",
+      "slice": {
+        "midMin": 0.1,
+        "midMax": 0.9
+      },
+      "op": "<",
+      "threshold": 0,
+      "minN": 300
+    },
+    "frozenAt": "2026-10-20T13:45Z",
+    "baseline": {
+      "value": -1.805,
+      "n": 10010
+    },
     "status": "open",
     "retests": []
   }
