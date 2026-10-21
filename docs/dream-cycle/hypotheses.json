@@ -255,6 +255,38 @@
       "value": -1.805,
       "n": 10010
     },
+    "status": "SUPPORTED",
+    "retests": [
+      {
+        "date": "2026-10-21",
+        "ticks": 97,
+        "value": -1.561,
+        "n": 4064,
+        "verdict": "SUPPORTED",
+        "by": "code",
+        "note": "maker.netCentsPerAttempt = -1.561 vs < 0 on n=4064"
+      }
+    ],
+    "settledOn": "2026-10-21"
+  },
+  {
+    "id": "2026-10-21",
+    "date": "2026-10-21",
+    "deep": "cross-venue-divergence",
+    "issue": "#15",
+    "text": "Given the configured Republican House cross-venue pair, when checking aligned quotes for a buy-both-sides opportunity without submitting orders, then pair.bothSidesFracNetPositive should be < 0.01 vs the observed 0%, subject to both venues’ taker fees.",
+    "spec": {
+      "metric": "pair.bothSidesFracNetPositive",
+      "pair": "house-2026-republican",
+      "op": "<",
+      "threshold": 0.01,
+      "minN": 300
+    },
+    "frozenAt": "2026-10-21T14:00Z",
+    "baseline": {
+      "value": 0.003,
+      "n": 756
+    },
     "status": "open",
     "retests": []
   }
