@@ -306,7 +306,7 @@ async function main() {
   const prev = hyps.filter((h) => h.date < ctx.date).at(-1);
   const requireProfit = !!prev && !isProfitSpec(prev.spec);
   const rules = `A spec that the pre-freeze data already satisfies is rejected unless it predicts profit (resolution.netCentsPer10 or maker.netCentsPerAttempt > a threshold >= 0, or pair.bothSidesFracNetPositive > a threshold > 0); a non-profit prediction must claim a change from the recorded value.` +
-    (requireProfit ? ` The previous hypothesis (${prev.id}) did not predict profit, so TONIGHT'S SPEC MUST be a profit prediction: find the slice where it is most plausible and say why.` : '');
+    (requireProfit ? ` The previous hypothesis (${prev.id}) did not predict profit, so TONIGHT'S SPEC MUST be a profit prediction: choose the metric family whose EVIDENCE is closest to net positive per $10, find the slice where it is most plausible, and say why.` : '');
   ctx.hyps = hyps;
   const freeze = (res) => {
     if (!res.hypothesis) return null;
