@@ -8,3 +8,4 @@
 | 2026-10-19 | fee-modeling | Given Polymarket markets with entry mids from 0.2 to 0.8, when modeling a… | #13 | NONE | yes | INCONCLUSIVE | 40627 rows / 200 ticks observed | 0116894b | 10-14 UNGRADEABLE; 10-18 UNGRADEABLE; 10-17 SUPPORTED (140t); 10-16 SUPPORTED (188t); 10-15 REFUTED (194t) |
 | 2026-10-20 | maker-spread-capture | Given Kalshi markets with entry mids from 0.1 to 0.9, when evaluating the… | #14 | NONE | yes | INCONCLUSIVE | 58827 rows / 287 ticks observed | 811553af | 10-19 REFUTED (87t) |
 | 2026-10-21 | cross-venue-divergence | Given the configured Republican House cross-venue pair, when checking aligned… | #15 | NONE | yes | INCONCLUSIVE | 79037 rows / 384 ticks observed | a5e0fc83 | 10-20 SUPPORTED (97t) |
+| 2026-10-22 | liquidity-by-hour | Given Polymarket two-sided markets observed at UTC 2h–4h, when screening… | #16 | NONE | no | INCONCLUSIVE | 98537 rows / 480 ticks observed | 0097e937 | 10-21 INCONCLUSIVE (96t) |

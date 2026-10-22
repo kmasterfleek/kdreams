@@ -288,6 +288,43 @@
       "n": 756
     },
     "status": "open",
+    "retests": [
+      {
+        "date": "2026-10-22",
+        "ticks": 96,
+        "value": 0,
+        "n": 182,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "pair.bothSidesFracNetPositive = 0 on n=182, below the n>=300 needed"
+      }
+    ]
+  },
+  {
+    "id": "2026-10-22",
+    "date": "2026-10-22",
+    "deep": "liquidity-by-hour",
+    "issue": "#16",
+    "text": "Given Polymarket two-sided markets observed at UTC 2h–4h, when screening recorded quotes without placing orders, then `spread.fracOneCent` should be < 0.89 vs the 0.89 overall Polymarket baseline, subject to the invariant that quote tightness is not treated as net profit after fees or marks.",
+    "spec": {
+      "metric": "spread.fracOneCent",
+      "venue": "pm",
+      "slice": {
+        "hoursUtc": [
+          2,
+          4
+        ]
+      },
+      "op": "<",
+      "threshold": 0.89,
+      "minN": 300
+    },
+    "frozenAt": "2026-10-22T14:00Z",
+    "baseline": {
+      "value": 0.844,
+      "n": 3028
+    },
+    "status": "open",
     "retests": []
   }
 ]
