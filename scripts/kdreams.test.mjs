@@ -82,9 +82,11 @@ test('collector: mapKalshi reads dollar/fp string fields and isPlainBinary exclu
   assert.equal(round('abc'), null); assert.equal(round('0.1234567'), 0.1235);
 });
 
-test('metrics: parseRows skips junk, groupSeries sorts and dedupes by t', () => {
+test('metrics: parseRows skips junk and duplicate ticks, groupSeries sorts and dedupes by t', () => {
   const rows = parseRows(`${JSON.stringify(pm(1, 0.5, 0.51))}\nnot json\n${JSON.stringify(pm(0, 0.5, 0.51))}\n${JSON.stringify(pm(1, 0.5, 0.52))}\n`);
-  assert.equal(rows.length, 3);
+  assert.equal(rows.length, 2);
+  assert.equal(rows.find((r) => r.t === T(1)).a, 0.52);
+  assert.equal(groupSeries([...rows, pm(1, 0.5, 0.53)]).get('pm:c1')[1].a, 0.53);
   const s = groupSeries(rows).get('pm:c1');
   assert.equal(s.length, 2); assert.equal(s[0].t, T(0)); assert.equal(s[1].a, 0.52);
 });

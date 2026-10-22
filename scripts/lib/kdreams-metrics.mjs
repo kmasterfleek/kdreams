@@ -14,17 +14,25 @@ export function round(x, d = 2) {
   return Math.round((x + Number.EPSILON * Math.sign(x)) * f) / f;
 }
 
+/**
+ * Snapshot rows from NDJSON text. A market written twice for the same tick (two collector runs
+ * overlapping at a handoff) counts once, keeping the later line, as groupSeries does.
+ */
 export function parseRows(text) {
-  const rows = [];
+  const byKey = new Map();
   for (const line of String(text).split('\n')) {
     const s = line.trim();
     if (!s) continue;
     try {
       const r = JSON.parse(s);
-      if (r && r.t && r.v && r.id) rows.push(r);
+      if (r && r.t && r.v && r.id) {
+        const k = `${r.v}:${r.id}:${r.t}`;
+        byKey.delete(k);
+        byKey.set(k, r);
+      }
     } catch { /* skip malformed line */ }
   }
-  return rows;
+  return [...byKey.values()];
 }
 
 export function mid(r) {

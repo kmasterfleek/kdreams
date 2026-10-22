@@ -302,6 +302,13 @@ export async function main(argv = process.argv.slice(2)) {
   mkdirSync(join(dataDir, 'snapshots'), { recursive: true });
   mkdirSync(join(dataDir, 'catalog'), { recursive: true });
   const day = join(dataDir, 'snapshots', `${t.slice(0, 10)}.ndjson`);
+  // Two collector runs overlap for one tick at each handoff; the second one writes nothing.
+  if (existsSync(day) && readFileSync(day, 'utf8').includes(`{"t":"${t}",`)) {
+    log(`tick ${t} already recorded in ${day}; snapshot skipped`);
+    const settled = await collectResolutions(wl.resolutions || {}, dataDir, t, flags, log).catch((e) => (log(`resolutions failed: ${e.message}`), 0));
+    if (settled) log(`appended ${settled} resolutions`);
+    return { t, pm: 0, ks: 0, skipped: true };
+  }
   appendFileSync(day, all.map((x) => JSON.stringify(x.row)).join('\n') + '\n');
 
   for (const [venue, rows] of [['polymarket', pm], ['kalshi', ks]]) {
