@@ -36,7 +36,7 @@ import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
-import { computeReport, renderMarkdown, loadRows, SPEC_METRICS, validateSpec, measureSpecRows, gradeSpec, describeSpec } from './kdreams-backtest.mjs';
+import { computeReport, renderMarkdown, loadRows, loadResolutions, loadCatalogs, SPEC_METRICS, validateSpec, measureSpecRows, gradeSpec, describeSpec } from './kdreams-backtest.mjs';
 
 const DRY = process.argv.includes('--dry-run');
 const CONFIG = process.env.DREAM_CONFIG || 'dream.config.json';
@@ -94,6 +94,7 @@ export function specInstructions(pairs = []) {
   return `Metrics a spec may name (nothing else is measured):\n${metrics}\n` +
     `Configured pair names: ${pairs.map((p) => p.name).join(', ') || 'none'}.\n` +
     `Optional "slice": {"hoursUtc": [from, to] (whole UTC hours, from <= hour < to, wraps past midnight), "midMin": 0..1, "midMax": 0..1}. Maker slices apply at order entry.\n` +
+    `resolution.* metrics slice instead on "priceMin"/"priceMax" (0.5..1, entry price of the favored side bought, min <= p < max) and "hoursToClose": [min, max) hours before the scheduled close, plus hoursUtc; they never take midMin/midMax.\n` +
     `Required: "op": ">" or "<", numeric "threshold". Optional "minN": the sample the metric needs before it is graded (a floor still applies).\n` +
     `The spec must say exactly what the Hypothesis sentence says; anything the catalog cannot express (volume tiers, cadence, depth beyond the touch, queue position) belongs in Next observation, not in the hypothesis.`;
 }
@@ -101,7 +102,7 @@ export function specInstructions(pairs = []) {
 /** Specs that predict money made after fees: the only kind allowed to already hold before the freeze. */
 export function isProfitSpec(spec) {
   if (spec?.op !== '>') return false;
-  if (spec.metric === 'maker.netCentsPerAttempt') return spec.threshold >= 0;
+  if (spec.metric === 'maker.netCentsPerAttempt' || spec.metric === 'resolution.netCentsPer10') return spec.threshold >= 0;
   if (spec.metric === 'pair.bothSidesFracNetPositive') return spec.threshold > 0;
   return false;
 }
@@ -117,7 +118,7 @@ export function holds(spec, value) {
  * already satisfies is a restatement; after a non-profit night the next one must predict profit.
  */
 export function specRejection(spec, baseline, { requireProfit = false } = {}) {
-  if (requireProfit && !isProfitSpec(spec)) return 'the previous hypothesis did not predict profit, so tonight\'s must (maker.netCentsPerAttempt > a threshold >= 0, or pair.bothSidesFracNetPositive > a threshold > 0, in some slice)';
+  if (requireProfit && !isProfitSpec(spec)) return 'the previous hypothesis did not predict profit, so tonight\'s must (resolution.netCentsPer10 or maker.netCentsPerAttempt > a threshold >= 0, or pair.bothSidesFracNetPositive > a threshold > 0, in some slice)';
   if (!isProfitSpec(spec) && holds(spec, baseline?.value)) return `already true before the freeze (${spec.metric} = ${baseline.value} on n=${baseline.n}); a non-profit prediction must claim a change from the recorded value`;
   return null;
 }
@@ -173,7 +174,8 @@ async function research(ctx, ev, history = [], rules = '', retry = '') {
     'Goal: find one simple action that nets at least 1 cent on about $10 deployed (0.1% of capital per trade) after per-order fees, ' +
     'repeatably enough to run again and again: the flywheel. Convert per-contract numbers to return on capital: a contract bought at price p ' +
     'ties up p dollars, so x cents per contract is x/p percent (0.05c per contract at 50c is 0.1%). Kalshi rounds fees up to the cent per order, ' +
-    'so a $10 order pays at least 1c in fees. Settlement outcomes are now recorded per market; a hold-to-resolution metric is not in the spec catalog yet. ' +
+    'so a $10 order pays at least 1c in fees. Settled outcomes are recorded per market, and resolution.netCentsPer10 measures buying the favored side ' +
+    'with $10 and holding to settlement; one loss at 98c erases about 50 wins, so it needs a large sample of independent markets. ' +
     'Be terse, technical, evidence-driven. ' +
     'Quote numbers only from the EVIDENCE block; never invent measurements. Grade external claims A (official/reproducible) / B (cross-checked) / C (single-source). ' +
     'Never recommend placing an order; the output is a hypothesis for a human to test on data recorded after tonight.';
@@ -273,6 +275,7 @@ async function main() {
   const minTicks = bt.retestMinTicks ?? 48, minN = bt.retestMinN ?? 100;
   const hyps = loadJson(HYPOTHESES, []);
   const allRows = loadRows(ev.dataDir, ev.days).rows;
+  const settled = { resolutions: loadResolutions(ev.dataDir), catalogs: loadCatalogs(ev.dataDir) };
   const after = (t) => allRows.filter((x) => x.t > t);
   const ticksAfter = (t) => new Set(after(t).map((x) => x.t)).size;
   const grades = [];
@@ -282,7 +285,7 @@ async function main() {
   }
   const plan = planRetests(hyps.filter((x) => !grades.some((gr) => gr.id === x.id)), { date: ctx.date, days: ev.days, minTicks, maxOpen: bt.retestMaxOpen ?? 5 }, (h) => ticksAfter(h.frozenAt));
   for (const { h, ticks } of plan.due) {
-    const m = measureSpecRows(after(h.frozenAt), h.spec, ev.watchlist);
+    const m = measureSpecRows(after(h.frozenAt), h.spec, ev.watchlist, settled);
     const gr = gradeSpec(h.spec, m, minN);
     if (gr.verdict === 'SUPPORTED' && !isProfitSpec(h.spec) && holds(h.spec, h.baseline?.value)) gr.note += '; already true before the freeze, so no information';
     grades.push({ id: h.id, ticks, ...gr, value: m.value, n: m.n, by: 'code' });
@@ -302,14 +305,14 @@ async function main() {
   // Tonight's rules: no restating what the data already shows, and profit at least every other night.
   const prev = hyps.filter((h) => h.date < ctx.date).at(-1);
   const requireProfit = !!prev && !isProfitSpec(prev.spec);
-  const rules = `A spec that the pre-freeze data already satisfies is rejected unless it predicts profit (maker.netCentsPerAttempt > a threshold >= 0, or pair.bothSidesFracNetPositive > a threshold > 0); a non-profit prediction must claim a change from the recorded value.` +
+  const rules = `A spec that the pre-freeze data already satisfies is rejected unless it predicts profit (resolution.netCentsPer10 or maker.netCentsPerAttempt > a threshold >= 0, or pair.bothSidesFracNetPositive > a threshold > 0); a non-profit prediction must claim a change from the recorded value.` +
     (requireProfit ? ` The previous hypothesis (${prev.id}) did not predict profit, so TONIGHT'S SPEC MUST be a profit prediction: find the slice where it is most plausible and say why.` : '');
   ctx.hyps = hyps;
   const freeze = (res) => {
     if (!res.hypothesis) return null;
     const spec = extractSpec(res.content);
     const invalid = validateSpec(spec, ev.watchlist.pairs);
-    const baseline = invalid ? null : measureSpecRows(allRows, spec, ev.watchlist);
+    const baseline = invalid ? null : measureSpecRows(allRows, spec, ev.watchlist, settled);
     const specError = invalid || specRejection(spec, baseline, { requireProfit });
     return { id: ctx.date, date: ctx.date, deep: ctx.deep, issue: 'LOCAL', text: res.hypothesis, spec, frozenAt: g.lastTick,
       baseline, status: specError ? 'UNGRADEABLE' : 'open', ...(specError ? { specNote: specError } : {}), retests: [] };

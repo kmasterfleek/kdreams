@@ -296,3 +296,74 @@ export function sliceFilter(slice = {}) {
     return true;
   };
 }
+
+/** Resolution rows (data/resolutions.ndjson text) keyed "v:id"; later lines never override earlier ones. */
+export function parseResolutions(text) {
+  const m = new Map();
+  for (const line of String(text).split('\n')) {
+    if (!line.trim()) continue;
+    try {
+      const r = JSON.parse(line);
+      const k = `${r.v}:${r.id}`;
+      if (r.v && r.id && Number.isFinite(r.y) && r.at && !m.has(k)) m.set(k, r);
+    } catch { /* skip junk */ }
+  }
+  return m;
+}
+
+/**
+ * Hold to resolution: buy the favored side (YES at the ask when the ask is >= 0.5, else NO at
+ * 1 - bid) with `stake` dollars at the first snapshot that fits the slice, and hold until the
+ * market settles. Only resolved markets count, and only snapshots before settlement. A touch
+ * showing less than `stake` dollars of size is skipped; rows without sizes count as `unsized`. Kalshi markets are
+ * entered once per event (both sides of one game are one bet). Kalshi taker fees round up to the
+ * cent per order; Polymarket's do not.
+ *
+ * Slice keys: priceMin <= entry price < priceMax; hoursToClose [min, max) measured to the
+ * catalog close time; plus the usual hoursUtc. Returns net cents per `stake` dollars entered.
+ */
+export function holdToResolution(rows, resolutions, catalogs = {}, { fees = {}, stake = 10, slice = {} } = {}) {
+  const pmT = fees.polymarketTakerRate ?? 0.04, ksT = fees.kalshiTakerRate ?? 0.07;
+  const inHours = sliceFilter({ hoursUtc: slice.hoursUtc });
+  const pMin = slice.priceMin ?? 0.5, pMax = slice.priceMax ?? 1;
+  const entries = [], events = new Set();
+  for (const [key, series] of groupSeries(rows)) {
+    const res = resolutions.get(key);
+    if (!res) continue;
+    const v = key.slice(0, 2), id = key.slice(3);
+    const meta = catalogs[v]?.[id] || {};
+    const event = v === 'ks' && meta.event ? `ks:${meta.event}` : null;
+    if (event && events.has(event)) continue;
+    for (const r of series) {
+      if (r.t >= res.at || !twoSided(r) || !inHours(r)) continue;
+      const yes = r.a >= 0.5;
+      const p = yes ? r.a : 1 - r.b, size = yes ? r.as : r.bs;
+      if (p < pMin - EPS || p >= pMax - EPS || p >= 1) continue;
+      if (slice.hoursToClose) {
+        const close = Date.parse(meta.closeTime || '');
+        const h = (close - Date.parse(r.t)) / 3600000;
+        if (!Number.isFinite(h) || h < slice.hoursToClose[0] || h >= slice.hoursToClose[1]) continue;
+      }
+      if (size !== null && size !== undefined && !(size * p >= stake)) continue;
+      const n = Math.floor(stake / p + EPS);
+      const rawFee = (v === 'pm' ? pmT : ksT) * n * p * (1 - p) * 100;
+      const fee = v === 'ks' ? Math.ceil(rawFee - EPS) : rawFee;
+      const payout = yes ? res.y : 1 - res.y;
+      entries.push({ key, t: r.t, p, sized: size !== null && size !== undefined, win: payout > p, net: n * (payout - p) * 100 - fee, fee, holdHours: (Date.parse(res.at) - Date.parse(r.t)) / 3600000 });
+      if (event) events.add(event);
+      break;
+    }
+  }
+  const nets = entries.map((e) => e.net);
+  return {
+    markets: entries.length,
+    unsized: entries.filter((e) => !e.sized).length,
+    wins: entries.filter((e) => e.win).length,
+    winRate: entries.length ? round(entries.filter((e) => e.win).length / entries.length, 3) : null,
+    netCentsPer10: entries.length ? round((mean(nets) * 10) / stake, 1) : null,
+    worstCents: entries.length ? round(Math.min(...nets)) : null,
+    meanPrice: entries.length ? round(mean(entries.map((e) => e.p)), 3) : null,
+    feeCents: round(entries.reduce((a, e) => a + e.fee, 0)),
+    medianHoldHours: entries.length ? round(quantile(entries.map((e) => e.holdHours), 0.5), 1) : null,
+  };
+}

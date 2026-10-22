@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { bestOfBook, mapPolymarket, mapKalshi, isPlainBinary, round, pmResolution, ksResolution, resolutionCandidates } from './kdreams-collect.mjs';
 import {
-  parseRows, groupSeries, spreadStats, makerSpreadProxy, sumProxies, crossVenue, byBucket, candidates, feeTable, quantile, corr, medianGapMinutes, mid, sliceFilter,
+  parseRows, groupSeries, spreadStats, makerSpreadProxy, sumProxies, crossVenue, byBucket, candidates, feeTable, quantile, corr, medianGapMinutes, mid, sliceFilter, parseResolutions, holdToResolution,
 } from './lib/kdreams-metrics.mjs';
 import { computeReport, renderSummary, renderMarkdown, validateSpec, measureSpecRows, gradeSpec, describeSpec } from './kdreams-backtest.mjs';
 import { priorNightFates, reasoningFor, extractHypothesis, extractSpec, specInstructions, planRetests, fatesSummary, cell, isProfitSpec, specRejection, scorecard } from './kdreams-nightly.mjs';
@@ -268,4 +268,57 @@ test('collector: resolutions read settled outcomes and pick unchecked past-close
   const checks = { recent: '2026-10-22T10:00Z', dropped: '2026-10-22T02:00Z' };
   assert.deepEqual(resolutionCandidates(catalog, new Set(['done']), checks, t), ['past', 'dropped']);
   assert.deepEqual(resolutionCandidates(catalog, new Set(['done']), checks, t, { max: 1 }), ['past']);
+});
+
+test('metrics: holdToResolution buys the favored side once per market and nets fees at settlement', () => {
+  const row = (v, id, t, b, a, bs = 1000, as = 1000) => ({ t, v, id, b, a, bs, as, last: null, v24: null, oi: null });
+  const rows = [
+    row('ks', 'G-A', '2026-10-14T18:00Z', 0.95, 0.96), // below the band
+    row('ks', 'G-A', '2026-10-14T18:15Z', 0.97, 0.98), // entry: YES at 0.98
+    row('ks', 'G-A', '2026-10-14T18:30Z', 0.98, 0.99), // later snapshot ignored
+    row('ks', 'G-B', '2026-10-14T18:15Z', 0.01, 0.02), // same event, NO at 0.99: skipped
+    row('pm', 'p1', '2026-10-14T18:00Z', 0.02, 0.03, 5, 5), // NO at 0.98, but $0.05 at the touch: skipped
+    row('pm', 'p1', '2026-10-14T18:15Z', 0.01, 0.02, null, null), // NO at 0.99, unsized: entered
+    row('pm', 'p2', '2026-10-14T18:00Z', 0.97, 0.98), // loses
+    row('pm', 'p3', '2026-10-14T21:00Z', 0.97, 0.98), // after settlement: ignored
+  ];
+  const res = parseResolutions([
+    '{"t":"x","v":"ks","id":"G-A","y":1,"at":"2026-10-14T20:00Z"}', '{"t":"x","v":"ks","id":"G-B","y":0,"at":"2026-10-14T20:00Z"}',
+    '{"t":"x","v":"pm","id":"p1","y":0,"at":"2026-10-14T20:00Z"}', '{"t":"x","v":"pm","id":"p2","y":0,"at":"2026-10-14T20:00Z"}',
+    '{"t":"x","v":"pm","id":"p3","y":1,"at":"2026-10-14T20:00Z"}', 'junk', '{"t":"x","v":"pm","id":"p1","y":1,"at":"later"}',
+  ].join('\n'));
+  assert.equal(res.size, 5);
+  assert.equal(res.get('pm:p1').y, 0);
+  const catalogs = { ks: { 'G-A': { event: 'G', closeTime: '2026-10-14T20:00:00Z' }, 'G-B': { event: 'G' } } };
+  const fees = { polymarketTakerRate: 0.04, kalshiTakerRate: 0.07 };
+
+  // Kalshi: 10 contracts at 98c win 2c each = 20c gross; fee 0.07*10*0.98*0.02*100 = 1.372c, rounded up to 2c.
+  const ks = holdToResolution(rows.filter((r) => r.v === 'ks'), res, catalogs, { fees, slice: { priceMin: 0.97, priceMax: 0.99 } });
+  assert.deepEqual([ks.markets, ks.wins, ks.netCentsPer10, ks.feeCents, ks.medianHoldHours], [1, 1, 18, 2, 1.8]);
+  // The other side of the same game is the same bet: not entered again even when its band matches.
+  assert.equal(holdToResolution(rows.filter((r) => r.v === 'ks'), res, catalogs, { fees, slice: { priceMin: 0.97 } }).markets, 1);
+  // hoursToClose uses the catalog close: G-A's entry is 1.75h before close.
+  assert.equal(holdToResolution(rows.filter((r) => r.v === 'ks'), res, catalogs, { fees, slice: { priceMin: 0.97, hoursToClose: [0, 1] } }).markets, 0);
+
+  // Polymarket: p1 NO at 0.99 wins (10 contracts, +10c minus 0.396c fee), p2 YES at 0.98 loses 10 * 98c minus fee.
+  const pm = holdToResolution(rows.filter((r) => r.v === 'pm'), res, catalogs, { fees, slice: { priceMin: 0.97 } });
+  assert.deepEqual([pm.markets, pm.unsized, pm.wins, pm.winRate], [2, 1, 1, 0.5]);
+  assert.equal(pm.worstCents, -980.78);
+  assert.equal(pm.netCentsPer10, round((10 - 0.396 + -980 - 0.784) / 2, 1));
+});
+
+test('specs: resolution metrics validate their own slice keys and count as profit predictions', () => {
+  const r = { metric: 'resolution.netCentsPer10', venue: 'ks', slice: { priceMin: 0.97, priceMax: 0.99, hoursToClose: [0, 24] }, op: '>', threshold: 1 };
+  assert.equal(validateSpec(r), null);
+  assert.match(validateSpec({ ...r, slice: { midMin: 0.9 } }), /priceMin\/priceMax/);
+  assert.match(validateSpec({ ...r, slice: { priceMin: 0.3 } }), /0\.5\.\.1/);
+  assert.match(validateSpec({ ...r, slice: { priceMin: 0.99, priceMax: 0.97 } }), /below priceMax/);
+  assert.match(validateSpec({ ...r, slice: { hoursToClose: [5, 2] } }), /hoursToClose/);
+  assert.match(validateSpec({ metric: 'maker.fillRate', venue: 'pm', op: '>', threshold: 0, slice: { priceMin: 0.9 } }), /only applies to resolution/);
+  assert.equal(describeSpec(r), 'resolution.netCentsPer10 > 1 (venue ks, entry 0.97..0.99, 0-24h to close)');
+  assert.equal(isProfitSpec(r), true);
+  assert.equal(isProfitSpec({ ...r, metric: 'resolution.winRate', threshold: 0.99 }), false);
+  // A profit prediction may already hold before the freeze: persistence is the claim.
+  assert.equal(specRejection(r, { value: 15, n: 80 }), null);
+  assert.match(specInstructions([]), /hoursToClose/);
 });

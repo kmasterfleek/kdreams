@@ -67,6 +67,8 @@ snapshots and sharpen the hypotheses, not to produce trades.
 4. **lead-lag** — which venue moves first on paired events.
 5. **fee-modeling** — the published fee schedules as cents per contract, and what a one-cent round trip nets after them.
 
+Every night's evidence, whatever the surface, also carries **hold-to-resolution**: buy the favored side with $10 when it first trades in a price band (say 97–99c), hold to settlement, and net taker fees (Kalshi's rounded up per order). Measured on `data/resolutions.ndjson` as `resolution.netCentsPer10` and `resolution.winRate`, sliced by entry price, hours to the scheduled close and UTC hour. One entry per market, one per event on Kalshi, and a touch showing under $10 of size is skipped. Only settled markets count, so long-dated ones are under-represented; one loss at 98c erases about 50 wins, so trust it only on a large sample.
+
 ## Fees are the whole game
 
 | At a 50c price | Polymarket | Kalshi |
