@@ -42,6 +42,16 @@ ledger's prior-night fates column, in `docs/dream-cycle/hypotheses.json`, and
 as a comment on the hypothesis's issue, which is then closed. The model sees
 past grades the next night so it does not re-propose a refuted idea.
 
+Two rules keep the model from grading itself on easy questions. A spec that the
+pre-freeze data already satisfies is rejected, unless it is a **profit
+prediction** (`maker.netCentsPerAttempt > t` with t >= 0, or
+`pair.bothSidesFracNetPositive > t` with t > 0); "Kalshi maker still loses
+money" restates the evidence and teaches nothing. And after any night whose
+spec was not a profit prediction, the next night's spec must be one. A rejected
+spec gets one retry with the reason; a second miss is frozen as UNGRADEABLE.
+The model also sees its record: profit predictions made and supported, and how
+many SUPPORTED grades were already true at freeze.
+
 A SUPPORTED grade means the stated number held, nothing more: a higher round-
 trip rate can still lose money per attempt. Read the spec, not the sentence. The point of the first month is to accumulate those
 snapshots and sharpen the hypotheses, not to produce trades.

@@ -98,6 +98,39 @@ export function specInstructions(pairs = []) {
     `The spec must say exactly what the Hypothesis sentence says; anything the catalog cannot express (volume tiers, cadence, depth beyond the touch, queue position) belongs in Next observation, not in the hypothesis.`;
 }
 
+/** Specs that predict money made after fees: the only kind allowed to already hold before the freeze. */
+export function isProfitSpec(spec) {
+  if (spec?.op !== '>') return false;
+  if (spec.metric === 'maker.netCentsPerAttempt') return spec.threshold >= 0;
+  if (spec.metric === 'pair.bothSidesFracNetPositive') return spec.threshold > 0;
+  return false;
+}
+
+/** Whether a measured value already satisfies a spec's threshold. */
+export function holds(spec, value) {
+  if (value === null || value === undefined) return false;
+  return spec.op === '>' ? value > spec.threshold : value < spec.threshold;
+}
+
+/**
+ * Why a valid spec would teach nothing, or null. A non-profit prediction the pre-freeze data
+ * already satisfies is a restatement; after a non-profit night the next one must predict profit.
+ */
+export function specRejection(spec, baseline, { requireProfit = false } = {}) {
+  if (requireProfit && !isProfitSpec(spec)) return 'the previous hypothesis did not predict profit, so tonight\'s must (maker.netCentsPerAttempt > a threshold >= 0, or pair.bothSidesFracNetPositive > a threshold > 0, in some slice)';
+  if (!isProfitSpec(spec) && holds(spec, baseline?.value)) return `already true before the freeze (${spec.metric} = ${baseline.value} on n=${baseline.n}); a non-profit prediction must claim a change from the recorded value`;
+  return null;
+}
+
+/** The record the model sees: how many profit predictions it made and how many SUPPORTED grades were free. */
+export function scorecard(hyps) {
+  const graded = hyps.filter((h) => h.status === 'SUPPORTED' || h.status === 'REFUTED');
+  const profit = graded.filter((h) => isProfitSpec(h.spec));
+  const free = graded.filter((h) => h.status === 'SUPPORTED' && !isProfitSpec(h.spec) && holds(h.spec, h.baseline?.value));
+  return `Record: ${graded.length} graded; profit predictions ${profit.length} (${profit.filter((h) => h.status === 'SUPPORTED').length} SUPPORTED); ` +
+    `${free.length} SUPPORTED grade(s) were already true at freeze and carry no information.`;
+}
+
 /** Keep ledger cells and registry notes table-safe and short. */
 export function cell(text, max = 160) {
   return trimWords(String(text).replace(/\|/g, '/').replace(/\s+/g, ' ').trim(), max);
@@ -127,7 +160,7 @@ export function fatesSummary(grades) {
   return cell(grades.map((g) => `${g.id.slice(5)} ${g.verdict}${g.ticks !== undefined ? ` (${g.ticks}t)` : ''}`).join('; '), 120);
 }
 
-async function research(ctx, ev, history = []) {
+async function research(ctx, ev, history = [], rules = '', retry = '') {
   if (!KEY) {
     return {
       blocked: true,
@@ -145,9 +178,10 @@ async function research(ctx, ev, history = []) {
     `EVIDENCE (computed from recorded top-of-book snapshots; the collector targets a 15-minute cadence, the real median gap is ${ev.report.generatedFrom.medianGapMinutes ?? 'n/a'} minutes):\n${ev.md}\n\n` +
     `CATALOG EXCERPT:\n${ev.catalogs}\n\n` +
     (history.length
-      ? `EARLIER HYPOTHESES (graded by code on snapshots recorded after each was frozen; do not re-propose a REFUTED one unchanged):\n${history.join('\n')}\n\n`
+      ? `EARLIER HYPOTHESES (graded by code on snapshots recorded after each was frozen; do not re-propose a REFUTED one unchanged):\n${history.join('\n')}\n${scorecard(ctx.hyps || [])}\n\n`
       : '') +
-    `HYPOTHESIS SPEC CONTRACT:\n${specInstructions(ev.watchlist.pairs)}\n\n` +
+    `HYPOTHESIS SPEC CONTRACT:\n${specInstructions(ev.watchlist.pairs)}\n${rules}\n\n` +
+    (retry ? `${retry}\n\n` : '') +
     `Produce, in under 450 words, with these exact headings:\n` +
     `## Observations — 2-4 bullets about "${ctx.deep}", each citing a number from EVIDENCE.\n` +
     `## Hypothesis — exactly one, in the form: "Given <market subset>, when <simple action>, then <metric> should be <op threshold> vs <baseline from EVIDENCE>, subject to <fee or risk invariant>." The threshold must be a stated number that the data could refute.\n` +
@@ -245,7 +279,9 @@ async function main() {
   const plan = planRetests(hyps.filter((x) => !grades.some((gr) => gr.id === x.id)), { date: ctx.date, days: ev.days, minTicks, maxOpen: bt.retestMaxOpen ?? 5 }, (h) => ticksAfter(h.frozenAt));
   for (const { h, ticks } of plan.due) {
     const m = measureSpecRows(after(h.frozenAt), h.spec, ev.watchlist);
-    grades.push({ id: h.id, ticks, ...gradeSpec(h.spec, m, minN), value: m.value, n: m.n, by: 'code' });
+    const gr = gradeSpec(h.spec, m, minN);
+    if (gr.verdict === 'SUPPORTED' && !isProfitSpec(h.spec) && holds(h.spec, h.baseline?.value)) gr.note += '; already true before the freeze, so no information';
+    grades.push({ id: h.id, ticks, ...gr, value: m.value, n: m.n, by: 'code' });
   }
   for (const { h, ticks } of plan.tooSoon) grades.push({ id: h.id, ticks, verdict: 'INCONCLUSIVE', note: `only ${ticks} post-freeze ticks (< ${minTicks})`, by: 'rule' });
   for (const h of plan.expired) grades.push({ id: h.id, verdict: 'EXPIRED', note: `frozen before the ${ev.days}-day window without a grade`, by: 'rule' });
@@ -255,28 +291,49 @@ async function main() {
   const tonightGrade = new Map(grades.map((x) => [x.id, x]));
   const history = hyps.filter((h) => h.date !== ctx.date).slice(-MAX_HISTORY).map((h) => {
     const gr = tonightGrade.get(h.id) || h.retests?.at(-1);
-    return `- H ${h.id} [${gr?.verdict || h.status}] ${h.spec && !validateSpec(h.spec, ev.watchlist.pairs) ? describeSpec(h.spec) : cell(h.text, 140)}${gr?.note ? ` — ${gr.note}` : ''}`;
+    const free = (gr?.verdict || h.status) === 'SUPPORTED' && !isProfitSpec(h.spec) && holds(h.spec, h.baseline?.value);
+    return `- H ${h.id} [${gr?.verdict || h.status}${free ? ', already true at freeze' : ''}${isProfitSpec(h.spec) ? ', profit' : ''}] ${h.spec && !validateSpec(h.spec, ev.watchlist.pairs) ? describeSpec(h.spec) : cell(h.text, 140)}${gr?.note ? ` — ${gr.note}` : ''}`;
   });
 
-  const r = await research(ctx, ev, history);
+  // Tonight's rules: no restating what the data already shows, and profit at least every other night.
+  const prev = hyps.filter((h) => h.date < ctx.date).at(-1);
+  const requireProfit = !!prev && !isProfitSpec(prev.spec);
+  const rules = `A spec that the pre-freeze data already satisfies is rejected unless it predicts profit (maker.netCentsPerAttempt > a threshold >= 0, or pair.bothSidesFracNetPositive > a threshold > 0); a non-profit prediction must claim a change from the recorded value.` +
+    (requireProfit ? ` The previous hypothesis (${prev.id}) did not predict profit, so TONIGHT'S SPEC MUST be a profit prediction: find the slice where it is most plausible and say why.` : '');
+  ctx.hyps = hyps;
+  const freeze = (res) => {
+    if (!res.hypothesis) return null;
+    const spec = extractSpec(res.content);
+    const invalid = validateSpec(spec, ev.watchlist.pairs);
+    const baseline = invalid ? null : measureSpecRows(allRows, spec, ev.watchlist);
+    const specError = invalid || specRejection(spec, baseline, { requireProfit });
+    return { id: ctx.date, date: ctx.date, deep: ctx.deep, issue: 'LOCAL', text: res.hypothesis, spec, frozenAt: g.lastTick,
+      baseline, status: specError ? 'UNGRADEABLE' : 'open', ...(specError ? { specNote: specError } : {}), retests: [] };
+  };
+  let r = await research(ctx, ev, history, rules);
+  let frozen = r.blocked ? null : freeze(r);
+  if (!r.blocked && frozen?.status !== 'open') {
+    // One retry with the reason; a second miss is frozen as UNGRADEABLE with that reason.
+    const why = frozen ? frozen.specNote : 'no Hypothesis section was found';
+    console.log(`Spec rejected (${why}); asking once more`);
+    const r2 = await research(ctx, ev, history, rules, `YOUR PREVIOUS ANSWER WAS REJECTED: ${why}.${frozen?.spec ? ` Its spec was ${JSON.stringify(frozen.spec)}.` : ''} Answer again in full with a hypothesis and spec that fix this.`);
+    if (!r2.blocked) {
+      const u1 = r.usage || {}, u2 = r2.usage || {};
+      r = { ...r2, usage: { total_tokens: (u1.total_tokens || 0) + (u2.total_tokens || 0), ...(u1.cost !== undefined || u2.cost !== undefined ? { cost: (u1.cost || 0) + (u2.cost || 0) } : {}) },
+        body: `${r2.body}\n\n<details><summary>First answer, rejected: ${cell(why, 200)}</summary>\n\n${r.content}\n</details>` };
+      frozen = freeze(r);
+    }
+  }
   const decisive = grades.some((x) => x.verdict === 'SUPPORTED' || x.verdict === 'REFUTED');
   const evaluated = r.blocked ? 'blocked' : decisive ? 'yes' : 'no';
   const verdict = 'INCONCLUSIVE'; // tonight's own hypothesis is untested by construction
   const cost = r.usage ? ` (${r.usage.total_tokens} tokens${r.usage.cost !== undefined ? `, $${Number(r.usage.cost).toFixed(5)}` : ''})` : '';
 
-  // Freeze tonight's hypothesis with its spec and the pre-freeze value of the same number.
-  let frozen = null;
-  if (r.hypothesis) {
-    const spec = extractSpec(r.content);
-    const specError = validateSpec(spec, ev.watchlist.pairs);
-    const baseline = specError ? null : measureSpecRows(allRows, spec, ev.watchlist);
-    frozen = { id: ctx.date, date: ctx.date, deep: ctx.deep, issue: 'LOCAL', text: r.hypothesis, spec, frozenAt: g.lastTick,
-      baseline, status: specError ? 'UNGRADEABLE' : 'open', ...(specError ? { specNote: specError } : {}), retests: [] };
-  }
   const specLine = frozen
     ? (frozen.status === 'open'
       ? `## Tonight's spec (frozen at ${frozen.frozenAt})\n\n- ${describeSpec(frozen.spec)}\n- pre-freeze value: ${frozen.baseline.value} on n=${frozen.baseline.n}; graded on post-freeze data once it has ${minTicks} ticks and n >= ${Math.max(frozen.spec.minN ?? 0, minN)}\n`
-      : `## Tonight's spec\n\n- UNGRADEABLE: ${frozen.specNote}. The hypothesis is recorded but will never be graded.\n`)
+      : `## Tonight's spec\n\n- UNGRADEABLE: ${frozen.specNote}. The hypothesis is recorded but will never be graded.\n`) +
+      (requireProfit ? `- tonight was a required profit night (previous hypothesis ${prev.id} did not predict profit)\n` : '')
     : '';
   const regradeTable = grades.length
     ? ['## Frozen hypotheses graded tonight', '', '| H | spec | post-freeze ticks | value | n | grade | by | note |', '|---|---|---|---|---|---|---|---|',

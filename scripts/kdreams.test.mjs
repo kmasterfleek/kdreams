@@ -8,7 +8,7 @@ import {
   parseRows, groupSeries, spreadStats, makerSpreadProxy, sumProxies, crossVenue, byBucket, candidates, feeTable, quantile, corr, medianGapMinutes, mid, sliceFilter,
 } from './lib/kdreams-metrics.mjs';
 import { computeReport, renderSummary, renderMarkdown, validateSpec, measureSpecRows, gradeSpec, describeSpec } from './kdreams-backtest.mjs';
-import { priorNightFates, reasoningFor, extractHypothesis, extractSpec, specInstructions, planRetests, fatesSummary, cell } from './kdreams-nightly.mjs';
+import { priorNightFates, reasoningFor, extractHypothesis, extractSpec, specInstructions, planRetests, fatesSummary, cell, isProfitSpec, specRejection, scorecard } from './kdreams-nightly.mjs';
 
 test('nightly: importing the module never runs the pipeline, and helpers behave', () => {
   // Importing above must not have filed anything or touched the ledger: the guard is the test.
@@ -222,4 +222,27 @@ test('specs: validation, slicing, measurement and grading are arithmetic, not ju
   assert.equal(gradeSpec({ ...spec, minN: 500 }, { value: 0.5, n: 120 }, 100).verdict, 'INCONCLUSIVE');
   assert.equal(gradeSpec(spec, { value: null, n: 0 }, 100).verdict, 'INCONCLUSIVE');
   assert.equal(describeSpec({ ...spec, slice: { hoursUtc: [5, 10] } }), 'maker.fillRate > 0.2 (venue pm, UTC 5h-10h, n>=50)');
+});
+
+test('specs: restating pre-freeze data is rejected, profit is required every other night', () => {
+  const lose = { metric: 'maker.netCentsPerAttempt', venue: 'ks', op: '<', threshold: 0 };
+  const profit = { metric: 'maker.netCentsPerAttempt', venue: 'pm', slice: { midMin: 0.2 }, op: '>', threshold: 0 };
+  const tight = { metric: 'spread.fracOneCent', venue: 'pm', op: '<', threshold: 0.89 };
+  assert.equal(isProfitSpec(profit), true);
+  assert.equal(isProfitSpec(lose), false);
+  assert.equal(isProfitSpec({ metric: 'pair.bothSidesFracNetPositive', pair: 'p1', op: '>', threshold: 0 }), false);
+  assert.match(specRejection(lose, { value: -1.8, n: 10000 }), /already true before the freeze/);
+  assert.equal(specRejection(tight, { value: 0.95, n: 3000 }), null);
+  assert.equal(specRejection(tight, { value: null, n: 0 }), null);
+  // A profit prediction may already hold: persistence out of sample is the claim worth testing.
+  assert.equal(specRejection(profit, { value: 0.4, n: 500 }), null);
+  assert.match(specRejection(tight, { value: 0.95, n: 3000 }, { requireProfit: true }), /must/);
+  assert.equal(specRejection(profit, { value: -1, n: 500 }, { requireProfit: true }), null);
+
+  const card = scorecard([
+    { status: 'SUPPORTED', spec: lose, baseline: { value: -1.8, n: 1 } },
+    { status: 'REFUTED', spec: profit, baseline: { value: -1, n: 1 } },
+    { status: 'open', spec: tight },
+  ]);
+  assert.equal(card, 'Record: 2 graded; profit predictions 1 (0 SUPPORTED); 1 SUPPORTED grade(s) were already true at freeze and carry no information.');
 });
