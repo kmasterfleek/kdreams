@@ -13,6 +13,11 @@
  *   last  last trade price (Kalshi only)          v24    24h volume (venue units)
  *   oi    Kalshi open interest; Polymarket liquidity number
  *
+ * Settled markets also get one line each in data/resolutions.ndjson:
+ *   { t, v, id, y, at }   y = what one YES share paid (0..1), at = settlement time
+ * Candidates are catalog markets past their close time or no longer in the watched
+ * set; each is re-checked at most every `resolutions.recheckMinutes`.
+ *
  * Env:   KDREAMS_WATCHLIST (default config/kdreams.watchlist.json)
  *        KDREAMS_DATA      (default data)
  *        KDREAMS_NOW       (ISO override, for reproducible runs)
@@ -113,6 +118,35 @@ export function mapKalshi(m, t, event) {
   return { row, meta };
 }
 
+/** Gamma market -> resolution row, or null while unresolved. YES is outcome 0, as in mapPolymarket. */
+export function pmResolution(m, t) {
+  if (!m.closed || m.umaResolutionStatus !== 'resolved') return null;
+  const y = round(parseJsonField(m.outcomePrices)[0]);
+  if (y === null || y < 0 || y > 1) return null;
+  const at = m.closedTime ? new Date(String(m.closedTime).replace(' ', 'T').replace(/\+00$/, 'Z')) : null;
+  return { t, v: 'pm', id: String(m.conditionId), y, at: at && !Number.isNaN(at.getTime()) ? at.toISOString().slice(0, 16) + 'Z' : null };
+}
+
+/** Kalshi v2 market -> resolution row, or null while unsettled (voided markets never resolve). */
+export function ksResolution(m, t) {
+  const y = m.result === 'yes' ? 1 : m.result === 'no' ? 0 : null;
+  if (y === null) return null;
+  const at = m.settlement_ts || m.close_time || null;
+  return { t, v: 'ks', id: String(m.ticker), y: round(m.settlement_value_dollars) ?? y, at: at ? String(at).slice(0, 16) + 'Z' : null };
+}
+
+/** Catalog ids worth asking about: past close or out of the watched set, unresolved, not checked recently. */
+export function resolutionCandidates(catalog, resolved, checks, t, { recheckMinutes = 360, max = 200, staleMinutes = 120 } = {}) {
+  const now = Date.parse(t);
+  return Object.entries(catalog)
+    .filter(([id, m]) => !resolved.has(id))
+    .filter(([, m]) => (m.closeTime && Date.parse(m.closeTime) <= now) || (m.lastSeen && now - Date.parse(m.lastSeen) > staleMinutes * 60000))
+    .filter(([id]) => !checks[id] || now - Date.parse(checks[id]) >= recheckMinutes * 60000)
+    .sort(([a, x], [b, y]) => (checks[a] || '').localeCompare(checks[b] || '') || String(x.closeTime).localeCompare(String(y.closeTime)))
+    .slice(0, max)
+    .map(([id]) => id);
+}
+
 export function isPlainBinary(m) {
   return m.market_type === 'binary' && !m.mve_collection_ticker && (m.status === 'active' || m.status === 'open');
 }
@@ -199,6 +233,47 @@ async function collectKalshi(cfg, t, dataDir, flags, log) {
   return out;
 }
 
+async function fetchResolutions(venue, ids, t) {
+  const out = [];
+  for (let i = 0; i < ids.length; i += 50) {
+    const batch = ids.slice(i, i + 50);
+    if (venue === 'polymarket') {
+      const ms = await fetchJson(`${GAMMA}/markets?${batch.map((id) => `condition_ids=${id}`).join('&')}&closed=true&limit=100`);
+      for (const m of ms) { const r = pmResolution(m, t); if (r) out.push(r); }
+    } else {
+      const d = await fetchJson(`${KALSHI}/markets?limit=100&tickers=${batch.join(',')}`);
+      for (const m of d.markets || []) { const r = ksResolution(m, t); if (r) out.push(r); }
+    }
+    await sleep(150);
+  }
+  return out;
+}
+
+/** Append newly settled markets to data/resolutions.ndjson. Never fails the snapshot run. */
+async function collectResolutions(cfg, dataDir, t, flags, log) {
+  const file = join(dataDir, 'resolutions.ndjson');
+  const checksPath = join(dataDir, 'catalog', 'resolution-checks.json');
+  const resolved = new Set(existsSync(file) ? readFileSync(file, 'utf8').split('\n').filter(Boolean).map((l) => { try { return JSON.parse(l).id; } catch { return null; } }) : []);
+  const checks = loadJson(checksPath, {});
+  const rows = [];
+  for (const venue of ['polymarket', 'kalshi']) {
+    const catalog = loadJson(join(dataDir, 'catalog', `${venue}.json`), {});
+    const ids = resolutionCandidates(catalog, resolved, checks, t, cfg);
+    if (!ids.length) continue;
+    try {
+      const got = await fetchResolutions(venue, ids, t);
+      for (const id of ids) checks[id] = t;
+      rows.push(...got.filter((r) => !resolved.has(r.id)));
+      log(`resolutions ${venue}: ${got.length} settled of ${ids.length} checked`);
+    } catch (e) { log(`resolutions ${venue} skipped: ${e.message}`); }
+  }
+  if (flags.dryRun) return rows.length;
+  for (const r of rows) delete checks[r.id];
+  if (rows.length) appendFileSync(file, rows.map((r) => JSON.stringify(r)).join('\n') + '\n');
+  writeFileSync(checksPath, JSON.stringify(checks, null, 1) + '\n');
+  return rows.length;
+}
+
 export async function main(argv = process.argv.slice(2)) {
   const flags = { dryRun: argv.includes('--dry-run'), rescan: argv.includes('--rescan') };
   const log = (s) => console.log(`[kdreams-collect] ${s}`);
@@ -218,7 +293,8 @@ export async function main(argv = process.argv.slice(2)) {
 
   if (flags.dryRun) {
     for (const x of all.slice(0, 3)) console.log(JSON.stringify(x.row));
-    log(`dry run: ${all.length} rows not written`);
+    const settled = await collectResolutions(wl.resolutions || {}, dataDir, t, flags, log).catch((e) => (log(`resolutions failed: ${e.message}`), 0));
+    log(`dry run: ${all.length} rows and ${settled} resolutions not written`);
     return { t, pm: pm.length, ks: ks.length };
   }
   if (all.length === 0) throw new Error('both venues failed; nothing to write');
@@ -236,6 +312,8 @@ export async function main(argv = process.argv.slice(2)) {
     writeFileSync(path, JSON.stringify(catalog, null, 1) + '\n');
   }
   log(`wrote ${all.length} rows to ${day}`);
+  const settled = await collectResolutions(wl.resolutions || {}, dataDir, t, flags, log).catch((e) => (log(`resolutions failed: ${e.message}`), 0));
+  if (settled) log(`appended ${settled} resolutions`);
   return { t, pm: pm.length, ks: ks.length };
 }
 

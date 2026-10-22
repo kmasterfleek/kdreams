@@ -3,8 +3,11 @@
 **An observe-only nightly research loop over Polymarket and Kalshi, built on the
 [Dream Machine](https://github.com/ruvnet/dream-machine) engine.**
 
-The question it works on is small on purpose: *is there a simple, repeatable
-action that nets about one cent per contract after fees?* It never trades. It
+The question it works on is small on purpose: *is there a simple action that
+nets at least one cent on about $10 deployed (0.1% per trade) after fees, and
+repeats reliably enough to be a flywheel?* At a 50c price, $10 buys 20
+contracts, so that is about 0.05c per contract; fees, not edge, are the hurdle.
+It never trades. It
 records what the order books actually showed, forms one falsifiable hypothesis a
 night, and writes the verdict down whether or not the answer was the hoped-for
 one.
@@ -16,7 +19,7 @@ one.
 
 | Job | Cadence | What it does | Cost |
 |---|---|---|---|
-| `kdreams collect` | every 15 min, inside a ~6 h loop | Snapshots top-of-book for the 100 highest-volume markets on each venue plus the pinned pair markets (no keys, no accounts) and commits one NDJSON line per market to `data/snapshots/`. GitHub drops most high-frequency cron runs, so each run loops on the quarter hour for up to 340 minutes and an hourly cron restarts it. | free CI minutes (public repo) |
+| `kdreams collect` | every 15 min, inside a ~6 h loop | Snapshots top-of-book for the 100 highest-volume markets on each venue plus the pinned pair markets (no keys, no accounts) and commits one NDJSON line per market to `data/snapshots/`. Each tick also records how up to 200 past-close markets per venue settled in `data/resolutions.ndjson`. GitHub drops most high-frequency cron runs, so each run loops on the quarter hour for up to 340 minutes and an hourly cron restarts it. | free CI minutes (public repo) |
 | `kdreams nightly` | 09:00 UTC | Runs the backtest over the last 14 days, grades still-open frozen hypotheses on post-freeze snapshots (in code), hands the evidence and those grades to an OpenRouter model (GPT-6 Sol) for observations and one new hypothesis with a machine-readable spec, files a witnessed issue, and commits the report, one ledger row and `docs/dream-cycle/hypotheses.json` to main. | ~$0.014 / night (~$0.40 / month) on GPT-6 Sol; falls back to Qwen 3.7 flash, then GPT-5 nano |
 
 Every night ends in exactly one verdict: **ACCEPT**, **REJECT**, or
@@ -115,6 +118,8 @@ data/snapshots/YYYY-MM-DD.ndjson   one line per market per tick: {t,v,id,b,a,bs,
 data/catalog/polymarket.json       conditionId -> question, slug, tokens, tick, minSize, first/last seen
 data/catalog/kalshi.json           ticker -> title, series, category, closeTime, first/last seen
 data/catalog/kalshi-top.json       the 100 Kalshi tickers currently watched (rescanned every 6h)
+data/resolutions.ndjson            one line per settled market: {t,v,id,y,at}, y = what a YES share paid
+data/catalog/resolution-checks.json  when each unsettled past-close market was last checked
 config/kdreams.watchlist.json      venue limits, fee rates, and hand-confirmed cross-venue pairs
 docs/dream-cycle/LEDGER.md         one row per night, the only durable cross-night memory
 docs/dream-cycle/*-report.md       each night's witnessed report

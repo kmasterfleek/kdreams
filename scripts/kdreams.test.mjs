@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { mkdtempSync, writeFileSync, mkdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { bestOfBook, mapPolymarket, mapKalshi, isPlainBinary, round } from './kdreams-collect.mjs';
+import { bestOfBook, mapPolymarket, mapKalshi, isPlainBinary, round, pmResolution, ksResolution, resolutionCandidates } from './kdreams-collect.mjs';
 import {
   parseRows, groupSeries, spreadStats, makerSpreadProxy, sumProxies, crossVenue, byBucket, candidates, feeTable, quantile, corr, medianGapMinutes, mid, sliceFilter,
 } from './lib/kdreams-metrics.mjs';
@@ -245,4 +245,27 @@ test('specs: restating pre-freeze data is rejected, profit is required every oth
     { status: 'open', spec: tight },
   ]);
   assert.equal(card, 'Record: 2 graded; profit predictions 1 (0 SUPPORTED); 1 SUPPORTED grade(s) were already true at freeze and carry no information.');
+});
+
+test('collector: resolutions read settled outcomes and pick unchecked past-close candidates', () => {
+  const t = '2026-10-22T12:00Z';
+  const pm = { conditionId: '0xabc', closed: true, umaResolutionStatus: 'resolved', outcomePrices: '["1", "0"]', closedTime: '2026-10-14 21:24:00+00' };
+  assert.deepEqual(pmResolution(pm, t), { t, v: 'pm', id: '0xabc', y: 1, at: '2026-10-14T21:24Z' });
+  assert.equal(pmResolution({ ...pm, outcomePrices: '["0.5", "0.5"]' }, t).y, 0.5);
+  assert.equal(pmResolution({ ...pm, umaResolutionStatus: 'proposed' }, t), null);
+  assert.equal(pmResolution({ ...pm, closed: false }, t), null);
+  const ks = { ticker: 'KX-A', status: 'finalized', result: 'no', settlement_value_dollars: '0.0000', settlement_ts: '2026-10-14T20:58:39.38Z' };
+  assert.deepEqual(ksResolution(ks, t), { t, v: 'ks', id: 'KX-A', y: 0, at: '2026-10-14T20:58Z' });
+  assert.equal(ksResolution({ ...ks, result: '' }, t), null);
+
+  const catalog = {
+    past: { closeTime: '2026-10-20T00:00:00Z', lastSeen: '2026-10-20T00:00Z' },
+    open: { closeTime: '2026-12-01T00:00:00Z', lastSeen: '2026-10-22T11:45Z' },
+    dropped: { closeTime: '2026-12-01T00:00:00Z', lastSeen: '2026-10-21T00:00Z' },
+    done: { closeTime: '2026-10-19T00:00:00Z', lastSeen: '2026-10-19T00:00Z' },
+    recent: { closeTime: '2026-10-19T00:00:00Z', lastSeen: '2026-10-19T00:00Z' },
+  };
+  const checks = { recent: '2026-10-22T10:00Z', dropped: '2026-10-22T02:00Z' };
+  assert.deepEqual(resolutionCandidates(catalog, new Set(['done']), checks, t), ['past', 'dropped']);
+  assert.deepEqual(resolutionCandidates(catalog, new Set(['done']), checks, t, { max: 1 }), ['past']);
 });
