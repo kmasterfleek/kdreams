@@ -287,7 +287,7 @@
       "value": 0.003,
       "n": 756
     },
-    "status": "open",
+    "status": "SUPPORTED",
     "retests": [
       {
         "date": "2026-10-22",
@@ -297,8 +297,18 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "pair.bothSidesFracNetPositive = 0 on n=182, below the n>=300 needed"
+      },
+      {
+        "date": "2026-10-23",
+        "ticks": 191,
+        "value": 0,
+        "n": 372,
+        "verdict": "SUPPORTED",
+        "by": "code",
+        "note": "pair.bothSidesFracNetPositive = 0 vs < 0.01 on n=372; already true before the freeze, so no information"
       }
-    ]
+    ],
+    "settledOn": "2026-10-23"
   },
   {
     "id": "2026-10-22",
@@ -323,6 +333,42 @@
     "baseline": {
       "value": 0.844,
       "n": 3028
+    },
+    "status": "SUPPORTED",
+    "retests": [
+      {
+        "date": "2026-10-23",
+        "ticks": 95,
+        "value": 0.832,
+        "n": 661,
+        "verdict": "SUPPORTED",
+        "by": "code",
+        "note": "spread.fracOneCent = 0.832 vs < 0.89 on n=661; already true before the freeze, so no information"
+      }
+    ],
+    "settledOn": "2026-10-23"
+  },
+  {
+    "id": "2026-10-23",
+    "date": "2026-10-23",
+    "deep": "lead-lag",
+    "issue": "#17",
+    "text": "Given Polymarket markets with a favored-side entry price from 0.97 to below 0.99, when buying that side at the touch and holding to settlement, then resolution.netCentsPer10 should be > 1 cent per $10 vs the recorded 3 cents per $10, subject to taker fees and full settlement losses.",
+    "spec": {
+      "metric": "resolution.netCentsPer10",
+      "venue": "pm",
+      "slice": {
+        "priceMin": 0.97,
+        "priceMax": 0.99
+      },
+      "op": ">",
+      "threshold": 1,
+      "minN": 100
+    },
+    "frozenAt": "2026-10-23T13:45Z",
+    "baseline": {
+      "value": 3,
+      "n": 327
     },
     "status": "open",
     "retests": []
