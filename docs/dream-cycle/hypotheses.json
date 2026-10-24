@@ -371,6 +371,41 @@
       "n": 327
     },
     "status": "open",
+    "retests": [
+      {
+        "date": "2026-10-24",
+        "ticks": 92,
+        "value": 19.6,
+        "n": 26,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "resolution.netCentsPer10 = 19.6 on n=26, below the n>=100 needed"
+      }
+    ]
+  },
+  {
+    "id": "2026-10-24",
+    "date": "2026-10-24",
+    "deep": "fee-modeling",
+    "issue": "#18",
+    "text": "Given Polymarket favored-side entries priced 0.9–0.95, when buying at the recorded touch and holding to settlement, then resolution.netCentsPer10 should be > 1c per $10 vs the recorded 2.7c per $10, subject to taker fees and the risk that a single loss overwhelms many wins.",
+    "spec": {
+      "metric": "resolution.netCentsPer10",
+      "venue": "pm",
+      "slice": {
+        "priceMin": 0.9,
+        "priceMax": 0.95
+      },
+      "op": ">",
+      "threshold": 1,
+      "minN": 100
+    },
+    "frozenAt": "2026-10-24T12:45Z",
+    "baseline": {
+      "value": 2.7,
+      "n": 414
+    },
+    "status": "open",
     "retests": []
   }
 ]
