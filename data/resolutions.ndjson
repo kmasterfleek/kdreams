@@ -3454,3 +3454,7 @@
 {"t":"2026-10-25T00:00Z","v":"ks","id":"KXNCAAFGAME-26OCT23BYUUCF-UCF","y":1,"at":"2026-10-24T23:48Z"}
 {"t":"2026-10-25T00:00Z","v":"ks","id":"KXNCAAFSPREAD-26OCT24BYUUCF-BYU7","y":0,"at":"2026-10-24T23:48Z"}
 {"t":"2026-10-25T00:15Z","v":"ks","id":"KXNCAAFTOTAL-26OCT24ODULT-44","y":0,"at":"2026-10-25T00:13Z"}
+{"t":"2026-10-25T00:30Z","v":"pm","id":"0xfe5ed516e9a226c11a4970cf27293d843e8d5ebeccd8513034599fb58edb05fb","y":1,"at":"2026-10-24T22:22Z"}
+{"t":"2026-10-25T00:30Z","v":"pm","id":"0xa2167fdfc0cbf4f784f20a7629dbb19accccca22c4d405ed98e6f2431c78ccd4","y":0,"at":"2026-10-24T19:12Z"}
+{"t":"2026-10-25T00:30Z","v":"pm","id":"0xa80c2d9cb6c10fd914ef6315e185667762fcbc38ea0c1d51251d490cee75985c","y":1,"at":"2026-10-24T20:16Z"}
+{"t":"2026-10-25T00:30Z","v":"pm","id":"0xfa645c749861c70d41d188bee42eed2e4f21f45f0a6625dbf49cdb4af6540ca1","y":1,"at":"2026-10-24T22:24Z"}
