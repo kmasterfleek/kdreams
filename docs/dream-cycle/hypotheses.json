@@ -380,6 +380,15 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "resolution.netCentsPer10 = 19.6 on n=26, below the n>=100 needed"
+      },
+      {
+        "date": "2026-10-25",
+        "ticks": 190,
+        "value": -17.5,
+        "n": 80,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "resolution.netCentsPer10 = -17.5 on n=80, below the n>=100 needed"
       }
     ]
   },
@@ -404,6 +413,45 @@
     "baseline": {
       "value": 2.7,
       "n": 414
+    },
+    "status": "open",
+    "retests": [
+      {
+        "date": "2026-10-25",
+        "ticks": 98,
+        "value": -34.3,
+        "n": 83,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "resolution.netCentsPer10 = -34.3 on n=83, below the n>=100 needed"
+      }
+    ]
+  },
+  {
+    "id": "2026-10-25",
+    "date": "2026-10-25",
+    "deep": "maker-spread-capture",
+    "issue": "#19",
+    "text": "Given Polymarket markets with entry mid from 0.1 to below 0.9 during 8h–10h UTC, when a resting maker quote is evaluated by the recorded 60-minute trade-through proxy, then maker.netCentsPerAttempt should be > 0c vs the all-hours Polymarket baseline of −1.307c, subject to adverse-mark risk and the proxy’s lack of queue-position modeling.",
+    "spec": {
+      "metric": "maker.netCentsPerAttempt",
+      "venue": "pm",
+      "slice": {
+        "hoursUtc": [
+          8,
+          10
+        ],
+        "midMin": 0.1,
+        "midMax": 0.9
+      },
+      "op": ">",
+      "threshold": 0,
+      "minN": 300
+    },
+    "frozenAt": "2026-10-25T13:15Z",
+    "baseline": {
+      "value": -1.097,
+      "n": 2828
     },
     "status": "open",
     "retests": []
