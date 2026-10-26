@@ -370,7 +370,7 @@
       "value": 3,
       "n": 327
     },
-    "status": "open",
+    "status": "REFUTED",
     "retests": [
       {
         "date": "2026-10-24",
@@ -389,8 +389,18 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "resolution.netCentsPer10 = -17.5 on n=80, below the n>=100 needed"
+      },
+      {
+        "date": "2026-10-26",
+        "ticks": 295,
+        "value": -6.7,
+        "n": 146,
+        "verdict": "REFUTED",
+        "by": "code",
+        "note": "resolution.netCentsPer10 = -6.7 vs > 1 on n=146"
       }
-    ]
+    ],
+    "settledOn": "2026-10-26"
   },
   {
     "id": "2026-10-24",
@@ -414,7 +424,7 @@
       "value": 2.7,
       "n": 414
     },
-    "status": "open",
+    "status": "REFUTED",
     "retests": [
       {
         "date": "2026-10-25",
@@ -424,8 +434,18 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "resolution.netCentsPer10 = -34.3 on n=83, below the n>=100 needed"
+      },
+      {
+        "date": "2026-10-26",
+        "ticks": 203,
+        "value": -9,
+        "n": 164,
+        "verdict": "REFUTED",
+        "by": "code",
+        "note": "resolution.netCentsPer10 = -9 vs > 1 on n=164"
       }
-    ]
+    ],
+    "settledOn": "2026-10-26"
   },
   {
     "id": "2026-10-25",
@@ -452,6 +472,38 @@
     "baseline": {
       "value": -1.097,
       "n": 2828
+    },
+    "status": "REFUTED",
+    "retests": [
+      {
+        "date": "2026-10-26",
+        "ticks": 105,
+        "value": -1.505,
+        "n": 327,
+        "verdict": "REFUTED",
+        "by": "code",
+        "note": "maker.netCentsPerAttempt = -1.505 vs > 0 on n=327"
+      }
+    ],
+    "settledOn": "2026-10-26"
+  },
+  {
+    "id": "2026-10-26",
+    "date": "2026-10-26",
+    "deep": "cross-venue-divergence",
+    "issue": "#20",
+    "text": "Given the configured Republican House pair, when checking synchronized buy-both-sides quotes without placing orders, then `pair.bothSidesFracNetPositive` should be > 0.03 vs the recorded 2% baseline, subject to both taker fees and identical YES-resolution rules. This tests the frequency of apparent opportunities, not whether they clear 1c per $10 deployed.",
+    "spec": {
+      "metric": "pair.bothSidesFracNetPositive",
+      "pair": "house-2026-republican",
+      "op": ">",
+      "threshold": 0.03,
+      "minN": 300
+    },
+    "frozenAt": "2026-10-26T15:30Z",
+    "baseline": {
+      "value": 0.023,
+      "n": 1718
     },
     "status": "open",
     "retests": []
