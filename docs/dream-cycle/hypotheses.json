@@ -506,6 +506,45 @@
       "n": 1718
     },
     "status": "open",
+    "retests": [
+      {
+        "date": "2026-10-27",
+        "ticks": 92,
+        "value": 0.038,
+        "n": 184,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "pair.bothSidesFracNetPositive = 0.038 on n=184, below the n>=300 needed"
+      }
+    ]
+  },
+  {
+    "id": "2026-10-27",
+    "date": "2026-10-27",
+    "deep": "liquidity-by-hour",
+    "issue": "#21",
+    "text": "Given Polymarket markets with mids from 0.1 to 0.9 at UTC 7h–8h, when a one-tick maker-proxy attempt is evaluated over 60 minutes, then maker.netCentsPerAttempt should be > 0c vs the overall −1.312c-per-attempt baseline, subject to the recorded adverse mark and maker-fee accounting.",
+    "spec": {
+      "metric": "maker.netCentsPerAttempt",
+      "venue": "pm",
+      "slice": {
+        "hoursUtc": [
+          7,
+          8
+        ],
+        "midMin": 0.1,
+        "midMax": 0.9
+      },
+      "op": ">",
+      "threshold": 0,
+      "minN": 300
+    },
+    "frozenAt": "2026-10-27T15:00Z",
+    "baseline": {
+      "value": -0.755,
+      "n": 1771
+    },
+    "status": "open",
     "retests": []
   }
 ]

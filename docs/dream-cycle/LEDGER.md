@@ -13,3 +13,4 @@
 | 2026-10-24 | fee-modeling | Given Polymarket favored-side entries priced 0.9–0.95, when buying at the… | #18 | NONE | no | INCONCLUSIVE | 133158 rows / 667 ticks observed | 1f9c9508 | 10-23 INCONCLUSIVE (92t) |
 | 2026-10-25 | maker-spread-capture | Given Polymarket markets with entry mid from 0.1 to below 0.9 during 8h–10h… | #19 | NONE | no | INCONCLUSIVE | 152807 rows / 765 ticks observed | ebae2f40 | 10-24 INCONCLUSIVE (98t); 10-23 INCONCLUSIVE (190t) |
 | 2026-10-26 | cross-venue-divergence | Given the configured Republican House pair, when checking synchronized… | #20 | NONE | yes | INCONCLUSIVE | 173828 rows / 870 ticks observed | 1bb6af45 | 10-25 REFUTED (105t); 10-24 REFUTED (203t); 10-23 REFUTED (295t) |
+| 2026-10-27 | liquidity-by-hour | Given Polymarket markets with mids from 0.1 to 0.9 at UTC 7h–8h, when a… | #21 | NONE | no | INCONCLUSIVE | 192228 rows / 962 ticks observed | 61688a2d | 10-26 INCONCLUSIVE (92t) |
