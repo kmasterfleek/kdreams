@@ -505,7 +505,7 @@
       "value": 0.023,
       "n": 1718
     },
-    "status": "open",
+    "status": "REFUTED",
     "retests": [
       {
         "date": "2026-10-27",
@@ -515,8 +515,18 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "pair.bothSidesFracNetPositive = 0.038 on n=184, below the n>=300 needed"
+      },
+      {
+        "date": "2026-10-28",
+        "ticks": 189,
+        "value": 0.019,
+        "n": 378,
+        "verdict": "REFUTED",
+        "by": "code",
+        "note": "pair.bothSidesFracNetPositive = 0.019 vs > 0.03 on n=378"
       }
-    ]
+    ],
+    "settledOn": "2026-10-28"
   },
   {
     "id": "2026-10-27",
@@ -543,6 +553,37 @@
     "baseline": {
       "value": -0.755,
       "n": 1771
+    },
+    "status": "open",
+    "retests": [
+      {
+        "date": "2026-10-28",
+        "ticks": 97,
+        "value": -0.873,
+        "n": 137,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "maker.netCentsPerAttempt = -0.873 on n=137, below the n>=300 needed"
+      }
+    ]
+  },
+  {
+    "id": "2026-10-28",
+    "date": "2026-10-28",
+    "deep": "lead-lag",
+    "issue": "#22",
+    "text": "Given the configured Democratic House pair, when checking opposite-side cross-venue touch purchases without executing, then pair.bothSidesFracNetPositive should be > 0.03 vs the recorded 0.02 baseline, subject to taker fees being included in every check.",
+    "spec": {
+      "metric": "pair.bothSidesFracNetPositive",
+      "pair": "house-2026-democratic",
+      "op": ">",
+      "threshold": 0.03,
+      "minN": 300
+    },
+    "frozenAt": "2026-10-28T15:15Z",
+    "baseline": {
+      "value": 0.019,
+      "n": 2102
     },
     "status": "open",
     "retests": []
