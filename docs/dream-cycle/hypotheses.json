@@ -564,6 +564,15 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "maker.netCentsPerAttempt = -0.873 on n=137, below the n>=300 needed"
+      },
+      {
+        "date": "2026-10-29",
+        "ticks": 194,
+        "value": -1.246,
+        "n": 282,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "maker.netCentsPerAttempt = -1.246 on n=282, below the n>=300 needed"
       }
     ]
   },
@@ -584,6 +593,41 @@
     "baseline": {
       "value": 0.019,
       "n": 2102
+    },
+    "status": "open",
+    "retests": [
+      {
+        "date": "2026-10-29",
+        "ticks": 97,
+        "value": 0.227,
+        "n": 194,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "pair.bothSidesFracNetPositive = 0.227 on n=194, below the n>=300 needed"
+      }
+    ]
+  },
+  {
+    "id": "2026-10-29",
+    "date": "2026-10-29",
+    "deep": "fee-modeling",
+    "issue": "#24",
+    "text": "Given Kalshi markets with favored-side entry prices from 0.97 to below 0.99, when modeling a $10 touch purchase held to settlement, then resolution.netCentsPer10 should be > 1c versus the recorded 7.1c per $10 baseline, subject to taker fees and the risk that one loss erases many wins.",
+    "spec": {
+      "metric": "resolution.netCentsPer10",
+      "venue": "ks",
+      "slice": {
+        "priceMin": 0.97,
+        "priceMax": 0.99
+      },
+      "op": ">",
+      "threshold": 1,
+      "minN": 100
+    },
+    "frozenAt": "2026-10-29T15:30Z",
+    "baseline": {
+      "value": 7.1,
+      "n": 262
     },
     "status": "open",
     "retests": []
