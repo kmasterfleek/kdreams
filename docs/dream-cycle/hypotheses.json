@@ -554,7 +554,7 @@
       "value": -0.755,
       "n": 1771
     },
-    "status": "open",
+    "status": "REFUTED",
     "retests": [
       {
         "date": "2026-10-28",
@@ -573,8 +573,18 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "maker.netCentsPerAttempt = -1.246 on n=282, below the n>=300 needed"
+      },
+      {
+        "date": "2026-10-30",
+        "ticks": 285,
+        "value": -1.112,
+        "n": 436,
+        "verdict": "REFUTED",
+        "by": "code",
+        "note": "maker.netCentsPerAttempt = -1.112 vs > 0 on n=436"
       }
-    ]
+    ],
+    "settledOn": "2026-10-30"
   },
   {
     "id": "2026-10-28",
@@ -594,7 +604,7 @@
       "value": 0.019,
       "n": 2102
     },
-    "status": "open",
+    "status": "SUPPORTED",
     "retests": [
       {
         "date": "2026-10-29",
@@ -604,8 +614,18 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "pair.bothSidesFracNetPositive = 0.227 on n=194, below the n>=300 needed"
+      },
+      {
+        "date": "2026-10-30",
+        "ticks": 188,
+        "value": 0.247,
+        "n": 376,
+        "verdict": "SUPPORTED",
+        "by": "code",
+        "note": "pair.bothSidesFracNetPositive = 0.247 vs > 0.03 on n=376"
       }
-    ]
+    ],
+    "settledOn": "2026-10-30"
   },
   {
     "id": "2026-10-29",
@@ -628,6 +648,41 @@
     "baseline": {
       "value": 7.1,
       "n": 262
+    },
+    "status": "open",
+    "retests": [
+      {
+        "date": "2026-10-30",
+        "ticks": 91,
+        "value": -158.1,
+        "n": 11,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "resolution.netCentsPer10 = -158.1 on n=11, below the n>=100 needed"
+      }
+    ]
+  },
+  {
+    "id": "2026-10-30",
+    "date": "2026-10-30",
+    "deep": "maker-spread-capture",
+    "issue": "#25",
+    "text": "Given Polymarket markets entered at a mid of 0.9–0.99, when a one-tick resting-order maker attempt is evaluated over the recorded 60-minute horizon, then maker.netCentsPerAttempt should be > 0c vs the Polymarket baseline of −1.293c per attempt, subject to adverse marks being included.",
+    "spec": {
+      "metric": "maker.netCentsPerAttempt",
+      "venue": "pm",
+      "slice": {
+        "midMin": 0.9,
+        "midMax": 0.99
+      },
+      "op": ">",
+      "threshold": 0,
+      "minN": 300
+    },
+    "frozenAt": "2026-10-30T15:15Z",
+    "baseline": {
+      "value": -0.437,
+      "n": 6581
     },
     "status": "open",
     "retests": []

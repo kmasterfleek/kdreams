@@ -16,3 +16,4 @@
 | 2026-10-27 | liquidity-by-hour | Given Polymarket markets with mids from 0.1 to 0.9 at UTC 7h–8h, when a… | #21 | NONE | no | INCONCLUSIVE | 192228 rows / 962 ticks observed | 61688a2d | 10-26 INCONCLUSIVE (92t) |
 | 2026-10-28 | lead-lag | Given the configured Democratic House pair, when checking opposite-side… | #22 | NONE | yes | INCONCLUSIVE | 211087 rows / 1056 ticks observed | 5509671f | 10-27 INCONCLUSIVE (97t); 10-26 REFUTED (189t) |
 | 2026-10-29 | fee-modeling | Given Kalshi markets with favored-side entry prices from 0.97 to below 0.99… | #24 | NONE | no | INCONCLUSIVE | 229287 rows / 1147 ticks observed | 104fa993 | 10-28 INCONCLUSIVE (97t); 10-27 INCONCLUSIVE (194t) |
+| 2026-10-30 | maker-spread-capture | Given Polymarket markets entered at a mid of 0.9–0.99, when a one-tick… | #25 | NONE | yes | INCONCLUSIVE | 241862 rows / 1210 ticks observed | 5d82a48e | 10-29 INCONCLUSIVE (91t); 10-28 SUPPORTED (188t); 10-27 REFUTED (285t) |
