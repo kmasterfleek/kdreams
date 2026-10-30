@@ -1,151 +1,111 @@
 {
-  "scannedAt": "2026-10-29T19:15Z",
+  "scannedAt": "2026-10-30T01:30Z",
   "tickers": [
-    "CONTROLH-2026-R",
-    "SENATETX-26-R",
-    "KXBALANCEPOWERCOMBO-27FEB-RD",
-    "KXATPMATCH-26OCT29ZVEGRI-GRI",
-    "KXATPMATCH-26OCT29ZVEGRI-ZVE",
-    "GOVPARTYTX-26-R",
-    "KXGOVCA-26-SHIL",
-    "SENATETX-26-D",
-    "KXSERIEAGAME-26OCT29FROLEC-FRO",
-    "KXNFLGAME-26OCT29CARGB-GB",
-    "KXATPMATCH-26OCT29DJOSTR-DJO",
-    "CONTROLS-2026-R",
-    "KXNBA-27-CLE",
-    "KXATPMATCH-26OCT29DJOSTR-STR",
-    "KXBALANCEPOWERCOMBO-27FEB-DD",
-    "KXBALANCEPOWERCOMBO-27FEB-RR",
-    "KXNBATOTAL-26OCT29MEMPOR-234",
-    "KXNFLSPREAD-26OCT29CARGB-GB4",
-    "SENATEMI-26-R",
-    "KXNFLSPREAD-26NOV01NEMIA-NE7",
-    "KXPGATOUR-VIMO26-WCLA",
     "KXNFLGAME-26OCT29CARGB-CAR",
-    "KXISRAELPM-26OCT27-BNET",
-    "CONTROLH-2026-D",
-    "KXSAUDIPLGAME-26OCT29ALNAKH-ALN",
-    "KXNFLGAME-26NOV01NEMIA-NE",
-    "KXBALANCEPOWERCOMBO-27FEB-DR",
-    "KXSB-27-CHI",
-    "KXPGATOUR-VIMO26-NSHI",
-    "SENATEAK-26-R",
-    "SENATEAK-26-D",
-    "CONTROLS-2026-D",
-    "GOVPARTYFL-26-R",
-    "KXITFMATCH-26OCT29LINSAK-LIN",
-    "KXSAUDIPLGAME-26OCT29ALNAKH-AKH",
-    "SENATEKS-26-R",
-    "KXNBA-27-POR",
-    "SENATEMI-26-D",
-    "SENATEKS-26-D",
-    "KXNBAGAME-26OCT29MEMPOR-POR",
-    "KXPGATOUR-VIMO26-TKIM",
-    "KXPGATOUR-VIMO26-ISAL",
-    "KXNFLSPREAD-26NOV01LVNYJ-LV2",
-    "KXPGATOUR-VIMO26-APOT",
-    "KXSERIEATOTAL-26OCT29FROLEC-4",
-    "KXPGATOUR-VIMO26-SYEL",
-    "KXBLUEWAVECOMBO-27FEB",
-    "KXPGATOUR-VIMO26-KHIR",
-    "KXSERIEAGAME-26OCT29FROLEC-LEC",
-    "KXPGATOUR-VIMO26-NDUN",
-    "KXPGATOUR-VIMO26-JKEE",
-    "KXWTACHALLENGERMATCH-26OCT29BLIZAV-ZAV",
+    "KXNFLGAME-26OCT29CARGB-GB",
+    "KXNFLSPREAD-26OCT29CARGB-GB4",
+    "CONTROLH-2026-R",
     "KXNBAGAME-26OCT29CLEATL-CLE",
-    "GOVPARTYFL-26-D",
-    "KXPGATOUR-VIMO26-MPEN",
-    "KXPGATOUR-VIMO26-BBRO",
+    "SENATETX-26-R",
+    "KXNCAAFGAME-26OCT29FAUUNT-FAU",
+    "KXBALANCEPOWERCOMBO-27FEB-RD",
+    "KXNBAGAME-26OCT29CLEATL-ATL",
+    "KXNCAAFGAME-26OCT29TROYJMU-TROY",
+    "KXATPCHALLENGERMATCH-26OCT29CAMREI-CAM",
+    "GOVPARTYTX-26-R",
+    "KXNCAAFGAME-26OCT30SCAROKLA-SCAR",
+    "KXNBATOTAL-26OCT29MEMPOR-234",
+    "KXITFWMATCH-26OCT29SWAWAN-WAN",
+    "KXNFLSPREAD-26OCT29CARGB-GB3",
     "KXNFLSPREAD-26OCT29CARGB-GB5",
-    "KXWTACHALLENGERMATCH-26OCT28FERREA-REA",
-    "KXPGATOUR-VIMO26-MHOM",
-    "KXBTCD-26OCT2917-T79999.99",
-    "KXUCLWGAME-26OCT29MCIPSG-PSG",
-    "GOVPARTYNY-26-R",
-    "KXPRESNOMD-28-RGAL",
-    "KXBTCD-26OCT2917-T81499.99",
-    "KXBTCD-26OCT2917-T80999.99",
-    "KXPGATOUR-VIMO26-DGHI",
-    "GOVPARTYOH-26-R",
-    "KXPGATOUR-VIMO26-BGRI",
-    "KXSERIEAGAME-26OCT29FROLEC-TIE",
-    "KXPGATOUR-VIMO26-LCLA",
-    "KXPGATOUR-VIMO26-GSAR",
-    "GOVPARTYMA-26-R",
-    "KXNBA-27-DAL",
-    "KXPGATOUR-VIMO26-RNEE",
-    "KXMISENATE-26-MROG",
-    "SENATESC-26-D",
-    "GOVPARTYCA-26-R",
-    "KXUCLWGAME-26OCT29FAKJUV-JUV",
-    "KXBTCD-26OCT2917-T81249.99",
-    "KXBTCD-26OCT2917-T80499.99",
-    "KXPGAR1LEAD-VIMO26-KHIR",
-    "KXATPMATCH-26OCT28COBBER-COB",
-    "KXPGATOUR-VIMO26-BJAM",
-    "KXMAYORLA-26-KBAS",
-    "KXATPSETWINNER-26OCT29DJOSTR-1-STR",
-    "SENATEFLS-26-D",
-    "SENATEIA-26-R",
-    "KXNFLTD-26NOV01BALBUF-BALNVANNETT81-1",
-    "KXNFLNFCNORTH-27-CHI",
-    "KXPGATOUR-VIMO26-JSUB",
-    "KXSERIEAGAME-26OCT29FIOATA-ATA",
-    "KXBTC50VS100-BTC-26DEC31",
-    "KXPGATOUR-VIMO26-RHOJ",
-    "KXATPCHALLENGERMATCH-26OCT29DEDABO-ABO",
+    "KXNBAGAME-26OCT29SACNOP-SAC",
+    "KXBALANCEPOWERCOMBO-27FEB-DR",
+    "KXLOLGAME-26OCT281600BLGTES-TES",
+    "KXNCAAFTOTAL-26OCT29FAUUNT-80",
+    "KXNFLTOTAL-26OCT29CARGB-48",
+    "KXLOLGAME-26OCT281600BLGTES-BLG",
+    "KXNBA-27-CLE",
+    "KXGOVCA-26-SHIL",
+    "KXPGATOUR-VIMO26-WCLA",
+    "KXATPCHALLENGERMATCH-26OCT29KRUBLA-KRU",
+    "KXATPCHALLENGERMATCH-26OCT29KRUBLA-BLA",
+    "KXBALANCEPOWERCOMBO-27FEB-RR",
+    "KXNCAAFGAME-26OCT29SCSTMORG-MORG",
+    "KXNFLTD-26OCT29CARGB-CARCHUBBARD30-1",
+    "KXNFLTOTAL-26OCT29CARGB-47",
+    "SENATEMI-26-R",
+    "KXNFLSPREAD-26NOV01TENCIN-CIN11",
+    "KXNCAAFGAME-26OCT29FAUUNT-UNT",
+    "SENATETX-26-D",
+    "KXNCAAFGAME-26OCT29TROYJMU-JMU",
+    "KXSB-27-CHI",
+    "KXBALANCEPOWERCOMBO-27FEB-DD",
+    "KXNCAAFGAME-26OCT30AUBMISS-AUB",
+    "KXNFL1HSPREAD-26OCT29CARGB-GB3",
+    "KXITFWMATCH-26OCT29SATSEM-SEM",
+    "KXNCAAFGAME-26OCT29SCSTMORG-SCST",
+    "KXNFLTD-26OCT29CARGB-GBSWILLIAMS83-1",
+    "KXNCAAFTOTAL-26OCT29FAUUNT-77",
+    "KXNCAAFGAME-26OCT30UTAHCIN-UTAH",
+    "CONTROLS-2026-R",
+    "KXNFLGAME-26NOV01NEMIA-NE",
+    "CONTROLH-2026-D",
+    "KXNCAAFSPREAD-26OCT29FAUUNT-UNT14",
+    "KXISRAELPM-26OCT27-BNET",
+    "KXNFLTD-26OCT29CARGB-GBJLOVE10-1",
     "KXNBAGAME-26OCT29MEMPOR-MEM",
-    "KXSB-27-SF",
-    "SENATEMN-26-R",
-    "KXPGATOUR-VIMO26-ANOV",
-    "KXBTCD-26OCT2917-T80249.99",
-    "KXGOVCA-26-XBEC"
+    "SENATEKS-26-R",
+    "KXNBAGAME-26OCT29SACNOP-NOP",
+    "KXPGATOUR-VIMO26-TKIM",
+    "KXNBAGAME-26OCT29MEMPOR-POR",
+    "KXPGATOUR-VIMO26-KHIR",
+    "KXATPCHALLENGERMATCH-26OCT29CAMREI-REI",
+    "KXNCAAFSPREAD-26OCT29FAUUNT-UNT15",
+    "GOVPARTYIA-26-R",
+    "KXNCAAFSPREAD-26OCT29TROYJMU-JMU18",
+    "KXNFLTD-26OCT29CARGB-CARTMCMILLAN4-2",
+    "KXBLUEWAVECOMBO-27FEB",
+    "SENATEMI-26-D",
+    "SENATENC-26-R",
+    "KXNFLTD-26OCT29CARGB-GBCWATSON9-1",
+    "KXPGATOUR-VIMO26-LCLA",
+    "KXWTACHALLENGERMATCH-26OCT29CHEAND-CHE",
+    "KXPGATOUR-VIMO26-MPEN",
+    "SENATEKS-26-D",
+    "KXNFLSPREAD-26NOV01NEMIA-NE7",
+    "KXNFLTOTAL-26OCT29CARGB-50",
+    "GOVPARTYFL-26-R",
+    "KXPGATOUR-VIMO26-JKEE",
+    "KXNFLTD-26OCT29CARGB-GBJJACOBS8-2",
+    "KXBTC50VS100-BTC-26DEC31",
+    "KXNFLTOTAL-26OCT29CARGB-54",
+    "KXNFLTOTAL-26OCT29CARGB-49",
+    "KXLIGUE1GAME-26OCT30HACPSG-PSG",
+    "KXNFLSPREAD-26OCT29CARGB-GB14",
+    "KXPRESNOMD-28-AYAN",
+    "KXNFLRSHYDS-26OCT29CARGB-GBJJACOBS8-60",
+    "SENATEME-26-R",
+    "KXITFWMATCH-26OCT29SATSEM-SAT",
+    "KXPGATOUR-VIMO26-MHOM",
+    "KXMAYORLA-26-KBAS",
+    "KXPGATOUR-VIMO26-JSUB",
+    "KXPGATOUR-VIMO26-BGRI",
+    "KXRHOUSESEATS-27-215",
+    "KXNHLGAME-26OCT29BOSSTL-BOS",
+    "KXDSENATESEATS-27-ABOVE52",
+    "KXPRESNOMD-28-RGAL",
+    "KXNHLGAME-26OCT29BOSSTL-STL",
+    "KXNFLTD-26OCT29CARGB-CARTMCMILLAN4-1",
+    "KXNFLSPREAD-26OCT29CARGB-GB7",
+    "KXNFLSPREAD-26OCT29CARGB-GB6",
+    "GOVPARTYOH-26-R",
+    "KXNFLRECYDS-26OCT29CARGB-GBCWATSON9-50",
+    "KXPGATOUR-VIMO26-DGHI"
   ],
   "events": {
-    "CONTROLH-2026-R": {
-      "title": "Who will control the House?",
-      "series_ticker": "CONTROLH",
-      "category": "Elections"
-    },
-    "SENATETX-26-R": {
-      "title": "Texas Senate winner?",
-      "series_ticker": "SENATETX",
-      "category": "Elections"
-    },
-    "KXBALANCEPOWERCOMBO-27FEB-RD": {
-      "title": "2026 Midterms: Congress Balance of Power?",
-      "series_ticker": "KXBALANCEPOWERCOMBO",
-      "category": "Elections"
-    },
-    "KXATPMATCH-26OCT29ZVEGRI-GRI": {
-      "title": "Zverev vs Griekspoor",
-      "series_ticker": "KXATPMATCH",
-      "category": "Sports"
-    },
-    "KXATPMATCH-26OCT29ZVEGRI-ZVE": {
-      "title": "Zverev vs Griekspoor",
-      "series_ticker": "KXATPMATCH",
-      "category": "Sports"
-    },
-    "GOVPARTYTX-26-R": {
-      "title": "Texas Governor winner?",
-      "series_ticker": "GOVPARTYTX",
-      "category": "Elections"
-    },
-    "KXGOVCA-26-SHIL": {
-      "title": "California Governor winner? (Person)",
-      "series_ticker": "KXGOVCA",
-      "category": "Elections"
-    },
-    "SENATETX-26-D": {
-      "title": "Texas Senate winner?",
-      "series_ticker": "SENATETX",
-      "category": "Elections"
-    },
-    "KXSERIEAGAME-26OCT29FROLEC-FRO": {
-      "title": "Frosinone vs Lecce",
-      "series_ticker": "KXSERIEAGAME",
+    "KXNFLGAME-26OCT29CARGB-CAR": {
+      "title": "Carolina vs Green Bay",
+      "series_ticker": "KXNFLGAME",
       "category": "Sports"
     },
     "KXNFLGAME-26OCT29CARGB-GB": {
@@ -153,84 +113,84 @@
       "series_ticker": "KXNFLGAME",
       "category": "Sports"
     },
-    "KXATPMATCH-26OCT29DJOSTR-DJO": {
-      "title": "Djokovic vs Struff",
-      "series_ticker": "KXATPMATCH",
+    "KXNFLSPREAD-26OCT29CARGB-GB4": {
+      "title": "Carolina vs Green Bay: Spread",
+      "series_ticker": "KXNFLSPREAD",
       "category": "Sports"
     },
-    "CONTROLS-2026-R": {
-      "title": "Who will control the Senate?",
-      "series_ticker": "CONTROLS",
+    "CONTROLH-2026-R": {
+      "title": "Who will control the House?",
+      "series_ticker": "CONTROLH",
       "category": "Elections"
     },
-    "KXNBA-27-CLE": {
-      "title": "2027 Pro Basketball Champion",
-      "series_ticker": "KXNBA",
+    "KXNBAGAME-26OCT29CLEATL-CLE": {
+      "title": "Cleveland vs Atlanta",
+      "series_ticker": "KXNBAGAME",
       "category": "Sports"
     },
-    "KXATPMATCH-26OCT29DJOSTR-STR": {
-      "title": "Djokovic vs Struff",
-      "series_ticker": "KXATPMATCH",
+    "SENATETX-26-R": {
+      "title": "Texas Senate winner?",
+      "series_ticker": "SENATETX",
+      "category": "Elections"
+    },
+    "KXNCAAFGAME-26OCT29FAUUNT-FAU": {
+      "title": "Florida Atlantic vs North Texas",
+      "series_ticker": "KXNCAAFGAME",
       "category": "Sports"
     },
-    "KXBALANCEPOWERCOMBO-27FEB-DD": {
+    "KXBALANCEPOWERCOMBO-27FEB-RD": {
       "title": "2026 Midterms: Congress Balance of Power?",
       "series_ticker": "KXBALANCEPOWERCOMBO",
       "category": "Elections"
     },
-    "KXBALANCEPOWERCOMBO-27FEB-RR": {
-      "title": "2026 Midterms: Congress Balance of Power?",
-      "series_ticker": "KXBALANCEPOWERCOMBO",
+    "KXNBAGAME-26OCT29CLEATL-ATL": {
+      "title": "Cleveland vs Atlanta",
+      "series_ticker": "KXNBAGAME",
+      "category": "Sports"
+    },
+    "KXNCAAFGAME-26OCT29TROYJMU-TROY": {
+      "title": "Troy vs James Madison",
+      "series_ticker": "KXNCAAFGAME",
+      "category": "Sports"
+    },
+    "KXATPCHALLENGERMATCH-26OCT29CAMREI-CAM": {
+      "title": "Camacho vs Reis Da Silva",
+      "series_ticker": "KXATPCHALLENGERMATCH",
+      "category": "Sports"
+    },
+    "GOVPARTYTX-26-R": {
+      "title": "Texas Governor winner?",
+      "series_ticker": "GOVPARTYTX",
       "category": "Elections"
+    },
+    "KXNCAAFGAME-26OCT30SCAROKLA-SCAR": {
+      "title": "South Carolina vs Oklahoma",
+      "series_ticker": "KXNCAAFGAME",
+      "category": "Sports"
     },
     "KXNBATOTAL-26OCT29MEMPOR-234": {
       "title": "Memphis vs Portland: Total Points",
       "series_ticker": "KXNBATOTAL",
       "category": "Sports"
     },
-    "KXNFLSPREAD-26OCT29CARGB-GB4": {
+    "KXITFWMATCH-26OCT29SWAWAN-WAN": {
+      "title": "Swan vs Wan",
+      "series_ticker": "KXITFWMATCH",
+      "category": "Sports"
+    },
+    "KXNFLSPREAD-26OCT29CARGB-GB3": {
       "title": "Carolina vs Green Bay: Spread",
       "series_ticker": "KXNFLSPREAD",
       "category": "Sports"
     },
-    "SENATEMI-26-R": {
-      "title": "Michigan Senate winner?",
-      "series_ticker": "SENATEMI",
-      "category": "Elections"
-    },
-    "KXNFLSPREAD-26NOV01NEMIA-NE7": {
-      "title": "New England vs Miami: Spread",
+    "KXNFLSPREAD-26OCT29CARGB-GB5": {
+      "title": "Carolina vs Green Bay: Spread",
       "series_ticker": "KXNFLSPREAD",
       "category": "Sports"
     },
-    "KXPGATOUR-VIMO26-WCLA": {
-      "title": "VidantaWorld Mexico Open Winner",
-      "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
-    "KXNFLGAME-26OCT29CARGB-CAR": {
-      "title": "Carolina vs Green Bay",
-      "series_ticker": "KXNFLGAME",
-      "category": "Sports"
-    },
-    "KXISRAELPM-26OCT27-BNET": {
-      "title": "Prime Minister of Israel after the 2026 election?",
-      "series_ticker": "KXISRAELPM",
-      "category": "Elections"
-    },
-    "CONTROLH-2026-D": {
-      "title": "Who will control the House?",
-      "series_ticker": "CONTROLH",
-      "category": "Elections"
-    },
-    "KXSAUDIPLGAME-26OCT29ALNAKH-ALN": {
-      "title": "Al Nassr vs Al-Kholood",
-      "series_ticker": "KXSAUDIPLGAME",
-      "category": "Sports"
-    },
-    "KXNFLGAME-26NOV01NEMIA-NE": {
-      "title": "New England vs Miami",
-      "series_ticker": "KXNFLGAME",
+    "KXNBAGAME-26OCT29SACNOP-SAC": {
+      "title": "Sacramento vs New Orleans",
+      "series_ticker": "KXNBAGAME",
       "category": "Sports"
     },
     "KXBALANCEPOWERCOMBO-27FEB-DR": {
@@ -238,44 +198,174 @@
       "series_ticker": "KXBALANCEPOWERCOMBO",
       "category": "Elections"
     },
+    "KXLOLGAME-26OCT281600BLGTES-TES": {
+      "title": "Bilibili Gaming vs. Top Esports",
+      "series_ticker": "KXLOLGAME",
+      "category": "Sports"
+    },
+    "KXNCAAFTOTAL-26OCT29FAUUNT-80": {
+      "title": "Florida Atlantic vs North Texas: Total Points",
+      "series_ticker": "KXNCAAFTOTAL",
+      "category": "Sports"
+    },
+    "KXNFLTOTAL-26OCT29CARGB-48": {
+      "title": "Carolina vs Green Bay: Total Points",
+      "series_ticker": "KXNFLTOTAL",
+      "category": "Sports"
+    },
+    "KXLOLGAME-26OCT281600BLGTES-BLG": {
+      "title": "Bilibili Gaming vs. Top Esports",
+      "series_ticker": "KXLOLGAME",
+      "category": "Sports"
+    },
+    "KXNBA-27-CLE": {
+      "title": "2027 Pro Basketball Champion",
+      "series_ticker": "KXNBA",
+      "category": "Sports"
+    },
+    "KXGOVCA-26-SHIL": {
+      "title": "California Governor winner? (Person)",
+      "series_ticker": "KXGOVCA",
+      "category": "Elections"
+    },
+    "KXPGATOUR-VIMO26-WCLA": {
+      "title": "VidantaWorld Mexico Open Winner",
+      "series_ticker": "KXPGATOUR",
+      "category": "Sports"
+    },
+    "KXATPCHALLENGERMATCH-26OCT29KRUBLA-KRU": {
+      "title": "Krueger vs Blanch",
+      "series_ticker": "KXATPCHALLENGERMATCH",
+      "category": "Sports"
+    },
+    "KXATPCHALLENGERMATCH-26OCT29KRUBLA-BLA": {
+      "title": "Krueger vs Blanch",
+      "series_ticker": "KXATPCHALLENGERMATCH",
+      "category": "Sports"
+    },
+    "KXBALANCEPOWERCOMBO-27FEB-RR": {
+      "title": "2026 Midterms: Congress Balance of Power?",
+      "series_ticker": "KXBALANCEPOWERCOMBO",
+      "category": "Elections"
+    },
+    "KXNCAAFGAME-26OCT29SCSTMORG-MORG": {
+      "title": "South Carolina St. vs Morgan St.",
+      "series_ticker": "KXNCAAFGAME",
+      "category": "Sports"
+    },
+    "KXNFLTD-26OCT29CARGB-CARCHUBBARD30-1": {
+      "title": "Carolina vs Green Bay: Touchdowns",
+      "series_ticker": "KXNFLTD",
+      "category": "Sports"
+    },
+    "KXNFLTOTAL-26OCT29CARGB-47": {
+      "title": "Carolina vs Green Bay: Total Points",
+      "series_ticker": "KXNFLTOTAL",
+      "category": "Sports"
+    },
+    "SENATEMI-26-R": {
+      "title": "Michigan Senate winner?",
+      "series_ticker": "SENATEMI",
+      "category": "Elections"
+    },
+    "KXNFLSPREAD-26NOV01TENCIN-CIN11": {
+      "title": "Tennessee vs Cincinnati: Spread",
+      "series_ticker": "KXNFLSPREAD",
+      "category": "Sports"
+    },
+    "KXNCAAFGAME-26OCT29FAUUNT-UNT": {
+      "title": "Florida Atlantic vs North Texas",
+      "series_ticker": "KXNCAAFGAME",
+      "category": "Sports"
+    },
+    "SENATETX-26-D": {
+      "title": "Texas Senate winner?",
+      "series_ticker": "SENATETX",
+      "category": "Elections"
+    },
+    "KXNCAAFGAME-26OCT29TROYJMU-JMU": {
+      "title": "Troy vs James Madison",
+      "series_ticker": "KXNCAAFGAME",
+      "category": "Sports"
+    },
     "KXSB-27-CHI": {
       "title": "2027 Pro Football Champion",
       "series_ticker": "KXSB",
       "category": "Sports"
     },
-    "KXPGATOUR-VIMO26-NSHI": {
-      "title": "VidantaWorld Mexico Open Winner",
-      "series_ticker": "KXPGATOUR",
+    "KXBALANCEPOWERCOMBO-27FEB-DD": {
+      "title": "2026 Midterms: Congress Balance of Power?",
+      "series_ticker": "KXBALANCEPOWERCOMBO",
+      "category": "Elections"
+    },
+    "KXNCAAFGAME-26OCT30AUBMISS-AUB": {
+      "title": "Auburn vs Ole Miss",
+      "series_ticker": "KXNCAAFGAME",
       "category": "Sports"
     },
-    "SENATEAK-26-R": {
-      "title": "Alaska Senate winner?",
-      "series_ticker": "SENATEAK",
-      "category": "Elections"
+    "KXNFL1HSPREAD-26OCT29CARGB-GB3": {
+      "title": "Carolina vs Green Bay: 1st Half Spread",
+      "series_ticker": "KXNFL1HSPREAD",
+      "category": "Sports"
     },
-    "SENATEAK-26-D": {
-      "title": "Alaska Senate winner?",
-      "series_ticker": "SENATEAK",
-      "category": "Elections"
+    "KXITFWMATCH-26OCT29SATSEM-SEM": {
+      "title": "Sato vs Sema",
+      "series_ticker": "KXITFWMATCH",
+      "category": "Sports"
     },
-    "CONTROLS-2026-D": {
+    "KXNCAAFGAME-26OCT29SCSTMORG-SCST": {
+      "title": "South Carolina St. vs Morgan St.",
+      "series_ticker": "KXNCAAFGAME",
+      "category": "Sports"
+    },
+    "KXNFLTD-26OCT29CARGB-GBSWILLIAMS83-1": {
+      "title": "Carolina vs Green Bay: Touchdowns",
+      "series_ticker": "KXNFLTD",
+      "category": "Sports"
+    },
+    "KXNCAAFTOTAL-26OCT29FAUUNT-77": {
+      "title": "Florida Atlantic vs North Texas: Total Points",
+      "series_ticker": "KXNCAAFTOTAL",
+      "category": "Sports"
+    },
+    "KXNCAAFGAME-26OCT30UTAHCIN-UTAH": {
+      "title": "Utah vs Cincinnati",
+      "series_ticker": "KXNCAAFGAME",
+      "category": "Sports"
+    },
+    "CONTROLS-2026-R": {
       "title": "Who will control the Senate?",
       "series_ticker": "CONTROLS",
       "category": "Elections"
     },
-    "GOVPARTYFL-26-R": {
-      "title": "Florida Governor winner?",
-      "series_ticker": "GOVPARTYFL",
-      "category": "Elections"
-    },
-    "KXITFMATCH-26OCT29LINSAK-LIN": {
-      "title": "Lino vs Sakamoto",
-      "series_ticker": "KXITFMATCH",
+    "KXNFLGAME-26NOV01NEMIA-NE": {
+      "title": "New England vs Miami",
+      "series_ticker": "KXNFLGAME",
       "category": "Sports"
     },
-    "KXSAUDIPLGAME-26OCT29ALNAKH-AKH": {
-      "title": "Al Nassr vs Al-Kholood",
-      "series_ticker": "KXSAUDIPLGAME",
+    "CONTROLH-2026-D": {
+      "title": "Who will control the House?",
+      "series_ticker": "CONTROLH",
+      "category": "Elections"
+    },
+    "KXNCAAFSPREAD-26OCT29FAUUNT-UNT14": {
+      "title": "Florida Atlantic vs North Texas: Spread",
+      "series_ticker": "KXNCAAFSPREAD",
+      "category": "Sports"
+    },
+    "KXISRAELPM-26OCT27-BNET": {
+      "title": "Prime Minister of Israel after the 2026 election?",
+      "series_ticker": "KXISRAELPM",
+      "category": "Elections"
+    },
+    "KXNFLTD-26OCT29CARGB-GBJLOVE10-1": {
+      "title": "Carolina vs Green Bay: Touchdowns",
+      "series_ticker": "KXNFLTD",
+      "category": "Sports"
+    },
+    "KXNBAGAME-26OCT29MEMPOR-MEM": {
+      "title": "Memphis vs Portland",
+      "series_ticker": "KXNBAGAME",
       "category": "Sports"
     },
     "SENATEKS-26-R": {
@@ -283,23 +373,8 @@
       "series_ticker": "SENATEKS",
       "category": "Elections"
     },
-    "KXNBA-27-POR": {
-      "title": "2027 Pro Basketball Champion",
-      "series_ticker": "KXNBA",
-      "category": "Sports"
-    },
-    "SENATEMI-26-D": {
-      "title": "Michigan Senate winner?",
-      "series_ticker": "SENATEMI",
-      "category": "Elections"
-    },
-    "SENATEKS-26-D": {
-      "title": "Kansas Senate winner?",
-      "series_ticker": "SENATEKS",
-      "category": "Elections"
-    },
-    "KXNBAGAME-26OCT29MEMPOR-POR": {
-      "title": "Memphis vs Portland",
+    "KXNBAGAME-26OCT29SACNOP-NOP": {
+      "title": "Sacramento vs New Orleans",
       "series_ticker": "KXNBAGAME",
       "category": "Sports"
     },
@@ -308,29 +383,39 @@
       "series_ticker": "KXPGATOUR",
       "category": "Sports"
     },
-    "KXPGATOUR-VIMO26-ISAL": {
+    "KXNBAGAME-26OCT29MEMPOR-POR": {
+      "title": "Memphis vs Portland",
+      "series_ticker": "KXNBAGAME",
+      "category": "Sports"
+    },
+    "KXPGATOUR-VIMO26-KHIR": {
       "title": "VidantaWorld Mexico Open Winner",
       "series_ticker": "KXPGATOUR",
       "category": "Sports"
     },
-    "KXNFLSPREAD-26NOV01LVNYJ-LV2": {
-      "title": "Las Vegas vs New York J: Spread",
-      "series_ticker": "KXNFLSPREAD",
+    "KXATPCHALLENGERMATCH-26OCT29CAMREI-REI": {
+      "title": "Camacho vs Reis Da Silva",
+      "series_ticker": "KXATPCHALLENGERMATCH",
       "category": "Sports"
     },
-    "KXPGATOUR-VIMO26-APOT": {
-      "title": "VidantaWorld Mexico Open Winner",
-      "series_ticker": "KXPGATOUR",
+    "KXNCAAFSPREAD-26OCT29FAUUNT-UNT15": {
+      "title": "Florida Atlantic vs North Texas: Spread",
+      "series_ticker": "KXNCAAFSPREAD",
       "category": "Sports"
     },
-    "KXSERIEATOTAL-26OCT29FROLEC-4": {
-      "title": "Frosinone vs Lecce: Total Goals",
-      "series_ticker": "KXSERIEATOTAL",
+    "GOVPARTYIA-26-R": {
+      "title": "Iowa Governor winner?",
+      "series_ticker": "GOVPARTYIA",
+      "category": "Elections"
+    },
+    "KXNCAAFSPREAD-26OCT29TROYJMU-JMU18": {
+      "title": "Troy vs James Madison: Spread",
+      "series_ticker": "KXNCAAFSPREAD",
       "category": "Sports"
     },
-    "KXPGATOUR-VIMO26-SYEL": {
-      "title": "VidantaWorld Mexico Open Winner",
-      "series_ticker": "KXPGATOUR",
+    "KXNFLTD-26OCT29CARGB-CARTMCMILLAN4-2": {
+      "title": "Carolina vs Green Bay: Touchdowns",
+      "series_ticker": "KXNFLTD",
       "category": "Sports"
     },
     "KXBLUEWAVECOMBO-27FEB": {
@@ -338,114 +423,19 @@
       "series_ticker": "KXBLUEWAVECOMBO",
       "category": "Politics"
     },
-    "KXPGATOUR-VIMO26-KHIR": {
-      "title": "VidantaWorld Mexico Open Winner",
-      "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
-    "KXSERIEAGAME-26OCT29FROLEC-LEC": {
-      "title": "Frosinone vs Lecce",
-      "series_ticker": "KXSERIEAGAME",
-      "category": "Sports"
-    },
-    "KXPGATOUR-VIMO26-NDUN": {
-      "title": "VidantaWorld Mexico Open Winner",
-      "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
-    "KXPGATOUR-VIMO26-JKEE": {
-      "title": "VidantaWorld Mexico Open Winner",
-      "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
-    "KXWTACHALLENGERMATCH-26OCT29BLIZAV-ZAV": {
-      "title": "Blinkova vs Zavatska",
-      "series_ticker": "KXWTACHALLENGERMATCH",
-      "category": "Sports"
-    },
-    "KXNBAGAME-26OCT29CLEATL-CLE": {
-      "title": "Cleveland vs Atlanta",
-      "series_ticker": "KXNBAGAME",
-      "category": "Sports"
-    },
-    "GOVPARTYFL-26-D": {
-      "title": "Florida Governor winner?",
-      "series_ticker": "GOVPARTYFL",
+    "SENATEMI-26-D": {
+      "title": "Michigan Senate winner?",
+      "series_ticker": "SENATEMI",
       "category": "Elections"
     },
-    "KXPGATOUR-VIMO26-MPEN": {
-      "title": "VidantaWorld Mexico Open Winner",
-      "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
-    "KXPGATOUR-VIMO26-BBRO": {
-      "title": "VidantaWorld Mexico Open Winner",
-      "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26OCT29CARGB-GB5": {
-      "title": "Carolina vs Green Bay: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXWTACHALLENGERMATCH-26OCT28FERREA-REA": {
-      "title": "Ferro vs Reami",
-      "series_ticker": "KXWTACHALLENGERMATCH",
-      "category": "Sports"
-    },
-    "KXPGATOUR-VIMO26-MHOM": {
-      "title": "VidantaWorld Mexico Open Winner",
-      "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
-    "KXBTCD-26OCT2917-T79999.99": {
-      "title": "BTC price on Oct 29, 2026 at 5pm EDT?",
-      "series_ticker": "KXBTCD",
-      "category": "Crypto"
-    },
-    "KXUCLWGAME-26OCT29MCIPSG-PSG": {
-      "title": "Manchester City vs PSG",
-      "series_ticker": "KXUCLWGAME",
-      "category": "Sports"
-    },
-    "GOVPARTYNY-26-R": {
-      "title": "New York Governor winner?",
-      "series_ticker": "GOVPARTYNY",
+    "SENATENC-26-R": {
+      "title": "North Carolina Senate winner?",
+      "series_ticker": "SENATENC",
       "category": "Elections"
     },
-    "KXPRESNOMD-28-RGAL": {
-      "title": "2028 Democratic presidential nominee",
-      "series_ticker": "KXPRESNOMD",
-      "category": "Elections"
-    },
-    "KXBTCD-26OCT2917-T81499.99": {
-      "title": "BTC price on Oct 29, 2026 at 5pm EDT?",
-      "series_ticker": "KXBTCD",
-      "category": "Crypto"
-    },
-    "KXBTCD-26OCT2917-T80999.99": {
-      "title": "BTC price on Oct 29, 2026 at 5pm EDT?",
-      "series_ticker": "KXBTCD",
-      "category": "Crypto"
-    },
-    "KXPGATOUR-VIMO26-DGHI": {
-      "title": "VidantaWorld Mexico Open Winner",
-      "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
-    "GOVPARTYOH-26-R": {
-      "title": "Ohio Governor winner?",
-      "series_ticker": "GOVPARTYOH",
-      "category": "Elections"
-    },
-    "KXPGATOUR-VIMO26-BGRI": {
-      "title": "VidantaWorld Mexico Open Winner",
-      "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
-    "KXSERIEAGAME-26OCT29FROLEC-TIE": {
-      "title": "Frosinone vs Lecce",
-      "series_ticker": "KXSERIEAGAME",
+    "KXNFLTD-26OCT29CARGB-GBCWATSON9-1": {
+      "title": "Carolina vs Green Bay: Touchdowns",
+      "series_ticker": "KXNFLTD",
       "category": "Sports"
     },
     "KXPGATOUR-VIMO26-LCLA": {
@@ -453,67 +443,92 @@
       "series_ticker": "KXPGATOUR",
       "category": "Sports"
     },
-    "KXPGATOUR-VIMO26-GSAR": {
+    "KXWTACHALLENGERMATCH-26OCT29CHEAND-CHE": {
+      "title": "Cherubini vs Andreescu",
+      "series_ticker": "KXWTACHALLENGERMATCH",
+      "category": "Sports"
+    },
+    "KXPGATOUR-VIMO26-MPEN": {
       "title": "VidantaWorld Mexico Open Winner",
       "series_ticker": "KXPGATOUR",
       "category": "Sports"
     },
-    "GOVPARTYMA-26-R": {
-      "title": "Massachusetts Governor winner?",
-      "series_ticker": "GOVPARTYMA",
+    "SENATEKS-26-D": {
+      "title": "Kansas Senate winner?",
+      "series_ticker": "SENATEKS",
       "category": "Elections"
     },
-    "KXNBA-27-DAL": {
-      "title": "2027 Pro Basketball Champion",
-      "series_ticker": "KXNBA",
+    "KXNFLSPREAD-26NOV01NEMIA-NE7": {
+      "title": "New England vs Miami: Spread",
+      "series_ticker": "KXNFLSPREAD",
       "category": "Sports"
     },
-    "KXPGATOUR-VIMO26-RNEE": {
+    "KXNFLTOTAL-26OCT29CARGB-50": {
+      "title": "Carolina vs Green Bay: Total Points",
+      "series_ticker": "KXNFLTOTAL",
+      "category": "Sports"
+    },
+    "GOVPARTYFL-26-R": {
+      "title": "Florida Governor winner?",
+      "series_ticker": "GOVPARTYFL",
+      "category": "Elections"
+    },
+    "KXPGATOUR-VIMO26-JKEE": {
       "title": "VidantaWorld Mexico Open Winner",
       "series_ticker": "KXPGATOUR",
       "category": "Sports"
     },
-    "KXMISENATE-26-MROG": {
-      "title": "Michigan Senate winner? (Person)",
-      "series_ticker": "KXMISENATE",
-      "category": "Elections"
-    },
-    "SENATESC-26-D": {
-      "title": "South Carolina Senate winner?",
-      "series_ticker": "SENATESC",
-      "category": "Elections"
-    },
-    "GOVPARTYCA-26-R": {
-      "title": "California Governor winner?",
-      "series_ticker": "GOVPARTYCA",
-      "category": "Elections"
-    },
-    "KXUCLWGAME-26OCT29FAKJUV-JUV": {
-      "title": "Austria Wien vs Juventus",
-      "series_ticker": "KXUCLWGAME",
+    "KXNFLTD-26OCT29CARGB-GBJJACOBS8-2": {
+      "title": "Carolina vs Green Bay: Touchdowns",
+      "series_ticker": "KXNFLTD",
       "category": "Sports"
     },
-    "KXBTCD-26OCT2917-T81249.99": {
-      "title": "BTC price on Oct 29, 2026 at 5pm EDT?",
-      "series_ticker": "KXBTCD",
+    "KXBTC50VS100-BTC-26DEC31": {
+      "title": "Will BTC hit $50,000 before $100,000?",
+      "series_ticker": "KXBTC50VS100",
       "category": "Crypto"
     },
-    "KXBTCD-26OCT2917-T80499.99": {
-      "title": "BTC price on Oct 29, 2026 at 5pm EDT?",
-      "series_ticker": "KXBTCD",
-      "category": "Crypto"
-    },
-    "KXPGAR1LEAD-VIMO26-KHIR": {
-      "title": "VidantaWorld Mexico Open End of Round 1 Leader",
-      "series_ticker": "KXPGAR1LEAD",
+    "KXNFLTOTAL-26OCT29CARGB-54": {
+      "title": "Carolina vs Green Bay: Total Points",
+      "series_ticker": "KXNFLTOTAL",
       "category": "Sports"
     },
-    "KXATPMATCH-26OCT28COBBER-COB": {
-      "title": "Cobolli vs Berrettini",
-      "series_ticker": "KXATPMATCH",
+    "KXNFLTOTAL-26OCT29CARGB-49": {
+      "title": "Carolina vs Green Bay: Total Points",
+      "series_ticker": "KXNFLTOTAL",
       "category": "Sports"
     },
-    "KXPGATOUR-VIMO26-BJAM": {
+    "KXLIGUE1GAME-26OCT30HACPSG-PSG": {
+      "title": "Le Havre vs PSG",
+      "series_ticker": "KXLIGUE1GAME",
+      "category": "Sports"
+    },
+    "KXNFLSPREAD-26OCT29CARGB-GB14": {
+      "title": "Carolina vs Green Bay: Spread",
+      "series_ticker": "KXNFLSPREAD",
+      "category": "Sports"
+    },
+    "KXPRESNOMD-28-AYAN": {
+      "title": "2028 Democratic presidential nominee",
+      "series_ticker": "KXPRESNOMD",
+      "category": "Elections"
+    },
+    "KXNFLRSHYDS-26OCT29CARGB-GBJJACOBS8-60": {
+      "title": "Carolina vs Green Bay: Rushing Yards",
+      "series_ticker": "KXNFLRSHYDS",
+      "category": "Sports"
+    },
+    "SENATEME-26-R": {
+      "title": "Maine Senate winner?",
+      "series_ticker": "SENATEME",
+      "category": "Elections"
+    },
+    "KXITFWMATCH-26OCT29SATSEM-SAT": {
+      "title": "Sato vs Sema",
+      "series_ticker": "KXITFWMATCH",
+      "category": "Sports"
+    },
+    "KXPGATOUR-VIMO26-MHOM": {
       "title": "VidantaWorld Mexico Open Winner",
       "series_ticker": "KXPGATOUR",
       "category": "Sports"
@@ -523,85 +538,70 @@
       "series_ticker": "KXMAYORLA",
       "category": "Elections"
     },
-    "KXATPSETWINNER-26OCT29DJOSTR-1-STR": {
-      "title": "Novak Djokovic vs Jan-Lennard Struff: Set 1 Winner",
-      "series_ticker": "KXATPSETWINNER",
-      "category": "Sports"
-    },
-    "SENATEFLS-26-D": {
-      "title": "Florida Senate winner?",
-      "series_ticker": "SENATEFLS",
-      "category": "Elections"
-    },
-    "SENATEIA-26-R": {
-      "title": "Iowa Senate winner?",
-      "series_ticker": "SENATEIA",
-      "category": "Elections"
-    },
-    "KXNFLTD-26NOV01BALBUF-BALNVANNETT81-1": {
-      "title": "Baltimore vs Buffalo: Touchdowns",
-      "series_ticker": "KXNFLTD",
-      "category": "Sports"
-    },
-    "KXNFLNFCNORTH-27-CHI": {
-      "title": "NFC North Division Winner",
-      "series_ticker": "KXNFLNFCNORTH",
-      "category": "Sports"
-    },
     "KXPGATOUR-VIMO26-JSUB": {
       "title": "VidantaWorld Mexico Open Winner",
       "series_ticker": "KXPGATOUR",
       "category": "Sports"
     },
-    "KXSERIEAGAME-26OCT29FIOATA-ATA": {
-      "title": "Fiorentina vs Atalanta",
-      "series_ticker": "KXSERIEAGAME",
-      "category": "Sports"
-    },
-    "KXBTC50VS100-BTC-26DEC31": {
-      "title": "Will BTC hit $50,000 before $100,000?",
-      "series_ticker": "KXBTC50VS100",
-      "category": "Crypto"
-    },
-    "KXPGATOUR-VIMO26-RHOJ": {
+    "KXPGATOUR-VIMO26-BGRI": {
       "title": "VidantaWorld Mexico Open Winner",
       "series_ticker": "KXPGATOUR",
       "category": "Sports"
     },
-    "KXATPCHALLENGERMATCH-26OCT29DEDABO-ABO": {
-      "title": "Dedura vs Aboian",
-      "series_ticker": "KXATPCHALLENGERMATCH",
-      "category": "Sports"
-    },
-    "KXNBAGAME-26OCT29MEMPOR-MEM": {
-      "title": "Memphis vs Portland",
-      "series_ticker": "KXNBAGAME",
-      "category": "Sports"
-    },
-    "KXSB-27-SF": {
-      "title": "2027 Pro Football Champion",
-      "series_ticker": "KXSB",
-      "category": "Sports"
-    },
-    "SENATEMN-26-R": {
-      "title": "Minnesota Senate winner?",
-      "series_ticker": "SENATEMN",
+    "KXRHOUSESEATS-27-215": {
+      "title": "How many House seats will Republicans hold after the Midterms?",
+      "series_ticker": "KXRHOUSESEATS",
       "category": "Elections"
     },
-    "KXPGATOUR-VIMO26-ANOV": {
+    "KXNHLGAME-26OCT29BOSSTL-BOS": {
+      "title": "Boston vs St. Louis",
+      "series_ticker": "KXNHLGAME",
+      "category": "Sports"
+    },
+    "KXDSENATESEATS-27-ABOVE52": {
+      "title": "How many Senate seats will Democrats hold after the Midterms?",
+      "series_ticker": "KXDSENATESEATS",
+      "category": "Elections"
+    },
+    "KXPRESNOMD-28-RGAL": {
+      "title": "2028 Democratic presidential nominee",
+      "series_ticker": "KXPRESNOMD",
+      "category": "Elections"
+    },
+    "KXNHLGAME-26OCT29BOSSTL-STL": {
+      "title": "Boston vs St. Louis",
+      "series_ticker": "KXNHLGAME",
+      "category": "Sports"
+    },
+    "KXNFLTD-26OCT29CARGB-CARTMCMILLAN4-1": {
+      "title": "Carolina vs Green Bay: Touchdowns",
+      "series_ticker": "KXNFLTD",
+      "category": "Sports"
+    },
+    "KXNFLSPREAD-26OCT29CARGB-GB7": {
+      "title": "Carolina vs Green Bay: Spread",
+      "series_ticker": "KXNFLSPREAD",
+      "category": "Sports"
+    },
+    "KXNFLSPREAD-26OCT29CARGB-GB6": {
+      "title": "Carolina vs Green Bay: Spread",
+      "series_ticker": "KXNFLSPREAD",
+      "category": "Sports"
+    },
+    "GOVPARTYOH-26-R": {
+      "title": "Ohio Governor winner?",
+      "series_ticker": "GOVPARTYOH",
+      "category": "Elections"
+    },
+    "KXNFLRECYDS-26OCT29CARGB-GBCWATSON9-50": {
+      "title": "Carolina vs Green Bay: Receiving Yards",
+      "series_ticker": "KXNFLRECYDS",
+      "category": "Sports"
+    },
+    "KXPGATOUR-VIMO26-DGHI": {
       "title": "VidantaWorld Mexico Open Winner",
       "series_ticker": "KXPGATOUR",
       "category": "Sports"
-    },
-    "KXBTCD-26OCT2917-T80249.99": {
-      "title": "BTC price on Oct 29, 2026 at 5pm EDT?",
-      "series_ticker": "KXBTCD",
-      "category": "Crypto"
-    },
-    "KXGOVCA-26-XBEC": {
-      "title": "California Governor winner? (Person)",
-      "series_ticker": "KXGOVCA",
-      "category": "Elections"
     }
   }
 }
