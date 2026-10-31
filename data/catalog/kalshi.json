@@ -57,7 +57,7 @@
   "event": "CONTROLH-2026",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXMLBGAME-26OCT142000MILLAD-LAD": {
   "title": "Game 3: Milwaukee vs Los Angeles D — Los Angeles D",
@@ -177,7 +177,7 @@
   "event": "KXBALANCEPOWERCOMBO-27FEB",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXMLBTOTAL-26OCT142000MILLAD-8": {
   "title": "Milwaukee vs Los Angeles D: Total Runs — Over 7.5 runs scored",
@@ -213,7 +213,7 @@
   "event": "SENATETX-26",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNCAAFGAME-26OCT16CHSOCLEM-CHSO": {
   "title": "Charleston Southern vs Clemson — Charleston Southern",
@@ -309,7 +309,7 @@
   "event": "GOVPARTYNY-26",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "GOVPARTYGA-26-D": {
   "title": "Georgia Governor winner? — Keisha Lance Bottoms",
@@ -381,7 +381,7 @@
   "event": "KXNBA-27",
   "category": "Sports",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "GOVPARTYFL-26-D": {
   "title": "Florida Governor winner? — David Jolly",
@@ -393,7 +393,7 @@
   "event": "GOVPARTYFL-26",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXMLB-26-LAD": {
   "title": "Pro Baseball Champion — Los Angeles D",
@@ -417,7 +417,7 @@
   "event": "KXBALANCEPOWERCOMBO-27FEB",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNFLGAME-26OCT15SEADEN-SEA": {
   "title": "SEA Seahawks vs DEN Broncos — Seattle",
@@ -501,7 +501,7 @@
   "event": "CONTROLH-2026",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXMAYORLA-26-KBAS": {
   "title": "Los Angeles Mayor winner? — Karen Bass",
@@ -753,7 +753,7 @@
   "event": "CONTROLS-2026",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXMLSTOTAL-26OCT14DCUNYRB-4": {
   "title": "DC United vs New York RB: Total Goals — Over 3.5 goals scored",
@@ -861,7 +861,7 @@
   "event": "SENATETX-26",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXBTCD-26OCT1417-T82749.99": {
   "title": "BTC price on Oct 14, 2026 at 5pm EDT? — $82,750 or above",
@@ -897,7 +897,7 @@
   "event": "SENATEMI-26",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXEUROLEAGUEGAME-26OCT141330BAYEFS-BAY": {
   "title": "Bayern Munich vs Anadolu Efes SK — Bayern Munich",
@@ -993,7 +993,7 @@
   "event": "KXGOVCA-26",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXSB-27-MIN": {
   "title": "2027 Pro Football Champion — Minnesota",
@@ -1017,7 +1017,7 @@
   "event": "KXBALANCEPOWERCOMBO-27FEB",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXDPWORLDTOUR-DPWIC26-PREE": {
   "title": "DP World India Championship Winner — Patrick Reed",
@@ -1701,7 +1701,7 @@
   "event": "SENATEMI-26",
   "category": "Elections",
   "firstSeen": "2026-10-15T05:16Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXCPICORE-26OCT-T0.2": {
   "title": "CPI core in October — Above 0.2%",
@@ -2289,7 +2289,7 @@
   "event": "SENATEIA-26",
   "category": "Elections",
   "firstSeen": "2026-10-15T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXWTACHALLENGERMATCH-26OCT15MINMAS-MAS": {
   "title": "Mintegi Del Olmo vs Masarova — Rebeka Masarova",
@@ -2697,7 +2697,7 @@
   "event": "CONTROLS-2026",
   "category": "Elections",
   "firstSeen": "2026-10-15T22:15Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXITFMATCH-26OCT15SLATHI-SLA": {
   "title": "Slavic vs Thies — Nikola Slavic",
@@ -3837,7 +3837,7 @@
   "event": "SENATEMN-26",
   "category": "Elections",
   "firstSeen": "2026-10-16T14:15Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXITFWMATCH-26OCT16SANSOU-SOU": {
   "title": "Sanchez vs Souza — Marjorie Souza",
@@ -4929,7 +4929,7 @@
   "event": "KXBALANCEPOWERCOMBO-27FEB",
   "category": "Elections",
   "firstSeen": "2026-10-17T05:15Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXWTAMATCH-26OCT16KRAKOB-KRA": {
   "title": "Kraus vs Kobori — Sinja Kraus",
@@ -4977,7 +4977,7 @@
   "event": "SENATESC-26",
   "category": "Elections",
   "firstSeen": "2026-10-17T05:15Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNCAAFSPREAD-26OCT17RUTGMD-MD6": {
   "title": "Rutgers vs Maryland: Spread — Maryland wins by over 5.5 points",
@@ -6033,7 +6033,7 @@
   "event": "KXNCAAF-27",
   "category": "Sports",
   "firstSeen": "2026-10-18T03:15Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNCAAFSPREAD-26OCT17NDBYU-BYU4": {
   "title": "Notre Dame vs BYU: Spread — BYU wins by over 3.5 points",
@@ -9093,7 +9093,7 @@
   "event": "GOVPARTYCA-26",
   "category": "Elections",
   "firstSeen": "2026-10-19T09:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXMARMAD-27-BAY": {
   "title": "Men's 2027 College Basketball Champion — Baylor",
@@ -10521,7 +10521,7 @@
   "event": "SENATEME-26",
   "category": "Elections",
   "firstSeen": "2026-10-20T04:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXRAIN-26OCT19-MIA": {
   "title": "Where will it rain on Oct 19, 2026? — Miami",
@@ -11445,7 +11445,7 @@
   "event": "GOVPARTYOH-26",
   "category": "Elections",
   "firstSeen": "2026-10-20T16:30Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "GOVPARTYTX-26-D": {
   "title": "Texas Governor winner? — Gina Hinojosa",
@@ -11457,7 +11457,7 @@
   "event": "GOVPARTYTX-26",
   "category": "Elections",
   "firstSeen": "2026-10-20T16:30Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXITFWMATCH-26OCT20MARHRU-HRU": {
   "title": "Marcinkevica vs Hruncakova — Viktoria Hruncakova",
@@ -12429,7 +12429,7 @@
   "event": "GOVPARTYTX-26",
   "category": "Elections",
   "firstSeen": "2026-10-21T05:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXHEISMAN-27-TCHAM": {
   "title": "Heisman Trophy Winner — Trinidad Chambliss",
@@ -13929,7 +13929,7 @@
   "event": "SENATENE-26",
   "category": "Elections",
   "firstSeen": "2026-10-22T06:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXWTAMATCH-26OCT21JOVPAO-PAO": {
   "title": "Jovic vs Paolini — Jasmine Paolini",
@@ -14937,7 +14937,7 @@
   "event": "GOVPARTYFL-26",
   "category": "Elections",
   "firstSeen": "2026-10-22T18:30Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNBAGAME-26OCT22CLEPHI-CLE": {
   "title": "Cleveland vs Philadelphia — Cleveland",
@@ -15993,7 +15993,7 @@
   "event": "KXPRESNOMR-28",
   "category": "Elections",
   "firstSeen": "2026-10-23T07:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNBAGAME-26OCT23NOPUTA-NOP": {
   "title": "New Orleans vs Utah — New Orleans",
@@ -17745,7 +17745,7 @@
   "event": "KXNBA-27",
   "category": "Sports",
   "firstSeen": "2026-10-24T08:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "GOVPARTYMA-26-R": {
   "title": "Massachusetts Governor winner? — Mike Minogue",
@@ -21861,7 +21861,7 @@
   "event": "SENATEKS-26",
   "category": "Elections",
   "firstSeen": "2026-10-26T10:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNFLMVP-27-JSMI": {
   "title": "MVP Winner? — Jaxon Smith-Njigba",
@@ -21909,7 +21909,7 @@
   "event": "SENATENE-26",
   "category": "Elections",
   "firstSeen": "2026-10-26T10:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "SENATEGA-26-D": {
   "title": "Georgia Senate winner? — Jon Ossoff",
@@ -23097,7 +23097,7 @@
   "event": "GOVPARTYNV-26",
   "category": "Elections",
   "firstSeen": "2026-10-27T04:45Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXKBOGAME-26OCT260530KIASAM-SAM": {
   "title": "Game 2: Kia Tigers vs Samsung Lions — Samsung Lions",
@@ -23145,7 +23145,7 @@
   "event": "KXLALIGAGAME-26OCT31BARALA",
   "category": "Sports",
   "firstSeen": "2026-10-27T04:45Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "SENATEAK-26-R": {
   "title": "Alaska Senate winner? — Republican party",
@@ -23265,7 +23265,7 @@
   "event": "KXNFLGAME-26NOV01MINDET",
   "category": "Sports",
   "firstSeen": "2026-10-27T04:45Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXMLBWSMVP-26-AASHBY26": {
   "title": "Pro Baseball Championship Series MVP Winner — Aaron Ashby",
@@ -23985,7 +23985,7 @@
   "event": "KXPGATOUR-VIMO26",
   "category": "Sports",
   "firstSeen": "2026-10-27T17:15Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXISRAELPM-26OCT27-NBEN": {
   "title": "Prime Minister of Israel after the 2026 election? — Naftali Bennett",
@@ -24477,7 +24477,7 @@
   "event": "KXLALIGAGAME-26OCT31BARALA",
   "category": "Sports",
   "firstSeen": "2026-10-27T23:30Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNFLSPREAD-26NOV01LVNYJ-NYJ8": {
   "title": "Las Vegas vs New York J: Spread — New York J wins by over 7.5 points",
@@ -24489,7 +24489,7 @@
   "event": "KXNFLSPREAD-26NOV01LVNYJ",
   "category": "Sports",
   "firstSeen": "2026-10-27T23:30Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXWTAMATCH-26OCT27BUCJOI-BUC": {
   "title": "Bucsa vs Joint — Cristina Bucsa",
@@ -24957,7 +24957,7 @@
   "event": "GOVPARTYNV-26",
   "category": "Elections",
   "firstSeen": "2026-10-28T05:45Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNFLSPREAD-26NOV01ARIDAL-DAL15": {
   "title": "Arizona vs Dallas: Spread — Dallas wins by over 14.5 points",
@@ -25977,7 +25977,7 @@
   "event": "KXNFLSPREAD-26NOV01LVNYJ",
   "category": "Sports",
   "firstSeen": "2026-10-29T00:30Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNBAGAME-26OCT28GSWMIN-MIN": {
   "title": "Golden State vs Minnesota — Minnesota",
@@ -26265,7 +26265,7 @@
   "event": "KXNFLSPREAD-26NOV01NEMIA",
   "category": "Sports",
   "firstSeen": "2026-10-29T06:45Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXWTACHALLENGERMATCH-26OCT28FERREA-REA": {
   "title": "Ferro vs Reami — Adriana Reami",
@@ -26469,7 +26469,7 @@
   "event": "KXPGATOUR-VIMO26",
   "category": "Sports",
   "firstSeen": "2026-10-29T06:45Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXPGATOUR-VIMO26-PNYH": {
   "title": "VidantaWorld Mexico Open Winner — Pontus Nyholm",
@@ -26637,7 +26637,7 @@
   "event": "SENATEKS-26",
   "category": "Elections",
   "firstSeen": "2026-10-29T13:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXKBOGAME-26OCT280530SAMKIA-KIA": {
   "title": "Game 3: Samsung Lions vs Kia Tigers — Kia Tigers",
@@ -26913,7 +26913,7 @@
   "event": "KXPGATOUR-VIMO26",
   "category": "Sports",
   "firstSeen": "2026-10-29T19:15Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXSERIEAGAME-26OCT29FROLEC-LEC": {
   "title": "Frosinone vs Lecce — Lecce",
@@ -26961,7 +26961,7 @@
   "event": "KXPGATOUR-VIMO26",
   "category": "Sports",
   "firstSeen": "2026-10-29T19:15Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNFLSPREAD-26OCT29CARGB-GB5": {
   "title": "Carolina vs Green Bay: Spread — Green Bay wins by over 4.5 points",
@@ -27045,7 +27045,7 @@
   "event": "KXPGATOUR-VIMO26",
   "category": "Sports",
   "firstSeen": "2026-10-29T19:15Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXSERIEAGAME-26OCT29FROLEC-TIE": {
   "title": "Frosinone vs Lecce — Tie",
@@ -27465,7 +27465,7 @@
   "event": "KXNCAAFGAME-26OCT30AUBMISS",
   "category": "Sports",
   "firstSeen": "2026-10-30T01:30Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNFL1HSPREAD-26OCT29CARGB-GB3": {
   "title": "Carolina vs Green Bay: 1st Half Spread — Green Bay wins by over 2.5 points",
@@ -28089,7 +28089,7 @@
   "event": "KXPGATOUR-VIMO26",
   "category": "Sports",
   "firstSeen": "2026-10-30T07:45Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXPGATOUR-VIMO26-BCAM": {
   "title": "VidantaWorld Mexico Open Winner — Brian Campbell",
@@ -28101,7 +28101,7 @@
   "event": "KXPGATOUR-VIMO26",
   "category": "Sports",
   "firstSeen": "2026-10-30T07:45Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "SENATEMS-26-R": {
   "title": "Mississippi Senate winner? — Cindy Hyde-Smith",
@@ -28173,7 +28173,7 @@
   "event": "KXNCAAFGAME-26OCT31NDNAVY",
   "category": "Sports",
   "firstSeen": "2026-10-30T07:45Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXBTCD-26OCT3017-T76999.99": {
   "title": "BTC price on Oct 30, 2026 at 5pm EDT? — $77,000 or above",
@@ -28569,7 +28569,7 @@
   "event": "KXNCAAFSPREAD-26OCT31CALNCST",
   "category": "Sports",
   "firstSeen": "2026-10-30T20:15Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNCAAFSPREAD-26OCT31CSUUSU-USU8": {
   "title": "Colorado St. vs Utah St.: Spread — Utah St. wins by over 7.5 points",
@@ -28581,7 +28581,7 @@
   "event": "KXNCAAFSPREAD-26OCT31CSUUSU",
   "category": "Sports",
   "firstSeen": "2026-10-30T20:15Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXLALIGAGAME-26OCT30VILESP-VIL": {
   "title": "Villarreal vs Espanyol — Villarreal",
@@ -28629,7 +28629,7 @@
   "event": "KXNCAAFSPREAD-26OCT31NIUUNLV",
   "category": "Sports",
   "firstSeen": "2026-10-30T20:15Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNBASPREAD-26OCT30ORLTOR-TOR6": {
   "title": "Orlando vs Toronto: Spread — Toronto wins by over 5.5 points",
@@ -28653,7 +28653,7 @@
   "event": "KXNCAAFSPREAD-26OCT31NWORE",
   "category": "Sports",
   "firstSeen": "2026-10-30T20:15Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNCAAFGAME-26OCT30BAYUCF-UCF": {
   "title": "Baylor vs UCF — UCF",
@@ -28797,7 +28797,7 @@
   "event": "KXPGATOUR-VIMO26",
   "category": "Sports",
   "firstSeen": "2026-10-30T20:15Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXBOXING-26OCT31CALVARMBILLI-CALVAR": {
   "title": "Canelo Alvarez vs Christian Mbilli — Canelo Alvarez",
@@ -28809,7 +28809,7 @@
   "event": "KXBOXING-26OCT31CALVARMBILLI",
   "category": "Sports",
   "firstSeen": "2026-10-30T20:15Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXATPCHALLENGERMATCH-26OCT30TRAVIR-TRA": {
   "title": "Travaglia vs Virtanen — Stefano Travaglia",
@@ -28977,7 +28977,7 @@
   "event": "KXNFLGAME-26NOV01LVNYJ",
   "category": "Sports",
   "firstSeen": "2026-10-31T02:30Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNBAGAME-26OCT30INDMIA-MIA": {
   "title": "Indiana vs Miami — Miami",
@@ -29097,7 +29097,7 @@
   "event": "KXNFLSPREAD-26NOV01INDJAC",
   "category": "Sports",
   "firstSeen": "2026-10-31T02:30Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXLIGAMXGAME-26OCT30ASLATL-ATL": {
   "title": "San Luis vs Atlas — Atlas",
@@ -29241,7 +29241,7 @@
   "event": "KXPGATOUR-VIMO26",
   "category": "Sports",
   "firstSeen": "2026-10-31T02:30Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNCAAFSPREAD-26OCT30BAYUCF-BAY4": {
   "title": "Baylor vs UCF: Spread — Baylor wins by over 3.5 points",
@@ -29301,7 +29301,7 @@
   "event": "KXNCAAFSPREAD-26OCT31ILLMD",
   "category": "Sports",
   "firstSeen": "2026-10-31T02:30Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNBAGAME-26OCT30DENPHX-PHX": {
   "title": "Denver vs Phoenix — Phoenix",
@@ -29373,7 +29373,7 @@
   "event": "KXNCAAFGAME-26OCT30MINNIND",
   "category": "Sports",
   "firstSeen": "2026-10-31T08:45Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNFLSPREAD-26NOV01LVNYJ-NYJ10": {
   "title": "Las Vegas vs New York J: Spread — New York J wins by over 9.5 points",
@@ -29385,7 +29385,7 @@
   "event": "KXNFLSPREAD-26NOV01LVNYJ",
   "category": "Sports",
   "firstSeen": "2026-10-31T08:45Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXODIMATCH-26OCT310400SRIPAK-SRI": {
   "title": "Pakistan vs Sri Lanka — Sri Lanka",
@@ -29397,7 +29397,7 @@
   "event": "KXODIMATCH-26OCT310400SRIPAK",
   "category": "Sports",
   "firstSeen": "2026-10-31T08:45Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNCAAFTOTAL-26OCT31UTAHCIN-57": {
   "title": "Utah vs Cincinnati: Total Points — Over 56.5 points",
@@ -29409,7 +29409,7 @@
   "event": "KXNCAAFTOTAL-26OCT31UTAHCIN",
   "category": "Sports",
   "firstSeen": "2026-10-31T08:45Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXITFMATCH-26OCT31SAFOMA-OMA": {
   "title": "Safonov vs Omarkhanov — Amir Omarkhanov",
@@ -29433,7 +29433,7 @@
   "event": "KXEPLGAME-26OCT31MCIBRI",
   "category": "Sports",
   "firstSeen": "2026-10-31T08:45Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXLALIGAGAME-26OCT31LEVATM-ATM": {
   "title": "Levante vs Atletico — Atletico",
@@ -29457,7 +29457,7 @@
   "event": "KXNCAAFGAME-26OCT31FLAUGA",
   "category": "Sports",
   "firstSeen": "2026-10-31T08:45Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXWTAMATCH-26OCT31SUNDAR-SUN": {
   "title": "Sun vs Dart — Xinran Sun",
@@ -29481,7 +29481,7 @@
   "event": "KXTRUMPSAYMONTH-26NOV01",
   "category": "Mentions",
   "firstSeen": "2026-10-31T08:45Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXBOXING-26OCT31CALVARMBILLI-MBILLI": {
   "title": "Canelo Alvarez vs Christian Mbilli — Christian Mbilli",
@@ -29493,7 +29493,7 @@
   "event": "KXBOXING-26OCT31CALVARMBILLI",
   "category": "Sports",
   "firstSeen": "2026-10-31T08:45Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNFLTD-26NOV02CHISEA-SEAEWILSON23-1": {
   "title": "Chicago vs Seattle: Touchdowns — Emanuel Wilson: 1+",
@@ -29541,7 +29541,7 @@
   "event": "KXNCAAFGAME-26OCT30WISIOWA",
   "category": "Sports",
   "firstSeen": "2026-10-31T08:45Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXPGATOUR-VIMO26-AECK": {
   "title": "VidantaWorld Mexico Open Winner — Austin Eckroat",
@@ -29565,7 +29565,7 @@
   "event": "KXATPMATCH-26OCT31GRIBON",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXODIMATCH-26OCT310400SRIPAK-PAK": {
   "title": "Pakistan vs Sri Lanka — Pakistan",
@@ -29577,7 +29577,7 @@
   "event": "KXODIMATCH-26OCT310400SRIPAK",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXATPMATCH-26OCT31GRIBON-BON": {
   "title": "Griekspoor vs Bonzi — Benjamin Bonzi",
@@ -29589,7 +29589,7 @@
   "event": "KXATPMATCH-26OCT31GRIBON",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNFLSPREAD-26NOV01INDJAC-JAC10": {
   "title": "Indianapolis vs Jacksonville: Spread — Jacksonville wins by over 9.5 points",
@@ -29601,7 +29601,7 @@
   "event": "KXNFLSPREAD-26NOV01INDJAC",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXATPMATCH-26OCT31MEDALC-ALC": {
   "title": "Medvedev vs Alcaraz — Carlos Alcaraz",
@@ -29613,7 +29613,7 @@
   "event": "KXATPMATCH-26OCT31MEDALC",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXCS2GAME-26OCT310700FURIANEMI-NEMI": {
   "title": "FURIA vs. Nemiga — Nemiga",
@@ -29625,7 +29625,7 @@
   "event": "KXCS2GAME-26OCT310700FURIANEMI",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXEPLGAME-26OCT31HULIPS-IPS": {
   "title": "Hull City vs Ipswich Town — Ipswich Town",
@@ -29637,7 +29637,7 @@
   "event": "KXEPLGAME-26OCT31HULIPS",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNBAGAME-26OCT31SACMEM-SAC": {
   "title": "Sacramento vs Memphis — Sacramento",
@@ -29649,7 +29649,7 @@
   "event": "KXNBAGAME-26OCT31SACMEM",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNCAAFGAME-26OCT31VMICHAT-VMI": {
   "title": "VMI vs Chattanooga — VMI",
@@ -29661,7 +29661,7 @@
   "event": "KXNCAAFGAME-26OCT31VMICHAT",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXATPMATCH-26OCT31MEDALC-MED": {
   "title": "Medvedev vs Alcaraz — Daniil Medvedev",
@@ -29673,7 +29673,7 @@
   "event": "KXATPMATCH-26OCT31MEDALC",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXWTACHALLENGERMATCH-26OCT31BLINOH-BLI": {
   "title": "Blinkova vs Noha Akugue — Anna Blinkova",
@@ -29685,7 +29685,7 @@
   "event": "KXWTACHALLENGERMATCH-26OCT31BLINOH",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNCAAFGAME-26OCT30KSUCOLO-COLO": {
   "title": "Kansas St. vs Colorado — Colorado",
@@ -29697,7 +29697,7 @@
   "event": "KXNCAAFGAME-26OCT30KSUCOLO",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXLALIGAGAME-26OCT31RVCRCC-RVC": {
   "title": "Vallecano vs Celta Vigo — Vallecano",
@@ -29709,7 +29709,7 @@
   "event": "KXLALIGAGAME-26OCT31RVCRCC",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNCAAFTOTAL-26OCT31NEVUCLA-44": {
   "title": "Nevada vs UCLA: Total Points — Over 43.5 points",
@@ -29721,7 +29721,7 @@
   "event": "KXNCAAFTOTAL-26OCT31NEVUCLA",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXATPMATCH-26OCT31BALHAN-HAN": {
   "title": "Balshaw vs Hanfmann — Yannick Hanfmann",
@@ -29733,7 +29733,7 @@
   "event": "KXATPMATCH-26OCT31BALHAN",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNCAAFSPREAD-26OCT31CALNCST-NCST10": {
   "title": "California vs NC St.: Spread — NC St. wins by over 9.5 points",
@@ -29745,7 +29745,7 @@
   "event": "KXNCAAFSPREAD-26OCT31CALNCST",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNCAAFGAME-26OCT30WISIOWA-WIS": {
   "title": "Wisconsin vs Iowa — Wisconsin",
@@ -29757,7 +29757,7 @@
   "event": "KXNCAAFGAME-26OCT30WISIOWA",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXWTAMATCH-26OCT31KULKOT-KOT": {
   "title": "Kulambayeva vs Kotliar — Yelyzaveta Kotliar",
@@ -29769,7 +29769,7 @@
   "event": "KXWTAMATCH-26OCT31KULKOT",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXSERIEAGAME-26OCT31BFCMON-BFC": {
   "title": "Bologna vs Monza — Bologna",
@@ -29781,7 +29781,7 @@
   "event": "KXSERIEAGAME-26OCT31BFCMON",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNCAAFGAME-26OCT30ARIZTTU-ARIZ": {
   "title": "Arizona vs Texas Tech — Arizona",
@@ -29793,7 +29793,7 @@
   "event": "KXNCAAFGAME-26OCT30ARIZTTU",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNCAAFSPREAD-26OCT31ARIZTTU-TTU4": {
   "title": "Arizona vs Texas Tech: Spread — Texas Tech wins by over 3.5 points",
@@ -29805,7 +29805,7 @@
   "event": "KXNCAAFSPREAD-26OCT31ARIZTTU",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXEPLGAME-26OCT31BOULEE-BOU": {
   "title": "Bournemouth vs Leeds United — Bournemouth",
@@ -29817,7 +29817,7 @@
   "event": "KXEPLGAME-26OCT31BOULEE",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNBAGAME-26OCT31MINSAS-MIN": {
   "title": "Minnesota vs San Antonio — Minnesota",
@@ -29829,7 +29829,7 @@
   "event": "KXNBAGAME-26OCT31MINSAS",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNCAAFGAME-26OCT31BGSUWMU-BGSU": {
   "title": "Bowling Green vs Western Michigan — Bowling Green",
@@ -29841,7 +29841,7 @@
   "event": "KXNCAAFGAME-26OCT31BGSUWMU",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXWTAMATCH-26OCT31KULKOT-KUL": {
   "title": "Kulambayeva vs Kotliar — Zhibek Kulambayeva",
@@ -29853,7 +29853,7 @@
   "event": "KXWTAMATCH-26OCT31KULKOT",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXATPMATCH-26OCT31VACFRI-FRI": {
   "title": "Vacherot vs Fritz — Taylor Fritz",
@@ -29865,7 +29865,7 @@
   "event": "KXATPMATCH-26OCT31VACFRI",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXATPMATCH-26OCT31BALHAN-BAL": {
   "title": "Balshaw vs Hanfmann — Felix Balshaw",
@@ -29877,7 +29877,7 @@
   "event": "KXATPMATCH-26OCT31BALHAN",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNCAAFSPREAD-26OCT31WISIOWA-IOWA3": {
   "title": "Wisconsin vs Iowa: Spread — Iowa wins by over 2.5 points",
@@ -29889,7 +29889,7 @@
   "event": "KXNCAAFSPREAD-26OCT31WISIOWA",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNCAAFSPREAD-26OCT31ARIZTTU-TTU5": {
   "title": "Arizona vs Texas Tech: Spread — Texas Tech wins by over 4.5 points",
@@ -29901,7 +29901,7 @@
   "event": "KXNCAAFSPREAD-26OCT31ARIZTTU",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXCS2GAME-26OCT310700FURIANEMI-FURIA": {
   "title": "FURIA vs. Nemiga — FURIA",
@@ -29913,7 +29913,7 @@
   "event": "KXCS2GAME-26OCT310700FURIANEMI",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXATPMATCH-26OCT31BAEDZU-BAE": {
   "title": "Baez vs Dzumhur — Sebastian Baez",
@@ -29925,7 +29925,7 @@
   "event": "KXATPMATCH-26OCT31BAEDZU",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  },
  "KXNBASPREAD-26OCT31PORUTA-POR7": {
   "title": "Portland vs Utah: Spread — Portland wins by over 6.5 points",
@@ -29937,6 +29937,6 @@
   "event": "KXNBASPREAD-26OCT31PORUTA",
   "category": "Sports",
   "firstSeen": "2026-10-31T15:00Z",
-  "lastSeen": "2026-10-31T15:15Z"
+  "lastSeen": "2026-10-31T15:30Z"
  }
 }
