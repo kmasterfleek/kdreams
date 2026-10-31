@@ -659,6 +659,15 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "resolution.netCentsPer10 = -158.1 on n=11, below the n>=100 needed"
+      },
+      {
+        "date": "2026-10-31",
+        "ticks": 185,
+        "value": -48.9,
+        "n": 28,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "resolution.netCentsPer10 = -48.9 on n=28, below the n>=100 needed"
       }
     ]
   },
@@ -683,6 +692,38 @@
     "baseline": {
       "value": -0.437,
       "n": 6581
+    },
+    "status": "REFUTED",
+    "retests": [
+      {
+        "date": "2026-10-31",
+        "ticks": 94,
+        "value": -0.923,
+        "n": 435,
+        "verdict": "REFUTED",
+        "by": "code",
+        "note": "maker.netCentsPerAttempt = -0.923 vs > 0 on n=435"
+      }
+    ],
+    "settledOn": "2026-10-31"
+  },
+  {
+    "id": "2026-10-31",
+    "date": "2026-10-31",
+    "deep": "cross-venue-divergence",
+    "issue": "#26",
+    "text": "Given the configured Democratic House-control pair, when observing a buy-both-sides check at the recorded touch, then `pair.bothSidesFracNetPositive` should be > 0.10 vs the recorded 0.05 baseline, subject to both venues’ taker fees and verified equivalent resolution rules.",
+    "spec": {
+      "metric": "pair.bothSidesFracNetPositive",
+      "pair": "house-2026-democratic",
+      "op": ">",
+      "threshold": 0.1,
+      "minN": 300
+    },
+    "frozenAt": "2026-10-31T14:45Z",
+    "baseline": {
+      "value": 0.053,
+      "n": 2506
     },
     "status": "open",
     "retests": []
