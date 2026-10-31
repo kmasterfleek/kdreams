@@ -8,6 +8,11 @@ updates:
       dev-dependencies:
         patterns: ["*"]
         dependency-type: development
+    # Majors (TypeScript 7, vite 8, vitest 5) break typescript-eslint and the
+    # engine tests; upgrade those by hand, one at a time.
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
   - package-ecosystem: github-actions
     directory: "/"
     schedule: { interval: weekly }
