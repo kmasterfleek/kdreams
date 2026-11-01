@@ -668,6 +668,15 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "resolution.netCentsPer10 = -48.9 on n=28, below the n>=100 needed"
+      },
+      {
+        "date": "2026-11-01",
+        "ticks": 284,
+        "value": -9.9,
+        "n": 62,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "resolution.netCentsPer10 = -9.9 on n=62, below the n>=100 needed"
       }
     ]
   },
@@ -724,6 +733,37 @@
     "baseline": {
       "value": 0.053,
       "n": 2506
+    },
+    "status": "open",
+    "retests": [
+      {
+        "date": "2026-11-01",
+        "ticks": 99,
+        "value": 0.232,
+        "n": 198,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "pair.bothSidesFracNetPositive = 0.232 on n=198, below the n>=300 needed"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-01",
+    "date": "2026-11-01",
+    "deep": "cross-venue-divergence",
+    "issue": "#28",
+    "text": "Given the Democratic House pair, when simulating a purchase of complementary outcomes across venues at recorded touches, then `pair.bothSidesFracNetPositive` should be > 0.1 vs the recorded 0.07 baseline, subject to taker fees and verified matching resolution rules.",
+    "spec": {
+      "metric": "pair.bothSidesFracNetPositive",
+      "pair": "house-2026-democratic",
+      "op": ">",
+      "threshold": 0.1,
+      "minN": 300
+    },
+    "frozenAt": "2026-11-01T15:30Z",
+    "baseline": {
+      "value": 0.069,
+      "n": 2580
     },
     "status": "open",
     "retests": []
