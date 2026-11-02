@@ -677,6 +677,15 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "resolution.netCentsPer10 = -9.9 on n=62, below the n>=100 needed"
+      },
+      {
+        "date": "2026-11-02",
+        "ticks": 387,
+        "value": -22.4,
+        "n": 90,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "resolution.netCentsPer10 = -22.4 on n=90, below the n>=100 needed"
       }
     ]
   },
@@ -734,7 +743,7 @@
       "value": 0.053,
       "n": 2506
     },
-    "status": "open",
+    "status": "SUPPORTED",
     "retests": [
       {
         "date": "2026-11-01",
@@ -744,8 +753,18 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "pair.bothSidesFracNetPositive = 0.232 on n=198, below the n>=300 needed"
+      },
+      {
+        "date": "2026-11-02",
+        "ticks": 202,
+        "value": 0.191,
+        "n": 404,
+        "verdict": "SUPPORTED",
+        "by": "code",
+        "note": "pair.bothSidesFracNetPositive = 0.191 vs > 0.1 on n=404"
       }
-    ]
+    ],
+    "settledOn": "2026-11-02"
   },
   {
     "id": "2026-11-01",
@@ -764,6 +783,43 @@
     "baseline": {
       "value": 0.069,
       "n": 2580
+    },
+    "status": "open",
+    "retests": [
+      {
+        "date": "2026-11-02",
+        "ticks": 103,
+        "value": 0.15,
+        "n": 206,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "pair.bothSidesFracNetPositive = 0.15 on n=206, below the n>=300 needed"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-02",
+    "date": "2026-11-02",
+    "deep": "liquidity-by-hour",
+    "issue": "#29",
+    "text": "Given Polymarket markets entered from 16h to 17h UTC, when observing a one-tick-improvement maker attempt under the recorded proxy, then maker.netCentsPerAttempt should be > 0c vs the all-hours baseline of -1.3c per attempt, subject to the invariant that adverse marks can exceed the fee-free spread captured.",
+    "spec": {
+      "metric": "maker.netCentsPerAttempt",
+      "venue": "pm",
+      "slice": {
+        "hoursUtc": [
+          16,
+          17
+        ]
+      },
+      "op": ">",
+      "threshold": 0,
+      "minN": 300
+    },
+    "frozenAt": "2026-11-02T18:45Z",
+    "baseline": {
+      "value": -1.364,
+      "n": 4173
     },
     "status": "open",
     "retests": []
