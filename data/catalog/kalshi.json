@@ -57,7 +57,7 @@
   "event": "CONTROLH-2026",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXMLBGAME-26OCT142000MILLAD-LAD": {
   "title": "Game 3: Milwaukee vs Los Angeles D — Los Angeles D",
@@ -177,7 +177,7 @@
   "event": "KXBALANCEPOWERCOMBO-27FEB",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXMLBTOTAL-26OCT142000MILLAD-8": {
   "title": "Milwaukee vs Los Angeles D: Total Runs — Over 7.5 runs scored",
@@ -213,7 +213,7 @@
   "event": "SENATETX-26",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNCAAFGAME-26OCT16CHSOCLEM-CHSO": {
   "title": "Charleston Southern vs Clemson — Charleston Southern",
@@ -309,7 +309,7 @@
   "event": "GOVPARTYNY-26",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "GOVPARTYGA-26-D": {
   "title": "Georgia Governor winner? — Keisha Lance Bottoms",
@@ -393,7 +393,7 @@
   "event": "GOVPARTYFL-26",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXMLB-26-LAD": {
   "title": "Pro Baseball Champion — Los Angeles D",
@@ -417,7 +417,7 @@
   "event": "KXBALANCEPOWERCOMBO-27FEB",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNFLGAME-26OCT15SEADEN-SEA": {
   "title": "SEA Seahawks vs DEN Broncos — Seattle",
@@ -501,7 +501,7 @@
   "event": "CONTROLH-2026",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXMAYORLA-26-KBAS": {
   "title": "Los Angeles Mayor winner? — Karen Bass",
@@ -561,7 +561,7 @@
   "event": "KXPRESNOMD-28",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXMLB-26-MIL": {
   "title": "Pro Baseball Champion — Milwaukee",
@@ -753,7 +753,7 @@
   "event": "CONTROLS-2026",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXMLSTOTAL-26OCT14DCUNYRB-4": {
   "title": "DC United vs New York RB: Total Goals — Over 3.5 goals scored",
@@ -861,7 +861,7 @@
   "event": "SENATETX-26",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXBTCD-26OCT1417-T82749.99": {
   "title": "BTC price on Oct 14, 2026 at 5pm EDT? — $82,750 or above",
@@ -897,7 +897,7 @@
   "event": "SENATEMI-26",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXEUROLEAGUEGAME-26OCT141330BAYEFS-BAY": {
   "title": "Bayern Munich vs Anadolu Efes SK — Bayern Munich",
@@ -993,7 +993,7 @@
   "event": "KXGOVCA-26",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXSB-27-MIN": {
   "title": "2027 Pro Football Champion — Minnesota",
@@ -1005,7 +1005,7 @@
   "event": "KXSB-27",
   "category": "Sports",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXBALANCEPOWERCOMBO-27FEB-DR": {
   "title": "2026 Midterms: Congress Balance of Power? — D-House, R-Senate",
@@ -1017,7 +1017,7 @@
   "event": "KXBALANCEPOWERCOMBO-27FEB",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXDPWORLDTOUR-DPWIC26-PREE": {
   "title": "DP World India Championship Winner — Patrick Reed",
@@ -1701,7 +1701,7 @@
   "event": "SENATEMI-26",
   "category": "Elections",
   "firstSeen": "2026-10-15T05:16Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXCPICORE-26OCT-T0.2": {
   "title": "CPI core in October — Above 0.2%",
@@ -2289,7 +2289,7 @@
   "event": "SENATEIA-26",
   "category": "Elections",
   "firstSeen": "2026-10-15T15:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXWTACHALLENGERMATCH-26OCT15MINMAS-MAS": {
   "title": "Mintegi Del Olmo vs Masarova — Rebeka Masarova",
@@ -2697,7 +2697,7 @@
   "event": "CONTROLS-2026",
   "category": "Elections",
   "firstSeen": "2026-10-15T22:15Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXITFMATCH-26OCT15SLATHI-SLA": {
   "title": "Slavic vs Thies — Nikola Slavic",
@@ -3249,7 +3249,7 @@
   "event": "KXBLUEWAVECOMBO-27FEB",
   "category": "Politics",
   "firstSeen": "2026-10-16T04:59Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXRAIN-26OCT15-MIA": {
   "title": "Where will it rain on Oct 15, 2026? — Miami",
@@ -3837,7 +3837,7 @@
   "event": "SENATEMN-26",
   "category": "Elections",
   "firstSeen": "2026-10-16T14:15Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXITFWMATCH-26OCT16SANSOU-SOU": {
   "title": "Sanchez vs Souza — Marjorie Souza",
@@ -3909,7 +3909,7 @@
   "event": "SENATEIA-26",
   "category": "Elections",
   "firstSeen": "2026-10-16T14:15Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "SENATEOHS-26-R": {
   "title": "Ohio Senate winner? — Jon Husted",
@@ -3921,7 +3921,7 @@
   "event": "SENATEOHS-26",
   "category": "Elections",
   "firstSeen": "2026-10-16T14:15Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNCAAFGAME-26OCT17OSUIND-IND": {
   "title": "Ohio St. vs Indiana — Indiana",
@@ -4929,7 +4929,7 @@
   "event": "KXBALANCEPOWERCOMBO-27FEB",
   "category": "Elections",
   "firstSeen": "2026-10-17T05:15Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXWTAMATCH-26OCT16KRAKOB-KRA": {
   "title": "Kraus vs Kobori — Sinja Kraus",
@@ -4977,7 +4977,7 @@
   "event": "SENATESC-26",
   "category": "Elections",
   "firstSeen": "2026-10-17T05:15Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNCAAFSPREAD-26OCT17RUTGMD-MD6": {
   "title": "Rutgers vs Maryland: Spread — Maryland wins by over 5.5 points",
@@ -7533,7 +7533,7 @@
   "event": "KXPRESNOMD-28",
   "category": "Elections",
   "firstSeen": "2026-10-18T20:30Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNFLSPREAD-26OCT18LACKC-KC7": {
   "title": "Los Angeles C vs Kansas City: Spread — Kansas City wins by over 6.5 points",
@@ -7737,7 +7737,7 @@
   "event": "KXNFLAFCSOUTH-27",
   "category": "Sports",
   "firstSeen": "2026-10-18T20:30Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNFLSPREAD-26OCT18NONYG-NYG4": {
   "title": "New Orleans vs New York G: Spread — New York G wins by over 3.5 points",
@@ -8073,7 +8073,7 @@
   "event": "KXSB-27",
   "category": "Sports",
   "firstSeen": "2026-10-19T02:45Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNFLTOTAL-26OCT18DALGB-55": {
   "title": "Dallas vs Green Bay: Total Points — Over 54.5 points",
@@ -8325,7 +8325,7 @@
   "event": "KXSB-27",
   "category": "Sports",
   "firstSeen": "2026-10-19T02:45Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNFLSPREAD-26OCT18DALGB-GB11": {
   "title": "Dallas vs Green Bay: Spread — Green Bay wins by over 10.5 points",
@@ -9093,7 +9093,7 @@
   "event": "GOVPARTYCA-26",
   "category": "Elections",
   "firstSeen": "2026-10-19T09:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXMARMAD-27-BAY": {
   "title": "Men's 2027 College Basketball Champion — Baylor",
@@ -9357,7 +9357,7 @@
   "event": "KXSB-27",
   "category": "Sports",
   "firstSeen": "2026-10-19T09:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXSB-27-CHI": {
   "title": "2027 Pro Football Champion — Chicago",
@@ -9369,7 +9369,7 @@
   "event": "KXSB-27",
   "category": "Sports",
   "firstSeen": "2026-10-19T09:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXUCLGAME-26OCT20PSGBAR-PSG": {
   "title": "PSG vs Barcelona — PSG",
@@ -9513,7 +9513,7 @@
   "event": "SENATEMN-26",
   "category": "Elections",
   "firstSeen": "2026-10-19T09:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXSB-27-DEN": {
   "title": "2027 Pro Football Champion — Denver",
@@ -9525,7 +9525,7 @@
   "event": "KXSB-27",
   "category": "Sports",
   "firstSeen": "2026-10-19T09:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNFLMVP-27-JLOV": {
   "title": "MVP Winner? — Jordan Love",
@@ -10521,7 +10521,7 @@
   "event": "SENATEME-26",
   "category": "Elections",
   "firstSeen": "2026-10-20T04:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXRAIN-26OCT19-MIA": {
   "title": "Where will it rain on Oct 19, 2026? — Miami",
@@ -10641,7 +10641,7 @@
   "event": "KXDSENATESEATS-27",
   "category": "Elections",
   "firstSeen": "2026-10-20T04:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNBAGAME-26OCT20PHINYK-NYK": {
   "title": "Philadelphia vs New York — New York",
@@ -10677,7 +10677,7 @@
   "event": "KXSB-27",
   "category": "Sports",
   "firstSeen": "2026-10-20T04:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXAAAGASW-26OCT26-4.3000": {
   "title": "US gas prices this week — Above 4.3000",
@@ -11445,7 +11445,7 @@
   "event": "GOVPARTYOH-26",
   "category": "Elections",
   "firstSeen": "2026-10-20T16:30Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "GOVPARTYTX-26-D": {
   "title": "Texas Governor winner? — Gina Hinojosa",
@@ -11457,7 +11457,7 @@
   "event": "GOVPARTYTX-26",
   "category": "Elections",
   "firstSeen": "2026-10-20T16:30Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXITFWMATCH-26OCT20MARHRU-HRU": {
   "title": "Marcinkevica vs Hruncakova — Viktoria Hruncakova",
@@ -11889,7 +11889,7 @@
   "event": "KXDSENATESEATS-27",
   "category": "Elections",
   "firstSeen": "2026-10-20T22:45Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNCAAFGAME-26OCT20USAMRSH-USA": {
   "title": "South Alabama vs Marshall — South Alabama",
@@ -12429,7 +12429,7 @@
   "event": "GOVPARTYTX-26",
   "category": "Elections",
   "firstSeen": "2026-10-21T05:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXHEISMAN-27-TCHAM": {
   "title": "Heisman Trophy Winner — Trinidad Chambliss",
@@ -12645,7 +12645,7 @@
   "event": "KXGOVCA-26",
   "category": "Elections",
   "firstSeen": "2026-10-21T11:15Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXATPMATCH-26OCT21MANRUB-MAN": {
   "title": "Mannarino vs Rublev — Adrian Mannarino",
@@ -12717,7 +12717,7 @@
   "event": "GOVPARTYOH-26",
   "category": "Elections",
   "firstSeen": "2026-10-21T11:15Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXWTAMATCH-26OCT21CIRBEJ-CIR": {
   "title": "Cirstea vs Bejlek — Sorana Cirstea",
@@ -12741,7 +12741,7 @@
   "event": "SENATESC-26",
   "category": "Elections",
   "firstSeen": "2026-10-21T11:15Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNFLTOTAL-26OCT25CLETEN-39": {
   "title": "Cleveland vs Tennessee: Total Points — Over 38.5 points",
@@ -13065,7 +13065,7 @@
   "event": "GOVPARTYGA-26",
   "category": "Elections",
   "firstSeen": "2026-10-21T17:30Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXITFWMATCH-26OCT21CAPMAN-CAP": {
   "title": "Capurro Taborda vs Mandlik — Martina Capurro Taborda",
@@ -14937,7 +14937,7 @@
   "event": "GOVPARTYFL-26",
   "category": "Elections",
   "firstSeen": "2026-10-22T18:30Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNBAGAME-26OCT22CLEPHI-CLE": {
   "title": "Cleveland vs Philadelphia — Cleveland",
@@ -17757,7 +17757,7 @@
   "event": "GOVPARTYMA-26",
   "category": "Elections",
   "firstSeen": "2026-10-24T08:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXISRAELPM-26OCT27-BNET": {
   "title": "Prime Minister of Israel after the 2026 election? — Benjamin Netanyahu",
@@ -17841,7 +17841,7 @@
   "event": "SENATEME-26",
   "category": "Elections",
   "firstSeen": "2026-10-24T08:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXEPLGAME-26OCT24ARSEVE-EVE": {
   "title": "Arsenal vs Everton — Everton",
@@ -19797,7 +19797,7 @@
   "event": "SENATEAK-26",
   "category": "Elections",
   "firstSeen": "2026-10-25T09:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXODIMATCH-26OCT250400ENGPAK-ENG": {
   "title": "Pakistan vs England — England",
@@ -21597,7 +21597,7 @@
   "event": "SENATEGA-26",
   "category": "Elections",
   "firstSeen": "2026-10-26T03:45Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNFLLASTTOLOSE-27-MIN": {
   "title": "Pro Football Last Undefeated Team — Minnesota",
@@ -21825,7 +21825,7 @@
   "event": "SENATENC-26",
   "category": "Elections",
   "firstSeen": "2026-10-26T10:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNFLMATCHUP-27SB-DENSEA": {
   "title": "Pro Football Championship Game Matchup — Denver vs Seattle",
@@ -21861,7 +21861,7 @@
   "event": "SENATEKS-26",
   "category": "Elections",
   "firstSeen": "2026-10-26T10:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNFLMVP-27-JSMI": {
   "title": "MVP Winner? — Jaxon Smith-Njigba",
@@ -21909,7 +21909,7 @@
   "event": "SENATENE-26",
   "category": "Elections",
   "firstSeen": "2026-10-26T10:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "SENATEGA-26-D": {
   "title": "Georgia Senate winner? — Jon Ossoff",
@@ -22437,7 +22437,7 @@
   "event": "SENATEFLS-26",
   "category": "Elections",
   "firstSeen": "2026-10-26T22:30Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXLOLMAP-26OCT261800ALTL-2-AL": {
   "title": "Anyone's Legend vs. Team Liquid: Game 2 Winner — Anyone's Legend",
@@ -22629,7 +22629,7 @@
   "event": "SENATEFLS-26",
   "category": "Elections",
   "firstSeen": "2026-10-26T22:30Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNFLSPREAD-26OCT26DALPHI-DAL6": {
   "title": "Dallas vs Philadelphia: Spread — Dallas wins by over 5.5 points",
@@ -23073,7 +23073,7 @@
   "event": "KXSB-27",
   "category": "Sports",
   "firstSeen": "2026-10-27T04:45Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXPGATOUR-VIMO26-BHOR": {
   "title": "VidantaWorld Mexico Open Winner — Billy Horschel",
@@ -23097,7 +23097,7 @@
   "event": "GOVPARTYNV-26",
   "category": "Elections",
   "firstSeen": "2026-10-27T04:45Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXKBOGAME-26OCT260530KIASAM-SAM": {
   "title": "Game 2: Kia Tigers vs Samsung Lions — Samsung Lions",
@@ -23157,7 +23157,7 @@
   "event": "SENATEAK-26",
   "category": "Elections",
   "firstSeen": "2026-10-27T04:45Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXPGATOUR-VIMO26-NDUN": {
   "title": "VidantaWorld Mexico Open Winner — Nick Dunlap",
@@ -25509,7 +25509,7 @@
   "event": "GOVPARTYIA-26",
   "category": "Elections",
   "firstSeen": "2026-10-28T18:15Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXCS2GAME-26OCT281300NAVITS-NAVI": {
   "title": "Natus Vincere vs. Spirit — Natus Vincere",
@@ -26637,7 +26637,7 @@
   "event": "SENATEKS-26",
   "category": "Elections",
   "firstSeen": "2026-10-29T13:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXKBOGAME-26OCT280530SAMKIA-KIA": {
   "title": "Game 3: Samsung Lions vs Kia Tigers — Kia Tigers",
@@ -27081,7 +27081,7 @@
   "event": "KXMISENATE-26",
   "category": "Elections",
   "firstSeen": "2026-10-29T19:15Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXUCLWGAME-26OCT29FAKJUV-JUV": {
   "title": "Austria Wien vs Juventus — Juventus",
@@ -27777,7 +27777,7 @@
   "event": "KXDSENATESEATS-27",
   "category": "Elections",
   "firstSeen": "2026-10-30T01:30Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNHLGAME-26OCT29BOSSTL-STL": {
   "title": "Boston vs St. Louis — St. Louis",
@@ -31917,7 +31917,7 @@
   "event": "KXEPLGAME-26NOV02NEWEVE",
   "category": "Sports",
   "firstSeen": "2026-11-01T16:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXWTACHALLENGERMATCH-26NOV01TUBGRA-TUB": {
   "title": "Tubello vs Grabher — Alice Tubello",
@@ -32265,7 +32265,7 @@
   "event": "KXUCLGAME-26NOV03VILPSG",
   "category": "Sports",
   "firstSeen": "2026-11-01T22:15Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNBAGAME-26NOV01TORLAL-LAL": {
   "title": "Toronto vs Los Angeles L — Los Angeles L",
@@ -32409,7 +32409,7 @@
   "event": "KXNFLGAME-26NOV02CHISEA",
   "category": "Sports",
   "firstSeen": "2026-11-01T22:15Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNFLSPREAD-26NOV01KCDEN-DEN3": {
   "title": "Kansas City vs Denver: Spread — Denver wins by over 2.5 points",
@@ -32457,7 +32457,7 @@
   "event": "KXNFLGAME-26NOV02CHISEA",
   "category": "Sports",
   "firstSeen": "2026-11-01T22:15Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNBAGAME-26NOV01BKNIND-BKN": {
   "title": "Brooklyn vs Indiana — Brooklyn",
@@ -32481,7 +32481,7 @@
   "event": "KXSB-27",
   "category": "Sports",
   "firstSeen": "2026-11-02T04:30Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXMLSGAME-26NOV01PORHOU-HOU": {
   "title": "Portland vs Houston — Houston",
@@ -32637,7 +32637,7 @@
   "event": "KXNCAAMBGAME-26NOV02OAKMICH",
   "category": "Sports",
   "firstSeen": "2026-11-02T04:30Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNFLTD-26NOV01PHIWAS-WASSDIGGS3-2": {
   "title": "Philadelphia vs Washington: Touchdowns — Stefon Diggs: 2+",
@@ -32697,7 +32697,7 @@
   "event": "KXNFLSPREAD-26NOV02CHISEA",
   "category": "Sports",
   "firstSeen": "2026-11-02T04:30Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXATPCHALLENGERMATCH-26NOV01WATLEO-LEO": {
   "title": "Watanuki vs Leong — Mitsuki Wei Kang Leong",
@@ -32781,7 +32781,7 @@
   "event": "KXNFLTD-26NOV02CHISEA",
   "category": "Sports",
   "firstSeen": "2026-11-02T04:30Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNFLPASSYDS-26NOV01PHIWAS-WASJDANIELS5-125": {
   "title": "Philadelphia vs Washington: Passing Yards — Jayden Daniels: 125+",
@@ -32853,7 +32853,7 @@
   "event": "KXNFLAFCWEST-27",
   "category": "Sports",
   "firstSeen": "2026-11-02T04:30Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNBATOTAL-26NOV01TORLAL-242": {
   "title": "Toronto vs Los Angeles L: Total Points — Over 241.5 points",
@@ -33033,7 +33033,7 @@
   "event": "KXATPCHALLENGERMATCH-26NOV01AGUDEL",
   "category": "Sports",
   "firstSeen": "2026-11-02T10:45Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXWT20MATCH-26NOV020310PS-WMS-W-MS-W": {
   "title": "Melbourne Stars Women vs Perth Scorchers Women — Melbourne Stars Women",
@@ -33057,7 +33057,7 @@
   "event": "KXNCAAFGAME-26NOV07BYUUTAH",
   "category": "Sports",
   "firstSeen": "2026-11-02T10:45Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "GOVPARTYVT-26-R": {
   "title": "Vermont Governor winner? — Phil Scott",
@@ -33069,7 +33069,7 @@
   "event": "GOVPARTYVT-26",
   "category": "Elections",
   "firstSeen": "2026-11-02T10:45Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXATPCHALLENGERMATCH-26NOV01AGUDEL-AGU": {
   "title": "Aguilar Cardozo vs Dellien — Joaquin Aguilar Cardozo",
@@ -33081,7 +33081,7 @@
   "event": "KXATPCHALLENGERMATCH-26NOV01AGUDEL",
   "category": "Sports",
   "firstSeen": "2026-11-02T10:45Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXWT20MATCH-26NOV020310PS-WMS-W-PS-W": {
   "title": "Melbourne Stars Women vs Perth Scorchers Women — Perth Scorchers Women",
@@ -33129,7 +33129,7 @@
   "event": "KXNFLSPREAD-26NOV02CHISEA",
   "category": "Sports",
   "firstSeen": "2026-11-02T10:45Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXHOUSEPOPVOTEMARGIN-27NOV03-B50": {
   "title": "2026 Midterms: House popular vote margin of victory? (Generic ballot) — Republicans win",
@@ -33141,7 +33141,7 @@
   "event": "KXHOUSEPOPVOTEMARGIN-27NOV03",
   "category": "Politics",
   "firstSeen": "2026-11-02T10:45Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXUCLGAME-26NOV03MUNROM-ROM": {
   "title": "Manchester United vs Roma — Roma",
@@ -33153,7 +33153,7 @@
   "event": "KXUCLGAME-26NOV03MUNROM",
   "category": "Sports",
   "firstSeen": "2026-11-02T10:45Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXUCLGAME-26NOV04AEKRMA-RMA": {
   "title": "AEK Athens vs Real Madrid — Real Madrid",
@@ -33165,7 +33165,7 @@
   "event": "KXUCLGAME-26NOV04AEKRMA",
   "category": "Sports",
   "firstSeen": "2026-11-02T10:45Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNFLMVP-27-JGIB": {
   "title": "MVP Winner? — Jahmyr Gibbs",
@@ -33249,19 +33249,19 @@
   "event": "KXATPCHALLENGERMATCH-26NOV02PAVSHE",
   "category": "Sports",
   "firstSeen": "2026-11-02T17:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXATPMATCH-26NOV02JACMAC-MAC": {
   "title": "Jacquet vs Machac — Tomas Machac",
   "sub": "Tomas Machac",
-  "closeTime": "2026-11-16T14:30:00Z",
+  "closeTime": "2026-11-02T17:15:51Z",
   "tick": 0.01,
   "minSize": 1,
   "series": "KXATPMATCH",
   "event": "KXATPMATCH-26NOV02JACMAC",
   "category": "Sports",
   "firstSeen": "2026-11-02T17:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXATPCHALLENGERMATCH-26NOV02PAVSHE-PAV": {
   "title": "Pavlovic vs Shevchenko — Luka Pavlovic",
@@ -33273,43 +33273,43 @@
   "event": "KXATPCHALLENGERMATCH-26NOV02PAVSHE",
   "category": "Sports",
   "firstSeen": "2026-11-02T17:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXATPMATCH-26NOV02JACMAC-JAC": {
   "title": "Jacquet vs Machac — Kyrian Jacquet",
   "sub": "Kyrian Jacquet",
-  "closeTime": "2026-11-16T14:30:00Z",
+  "closeTime": "2026-11-02T17:15:51Z",
   "tick": 0.01,
   "minSize": 1,
   "series": "KXATPMATCH",
   "event": "KXATPMATCH-26NOV02JACMAC",
   "category": "Sports",
   "firstSeen": "2026-11-02T17:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXLALIGA2GAME-26NOV02OVILPA-LPA": {
   "title": "Oviedo vs Las Palmas — Las Palmas",
   "sub": "Las Palmas",
-  "closeTime": "2026-11-04T15:15:00Z",
+  "closeTime": "2026-11-02T17:14:46Z",
   "tick": 0.01,
   "minSize": 1,
   "series": "KXLALIGA2GAME",
   "event": "KXLALIGA2GAME-26NOV02OVILPA",
   "category": "Sports",
   "firstSeen": "2026-11-02T17:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXLALIGA2GAME-26NOV02OVILPA-OVI": {
   "title": "Oviedo vs Las Palmas — Oviedo",
   "sub": "Oviedo",
-  "closeTime": "2026-11-04T15:15:00Z",
+  "closeTime": "2026-11-02T17:14:46Z",
   "tick": 0.01,
   "minSize": 1,
   "series": "KXLALIGA2GAME",
   "event": "KXLALIGA2GAME-26NOV02OVILPA",
   "category": "Sports",
   "firstSeen": "2026-11-02T17:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNBAGAME-26NOV02NOPMEM-NOP": {
   "title": "New Orleans vs Memphis — New Orleans",
@@ -33321,7 +33321,7 @@
   "event": "KXNBAGAME-26NOV02NOPMEM",
   "category": "Sports",
   "firstSeen": "2026-11-02T17:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNCAAMBGAME-26NOV02FISKMTU-FISK": {
   "title": "Fisk vs Middle Tennessee — Fisk",
@@ -33333,7 +33333,7 @@
   "event": "KXNCAAMBGAME-26NOV02FISKMTU",
   "category": "Sports",
   "firstSeen": "2026-11-02T17:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXATPCHALLENGERMATCH-26NOV02MILMIT-MIL": {
   "title": "Milavsky vs Mitsui — Daniel Milavsky",
@@ -33345,7 +33345,7 @@
   "event": "KXATPCHALLENGERMATCH-26NOV02MILMIT",
   "category": "Sports",
   "firstSeen": "2026-11-02T17:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXATPCHALLENGERMATCH-26NOV02MILMIT-MIT": {
   "title": "Milavsky vs Mitsui — Shunsuke Mitsui",
@@ -33357,7 +33357,7 @@
   "event": "KXATPCHALLENGERMATCH-26NOV02MILMIT",
   "category": "Sports",
   "firstSeen": "2026-11-02T17:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNCAAMBTOTAL-26NOV02TNSTMURR-166": {
   "title": "Tennessee St. vs Murray St.: Point Total — Over 165.5 points",
@@ -33369,7 +33369,7 @@
   "event": "KXNCAAMBTOTAL-26NOV02TNSTMURR",
   "category": "Sports",
   "firstSeen": "2026-11-02T17:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNCAAMBSPREAD-26NOV02TNSTMURR-MURR10": {
   "title": "Tennessee St. vs Murray St.: Spread — Murray St. wins by over 9.5 points",
@@ -33381,7 +33381,7 @@
   "event": "KXNCAAMBSPREAD-26NOV02TNSTMURR",
   "category": "Sports",
   "firstSeen": "2026-11-02T17:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "RSENATESEATS-27-E46": {
   "title": "How many Senate seats will Republicans hold after the Midterms? — 46",
@@ -33393,19 +33393,19 @@
   "event": "RSENATESEATS-27",
   "category": "Elections",
   "firstSeen": "2026-11-02T17:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXATPCHALLENGERMATCH-26NOV02RIBBRU-BRU": {
   "title": "Ribero vs Bruna — Nicolas Bruna",
   "sub": "Nicolas Bruna",
-  "closeTime": "2026-11-16T14:10:00Z",
+  "closeTime": "2026-11-02T17:20:00Z",
   "tick": 0.01,
   "minSize": 1,
   "series": "KXATPCHALLENGERMATCH",
   "event": "KXATPCHALLENGERMATCH-26NOV02RIBBRU",
   "category": "Sports",
   "firstSeen": "2026-11-02T17:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXAFCCLGAME-26NOV02SADAAS-AAS": {
   "title": "Al Sadd vs Al Ahli Saudi — Al Ahli Saudi",
@@ -33417,7 +33417,7 @@
   "event": "KXAFCCLGAME-26NOV02SADAAS",
   "category": "Sports",
   "firstSeen": "2026-11-02T17:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNCAAFGAME-26NOV03OHIOAKR-OHIO": {
   "title": "Ohio vs Akron — Ohio",
@@ -33429,7 +33429,7 @@
   "event": "KXNCAAFGAME-26NOV03OHIOAKR",
   "category": "Sports",
   "firstSeen": "2026-11-02T17:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNBAGAME-26NOV02PHXGSW-PHX": {
   "title": "Phoenix vs Golden State — Phoenix",
@@ -33441,7 +33441,7 @@
   "event": "KXNBAGAME-26NOV02PHXGSW",
   "category": "Sports",
   "firstSeen": "2026-11-02T17:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXDSENATESEATS-27-51": {
   "title": "How many Senate seats will Democrats hold after the Midterms? — 51",
@@ -33453,7 +33453,7 @@
   "event": "KXDSENATESEATS-27",
   "category": "Elections",
   "firstSeen": "2026-11-02T17:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNASDAQ100U-26NOV02H1600-T27939.99": {
   "title": "Nasdaq-100 price on Nov 2, 2026 at 4pm EST? — 27,940 or above",
@@ -33465,19 +33465,19 @@
   "event": "KXNASDAQ100U-26NOV02H1600",
   "category": "Financials",
   "firstSeen": "2026-11-02T17:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXATPCHALLENGERMATCH-26NOV02RIBBRU-RIB": {
   "title": "Ribero vs Bruna — Franco Ribero",
   "sub": "Franco Ribero",
-  "closeTime": "2026-11-16T14:10:00Z",
+  "closeTime": "2026-11-02T17:20:00Z",
   "tick": 0.01,
   "minSize": 1,
   "series": "KXATPCHALLENGERMATCH",
   "event": "KXATPCHALLENGERMATCH-26NOV02RIBBRU",
   "category": "Sports",
   "firstSeen": "2026-11-02T17:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXNFLSPREAD-26NOV02CHISEA-SEA3": {
   "title": "Chicago vs Seattle: Spread — Seattle wins by over 2.5 points",
@@ -33489,7 +33489,7 @@
   "event": "KXNFLSPREAD-26NOV02CHISEA",
   "category": "Sports",
   "firstSeen": "2026-11-02T17:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXATPCHALLENGERMATCH-26NOV02TROBAR-BAR": {
   "title": "Trotter vs Baris — Ozan Baris",
@@ -33501,7 +33501,7 @@
   "event": "KXATPCHALLENGERMATCH-26NOV02TROBAR",
   "category": "Sports",
   "firstSeen": "2026-11-02T17:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  },
  "KXDSENATESEATSH-27-E54": {
   "title": "How many Senate seats will Democrats hold after the Midterms? (Higher strikes) — 54",
@@ -33513,6 +33513,6 @@
   "event": "KXDSENATESEATSH-27",
   "category": "Elections",
   "firstSeen": "2026-11-02T17:00Z",
-  "lastSeen": "2026-11-02T17:15Z"
+  "lastSeen": "2026-11-02T17:30Z"
  }
 }
