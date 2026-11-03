@@ -686,6 +686,15 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "resolution.netCentsPer10 = -22.4 on n=90, below the n>=100 needed"
+      },
+      {
+        "date": "2026-11-03",
+        "ticks": 452,
+        "value": -18.8,
+        "n": 97,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "resolution.netCentsPer10 = -18.8 on n=97, below the n>=100 needed"
       }
     ]
   },
@@ -784,7 +793,7 @@
       "value": 0.069,
       "n": 2580
     },
-    "status": "open",
+    "status": "SUPPORTED",
     "retests": [
       {
         "date": "2026-11-02",
@@ -794,8 +803,18 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "pair.bothSidesFracNetPositive = 0.15 on n=206, below the n>=300 needed"
+      },
+      {
+        "date": "2026-11-03",
+        "ticks": 168,
+        "value": 0.131,
+        "n": 336,
+        "verdict": "SUPPORTED",
+        "by": "code",
+        "note": "pair.bothSidesFracNetPositive = 0.131 vs > 0.1 on n=336"
       }
-    ]
+    ],
+    "settledOn": "2026-11-03"
   },
   {
     "id": "2026-11-02",
@@ -820,6 +839,37 @@
     "baseline": {
       "value": -1.364,
       "n": 4173
+    },
+    "status": "open",
+    "retests": [
+      {
+        "date": "2026-11-03",
+        "ticks": 65,
+        "value": -0.133,
+        "n": 157,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "maker.netCentsPerAttempt = -0.133 on n=157, below the n>=300 needed"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-03",
+    "date": "2026-11-03",
+    "deep": "lead-lag",
+    "issue": "#30",
+    "text": "Given the House Democratic pair, when checking simultaneous buy-both-sides prices at the recorded touches, then `pair.bothSidesFracNetPositive` should be > 0.12 vs the recorded 9%, subject to both taker fees being included and the quoted touches being executable.",
+    "spec": {
+      "metric": "pair.bothSidesFracNetPositive",
+      "pair": "house-2026-democratic",
+      "op": ">",
+      "threshold": 0.12,
+      "minN": 300
+    },
+    "frozenAt": "2026-11-03T16:30Z",
+    "baseline": {
+      "value": 0.087,
+      "n": 2552
     },
     "status": "open",
     "retests": []
