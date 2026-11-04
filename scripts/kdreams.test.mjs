@@ -7,7 +7,7 @@ import { bestOfBook, mapPolymarket, mapKalshi, isPlainBinary, round, pmResolutio
 import {
   parseRows, groupSeries, spreadStats, makerSpreadProxy, sumProxies, crossVenue, byBucket, candidates, feeTable, quantile, corr, medianGapMinutes, mid, sliceFilter, parseResolutions, holdToResolution,
 } from './lib/kdreams-metrics.mjs';
-import { computeReport, renderSummary, renderMarkdown, validateSpec, measureSpecRows, gradeSpec, describeSpec } from './kdreams-backtest.mjs';
+import { computeReport, renderSummary, renderMarkdown, validateSpec, measureSpecRows, gradeSpec, describeSpec, pairFees } from './kdreams-backtest.mjs';
 import { priorNightFates, reasoningFor, extractHypothesis, extractSpec, specInstructions, planRetests, fatesSummary, cell, isProfitSpec, specRejection, scorecard } from './kdreams-nightly.mjs';
 
 test('nightly: importing the module never runs the pipeline, and helpers behave', () => {
@@ -151,6 +151,12 @@ test('metrics: crossVenue computes divergence, both-sides net, and lead-lag', ()
   const g = crossVenue([pm(0, 0.39, 0.4)], [ks(0, 0.5, 0.51)], { polymarketTakerRate: 0.04, kalshiTakerRate: 0.07 });
   assert.equal(g.bothSides.fracGrossPositive, 0.5); assert.ok(g.bothSides.maxNetCents > 7 && g.bothSides.maxNetCents < 10);
   assert.equal(corr([1, 2, 3], [1, 1, 1]), null);
+  // A pair's own Polymarket taker rate replaces the default; a higher rate shrinks the same gap's net.
+  const fees = { polymarketTakerRate: 0.04, kalshiTakerRate: 0.07 };
+  assert.equal(pairFees(fees, { name: 'x' }), fees);
+  assert.deepEqual(pairFees(fees, { name: 'x', polymarketTakerRate: 0.05 }), { polymarketTakerRate: 0.05, kalshiTakerRate: 0.07 });
+  const hi = crossVenue([pm(0, 0.39, 0.4)], [ks(0, 0.5, 0.51)], pairFees(fees, { polymarketTakerRate: 0.05 }));
+  assert.ok(hi.bothSides.maxNetCents < g.bothSides.maxNetCents);
 });
 
 test('metrics: byBucket, candidates, feeTable', () => {

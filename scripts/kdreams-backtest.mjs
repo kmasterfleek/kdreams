@@ -63,7 +63,7 @@ export function computeReport({ dataDir = 'data', watchlist = {}, days = 14, sin
 
   const pairs = (watchlist.pairs || []).map((p) => {
     const pm = series.get(`pm:${p.polymarketId}`) || [], ks = series.get(`ks:${p.kalshiTicker}`) || [];
-    return { ...p, pmTitle: catalogs.pm[p.polymarketId]?.title || null, ksTitle: catalogs.ks[p.kalshiTicker]?.title || null, ...crossVenue(pm, ks, fees) };
+    return { ...p, pmTitle: catalogs.pm[p.polymarketId]?.title || null, ksTitle: catalogs.ks[p.kalshiTicker]?.title || null, ...crossVenue(pm, ks, pairFees(fees, p)) };
   });
 
   const lastT = ticks[ticks.length - 1];
@@ -135,6 +135,11 @@ export function validateSpec(spec, pairs = []) {
   return null;
 }
 
+/** Venue fee rates for one pair: Polymarket sets taker rates per market, so a pair may override the default. */
+export function pairFees(fees, pair) {
+  return pair.polymarketTakerRate == null ? fees : { ...fees, polymarketTakerRate: pair.polymarketTakerRate };
+}
+
 /** The spec's metric and sample size over `rows`. Assumes validateSpec passed. */
 export function measureSpecRows(rows, spec, watchlist = {}, { resolutions = new Map(), catalogs = {} } = {}) {
   const def = SPEC_METRICS[spec.metric];
@@ -144,7 +149,7 @@ export function measureSpecRows(rows, spec, watchlist = {}, { resolutions = new 
   if (def.kind === 'pair') {
     const p = (watchlist.pairs || []).find((x) => x.name === spec.pair);
     const series = groupSeries(rows);
-    const cv = crossVenue((series.get(`pm:${p.polymarketId}`) || []).filter(keep), (series.get(`ks:${p.kalshiTicker}`) || []).filter(keep), fees);
+    const cv = crossVenue((series.get(`pm:${p.polymarketId}`) || []).filter(keep), (series.get(`ks:${p.kalshiTicker}`) || []).filter(keep), pairFees(fees, p));
     if (field === 'bothSidesFracNetPositive') return { value: cv.bothSides.fracNetPositive, n: cv.bothSides.checks };
     return { value: cv[field], n: cv.n };
   }

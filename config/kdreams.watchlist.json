@@ -1,11 +1,13 @@
 {
-  "$comment": "kdreams observation watchlist. Observe-only: nothing in this repo places orders. pairs[] maps the same real-world event across venues; polymarketId is the Gamma conditionId, kalshiTicker is the Kalshi market ticker. Fee rates are published venue schedules as of 2026-10 and must be re-verified before any edge claim. backtest.horizonMinutes bounds the maker proxy in wall-clock time (snapshots are irregular); retestMinTicks is how many post-freeze ticks a frozen hypothesis needs before it is graded; retestMinN is the smallest sample a spec metric may be graded on.",
+  "$comment": "kdreams observation watchlist. Observe-only: nothing in this repo places orders. pairs[] maps the same real-world event across venues; polymarketId is the Gamma conditionId, kalshiTicker is the Kalshi market ticker; a pair's polymarketTakerRate overrides fees.polymarketTakerRate because Polymarket sets taker rates per market. Fee rates are published venue schedules as of 2026-10 and must be re-verified before any edge claim. backtest.horizonMinutes bounds the maker proxy in wall-clock time (snapshots are irregular); retestMinTicks is how many post-freeze ticks a frozen hypothesis needs before it is graded; retestMinN is the smallest sample a spec metric may be graded on.",
   "polymarket": {
     "topByVolume24h": 100,
     "bookDepthTop": 100,
     "extraSlugs": [
       "will-the-republican-party-control-the-house-after-the-2026-midterm-elections",
-      "will-the-democratic-party-control-the-house-after-the-2026-midterm-elections"
+      "will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
+      "will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
+      "will-there-be-no-change-in-fed-interest-rates-after-the-december-2026-meeting-20260729232808635"
     ]
   },
   "kalshi": {
@@ -13,7 +15,9 @@
     "rescanEveryMinutes": 360,
     "extraTickers": [
       "CONTROLH-2026-R",
-      "CONTROLH-2026-D"
+      "CONTROLH-2026-D",
+      "KXFEDDECISION-26DEC-H25",
+      "KXFEDDECISION-26DEC-H0"
     ]
   },
   "pairs": [
@@ -28,6 +32,20 @@
       "polymarketId": "0xd5d9fc47718bd553592d126b1fa5e87183d27f3936975b0c04cc0f2dec1f1bb4",
       "kalshiTicker": "CONTROLH-2026-D",
       "note": "Mirror of house-2026-republican."
+    },
+    {
+      "name": "fed-2026-12-hike25",
+      "polymarketId": "0x8a4196617dcb703e49d9bb36d3847bf6a75fd364dbd19f8d408ac944bf1a03d8",
+      "kalshiTicker": "KXFEDDECISION-26DEC-H25",
+      "polymarketTakerRate": 0.05,
+      "note": "Same outcome: both resolve on the FOMC statement for the 2026-12-08/09 meeting. Edge cases differ: a canceled meeting resolves Kalshi to 'maintains' at once but Polymarket only after the next meeting's end date; Polymarket rounds an off-grid change up to the next 25 bps. Polymarket taker rate 0.05 is this market's feeSchedule.rate from Gamma (gamma-api.polymarket.com/markets?condition_ids=...), checked 2026-11-04."
+    },
+    {
+      "name": "fed-2026-12-hold",
+      "polymarketId": "0x723822eb2b143cee54c0bd7c1efba322b21f0051984c266df8879c394f1011c0",
+      "kalshiTicker": "KXFEDDECISION-26DEC-H0",
+      "polymarketTakerRate": 0.05,
+      "note": "Sibling bracket of fed-2026-12-hike25: Polymarket 'no change' and Kalshi 'Fed maintains rate' are the same outcome; same rules and fee notes."
     }
   ],
   "fees": {
