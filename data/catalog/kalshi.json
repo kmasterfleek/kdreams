@@ -57,7 +57,7 @@
   "event": "CONTROLH-2026",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXMLBGAME-26OCT142000MILLAD-LAD": {
   "title": "Game 3: Milwaukee vs Los Angeles D — Los Angeles D",
@@ -273,7 +273,7 @@
   "event": "KXPRESNOMD-28",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXWTACHALLENGERMATCH-26OCT14MATMAR-MAR": {
   "title": "Matoula vs Maristany Zuleta de Reales — Guiomar Maristany Zuleta de Reales",
@@ -501,7 +501,7 @@
   "event": "CONTROLH-2026",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXMAYORLA-26-KBAS": {
   "title": "Los Angeles Mayor winner? — Karen Bass",
@@ -513,7 +513,7 @@
   "event": "KXMAYORLA-26",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXMLBSPREAD-26OCT142000MILLAD-LAD2": {
   "title": "Milwaukee vs Los Angeles D: Spread — Los Angeles D wins by over 1.5 runs",
@@ -657,7 +657,7 @@
   "event": "KXMAYORLA-26",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXNCAAF-27-TEX": {
   "title": "College Football National Championship Winner — Texas",
@@ -3237,7 +3237,7 @@
   "event": "KXPRESNOMD-28",
   "category": "Elections",
   "firstSeen": "2026-10-16T04:59Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXBLUEWAVECOMBO-27FEB": {
   "title": "Blue wave in 2026? — Will Democrats hold 218 or more seats in the House AND hold 49 or more seats in the Senate?",
@@ -3249,7 +3249,7 @@
   "event": "KXBLUEWAVECOMBO-27FEB",
   "category": "Politics",
   "firstSeen": "2026-10-16T04:59Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXRAIN-26OCT15-MIA": {
   "title": "Where will it rain on Oct 15, 2026? — Miami",
@@ -7533,7 +7533,7 @@
   "event": "KXPRESNOMD-28",
   "category": "Elections",
   "firstSeen": "2026-10-18T20:30Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXNFLSPREAD-26OCT18LACKC-KC7": {
   "title": "Los Angeles C vs Kansas City: Spread — Kansas City wins by over 6.5 points",
@@ -9285,7 +9285,7 @@
   "event": "KXSB-27",
   "category": "Sports",
   "firstSeen": "2026-10-19T09:00Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXNFLGAME-26OCT22NECHI-NE": {
   "title": "New England vs Chicago — New England",
@@ -9369,7 +9369,7 @@
   "event": "KXSB-27",
   "category": "Sports",
   "firstSeen": "2026-10-19T09:00Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXUCLGAME-26OCT20PSGBAR-PSG": {
   "title": "PSG vs Barcelona — PSG",
@@ -10641,7 +10641,7 @@
   "event": "KXDSENATESEATS-27",
   "category": "Elections",
   "firstSeen": "2026-10-20T04:00Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXNBAGAME-26OCT20PHINYK-NYK": {
   "title": "Philadelphia vs New York — New York",
@@ -17769,7 +17769,7 @@
   "event": "KXISRAELPM-26OCT27",
   "category": "Elections",
   "firstSeen": "2026-10-24T08:00Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXNBAGAME-26OCT24SASDAL-SAS": {
   "title": "San Antonio vs Dallas — San Antonio",
@@ -19797,7 +19797,7 @@
   "event": "SENATEAK-26",
   "category": "Elections",
   "firstSeen": "2026-10-25T09:00Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXODIMATCH-26OCT250400ENGPAK-ENG": {
   "title": "Pakistan vs England — England",
@@ -23157,7 +23157,7 @@
   "event": "SENATEAK-26",
   "category": "Elections",
   "firstSeen": "2026-10-27T04:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXPGATOUR-VIMO26-NDUN": {
   "title": "VidantaWorld Mexico Open Winner — Nick Dunlap",
@@ -24369,7 +24369,7 @@
   "event": "KXHOUSERACE-NC03-26",
   "category": "Elections",
   "firstSeen": "2026-10-27T23:30Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXMLBHR-26OCT272000MILTB-TBYDIAZ2-1": {
   "title": "Milwaukee vs Tampa Bay: Home Runs — Yandy Díaz: 1+",
@@ -26373,7 +26373,7 @@
   "event": "KXFEDDECISION-26DEC",
   "category": "Economics",
   "firstSeen": "2026-10-29T06:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXNFLGAME-26OCT29CARGB-CAR": {
   "title": "Carolina vs Green Bay — Carolina",
@@ -26457,7 +26457,7 @@
   "event": "KXFEDDECISION-26DEC",
   "category": "Economics",
   "firstSeen": "2026-10-29T06:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXPGATOUR-VIMO26-ANOV": {
   "title": "VidantaWorld Mexico Open Winner — Andrew Novak",
@@ -27777,7 +27777,7 @@
   "event": "KXDSENATESEATS-27",
   "category": "Elections",
   "firstSeen": "2026-10-30T01:30Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXNHLGAME-26OCT29BOSSTL-STL": {
   "title": "Boston vs St. Louis — St. Louis",
@@ -27993,7 +27993,7 @@
   "event": "KXPRESNOMD-28",
   "category": "Elections",
   "firstSeen": "2026-10-30T07:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXITFMATCH-26OCT30SINBES-BES": {
   "title": "Singh vs Bessonov — Dmitry Bessonov",
@@ -28113,7 +28113,7 @@
   "event": "SENATEMS-26",
   "category": "Elections",
   "firstSeen": "2026-10-30T07:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXTESTMATCH-26OCT270430AUSSA-AUS": {
   "title": "South Africa vs Australia — Australia",
@@ -29289,7 +29289,7 @@
   "event": "KXSAVEACT-27",
   "category": "Politics",
   "firstSeen": "2026-10-31T02:30Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXNCAAFSPREAD-26OCT31ILLMD-ILL3": {
   "title": "Illinois vs Maryland: Spread — Illinois wins by over 2.5 points",
@@ -33141,7 +33141,7 @@
   "event": "KXHOUSEPOPVOTEMARGIN-27NOV03",
   "category": "Politics",
   "firstSeen": "2026-11-02T10:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXUCLGAME-26NOV03MUNROM-ROM": {
   "title": "Manchester United vs Roma — Roma",
@@ -33165,7 +33165,7 @@
   "event": "KXUCLGAME-26NOV04AEKRMA",
   "category": "Sports",
   "firstSeen": "2026-11-02T10:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXNFLMVP-27-JGIB": {
   "title": "MVP Winner? — Jahmyr Gibbs",
@@ -33213,7 +33213,7 @@
   "event": "KXBLUETSUNAMICOMBO-27FEB",
   "category": "Politics",
   "firstSeen": "2026-11-02T10:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXAFCCLGAME-26NOV02PAKALN-ALN": {
   "title": "Pakhtakor vs Al Nassr — Al Nassr",
@@ -33393,7 +33393,7 @@
   "event": "RSENATESEATS-27",
   "category": "Elections",
   "firstSeen": "2026-11-02T17:00Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXATPCHALLENGERMATCH-26NOV02RIBBRU-BRU": {
   "title": "Ribero vs Bruna — Nicolas Bruna",
@@ -33453,7 +33453,7 @@
   "event": "KXDSENATESEATS-27",
   "category": "Elections",
   "firstSeen": "2026-11-02T17:00Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXNASDAQ100U-26NOV02H1600-T27939.99": {
   "title": "Nasdaq-100 price on Nov 2, 2026 at 4pm EST? — 27,940 or above",
@@ -33513,7 +33513,7 @@
   "event": "KXDSENATESEATSH-27",
   "category": "Elections",
   "firstSeen": "2026-11-02T17:00Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXATPMATCH-26NOV01HUMVAN-VAN": {
   "title": "Humbert vs Van de Zandschulp — Botic Van de Zandschulp",
@@ -33585,7 +33585,7 @@
   "event": "KXPRESNOMD-28",
   "category": "Elections",
   "firstSeen": "2026-11-02T23:26Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXPRESNOMR-28-PHEG": {
   "title": "2028 Republican presidential nominee — Pete Hegseth",
@@ -33717,7 +33717,7 @@
   "event": "KXPRESNOMD-28",
   "category": "Elections",
   "firstSeen": "2026-11-02T23:26Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXNCAAMBGAME-26NOV02MCNSUAB-MCNS": {
   "title": "McNeese vs UAB — McNeese",
@@ -33789,7 +33789,7 @@
   "event": "SENATEMS-26",
   "category": "Elections",
   "firstSeen": "2026-11-02T23:26Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXNFLTD-26NOV02CHISEA-SEAJSMITHNJIGBA11-1": {
   "title": "Chicago vs Seattle: Touchdowns — Jaxon Smith-Njigba: 1+",
@@ -33933,7 +33933,7 @@
   "event": "GOVPARTYKS-27",
   "category": "Elections",
   "firstSeen": "2026-11-03T06:36Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXWTAMATCH-26NOV02SELKOS-KOS": {
   "title": "Selekhmeteva vs Kostovic — Teodora Kostovic",
@@ -34113,7 +34113,7 @@
   "event": "KXDSENATESEATS-27",
   "category": "Elections",
   "firstSeen": "2026-11-03T06:36Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXWTAMATCH-26NOV02SELKOS-SEL": {
   "title": "Selekhmeteva vs Kostovic — Oksana Selekhmeteva",
@@ -34161,7 +34161,7 @@
   "event": "KXHOUSERACE-VA05-26",
   "category": "Elections",
   "firstSeen": "2026-11-03T06:36Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXNFLGAME-26NOV05JACBAL-BAL": {
   "title": "Jacksonville vs Baltimore — Baltimore",
@@ -34173,7 +34173,7 @@
   "event": "KXNFLGAME-26NOV05JACBAL",
   "category": "Sports",
   "firstSeen": "2026-11-03T06:36Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "GOVPARTYAZ-26-R": {
   "title": "Arizona Governor winner? — Andy Biggs",
@@ -34509,7 +34509,7 @@
   "event": "KXNFLTOTAL-26NOV05JACBAL",
   "category": "Sports",
   "firstSeen": "2026-11-03T21:15Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXNFLTOTAL-26NOV08CINATL-53": {
   "title": "Cincinnati vs Atlanta: Total Points — Over 52.5 points",
@@ -34521,7 +34521,7 @@
   "event": "KXNFLTOTAL-26NOV08CINATL",
   "category": "Sports",
   "firstSeen": "2026-11-03T21:15Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXUCLGAME-26NOV03BOGLIL-LIL": {
   "title": "Bodoe/Glimt vs Lille — Lille",
@@ -34593,7 +34593,7 @@
   "event": "KXNFLTOTAL-26NOV08NYJKC",
   "category": "Sports",
   "firstSeen": "2026-11-03T21:15Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "RSENATESEATS-27-E50": {
   "title": "How many Senate seats will Republicans hold after the Midterms? — 50",
@@ -34701,7 +34701,7 @@
   "event": "HOUSENY17-26",
   "category": "Elections",
   "firstSeen": "2026-11-04T03:30Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "RSENATESEATS-27-B45": {
   "title": "How many Senate seats will Republicans hold after the Midterms? — Below 45",
@@ -34713,7 +34713,7 @@
   "event": "RSENATESEATS-27",
   "category": "Elections",
   "firstSeen": "2026-11-04T03:30Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXODIMATCH-26NOV032100INDNZ-IND": {
   "title": "New Zealand vs India — India",
@@ -34737,7 +34737,7 @@
   "event": "KXNFLTOTAL-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-04T03:30Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXNCAAFSPREAD-26NOV03OHIOAKR-OHIO10": {
   "title": "Ohio vs Akron: Spread — Ohio wins by over 9.5 points",
@@ -34785,7 +34785,7 @@
   "event": "KXDHOUSESEATS-27",
   "category": "Elections",
   "firstSeen": "2026-11-04T03:30Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "GOVPARTYTN-26-D": {
   "title": "Tennessee Governor winner? — Jerri Green",
@@ -34869,7 +34869,7 @@
   "event": "KXCAWEALTHTAX-26",
   "category": "Elections",
   "firstSeen": "2026-11-04T03:30Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "GOVPARTYWI-26-R": {
   "title": "Wisconsin Governor winner? — Tom Tiffany",
@@ -34917,7 +34917,7 @@
   "event": "KXNBAGAME-26NOV04PHIDET",
   "category": "Sports",
   "firstSeen": "2026-11-04T03:30Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "HOUSENY17-26-D": {
   "title": "NY-17 House winner? — Cait Conley",
@@ -34929,7 +34929,7 @@
   "event": "HOUSENY17-26",
   "category": "Elections",
   "firstSeen": "2026-11-04T03:30Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "GOVPARTYIA-26-D": {
   "title": "Iowa Governor winner? — Rob Sand",
@@ -35049,7 +35049,7 @@
   "event": "RSENATESEATS-27",
   "category": "Elections",
   "firstSeen": "2026-11-04T03:30Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "GOVPARTYCA-26-D": {
   "title": "California Governor winner? — Xavier Becerra",
@@ -35085,7 +35085,7 @@
   "event": "KXHOUSERACE-NV02-26",
   "category": "Elections",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "GOVPARTYKS-27-R": {
   "title": "Kansas Governor winner? — Ty Masterson",
@@ -35097,7 +35097,7 @@
   "event": "GOVPARTYKS-27",
   "category": "Elections",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXDSENATESEATSH-27-E55": {
   "title": "How many Senate seats will Democrats hold after the Midterms? (Higher strikes) — 55",
@@ -35109,7 +35109,7 @@
   "event": "KXDSENATESEATSH-27",
   "category": "Elections",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXDSENATESEATSH-27-E56": {
   "title": "How many Senate seats will Democrats hold after the Midterms? (Higher strikes) — 56",
@@ -35121,7 +35121,7 @@
   "event": "KXDSENATESEATSH-27",
   "category": "Elections",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXHOUSERACE-NC03-26-D": {
   "title": "NC-03 House winner? — Raymond Smith Jr.",
@@ -35133,7 +35133,7 @@
   "event": "KXHOUSERACE-NC03-26",
   "category": "Elections",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXREDWAVECOMBO-27FEBB-FALSE": {
   "title": "Red wave in 2026? — Yes",
@@ -35145,7 +35145,7 @@
   "event": "KXREDWAVECOMBO-27FEBB",
   "category": "Elections",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXDSENATESEATS-27-45": {
   "title": "How many Senate seats will Democrats hold after the Midterms? — 45",
@@ -35157,7 +35157,7 @@
   "event": "KXDSENATESEATS-27",
   "category": "Elections",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXMIDTERMMOV-TXSEND-P9": {
   "title": "Texas Senate margin of victory — James Talarico, 9+ pts",
@@ -35169,7 +35169,7 @@
   "event": "KXMIDTERMMOV-TXSEND",
   "category": "Elections",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXPRESPERSON-28-RDES": {
   "title": "2028 U.S. Presidential Election winner? — Ron DeSantis",
@@ -35181,7 +35181,7 @@
   "event": "KXPRESPERSON-28",
   "category": "Elections",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXPRESPERSON-28-JOSS": {
   "title": "2028 U.S. Presidential Election winner? — Jon Ossoff",
@@ -35193,7 +35193,7 @@
   "event": "KXPRESPERSON-28",
   "category": "Elections",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXUCLGAME-26NOV04FENLFC-LFC": {
   "title": "Fenerbahce vs Liverpool — Liverpool",
@@ -35205,7 +35205,7 @@
   "event": "KXUCLGAME-26NOV04FENLFC",
   "category": "Sports",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXMEGATSUNAMICOMBO-27FEB-240H54S": {
   "title": "Midterms: Democratic mega tsunami? — Yes",
@@ -35217,7 +35217,7 @@
   "event": "KXMEGATSUNAMICOMBO-27FEB",
   "category": "Elections",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXDSENATESEATSH-27-E53": {
   "title": "How many Senate seats will Democrats hold after the Midterms? (Higher strikes) — 53",
@@ -35229,7 +35229,7 @@
   "event": "KXDSENATESEATSH-27",
   "category": "Elections",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "RSENATESEATS-27-E47": {
   "title": "How many Senate seats will Republicans hold after the Midterms? — 47",
@@ -35241,7 +35241,7 @@
   "event": "RSENATESEATS-27",
   "category": "Elections",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXDHOUSESEATS-27-248": {
   "title": "How many House seats will Democrats hold after the Midterms? — 246-249",
@@ -35253,7 +35253,7 @@
   "event": "KXDHOUSESEATS-27",
   "category": "Elections",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXIMPEACH-27-JAN01": {
   "title": "Will the House impeach Trump? — Before Jan 1, 2027",
@@ -35265,7 +35265,7 @@
   "event": "KXIMPEACH",
   "category": "Politics",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXDSENATESEATSH-27-E57": {
   "title": "How many Senate seats will Democrats hold after the Midterms? (Higher strikes) — 57",
@@ -35277,7 +35277,7 @@
   "event": "KXDSENATESEATSH-27",
   "category": "Elections",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXHOUSERACE-VA05-26-R": {
   "title": "VA-05 House winner? — John McGuire",
@@ -35289,7 +35289,7 @@
   "event": "KXHOUSERACE-VA05-26",
   "category": "Elections",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXDHOUSESEATS-27-244": {
   "title": "How many House seats will Democrats hold after the Midterms? — 242-245",
@@ -35301,7 +35301,7 @@
   "event": "KXDHOUSESEATS-27",
   "category": "Elections",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXDSENATESEATSH-27-B53": {
   "title": "How many Senate seats will Democrats hold after the Midterms? (Higher strikes) — Below 53",
@@ -35313,7 +35313,7 @@
   "event": "KXDSENATESEATSH-27",
   "category": "Elections",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXHOUSERACE-TN09-26-D": {
   "title": "TN-09 House winner? — Justin J. Pearson",
@@ -35325,7 +35325,7 @@
   "event": "KXHOUSERACE-TN09-26",
   "category": "Elections",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "RSENATESEATS-27-E54": {
   "title": "How many Senate seats will Republicans hold after the Midterms? — 54",
@@ -35349,7 +35349,7 @@
   "event": "KXRHOUSESEATS-27",
   "category": "Elections",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "RSENATESEATS-27-E55": {
   "title": "How many Senate seats will Republicans hold after the Midterms? — 55",
@@ -35373,7 +35373,7 @@
   "event": "KXUCLGAME-26NOV04RBLMCI",
   "category": "Sports",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXCS2GAME-26NOV040200BBTL-TL": {
   "title": "BetBoom Team vs. Liquid — Liquid",
@@ -35409,7 +35409,7 @@
   "event": "KXDHOUSESEATS-27",
   "category": "Elections",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXPRESNOMD-28-PB": {
   "title": "2028 Democratic presidential nominee — Pete Buttigieg",
@@ -35421,7 +35421,7 @@
   "event": "KXPRESNOMD-28",
   "category": "Elections",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXWTAMATCH-26NOV04LIUBOU-LIU": {
   "title": "Liu vs Boulter — Claire Liu",
@@ -35445,7 +35445,7 @@
   "event": "KXNFLTOTAL-26NOV08NYGPHI",
   "category": "Sports",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXWTAMATCH-26NOV04GIBSAS-SAS": {
   "title": "Gibson vs Sasnovich — Aliaksandra Sasnovich",
@@ -35469,7 +35469,7 @@
   "event": "KXNFLTOTAL-26NOV08CLENO",
   "category": "Sports",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXNFLSPREAD-26NOV08DENCAR-DEN21": {
   "title": "Denver vs Carolina: Spread — Denver wins by over 20.5 points",
@@ -35481,7 +35481,7 @@
   "event": "KXNFLSPREAD-26NOV08DENCAR",
   "category": "Sports",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXNFLTOTAL-26NOV08NYJKC-29": {
   "title": "New York J vs Kansas City: Total Points — Over 28.5 points",
@@ -35493,7 +35493,7 @@
   "event": "KXNFLTOTAL-26NOV08NYJKC",
   "category": "Sports",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXNFLSPREAD-26NOV08TBCHI-TB11": {
   "title": "Tampa Bay vs Chicago: Spread — Tampa Bay wins by over 10.5 points",
@@ -35505,7 +35505,7 @@
   "event": "KXNFLSPREAD-26NOV08TBCHI",
   "category": "Sports",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXNFLTOTAL-26NOV08ARISEA-66": {
   "title": "Arizona vs Seattle: Total Points — Over 65.5 points",
@@ -35517,7 +35517,7 @@
   "event": "KXNFLTOTAL-26NOV08ARISEA",
   "category": "Sports",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXNFLSPREAD-26NOV08LVSF-LV5": {
   "title": "Las Vegas vs San Francisco: Spread — Las Vegas wins by over 4.5 points",
@@ -35541,7 +35541,7 @@
   "event": "KXNFLTOTAL-26NOV08TBCHI",
   "category": "Sports",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXNFLSPREAD-26NOV08NYJKC-NYJ8": {
   "title": "New York J vs Kansas City: Spread — New York J wins by over 7.5 points",
@@ -35553,7 +35553,7 @@
   "event": "KXNFLSPREAD-26NOV08NYJKC",
   "category": "Sports",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXDEMSWINGSTATEGOVSWEEP-26NOV03": {
   "title": "Will Democrats sweep all swing state Governor races? — Yes",
@@ -35577,7 +35577,7 @@
   "event": "KXHOUSERACE-NV02-26",
   "category": "Elections",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXMIDTERMMOV-TXSEND-P5": {
   "title": "Texas Senate margin of victory — James Talarico, 5+ pts",
@@ -35601,7 +35601,7 @@
   "event": "KXDSENATESEATSH-27",
   "category": "Elections",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "RSENATESEATS-27-E51": {
   "title": "How many Senate seats will Republicans hold after the Midterms? — 51",
@@ -35625,7 +35625,7 @@
   "event": "KXMIDTERMMOV-TXSEND",
   "category": "Elections",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXNCAAFGAME-26NOV07MRMKWAKE-MRMK": {
   "title": "Merrimack vs Wake Forest — Merrimack",
@@ -35637,7 +35637,7 @@
   "event": "KXNCAAFGAME-26NOV07MRMKWAKE",
   "category": "Sports",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXWTAMATCH-26NOV04LIUBOU-BOU": {
   "title": "Liu vs Boulter — Katie Boulter",
@@ -35661,7 +35661,7 @@
   "event": "KXPRESNOMR-28",
   "category": "Elections",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXUCLGAME-26NOV04RCLCOM-COM": {
   "title": "Lens vs Como — Como",
@@ -35673,7 +35673,7 @@
   "event": "KXUCLGAME-26NOV04RCLCOM",
   "category": "Sports",
   "firstSeen": "2026-11-04T09:45Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXPRESPERSON-28-TMAS": {
   "title": "2028 U.S. Presidential Election winner? — Thomas Massie",
@@ -35697,7 +35697,7 @@
   "event": "KXATPCHALLENGERMATCH-26NOV03AGAMON",
   "category": "Sports",
   "firstSeen": "2026-11-04T17:07Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXATPMATCH-26NOV04MOLFRI-MOL": {
   "title": "Molcan vs Fritz — Alex Molcan",
@@ -35709,7 +35709,7 @@
   "event": "KXATPMATCH-26NOV04MOLFRI",
   "category": "Sports",
   "firstSeen": "2026-11-04T17:07Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXATPCHALLENGERMATCH-26NOV03AGAMON-AGA": {
   "title": "Agamenone vs Monzon — Franco Agamenone",
@@ -35721,7 +35721,7 @@
   "event": "KXATPCHALLENGERMATCH-26NOV03AGAMON",
   "category": "Sports",
   "firstSeen": "2026-11-04T17:07Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXATPMATCH-26NOV04MOLFRI-FRI": {
   "title": "Molcan vs Fritz — Taylor Fritz",
@@ -35733,7 +35733,7 @@
   "event": "KXATPMATCH-26NOV04MOLFRI",
   "category": "Sports",
   "firstSeen": "2026-11-04T17:07Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXUELGAME-26NOV05RENOLY-REN": {
   "title": "Stade Rennais vs Olympiacos — Stade Rennais",
@@ -35745,7 +35745,7 @@
   "event": "KXUELGAME-26NOV05RENOLY",
   "category": "Sports",
   "firstSeen": "2026-11-04T17:07Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXUELGAME-26NOV05RENOLY-OLY": {
   "title": "Stade Rennais vs Olympiacos — Olympiacos",
@@ -35757,7 +35757,7 @@
   "event": "KXUELGAME-26NOV05RENOLY",
   "category": "Sports",
   "firstSeen": "2026-11-04T17:07Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXUCLSPREAD-26NOV04AEKRMA-AEK3": {
   "title": "AEK Athens vs Real Madrid: Spread — AEK Athens wins by more than 2.5 goals",
@@ -35769,7 +35769,7 @@
   "event": "KXUCLSPREAD-26NOV04AEKRMA",
   "category": "Sports",
   "firstSeen": "2026-11-04T17:07Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXNFLGAME-26NOV08CLENO-NO": {
   "title": "Cleveland vs New Orleans — New Orleans",
@@ -35781,7 +35781,7 @@
   "event": "KXNFLGAME-26NOV08CLENO",
   "category": "Sports",
   "firstSeen": "2026-11-04T17:07Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXUCLSPREAD-26NOV04AEKRMA-RMA2": {
   "title": "AEK Athens vs Real Madrid: Spread — Real Madrid wins by more than 1.5 goals",
@@ -35793,7 +35793,7 @@
   "event": "KXUCLSPREAD-26NOV04AEKRMA",
   "category": "Sports",
   "firstSeen": "2026-11-04T17:07Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXPRESNOMR-28-TMAS": {
   "title": "2028 Republican presidential nominee — Thomas Massie",
@@ -35805,7 +35805,7 @@
   "event": "KXPRESNOMR-28",
   "category": "Elections",
   "firstSeen": "2026-11-04T17:07Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXATPMATCH-26NOV04BORKHA-KHA": {
   "title": "Borges vs Khachanov — Karen Khachanov",
@@ -35817,7 +35817,7 @@
   "event": "KXATPMATCH-26NOV04BORKHA",
   "category": "Sports",
   "firstSeen": "2026-11-04T17:07Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXNCAAFGAME-26NOV03TOLSAC-SAC": {
   "title": "Toledo vs Sacramento St. — Sacramento St.",
@@ -35829,7 +35829,7 @@
   "event": "KXNCAAFGAME-26NOV03TOLSAC",
   "category": "Sports",
   "firstSeen": "2026-11-04T17:07Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXUCLSPREAD-26NOV04AEKRMA-RMA3": {
   "title": "AEK Athens vs Real Madrid: Spread — Real Madrid wins by more than 2.5 goals",
@@ -35841,7 +35841,7 @@
   "event": "KXUCLSPREAD-26NOV04AEKRMA",
   "category": "Sports",
   "firstSeen": "2026-11-04T17:07Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXNBAGAME-26NOV04PHIDET-DET": {
   "title": "Philadelphia vs Detroit — Detroit",
@@ -35853,7 +35853,7 @@
   "event": "KXNBAGAME-26NOV04PHIDET",
   "category": "Sports",
   "firstSeen": "2026-11-04T17:07Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXATPCHALLENGERMATCH-26NOV04CASKOZ-KOZ": {
   "title": "Cassone vs Kozlov — Stefan Kozlov",
@@ -35865,7 +35865,7 @@
   "event": "KXATPCHALLENGERMATCH-26NOV04CASKOZ",
   "category": "Sports",
   "firstSeen": "2026-11-04T17:07Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXAKSENATE-26NOV03-DSUL": {
   "title": "Alaska Senate winner? (Person) — Dan Sullivan",
@@ -35877,7 +35877,7 @@
   "event": "KXAKSENATE-26NOV03",
   "category": "Elections",
   "firstSeen": "2026-11-04T17:07Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXUCLGAME-26NOV04SLAARS-ARS": {
   "title": "Slavia Prague vs Arsenal — Arsenal",
@@ -35889,7 +35889,7 @@
   "event": "KXUCLGAME-26NOV04SLAARS",
   "category": "Sports",
   "firstSeen": "2026-11-04T17:07Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXUCLGAME-26NOV04AEKRMA-AEK": {
   "title": "AEK Athens vs Real Madrid — AEK Athens",
@@ -35901,7 +35901,7 @@
   "event": "KXUCLGAME-26NOV04AEKRMA",
   "category": "Sports",
   "firstSeen": "2026-11-04T17:07Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXPRESPERSON-28-JVAN": {
   "title": "2028 U.S. Presidential Election winner? — J.D. Vance",
@@ -35913,7 +35913,7 @@
   "event": "KXPRESPERSON-28",
   "category": "Elections",
   "firstSeen": "2026-11-04T17:07Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  },
  "KXATPMATCH-26NOV04BORKHA-BOR": {
   "title": "Borges vs Khachanov — Nuno Borges",
@@ -35925,6 +35925,6 @@
   "event": "KXATPMATCH-26NOV04BORKHA",
   "category": "Sports",
   "firstSeen": "2026-11-04T17:07Z",
-  "lastSeen": "2026-11-04T17:45Z"
+  "lastSeen": "2026-11-04T18:00Z"
  }
 }
