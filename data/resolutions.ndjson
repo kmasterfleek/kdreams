@@ -6956,3 +6956,16 @@
 {"t":"2026-11-04T05:00Z","v":"ks","id":"KXNCAAFGAME-26NOV03BUFFMOH-BUFF","y":1,"at":"2026-11-04T04:58Z"}
 {"t":"2026-11-04T05:00Z","v":"ks","id":"KXNCAAFGAME-26NOV03BUFFMOH-MOH","y":0,"at":"2026-11-04T04:58Z"}
 {"t":"2026-11-04T05:00Z","v":"ks","id":"CONTROLS-2026-D","y":1,"at":"2026-11-04T04:46Z"}
+{"t":"2026-11-04T05:15Z","v":"ks","id":"CONTROLH-2026-R","y":0,"at":"2026-11-04T05:02Z"}
+{"t":"2026-11-04T05:15Z","v":"ks","id":"CONTROLH-2026-D","y":1,"at":"2026-11-04T05:02Z"}
+{"t":"2026-11-04T05:15Z","v":"ks","id":"KXBALANCEPOWERCOMBO-27FEB-RR","y":0,"at":"2026-11-04T05:03Z"}
+{"t":"2026-11-04T05:15Z","v":"ks","id":"KXBALANCEPOWERCOMBO-27FEB-RD","y":0,"at":"2026-11-04T05:03Z"}
+{"t":"2026-11-04T05:15Z","v":"ks","id":"KXHOUSERACE-MN05-26-R","y":0,"at":"2026-11-04T05:08Z"}
+{"t":"2026-11-04T05:15Z","v":"ks","id":"GOVPARTYMN-26-R","y":0,"at":"2026-11-04T05:13Z"}
+{"t":"2026-11-04T05:15Z","v":"ks","id":"KXBALANCEPOWERCOMBO-27FEB-DD","y":1,"at":"2026-11-04T05:03Z"}
+{"t":"2026-11-04T05:15Z","v":"ks","id":"KXBALANCEPOWERCOMBO-27FEB-DR","y":0,"at":"2026-11-04T05:03Z"}
+{"t":"2026-11-04T05:15Z","v":"ks","id":"SENATEMN-26-R","y":0,"at":"2026-11-04T05:12Z"}
+{"t":"2026-11-04T05:15Z","v":"ks","id":"SENATEMN-26-D","y":1,"at":"2026-11-04T05:12Z"}
+{"t":"2026-11-04T05:15Z","v":"ks","id":"KXTXSENGOVCOMBO-26NOV-REPREP","y":0,"at":"2026-11-04T05:03Z"}
+{"t":"2026-11-04T05:15Z","v":"ks","id":"GOVPARTYNY-26-D","y":1,"at":"2026-11-04T02:13Z"}
+{"t":"2026-11-04T05:15Z","v":"ks","id":"SENATEGA-26-D","y":1,"at":"2026-11-04T01:28Z"}
