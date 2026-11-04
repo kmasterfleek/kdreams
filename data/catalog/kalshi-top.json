@@ -1,241 +1,111 @@
 {
-  "scannedAt": "2026-11-04T03:30Z",
+  "scannedAt": "2026-11-04T09:45Z",
   "tickers": [
-    "SENATETX-26-R",
-    "CONTROLH-2026-R",
-    "GOVPARTYTX-26-R",
-    "CONTROLS-2026-R",
-    "KXBALANCEPOWERCOMBO-27FEB-RR",
-    "CONTROLH-2026-D",
-    "SENATETX-26-D",
-    "CONTROLS-2026-D",
-    "KXBALANCEPOWERCOMBO-27FEB-DD",
-    "SENATEMI-26-R",
-    "GOVPARTYTX-26-D",
-    "KXBALANCEPOWERCOMBO-27FEB-RD",
-    "KXGOVCA-26-SHIL",
-    "KXNCAAFGAME-26NOV03OHIOAKR-AKR",
-    "KXBALANCEPOWERCOMBO-27FEB-DR",
-    "SENATESC-26-R",
-    "SENATEMI-26-D",
-    "SENATEME-26-R",
-    "GOVPARTYOH-26-R",
-    "SENATESC-26-D",
-    "GOVPARTYCA-26-R",
-    "KXNCAAFGAME-26NOV03OHIOAKR-OHIO",
-    "KXNCAAFGAME-26NOV03BUFFMOH-BUFF",
-    "SENATEIA-26-R",
-    "SENATEOHS-26-R",
-    "KXBLUEWAVECOMBO-27FEB",
-    "SENATEIA-26-D",
-    "SENATEMS-26-D",
-    "SENATEME-26-D",
-    "SENATEMN-26-R",
-    "SENATEMS-26-R",
-    "SENATEKS-26-R",
-    "SENATEOHS-26-D",
-    "SENATENE-26-R",
-    "SENATENE-26-DOSB",
-    "KXNCAAFGAME-26NOV03BUFFMOH-MOH",
-    "GOVPARTYOH-26-D",
-    "KXNCAAFSPREAD-26NOV03OHIOAKR-OHIO14",
     "KXMAYORLA-26-KBAS",
-    "SENATEKS-26-D",
-    "KXSB-27-CHI",
-    "KXUCLGAME-26NOV04AEKRMA-RMA",
-    "KXHOUSERACE-TX23-26-R",
+    "SENATEMS-26-D",
+    "SENATEMS-26-R",
     "KXMAYORLA-26-NRAM",
-    "KXDSENATESEATS-27-ABOVE52",
-    "KXMISENATE-26-MROG",
-    "GOVPARTYIA-26-R",
-    "KXGOVCA-26-XBEC",
-    "KXSENATELA-26NOV-R",
-    "KXPRESNOMD-28-AELS",
-    "KXNCAAFTOTAL-26NOV03BUFFMOH-45",
-    "KXNCAAFSPREAD-26NOV03BUFFMOH-MOH7",
+    "KXBLUEWAVECOMBO-27FEB",
     "SENATEAK-26-R",
-    "SENATEMN-26-D",
-    "KXSENATELA-26NOV-D",
-    "GOVPARTYAL-26-D",
-    "KXDSENATESEATS-27-51",
-    "HOUSENY17-26-R",
-    "KXBLUETSUNAMICOMBO-27FEB",
-    "RSENATESEATS-27-B45",
-    "KXODIMATCH-26NOV032100INDNZ-IND",
-    "KXDSENATESEATS-27-52",
-    "KXNFLTOTAL-26NOV09BUFMIN-46",
-    "KXNCAAFSPREAD-26NOV03OHIOAKR-OHIO10",
-    "GOVPARTYAZ-26-R",
-    "KXNHLGAME-26NOV03CARNSH-CAR",
-    "KXNCAAFTOTAL-26NOV03OHIOAKR-52",
-    "KXDHOUSESEATS-27-249",
-    "GOVPARTYTN-26-D",
-    "KXNCAAFSPREAD-26NOV03OHIOAKR-OHIO12",
-    "KXNCAAFSPREAD-26NOV03BUFFMOH-MOH6",
-    "KXPRESNOMD-28-DJOL",
-    "KXODIMATCH-26NOV032100INDNZ-NZ",
-    "KXPRESNOMD-28-JOSS",
-    "KXNCAAFSPREAD-26NOV03OHIOAKR-OHIO11",
-    "KXNCAAF-27-UK",
-    "KXMISENATE-26-AELS",
-    "KXHOUSERACE-TX23-26-D",
-    "KXCAWEALTHTAX-26",
-    "GOVPARTYWI-26-R",
-    "KXHOUSERACE-IN05-26-D",
-    "GOVPARTYNV-26-R",
-    "GOVPARTYMN-26-R",
-    "KXNBAGAME-26NOV04PHIDET-PHI",
-    "KXNFLTOTAL-26NOV08CINATL-53",
-    "HOUSENY17-26-D",
-    "KXHOUSEPOPVOTEMARGIN-27NOV03-B50",
-    "GOVPARTYIA-26-D",
-    "SENATENE-26-D",
-    "KXNCAAFSPREAD-26NOV03BUFFMOH-MOH8",
-    "KXNCAAFSPREAD-26NOV03OHIOAKR-OHIO8",
-    "GOVPARTYTN-26-R",
-    "SENATEMT-26-R",
-    "KXHOUSERACE-MN05-26-R",
-    "KXTXSENGOVCOMBO-26NOV-REPDEM",
-    "KXNCAAFTOTAL-26NOV03BUFFMOH-46",
     "SENATEAK-26-D",
-    "KXNFLTOTAL-26NOV05JACBAL-40",
+    "KXUCLGAME-26NOV04AEKRMA-RMA",
+    "HOUSENY17-26-R",
+    "KXDSENATESEATS-27-ABOVE52",
+    "KXCAWEALTHTAX-26",
+    "RSENATESEATS-27-B45",
+    "GOVPARTYKS-27-D",
+    "KXPRESNOMD-28-AELS",
+    "KXDSENATESEATS-27-52",
+    "GOVPARTYNV-26-R",
+    "KXBLUETSUNAMICOMBO-27FEB",
+    "HOUSENY17-26-D",
+    "KXDHOUSESEATS-27-249",
+    "KXHOUSERACE-NC03-26-R",
     "RSENATESEATS-27-E45",
-    "GOVPARTYCA-26-D"
+    "KXDSENATESEATS-27-51",
+    "KXITFMATCH-26NOV04KOLLOM-KOL",
+    "KXHOUSERACE-NV02-26-R",
+    "KXPRESNOMD-28-JOSS",
+    "GOVPARTYKS-27-R",
+    "KXSB-27-CHI",
+    "KXHOUSEPOPVOTEMARGIN-27NOV03-B50",
+    "KXPRESNOMD-28-JTAL",
+    "KXNFLTOTAL-26NOV09BUFMIN-46",
+    "GOVPARTYNV-26-D",
+    "KXDSENATESEATSH-27-E55",
+    "KXDSENATESEATSH-27-E56",
+    "KXHOUSERACE-NC03-26-D",
+    "KXNBAGAME-26NOV04PHIDET-PHI",
+    "KXREDWAVECOMBO-27FEBB-FALSE",
+    "KXDSENATESEATS-27-45",
+    "KXMIDTERMMOV-TXSEND-P9",
+    "KXPRESPERSON-28-RDES",
+    "KXPRESNOMD-28-DJOL",
+    "RSENATESEATS-27-E46",
+    "KXPRESPERSON-28-JOSS",
+    "KXUCLGAME-26NOV04FENLFC-LFC",
+    "KXNFLTOTAL-26NOV08CINATL-53",
+    "KXMEGATSUNAMICOMBO-27FEB-240H54S",
+    "KXDSENATESEATSH-27-E53",
+    "RSENATESEATS-27-E47",
+    "KXDHOUSESEATS-27-248",
+    "KXDSENATESEATSH-27-E54",
+    "KXNFLTOTAL-26NOV05JACBAL-40",
+    "KXIMPEACH-27-JAN01",
+    "KXDSENATESEATSH-27-E57",
+    "KXHOUSERACE-VA05-26-D",
+    "KXDSENATESEATS-27-47",
+    "KXHOUSERACE-VA05-26-R",
+    "KXSB-27-PIT",
+    "KXDHOUSESEATS-27-244",
+    "KXPRESNOMD-28-AHAM",
+    "KXDSENATESEATSH-27-B53",
+    "KXHOUSERACE-TN09-26-D",
+    "RSENATESEATS-27-E50",
+    "RSENATESEATS-27-E54",
+    "KXSAVEACT-27-JAN04",
+    "KXRHOUSESEATS-27-193",
+    "KXNFLTOTAL-26NOV08NYJKC-47",
+    "KXNFLGAME-26NOV05JACBAL-BAL",
+    "RSENATESEATS-27-E55",
+    "KXUCLGAME-26NOV04RBLMCI-MCI",
+    "KXCS2GAME-26NOV040200BBTL-TL",
+    "KXWTAMATCH-26NOV04GIBSAS-GIB",
+    "KXDHOUSESEATS-27-210",
+    "KXPRESNOMD-28-PB",
+    "KXWTAMATCH-26NOV04LIUBOU-LIU",
+    "KXNFLTOTAL-26NOV08NYGPHI-62",
+    "KXWTAMATCH-26NOV04GIBSAS-SAS",
+    "KXNFLTOTAL-26NOV08CLENO-44",
+    "KXNFLSPREAD-26NOV08DENCAR-DEN21",
+    "KXNFLTOTAL-26NOV08NYJKC-29",
+    "KXNFLSPREAD-26NOV08TBCHI-TB11",
+    "KXNFLTOTAL-26NOV08ARISEA-66",
+    "KXNFLSPREAD-26NOV08LVSF-LV5",
+    "KXNFLTOTAL-26NOV08TBCHI-29",
+    "KXNFLSPREAD-26NOV08NYJKC-NYJ8",
+    "KXDEMSWINGSTATEGOVSWEEP-26NOV03",
+    "KXHOUSERACE-NV02-26-D",
+    "KXMIDTERMMOV-TXSEND-P5",
+    "KXDSENATESEATSH-27-A57",
+    "RSENATESEATS-27-E51",
+    "KXMIDTERMMOV-TXSEND-P12",
+    "KXNCAAFGAME-26NOV07MRMKWAKE-MRMK",
+    "RSENATESEATS-27-E49",
+    "KXWTAMATCH-26NOV04LIUBOU-BOU",
+    "KXPRESNOMR-28-RDS",
+    "KXUCLGAME-26NOV04RCLCOM-COM",
+    "KXDSENATESEATS-27-BELOW45",
+    "RSENATESEATS-27-E52",
+    "KXDSENATESEATS-27-49",
+    "KXPRESPERSON-28-TMAS",
+    "KXDSENATESEATS-27-50",
+    "KXDSENATESEATS-27-48"
   ],
   "events": {
-    "SENATETX-26-R": {
-      "title": "Texas Senate winner?",
-      "series_ticker": "SENATETX",
-      "category": "Elections"
-    },
-    "CONTROLH-2026-R": {
-      "title": "Who will control the House?",
-      "series_ticker": "CONTROLH",
-      "category": "Elections"
-    },
-    "GOVPARTYTX-26-R": {
-      "title": "Texas Governor winner?",
-      "series_ticker": "GOVPARTYTX",
-      "category": "Elections"
-    },
-    "CONTROLS-2026-R": {
-      "title": "Who will control the Senate?",
-      "series_ticker": "CONTROLS",
-      "category": "Elections"
-    },
-    "KXBALANCEPOWERCOMBO-27FEB-RR": {
-      "title": "2026 Midterms: Congress Balance of Power?",
-      "series_ticker": "KXBALANCEPOWERCOMBO",
-      "category": "Elections"
-    },
-    "CONTROLH-2026-D": {
-      "title": "Who will control the House?",
-      "series_ticker": "CONTROLH",
-      "category": "Elections"
-    },
-    "SENATETX-26-D": {
-      "title": "Texas Senate winner?",
-      "series_ticker": "SENATETX",
-      "category": "Elections"
-    },
-    "CONTROLS-2026-D": {
-      "title": "Who will control the Senate?",
-      "series_ticker": "CONTROLS",
-      "category": "Elections"
-    },
-    "KXBALANCEPOWERCOMBO-27FEB-DD": {
-      "title": "2026 Midterms: Congress Balance of Power?",
-      "series_ticker": "KXBALANCEPOWERCOMBO",
-      "category": "Elections"
-    },
-    "SENATEMI-26-R": {
-      "title": "Michigan Senate winner?",
-      "series_ticker": "SENATEMI",
-      "category": "Elections"
-    },
-    "GOVPARTYTX-26-D": {
-      "title": "Texas Governor winner?",
-      "series_ticker": "GOVPARTYTX",
-      "category": "Elections"
-    },
-    "KXBALANCEPOWERCOMBO-27FEB-RD": {
-      "title": "2026 Midterms: Congress Balance of Power?",
-      "series_ticker": "KXBALANCEPOWERCOMBO",
-      "category": "Elections"
-    },
-    "KXGOVCA-26-SHIL": {
-      "title": "California Governor winner? (Person)",
-      "series_ticker": "KXGOVCA",
-      "category": "Elections"
-    },
-    "KXNCAAFGAME-26NOV03OHIOAKR-AKR": {
-      "title": "Ohio vs Akron",
-      "series_ticker": "KXNCAAFGAME",
-      "category": "Sports"
-    },
-    "KXBALANCEPOWERCOMBO-27FEB-DR": {
-      "title": "2026 Midterms: Congress Balance of Power?",
-      "series_ticker": "KXBALANCEPOWERCOMBO",
-      "category": "Elections"
-    },
-    "SENATESC-26-R": {
-      "title": "South Carolina Senate winner?",
-      "series_ticker": "SENATESC",
-      "category": "Elections"
-    },
-    "SENATEMI-26-D": {
-      "title": "Michigan Senate winner?",
-      "series_ticker": "SENATEMI",
-      "category": "Elections"
-    },
-    "SENATEME-26-R": {
-      "title": "Maine Senate winner?",
-      "series_ticker": "SENATEME",
-      "category": "Elections"
-    },
-    "GOVPARTYOH-26-R": {
-      "title": "Ohio Governor winner?",
-      "series_ticker": "GOVPARTYOH",
-      "category": "Elections"
-    },
-    "SENATESC-26-D": {
-      "title": "South Carolina Senate winner?",
-      "series_ticker": "SENATESC",
-      "category": "Elections"
-    },
-    "GOVPARTYCA-26-R": {
-      "title": "California Governor winner?",
-      "series_ticker": "GOVPARTYCA",
-      "category": "Elections"
-    },
-    "KXNCAAFGAME-26NOV03OHIOAKR-OHIO": {
-      "title": "Ohio vs Akron",
-      "series_ticker": "KXNCAAFGAME",
-      "category": "Sports"
-    },
-    "KXNCAAFGAME-26NOV03BUFFMOH-BUFF": {
-      "title": "Buffalo vs Miami (OH)",
-      "series_ticker": "KXNCAAFGAME",
-      "category": "Sports"
-    },
-    "SENATEIA-26-R": {
-      "title": "Iowa Senate winner?",
-      "series_ticker": "SENATEIA",
-      "category": "Elections"
-    },
-    "SENATEOHS-26-R": {
-      "title": "Ohio Senate winner?",
-      "series_ticker": "SENATEOHS",
-      "category": "Elections"
-    },
-    "KXBLUEWAVECOMBO-27FEB": {
-      "title": "Blue wave in 2026?",
-      "series_ticker": "KXBLUEWAVECOMBO",
-      "category": "Politics"
-    },
-    "SENATEIA-26-D": {
-      "title": "Iowa Senate winner?",
-      "series_ticker": "SENATEIA",
+    "KXMAYORLA-26-KBAS": {
+      "title": "Los Angeles Mayor winner?",
+      "series_ticker": "KXMAYORLA",
       "category": "Elections"
     },
     "SENATEMS-26-D": {
@@ -243,79 +113,9 @@
       "series_ticker": "SENATEMS",
       "category": "Elections"
     },
-    "SENATEME-26-D": {
-      "title": "Maine Senate winner?",
-      "series_ticker": "SENATEME",
-      "category": "Elections"
-    },
-    "SENATEMN-26-R": {
-      "title": "Minnesota Senate winner?",
-      "series_ticker": "SENATEMN",
-      "category": "Elections"
-    },
     "SENATEMS-26-R": {
       "title": "Mississippi Senate winner?",
       "series_ticker": "SENATEMS",
-      "category": "Elections"
-    },
-    "SENATEKS-26-R": {
-      "title": "Kansas Senate winner?",
-      "series_ticker": "SENATEKS",
-      "category": "Elections"
-    },
-    "SENATEOHS-26-D": {
-      "title": "Ohio Senate winner?",
-      "series_ticker": "SENATEOHS",
-      "category": "Elections"
-    },
-    "SENATENE-26-R": {
-      "title": "Nebraska Senate winner?",
-      "series_ticker": "SENATENE",
-      "category": "Elections"
-    },
-    "SENATENE-26-DOSB": {
-      "title": "Nebraska Senate winner?",
-      "series_ticker": "SENATENE",
-      "category": "Elections"
-    },
-    "KXNCAAFGAME-26NOV03BUFFMOH-MOH": {
-      "title": "Buffalo vs Miami (OH)",
-      "series_ticker": "KXNCAAFGAME",
-      "category": "Sports"
-    },
-    "GOVPARTYOH-26-D": {
-      "title": "Ohio Governor winner?",
-      "series_ticker": "GOVPARTYOH",
-      "category": "Elections"
-    },
-    "KXNCAAFSPREAD-26NOV03OHIOAKR-OHIO14": {
-      "title": "Ohio vs Akron: Spread",
-      "series_ticker": "KXNCAAFSPREAD",
-      "category": "Sports"
-    },
-    "KXMAYORLA-26-KBAS": {
-      "title": "Los Angeles Mayor winner?",
-      "series_ticker": "KXMAYORLA",
-      "category": "Elections"
-    },
-    "SENATEKS-26-D": {
-      "title": "Kansas Senate winner?",
-      "series_ticker": "SENATEKS",
-      "category": "Elections"
-    },
-    "KXSB-27-CHI": {
-      "title": "2027 Pro Football Champion",
-      "series_ticker": "KXSB",
-      "category": "Sports"
-    },
-    "KXUCLGAME-26NOV04AEKRMA-RMA": {
-      "title": "AEK Athens vs Real Madrid",
-      "series_ticker": "KXUCLGAME",
-      "category": "Sports"
-    },
-    "KXHOUSERACE-TX23-26-R": {
-      "title": "TX-23 House winner?",
-      "series_ticker": "KXHOUSERACE",
       "category": "Elections"
     },
     "KXMAYORLA-26-NRAM": {
@@ -323,174 +123,34 @@
       "series_ticker": "KXMAYORLA",
       "category": "Elections"
     },
-    "KXDSENATESEATS-27-ABOVE52": {
-      "title": "How many Senate seats will Democrats hold after the Midterms?",
-      "series_ticker": "KXDSENATESEATS",
-      "category": "Elections"
-    },
-    "KXMISENATE-26-MROG": {
-      "title": "Michigan Senate winner? (Person)",
-      "series_ticker": "KXMISENATE",
-      "category": "Elections"
-    },
-    "GOVPARTYIA-26-R": {
-      "title": "Iowa Governor winner?",
-      "series_ticker": "GOVPARTYIA",
-      "category": "Elections"
-    },
-    "KXGOVCA-26-XBEC": {
-      "title": "California Governor winner? (Person)",
-      "series_ticker": "KXGOVCA",
-      "category": "Elections"
-    },
-    "KXSENATELA-26NOV-R": {
-      "title": "Louisiana Senate winner?",
-      "series_ticker": "KXSENATELA",
-      "category": "Elections"
-    },
-    "KXPRESNOMD-28-AELS": {
-      "title": "2028 Democratic presidential nominee",
-      "series_ticker": "KXPRESNOMD",
-      "category": "Elections"
-    },
-    "KXNCAAFTOTAL-26NOV03BUFFMOH-45": {
-      "title": "Buffalo vs Miami (OH): Total Points",
-      "series_ticker": "KXNCAAFTOTAL",
-      "category": "Sports"
-    },
-    "KXNCAAFSPREAD-26NOV03BUFFMOH-MOH7": {
-      "title": "Buffalo vs Miami (OH): Spread",
-      "series_ticker": "KXNCAAFSPREAD",
-      "category": "Sports"
+    "KXBLUEWAVECOMBO-27FEB": {
+      "title": "Blue wave in 2026?",
+      "series_ticker": "KXBLUEWAVECOMBO",
+      "category": "Politics"
     },
     "SENATEAK-26-R": {
       "title": "Alaska Senate winner?",
       "series_ticker": "SENATEAK",
       "category": "Elections"
     },
-    "SENATEMN-26-D": {
-      "title": "Minnesota Senate winner?",
-      "series_ticker": "SENATEMN",
+    "SENATEAK-26-D": {
+      "title": "Alaska Senate winner?",
+      "series_ticker": "SENATEAK",
       "category": "Elections"
     },
-    "KXSENATELA-26NOV-D": {
-      "title": "Louisiana Senate winner?",
-      "series_ticker": "KXSENATELA",
-      "category": "Elections"
-    },
-    "GOVPARTYAL-26-D": {
-      "title": "Alabama Governor winner?",
-      "series_ticker": "GOVPARTYAL",
-      "category": "Elections"
-    },
-    "KXDSENATESEATS-27-51": {
-      "title": "How many Senate seats will Democrats hold after the Midterms?",
-      "series_ticker": "KXDSENATESEATS",
-      "category": "Elections"
+    "KXUCLGAME-26NOV04AEKRMA-RMA": {
+      "title": "AEK Athens vs Real Madrid",
+      "series_ticker": "KXUCLGAME",
+      "category": "Sports"
     },
     "HOUSENY17-26-R": {
       "title": "NY-17 House winner?",
       "series_ticker": "HOUSENY17",
       "category": "Elections"
     },
-    "KXBLUETSUNAMICOMBO-27FEB": {
-      "title": "Blue tsunami in 2026?",
-      "series_ticker": "KXBLUETSUNAMICOMBO",
-      "category": "Politics"
-    },
-    "RSENATESEATS-27-B45": {
-      "title": "How many Senate seats will Republicans hold after the Midterms?",
-      "series_ticker": "RSENATESEATS",
-      "category": "Elections"
-    },
-    "KXODIMATCH-26NOV032100INDNZ-IND": {
-      "title": "New Zealand vs India",
-      "series_ticker": "KXODIMATCH",
-      "category": "Sports"
-    },
-    "KXDSENATESEATS-27-52": {
+    "KXDSENATESEATS-27-ABOVE52": {
       "title": "How many Senate seats will Democrats hold after the Midterms?",
       "series_ticker": "KXDSENATESEATS",
-      "category": "Elections"
-    },
-    "KXNFLTOTAL-26NOV09BUFMIN-46": {
-      "title": "Buffalo vs Minnesota: Total Points",
-      "series_ticker": "KXNFLTOTAL",
-      "category": "Sports"
-    },
-    "KXNCAAFSPREAD-26NOV03OHIOAKR-OHIO10": {
-      "title": "Ohio vs Akron: Spread",
-      "series_ticker": "KXNCAAFSPREAD",
-      "category": "Sports"
-    },
-    "GOVPARTYAZ-26-R": {
-      "title": "Arizona Governor winner?",
-      "series_ticker": "GOVPARTYAZ",
-      "category": "Elections"
-    },
-    "KXNHLGAME-26NOV03CARNSH-CAR": {
-      "title": "Carolina vs Nashville",
-      "series_ticker": "KXNHLGAME",
-      "category": "Sports"
-    },
-    "KXNCAAFTOTAL-26NOV03OHIOAKR-52": {
-      "title": "Ohio vs Akron: Total Points",
-      "series_ticker": "KXNCAAFTOTAL",
-      "category": "Sports"
-    },
-    "KXDHOUSESEATS-27-249": {
-      "title": "How many House seats will Democrats hold after the Midterms?",
-      "series_ticker": "KXDHOUSESEATS",
-      "category": "Elections"
-    },
-    "GOVPARTYTN-26-D": {
-      "title": "Tennessee Governor winner?",
-      "series_ticker": "GOVPARTYTN",
-      "category": "Elections"
-    },
-    "KXNCAAFSPREAD-26NOV03OHIOAKR-OHIO12": {
-      "title": "Ohio vs Akron: Spread",
-      "series_ticker": "KXNCAAFSPREAD",
-      "category": "Sports"
-    },
-    "KXNCAAFSPREAD-26NOV03BUFFMOH-MOH6": {
-      "title": "Buffalo vs Miami (OH): Spread",
-      "series_ticker": "KXNCAAFSPREAD",
-      "category": "Sports"
-    },
-    "KXPRESNOMD-28-DJOL": {
-      "title": "2028 Democratic presidential nominee",
-      "series_ticker": "KXPRESNOMD",
-      "category": "Elections"
-    },
-    "KXODIMATCH-26NOV032100INDNZ-NZ": {
-      "title": "New Zealand vs India",
-      "series_ticker": "KXODIMATCH",
-      "category": "Sports"
-    },
-    "KXPRESNOMD-28-JOSS": {
-      "title": "2028 Democratic presidential nominee",
-      "series_ticker": "KXPRESNOMD",
-      "category": "Elections"
-    },
-    "KXNCAAFSPREAD-26NOV03OHIOAKR-OHIO11": {
-      "title": "Ohio vs Akron: Spread",
-      "series_ticker": "KXNCAAFSPREAD",
-      "category": "Sports"
-    },
-    "KXNCAAF-27-UK": {
-      "title": "College Football National Championship Winner",
-      "series_ticker": "KXNCAAF",
-      "category": "Sports"
-    },
-    "KXMISENATE-26-AELS": {
-      "title": "Michigan Senate winner? (Person)",
-      "series_ticker": "KXMISENATE",
-      "category": "Elections"
-    },
-    "KXHOUSERACE-TX23-26-D": {
-      "title": "TX-23 House winner?",
-      "series_ticker": "KXHOUSERACE",
       "category": "Elections"
     },
     "KXCAWEALTHTAX-26": {
@@ -498,14 +158,24 @@
       "series_ticker": "KXCAWEALTHTAX",
       "category": "Elections"
     },
-    "GOVPARTYWI-26-R": {
-      "title": "Wisconsin Governor winner?",
-      "series_ticker": "GOVPARTYWI",
+    "RSENATESEATS-27-B45": {
+      "title": "How many Senate seats will Republicans hold after the Midterms?",
+      "series_ticker": "RSENATESEATS",
       "category": "Elections"
     },
-    "KXHOUSERACE-IN05-26-D": {
-      "title": "IN-05 House winner?",
-      "series_ticker": "KXHOUSERACE",
+    "GOVPARTYKS-27-D": {
+      "title": "Kansas Governor winner?",
+      "series_ticker": "GOVPARTYKS",
+      "category": "Elections"
+    },
+    "KXPRESNOMD-28-AELS": {
+      "title": "2028 Democratic presidential nominee",
+      "series_ticker": "KXPRESNOMD",
+      "category": "Elections"
+    },
+    "KXDSENATESEATS-27-52": {
+      "title": "How many Senate seats will Democrats hold after the Midterms?",
+      "series_ticker": "KXDSENATESEATS",
       "category": "Elections"
     },
     "GOVPARTYNV-26-R": {
@@ -513,9 +183,94 @@
       "series_ticker": "GOVPARTYNV",
       "category": "Elections"
     },
-    "GOVPARTYMN-26-R": {
-      "title": "Minnesota Governor winner?",
-      "series_ticker": "GOVPARTYMN",
+    "KXBLUETSUNAMICOMBO-27FEB": {
+      "title": "Blue tsunami in 2026?",
+      "series_ticker": "KXBLUETSUNAMICOMBO",
+      "category": "Politics"
+    },
+    "HOUSENY17-26-D": {
+      "title": "NY-17 House winner?",
+      "series_ticker": "HOUSENY17",
+      "category": "Elections"
+    },
+    "KXDHOUSESEATS-27-249": {
+      "title": "How many House seats will Democrats hold after the Midterms?",
+      "series_ticker": "KXDHOUSESEATS",
+      "category": "Elections"
+    },
+    "KXHOUSERACE-NC03-26-R": {
+      "title": "NC-03 House winner?",
+      "series_ticker": "KXHOUSERACE",
+      "category": "Elections"
+    },
+    "RSENATESEATS-27-E45": {
+      "title": "How many Senate seats will Republicans hold after the Midterms?",
+      "series_ticker": "RSENATESEATS",
+      "category": "Elections"
+    },
+    "KXDSENATESEATS-27-51": {
+      "title": "How many Senate seats will Democrats hold after the Midterms?",
+      "series_ticker": "KXDSENATESEATS",
+      "category": "Elections"
+    },
+    "KXITFMATCH-26NOV04KOLLOM-KOL": {
+      "title": "Kolninov vs Lomakin",
+      "series_ticker": "KXITFMATCH",
+      "category": "Sports"
+    },
+    "KXHOUSERACE-NV02-26-R": {
+      "title": "NV-02 House winner?",
+      "series_ticker": "KXHOUSERACE",
+      "category": "Elections"
+    },
+    "KXPRESNOMD-28-JOSS": {
+      "title": "2028 Democratic presidential nominee",
+      "series_ticker": "KXPRESNOMD",
+      "category": "Elections"
+    },
+    "GOVPARTYKS-27-R": {
+      "title": "Kansas Governor winner?",
+      "series_ticker": "GOVPARTYKS",
+      "category": "Elections"
+    },
+    "KXSB-27-CHI": {
+      "title": "2027 Pro Football Champion",
+      "series_ticker": "KXSB",
+      "category": "Sports"
+    },
+    "KXHOUSEPOPVOTEMARGIN-27NOV03-B50": {
+      "title": "2026 Midterms: House popular vote margin of victory? (Generic ballot)",
+      "series_ticker": "KXHOUSEPOPVOTEMARGIN",
+      "category": "Politics"
+    },
+    "KXPRESNOMD-28-JTAL": {
+      "title": "2028 Democratic presidential nominee",
+      "series_ticker": "KXPRESNOMD",
+      "category": "Elections"
+    },
+    "KXNFLTOTAL-26NOV09BUFMIN-46": {
+      "title": "Buffalo vs Minnesota: Total Points",
+      "series_ticker": "KXNFLTOTAL",
+      "category": "Sports"
+    },
+    "GOVPARTYNV-26-D": {
+      "title": "Nevada Governor winner?",
+      "series_ticker": "GOVPARTYNV",
+      "category": "Elections"
+    },
+    "KXDSENATESEATSH-27-E55": {
+      "title": "How many Senate seats will Democrats hold after the Midterms? (Higher strikes)",
+      "series_ticker": "KXDSENATESEATSH",
+      "category": "Elections"
+    },
+    "KXDSENATESEATSH-27-E56": {
+      "title": "How many Senate seats will Democrats hold after the Midterms? (Higher strikes)",
+      "series_ticker": "KXDSENATESEATSH",
+      "category": "Elections"
+    },
+    "KXHOUSERACE-NC03-26-D": {
+      "title": "NC-03 House winner?",
+      "series_ticker": "KXHOUSERACE",
       "category": "Elections"
     },
     "KXNBAGAME-26NOV04PHIDET-PHI": {
@@ -523,69 +278,74 @@
       "series_ticker": "KXNBAGAME",
       "category": "Sports"
     },
+    "KXREDWAVECOMBO-27FEBB-FALSE": {
+      "title": "Red wave in 2026?",
+      "series_ticker": "KXREDWAVECOMBO",
+      "category": "Elections"
+    },
+    "KXDSENATESEATS-27-45": {
+      "title": "How many Senate seats will Democrats hold after the Midterms?",
+      "series_ticker": "KXDSENATESEATS",
+      "category": "Elections"
+    },
+    "KXMIDTERMMOV-TXSEND-P9": {
+      "title": "Texas Senate margin of victory",
+      "series_ticker": "KXMIDTERMMOV",
+      "category": "Elections"
+    },
+    "KXPRESPERSON-28-RDES": {
+      "title": "2028 U.S. Presidential Election winner?",
+      "series_ticker": "KXPRESPERSON",
+      "category": "Elections"
+    },
+    "KXPRESNOMD-28-DJOL": {
+      "title": "2028 Democratic presidential nominee",
+      "series_ticker": "KXPRESNOMD",
+      "category": "Elections"
+    },
+    "RSENATESEATS-27-E46": {
+      "title": "How many Senate seats will Republicans hold after the Midterms?",
+      "series_ticker": "RSENATESEATS",
+      "category": "Elections"
+    },
+    "KXPRESPERSON-28-JOSS": {
+      "title": "2028 U.S. Presidential Election winner?",
+      "series_ticker": "KXPRESPERSON",
+      "category": "Elections"
+    },
+    "KXUCLGAME-26NOV04FENLFC-LFC": {
+      "title": "Fenerbahce vs Liverpool",
+      "series_ticker": "KXUCLGAME",
+      "category": "Sports"
+    },
     "KXNFLTOTAL-26NOV08CINATL-53": {
       "title": "Cincinnati vs Atlanta: Total Points",
       "series_ticker": "KXNFLTOTAL",
       "category": "Sports"
     },
-    "HOUSENY17-26-D": {
-      "title": "NY-17 House winner?",
-      "series_ticker": "HOUSENY17",
+    "KXMEGATSUNAMICOMBO-27FEB-240H54S": {
+      "title": "Midterms: Democratic mega tsunami?",
+      "series_ticker": "KXMEGATSUNAMICOMBO",
       "category": "Elections"
     },
-    "KXHOUSEPOPVOTEMARGIN-27NOV03-B50": {
-      "title": "2026 Midterms: House popular vote margin of victory? (Generic ballot)",
-      "series_ticker": "KXHOUSEPOPVOTEMARGIN",
-      "category": "Politics"
-    },
-    "GOVPARTYIA-26-D": {
-      "title": "Iowa Governor winner?",
-      "series_ticker": "GOVPARTYIA",
+    "KXDSENATESEATSH-27-E53": {
+      "title": "How many Senate seats will Democrats hold after the Midterms? (Higher strikes)",
+      "series_ticker": "KXDSENATESEATSH",
       "category": "Elections"
     },
-    "SENATENE-26-D": {
-      "title": "Nebraska Senate winner?",
-      "series_ticker": "SENATENE",
+    "RSENATESEATS-27-E47": {
+      "title": "How many Senate seats will Republicans hold after the Midterms?",
+      "series_ticker": "RSENATESEATS",
       "category": "Elections"
     },
-    "KXNCAAFSPREAD-26NOV03BUFFMOH-MOH8": {
-      "title": "Buffalo vs Miami (OH): Spread",
-      "series_ticker": "KXNCAAFSPREAD",
-      "category": "Sports"
-    },
-    "KXNCAAFSPREAD-26NOV03OHIOAKR-OHIO8": {
-      "title": "Ohio vs Akron: Spread",
-      "series_ticker": "KXNCAAFSPREAD",
-      "category": "Sports"
-    },
-    "GOVPARTYTN-26-R": {
-      "title": "Tennessee Governor winner?",
-      "series_ticker": "GOVPARTYTN",
+    "KXDHOUSESEATS-27-248": {
+      "title": "How many House seats will Democrats hold after the Midterms?",
+      "series_ticker": "KXDHOUSESEATS",
       "category": "Elections"
     },
-    "SENATEMT-26-R": {
-      "title": "Montana Senate winner?",
-      "series_ticker": "SENATEMT",
-      "category": "Elections"
-    },
-    "KXHOUSERACE-MN05-26-R": {
-      "title": "MN-05 House winner?",
-      "series_ticker": "KXHOUSERACE",
-      "category": "Elections"
-    },
-    "KXTXSENGOVCOMBO-26NOV-REPDEM": {
-      "title": "Texas Governor-Senate combo",
-      "series_ticker": "KXTXSENGOVCOMBO",
-      "category": "Elections"
-    },
-    "KXNCAAFTOTAL-26NOV03BUFFMOH-46": {
-      "title": "Buffalo vs Miami (OH): Total Points",
-      "series_ticker": "KXNCAAFTOTAL",
-      "category": "Sports"
-    },
-    "SENATEAK-26-D": {
-      "title": "Alaska Senate winner?",
-      "series_ticker": "SENATEAK",
+    "KXDSENATESEATSH-27-E54": {
+      "title": "How many Senate seats will Democrats hold after the Midterms? (Higher strikes)",
+      "series_ticker": "KXDSENATESEATSH",
       "category": "Elections"
     },
     "KXNFLTOTAL-26NOV05JACBAL-40": {
@@ -593,14 +353,254 @@
       "series_ticker": "KXNFLTOTAL",
       "category": "Sports"
     },
-    "RSENATESEATS-27-E45": {
+    "KXIMPEACH-27-JAN01": {
+      "title": "Will the House impeach Trump?",
+      "series_ticker": "KXIMPEACH",
+      "category": "Politics"
+    },
+    "KXDSENATESEATSH-27-E57": {
+      "title": "How many Senate seats will Democrats hold after the Midterms? (Higher strikes)",
+      "series_ticker": "KXDSENATESEATSH",
+      "category": "Elections"
+    },
+    "KXHOUSERACE-VA05-26-D": {
+      "title": "VA-05 House winner?",
+      "series_ticker": "KXHOUSERACE",
+      "category": "Elections"
+    },
+    "KXDSENATESEATS-27-47": {
+      "title": "How many Senate seats will Democrats hold after the Midterms?",
+      "series_ticker": "KXDSENATESEATS",
+      "category": "Elections"
+    },
+    "KXHOUSERACE-VA05-26-R": {
+      "title": "VA-05 House winner?",
+      "series_ticker": "KXHOUSERACE",
+      "category": "Elections"
+    },
+    "KXSB-27-PIT": {
+      "title": "2027 Pro Football Champion",
+      "series_ticker": "KXSB",
+      "category": "Sports"
+    },
+    "KXDHOUSESEATS-27-244": {
+      "title": "How many House seats will Democrats hold after the Midterms?",
+      "series_ticker": "KXDHOUSESEATS",
+      "category": "Elections"
+    },
+    "KXPRESNOMD-28-AHAM": {
+      "title": "2028 Democratic presidential nominee",
+      "series_ticker": "KXPRESNOMD",
+      "category": "Elections"
+    },
+    "KXDSENATESEATSH-27-B53": {
+      "title": "How many Senate seats will Democrats hold after the Midterms? (Higher strikes)",
+      "series_ticker": "KXDSENATESEATSH",
+      "category": "Elections"
+    },
+    "KXHOUSERACE-TN09-26-D": {
+      "title": "TN-09 House winner?",
+      "series_ticker": "KXHOUSERACE",
+      "category": "Elections"
+    },
+    "RSENATESEATS-27-E50": {
       "title": "How many Senate seats will Republicans hold after the Midterms?",
       "series_ticker": "RSENATESEATS",
       "category": "Elections"
     },
-    "GOVPARTYCA-26-D": {
-      "title": "California Governor winner?",
-      "series_ticker": "GOVPARTYCA",
+    "RSENATESEATS-27-E54": {
+      "title": "How many Senate seats will Republicans hold after the Midterms?",
+      "series_ticker": "RSENATESEATS",
+      "category": "Elections"
+    },
+    "KXSAVEACT-27-JAN04": {
+      "title": "Will the SAVE Act become law?",
+      "series_ticker": "KXSAVEACT",
+      "category": "Politics"
+    },
+    "KXRHOUSESEATS-27-193": {
+      "title": "How many House seats will Republicans hold after the Midterms?",
+      "series_ticker": "KXRHOUSESEATS",
+      "category": "Elections"
+    },
+    "KXNFLTOTAL-26NOV08NYJKC-47": {
+      "title": "New York J vs Kansas City: Total Points",
+      "series_ticker": "KXNFLTOTAL",
+      "category": "Sports"
+    },
+    "KXNFLGAME-26NOV05JACBAL-BAL": {
+      "title": "Jacksonville vs Baltimore",
+      "series_ticker": "KXNFLGAME",
+      "category": "Sports"
+    },
+    "RSENATESEATS-27-E55": {
+      "title": "How many Senate seats will Republicans hold after the Midterms?",
+      "series_ticker": "RSENATESEATS",
+      "category": "Elections"
+    },
+    "KXUCLGAME-26NOV04RBLMCI-MCI": {
+      "title": "Leipzig vs Manchester City",
+      "series_ticker": "KXUCLGAME",
+      "category": "Sports"
+    },
+    "KXCS2GAME-26NOV040200BBTL-TL": {
+      "title": "BetBoom Team vs. Liquid",
+      "series_ticker": "KXCS2GAME",
+      "category": "Sports"
+    },
+    "KXWTAMATCH-26NOV04GIBSAS-GIB": {
+      "title": "Gibson vs Sasnovich",
+      "series_ticker": "KXWTAMATCH",
+      "category": "Sports"
+    },
+    "KXDHOUSESEATS-27-210": {
+      "title": "How many House seats will Democrats hold after the Midterms?",
+      "series_ticker": "KXDHOUSESEATS",
+      "category": "Elections"
+    },
+    "KXPRESNOMD-28-PB": {
+      "title": "2028 Democratic presidential nominee",
+      "series_ticker": "KXPRESNOMD",
+      "category": "Elections"
+    },
+    "KXWTAMATCH-26NOV04LIUBOU-LIU": {
+      "title": "Liu vs Boulter",
+      "series_ticker": "KXWTAMATCH",
+      "category": "Sports"
+    },
+    "KXNFLTOTAL-26NOV08NYGPHI-62": {
+      "title": "New York G vs Philadelphia: Total Points",
+      "series_ticker": "KXNFLTOTAL",
+      "category": "Sports"
+    },
+    "KXWTAMATCH-26NOV04GIBSAS-SAS": {
+      "title": "Gibson vs Sasnovich",
+      "series_ticker": "KXWTAMATCH",
+      "category": "Sports"
+    },
+    "KXNFLTOTAL-26NOV08CLENO-44": {
+      "title": "Cleveland vs New Orleans: Total Points",
+      "series_ticker": "KXNFLTOTAL",
+      "category": "Sports"
+    },
+    "KXNFLSPREAD-26NOV08DENCAR-DEN21": {
+      "title": "Denver vs Carolina: Spread",
+      "series_ticker": "KXNFLSPREAD",
+      "category": "Sports"
+    },
+    "KXNFLTOTAL-26NOV08NYJKC-29": {
+      "title": "New York J vs Kansas City: Total Points",
+      "series_ticker": "KXNFLTOTAL",
+      "category": "Sports"
+    },
+    "KXNFLSPREAD-26NOV08TBCHI-TB11": {
+      "title": "Tampa Bay vs Chicago: Spread",
+      "series_ticker": "KXNFLSPREAD",
+      "category": "Sports"
+    },
+    "KXNFLTOTAL-26NOV08ARISEA-66": {
+      "title": "Arizona vs Seattle: Total Points",
+      "series_ticker": "KXNFLTOTAL",
+      "category": "Sports"
+    },
+    "KXNFLSPREAD-26NOV08LVSF-LV5": {
+      "title": "Las Vegas vs San Francisco: Spread",
+      "series_ticker": "KXNFLSPREAD",
+      "category": "Sports"
+    },
+    "KXNFLTOTAL-26NOV08TBCHI-29": {
+      "title": "Tampa Bay vs Chicago: Total Points",
+      "series_ticker": "KXNFLTOTAL",
+      "category": "Sports"
+    },
+    "KXNFLSPREAD-26NOV08NYJKC-NYJ8": {
+      "title": "New York J vs Kansas City: Spread",
+      "series_ticker": "KXNFLSPREAD",
+      "category": "Sports"
+    },
+    "KXDEMSWINGSTATEGOVSWEEP-26NOV03": {
+      "title": "Will Democrats sweep all swing state Governor races?",
+      "series_ticker": "KXDEMSWINGSTATEGOVSWEEP",
+      "category": "Elections"
+    },
+    "KXHOUSERACE-NV02-26-D": {
+      "title": "NV-02 House winner?",
+      "series_ticker": "KXHOUSERACE",
+      "category": "Elections"
+    },
+    "KXMIDTERMMOV-TXSEND-P5": {
+      "title": "Texas Senate margin of victory",
+      "series_ticker": "KXMIDTERMMOV",
+      "category": "Elections"
+    },
+    "KXDSENATESEATSH-27-A57": {
+      "title": "How many Senate seats will Democrats hold after the Midterms? (Higher strikes)",
+      "series_ticker": "KXDSENATESEATSH",
+      "category": "Elections"
+    },
+    "RSENATESEATS-27-E51": {
+      "title": "How many Senate seats will Republicans hold after the Midterms?",
+      "series_ticker": "RSENATESEATS",
+      "category": "Elections"
+    },
+    "KXMIDTERMMOV-TXSEND-P12": {
+      "title": "Texas Senate margin of victory",
+      "series_ticker": "KXMIDTERMMOV",
+      "category": "Elections"
+    },
+    "KXNCAAFGAME-26NOV07MRMKWAKE-MRMK": {
+      "title": "Merrimack vs Wake Forest",
+      "series_ticker": "KXNCAAFGAME",
+      "category": "Sports"
+    },
+    "RSENATESEATS-27-E49": {
+      "title": "How many Senate seats will Republicans hold after the Midterms?",
+      "series_ticker": "RSENATESEATS",
+      "category": "Elections"
+    },
+    "KXWTAMATCH-26NOV04LIUBOU-BOU": {
+      "title": "Liu vs Boulter",
+      "series_ticker": "KXWTAMATCH",
+      "category": "Sports"
+    },
+    "KXPRESNOMR-28-RDS": {
+      "title": "2028 Republican presidential nominee",
+      "series_ticker": "KXPRESNOMR",
+      "category": "Elections"
+    },
+    "KXUCLGAME-26NOV04RCLCOM-COM": {
+      "title": "Lens vs Como",
+      "series_ticker": "KXUCLGAME",
+      "category": "Sports"
+    },
+    "KXDSENATESEATS-27-BELOW45": {
+      "title": "How many Senate seats will Democrats hold after the Midterms?",
+      "series_ticker": "KXDSENATESEATS",
+      "category": "Elections"
+    },
+    "RSENATESEATS-27-E52": {
+      "title": "How many Senate seats will Republicans hold after the Midterms?",
+      "series_ticker": "RSENATESEATS",
+      "category": "Elections"
+    },
+    "KXDSENATESEATS-27-49": {
+      "title": "How many Senate seats will Democrats hold after the Midterms?",
+      "series_ticker": "KXDSENATESEATS",
+      "category": "Elections"
+    },
+    "KXPRESPERSON-28-TMAS": {
+      "title": "2028 U.S. Presidential Election winner?",
+      "series_ticker": "KXPRESPERSON",
+      "category": "Elections"
+    },
+    "KXDSENATESEATS-27-50": {
+      "title": "How many Senate seats will Democrats hold after the Midterms?",
+      "series_ticker": "KXDSENATESEATS",
+      "category": "Elections"
+    },
+    "KXDSENATESEATS-27-48": {
+      "title": "How many Senate seats will Democrats hold after the Midterms?",
+      "series_ticker": "KXDSENATESEATS",
       "category": "Elections"
     }
   }
