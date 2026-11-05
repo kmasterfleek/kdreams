@@ -901,6 +901,15 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "pair.bothSidesFracNetPositive = 0.141 on n=156, below the n>=300 needed"
+      },
+      {
+        "date": "2026-11-05",
+        "ticks": 162,
+        "value": 0.141,
+        "n": 156,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "pair.bothSidesFracNetPositive = 0.141 on n=156, below the n>=300 needed"
       }
     ]
   },
@@ -925,6 +934,41 @@
     "baseline": {
       "value": 7.3,
       "n": 735
+    },
+    "status": "open",
+    "retests": [
+      {
+        "date": "2026-11-05",
+        "ticks": 78,
+        "value": 15.9,
+        "n": 35,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "resolution.netCentsPer10 = 15.9 on n=35, below the n>=100 needed"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-05",
+    "date": "2026-11-05",
+    "deep": "maker-spread-capture",
+    "issue": "#32",
+    "text": "Given Polymarket markets with entry mids from 0.3 to below 0.7, when observing a resting one-tick maker entry under the 60-minute proxy, then maker.netCentsPerAttempt should be > 0c vs the all-market Polymarket baseline of −1.278c per attempt, subject to adverse marks outweighing captured spread.",
+    "spec": {
+      "metric": "maker.netCentsPerAttempt",
+      "venue": "pm",
+      "slice": {
+        "midMin": 0.3,
+        "midMax": 0.7
+      },
+      "op": ">",
+      "threshold": 0,
+      "minN": 300
+    },
+    "frozenAt": "2026-11-05T16:45Z",
+    "baseline": {
+      "value": -3.132,
+      "n": 23407
     },
     "status": "open",
     "retests": []
