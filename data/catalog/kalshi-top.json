@@ -1,221 +1,136 @@
 {
-  "scannedAt": "2026-11-06T04:00Z",
+  "scannedAt": "2026-11-06T10:43Z",
   "tickers": [
-    "KXNFLGAME-26NOV05JACBAL-BAL",
-    "KXNFLGAME-26NOV05JACBAL-JAC",
-    "KXNFLSPREAD-26NOV05JACBAL-JAC10",
-    "KXNCAAFGAME-26NOV05SCSTHOW-HOW",
-    "KXNCAAFGAME-26NOV05UTSAFAU-FAU",
     "SENATEMS-26-R",
-    "KXNBAGAME-26NOV05MIAGSW-GSW",
-    "KXNCAAFGAME-26NOV05UTSAFAU-UTSA",
-    "KXNBAGAME-26NOV05MIAGSW-MIA",
-    "KXNBAGAME-26NOV05ORLPHX-PHX",
     "SENATEAK-26-R",
-    "KXNBAGAME-26NOV05ORLPHX-ORL",
-    "KXNFLSPREAD-26NOV05JACBAL-JAC11",
-    "KXNFLTD-26NOV05JACBAL-BALDHENRY22-1",
-    "KXNCAAFTOTAL-26NOV05JMUUSM-59",
-    "KXNCAAFGAME-26NOV05JMUUSM-USM",
     "SENATEAK-26-D",
-    "KXNFLSPREAD-26NOV05JACBAL-JAC7",
-    "KXNCAAFGAME-26NOV05SCSTHOW-SCST",
-    "KXNFLSPREAD-26NOV05JACBAL-JAC4",
+    "KXBTC15M-26NOV060545-45",
     "SENATEMS-26-D",
-    "KXNCAAFTOTAL-26NOV05UTSAFAU-73",
-    "KXNCAAFSPREAD-26NOV05UTSAFAU-UTSA8",
-    "KXHOUSERACE-NC03-26-R",
-    "KXNFLSPREAD-26NOV05JACBAL-JAC14",
     "KXITFWMATCH-26NOV05OZXCHE-CHE",
-    "KXNFLSPREAD-26NOV05JACBAL-JAC21",
-    "KXNFLSPREAD-26NOV05JACBAL-JAC15",
-    "KXNCAAFTOTAL-26NOV05JMUUSM-58",
+    "KXHOUSERACE-NC03-26-R",
     "KXITFWMATCH-26NOV05OZXCHE-OZX",
-    "KXNHLGAME-26NOV05NSHCOL-COL",
-    "KXNFLSPREAD-26NOV05JACBAL-JAC18",
-    "KXNFLTD-26NOV05JACBAL-JACBTUTEN33-2",
     "KXAKSENATE-26NOV03-DSUL",
-    "KXNFLTD-26NOV05JACBAL-BALDHENRY22-2",
     "KXSB-27-NYG",
-    "KXNFLSPREAD-26NOV05JACBAL-JAC24",
-    "KXHOUSERACE-NC03-26-D",
-    "KXITFWMATCH-26NOV05SWAYAO-YAO",
-    "KXNFLTOTAL-26NOV05JACBAL-43",
-    "KXNCAAFGAME-26NOV05JMUUSM-JMU",
-    "KXNFLSPREAD-26NOV05JACBAL-JAC8",
-    "KXNBASPREAD-26NOV05MIAGSW-GSW4",
-    "KXNHLGAME-26NOV05NSHCOL-NSH",
-    "KXPGATOUR-WOWTC26-MPAV",
-    "KXNBASPREAD-26NOV05ORLPHX-PHX2",
-    "KXNCAAMBGAME-26NOV05CPARIZ-CP",
-    "KXNFLTD-26NOV05JACBAL-JACTLAWRENCE16-1",
-    "KXNFLTD-26NOV05JACBAL-JACJMEYERS3-1",
-    "KXITFWMATCH-26NOV05ITOTSA-ITO",
-    "KXNFLSPREAD-26NOV05JACBAL-JAC17",
-    "KXNFLSPREAD-26NOV05JACBAL-JAC28",
-    "KXPRESNOMD-28-JOSS",
-    "KXNFLTD-26NOV05JACBAL-BALZFLOWERS4-1",
-    "KXMIDTERMMOV-FLGOVR-P12",
+    "KXITFWMATCH-26NOV06NGUMAT-NGU",
     "KXPGATOUR-WOWTC26-NDUN",
+    "KXPRESNOMD-28-CHOL",
+    "KXPGATOUR-WOWTC26-MPAV",
+    "KXHOUSERACE-NC03-26-D",
     "KXNFLGAME-26NOV08NYGPHI-NYG",
-    "KXNCAAFSPREAD-26NOV05JMUUSM-JMU14",
+    "KXPRESNOMR-28-MR",
+    "KXWT20MATCH-26NOV060310SS-WMS-W-SS-W",
+    "KXITFWMATCH-26NOV06NGUMAT-MAT",
     "KXBLUEWAVECOMBO-27FEB",
-    "KXNCAAFSPREAD-26NOV05UTSAFAU-UTSA7",
-    "KXAAAGASD-26NOV06-4.0750",
+    "KXPRESNOMD-28-JOSS",
+    "KXITFWMATCH-26NOV06FITOKT-FIT",
+    "KXNBA-27-GSW",
+    "KXPGATOUR-WOWTC26-JKOI",
+    "KXWT20MATCH-26NOV060310SS-WMS-W-MS-W",
     "KXNFLTOTAL-26NOV08LARWAS-50",
     "KXNFLSPREAD-26NOV09BUFMIN-BUF5",
-    "KXNFLPASSYDS-26NOV05JACBAL-JACTLAWRENCE16-175",
-    "KXPGATOUR-WOWTC26-JKOI",
     "KXPRESNOMD-28-JTAL",
-    "KXPGATOUR-WOWTC26-ZBAU",
-    "KXPRESNOMR-28-MR",
-    "KXSB-27-CHI",
-    "KXCAWEALTHTAX-26",
-    "KXITFWMATCH-26NOV05SHICEN-CEN",
-    "KXNFLTOTAL-26NOV05JACBAL-46",
+    "KXPRESNOMD-28-EWAR",
     "KXEPLGAME-26NOV07NFOMCI-MCI",
-    "KXPGATOUR-WOWTC26-BKOH",
-    "KXNCAAFTOTAL-26NOV05JMUUSM-57",
-    "KXNCAAFGAME-26NOV07MIAND-MIA",
+    "KXPGATOUR-WOWTC26-ZBAU",
     "KXPGATOUR-WOWTC26-BGRI",
+    "KXNCAAFGAME-26NOV07MIAND-MIA",
+    "KXNBAGAME-26NOV06PHICLE-PHI",
     "KXFEDDECISION-26DEC-H25",
-    "KXNFLSPREAD-26NOV05JACBAL-JAC31",
+    "KXCAWEALTHTAX-26",
     "KXPGAR1LEAD-WOWTC26-CKIR",
-    "KXNFLSPREAD-26NOV05JACBAL-JAC6",
-    "HOUSEAZ2-26-R",
-    "KXPRESNOMD-28-PB",
-    "KXNFLRSHYDS-26NOV05JACBAL-BALDHENRY22-70",
+    "KXATPCHALLENGERMATCH-26NOV06MRVMAR-MRV",
     "KXALIENS-26DEC",
-    "KXNFLTD-26NOV05JACBAL-JACTHUNTER12-1",
+    "KXPRESNOMD-28-PB",
+    "KXSB-27-JAC",
+    "KXPGATOUR-WOWTC26-BKOH",
+    "KXTRUMPADMINLEAVE-26DEC31-MRUB",
     "KXPRESNOMD-28-AOC",
-    "KXNFLTD-26NOV05JACBAL-BALDHENRY22-3",
-    "KXNFLPASSTDS-26NOV05JACBAL-JACTLAWRENCE16-2",
-    "KXNCAAFTOTAL-26NOV05UTSAFAU-72",
-    "KXNBATOTAL-26NOV05ORLPHX-223",
     "KXNFLTOTAL-26NOV08LVSF-52",
-    "KXNFLTD-26NOV05JACBAL-JACBSTRANGE85-1",
-    "KXNFLSPREAD-26NOV05JACBAL-BAL2",
-    "KXMIDTERMMOV-MISEND-P4",
     "KXPRESPERSON-28-JOSS",
-    "KXPRESNOMD-28-WM",
-    "KXNCAAFTOTAL-26NOV05JMUUSM-60",
-    "KXNCAAMBGAME-26NOV05COOKTTU-COOK",
-    "KXSB-27-JAC"
+    "KXATPCHALLENGERMATCH-26NOV06MRVMAR-MAR",
+    "HOUSEAZ2-26-R",
+    "KXFEDDECISION-26DEC-H0",
+    "KXNFLGAME-26NOV08LVSF-LV",
+    "KXSB-27-CHI",
+    "KXNCAAFGAME-26NOV07MRMKWAKE-MRMK",
+    "KXPRESNOMR-28-TCAR",
+    "KXPGATOUR-WOWTC26-BJAM",
+    "KXWALLSTBONUS-27MAR31-T200000",
+    "KXNEXTTEAMNFL-26ARODGERS8-NONE",
+    "KXPGATOUR-WOWTC26-KHIR",
+    "KXPRESNOMD-28-RGAL",
+    "KXNCAAF-27-USC",
+    "KXPGATOUR-WOWTC26-MGRE",
+    "KXPRESNOMR-28-TSCO",
+    "KXHEGSETHOUT-26AUG-26DEC01",
+    "KXPRESNOMD-28-AELS",
+    "KXPGATOUR-WOWTC26-TCRO",
+    "KXITFWMATCH-26NOV06FITOKT-OKT",
+    "KXWTAMATCH-26NOV06TJEKUD-KUD",
+    "KXBTC50VS100-BTC-26DEC31",
+    "KXPRESNOMR-28-RDS",
+    "HOUSEME2-26-D",
+    "KXPRESPERSON-28-JVAN",
+    "KXPGATOUR-WOWTC26-CDAV",
+    "KXPRESPERSON-28-JKEN",
+    "KXNFLGAME-26NOV08CINATL-CIN",
+    "KXDSENATESEATSH-27-E56",
+    "HOUSEAZ2-26-D",
+    "KXATPMATCH-26NOV06SHEPAU-SHE",
+    "KXISRAELPM-26OCT27-GEIZ",
+    "KXISRAELPM-26OCT27-BNET",
+    "KXGOLFMAJOR-27-MPEN",
+    "KXNFLTOTAL-26NOV08LVSF-36",
+    "KXPGATOUR-WOWTC26-PMAL",
+    "KXLASTWORDMENTION-26NOV05-OIL",
+    "KXPRESNOMR-28-JKEN",
+    "KXPGATOUR-WOWTC26-CKIR",
+    "KXPRESNOMD-28-JBP",
+    "KXLOLGAME-26NOV061700T1KC-T1",
+    "KXLALIGAGAME-26NOV07VCFRMA-RMA",
+    "KXOMARCITIZENSHIP-27-IOMA",
+    "KXEPLGAME-26NOV06EVECOV-EVE",
+    "KXITFMATCH-26NOV06BAIJON-BAI",
+    "KXRT-FOC-85",
+    "KXPRESNOMD-28-GR",
+    "KXNFLNFCEAST-27-NYG",
+    "KXTRUMPADMINLEAVE-26DEC31-PHEG",
+    "KXPGATOUR-WOWTC26-BHOS",
+    "KXDPWORLDTOUR-ABDAC26-FLAP",
+    "KXDSENATESEATSH-27-E57",
+    "KXNCAAFGAME-26NOV07ALALSU-ALA",
+    "KXITFMATCH-26NOV06BAIJON-JON",
+    "KXPGATOUR-WOWTC26-LCLA"
   ],
   "events": {
-    "KXNFLGAME-26NOV05JACBAL-BAL": {
-      "title": "Jacksonville vs Baltimore",
-      "series_ticker": "KXNFLGAME",
-      "category": "Sports"
-    },
-    "KXNFLGAME-26NOV05JACBAL-JAC": {
-      "title": "Jacksonville vs Baltimore",
-      "series_ticker": "KXNFLGAME",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26NOV05JACBAL-JAC10": {
-      "title": "Jacksonville vs Baltimore: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXNCAAFGAME-26NOV05SCSTHOW-HOW": {
-      "title": "South Carolina St. vs Howard",
-      "series_ticker": "KXNCAAFGAME",
-      "category": "Sports"
-    },
-    "KXNCAAFGAME-26NOV05UTSAFAU-FAU": {
-      "title": "UTSA vs Florida Atlantic",
-      "series_ticker": "KXNCAAFGAME",
-      "category": "Sports"
-    },
     "SENATEMS-26-R": {
       "title": "Mississippi Senate winner?",
       "series_ticker": "SENATEMS",
       "category": "Elections"
-    },
-    "KXNBAGAME-26NOV05MIAGSW-GSW": {
-      "title": "Miami vs Golden State",
-      "series_ticker": "KXNBAGAME",
-      "category": "Sports"
-    },
-    "KXNCAAFGAME-26NOV05UTSAFAU-UTSA": {
-      "title": "UTSA vs Florida Atlantic",
-      "series_ticker": "KXNCAAFGAME",
-      "category": "Sports"
-    },
-    "KXNBAGAME-26NOV05MIAGSW-MIA": {
-      "title": "Miami vs Golden State",
-      "series_ticker": "KXNBAGAME",
-      "category": "Sports"
-    },
-    "KXNBAGAME-26NOV05ORLPHX-PHX": {
-      "title": "Orlando vs Phoenix",
-      "series_ticker": "KXNBAGAME",
-      "category": "Sports"
     },
     "SENATEAK-26-R": {
       "title": "Alaska Senate winner?",
       "series_ticker": "SENATEAK",
       "category": "Elections"
     },
-    "KXNBAGAME-26NOV05ORLPHX-ORL": {
-      "title": "Orlando vs Phoenix",
-      "series_ticker": "KXNBAGAME",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26NOV05JACBAL-JAC11": {
-      "title": "Jacksonville vs Baltimore: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXNFLTD-26NOV05JACBAL-BALDHENRY22-1": {
-      "title": "Jacksonville vs Baltimore: Touchdowns",
-      "series_ticker": "KXNFLTD",
-      "category": "Sports"
-    },
-    "KXNCAAFTOTAL-26NOV05JMUUSM-59": {
-      "title": "James Madison vs Southern Miss: Total Points",
-      "series_ticker": "KXNCAAFTOTAL",
-      "category": "Sports"
-    },
-    "KXNCAAFGAME-26NOV05JMUUSM-USM": {
-      "title": "James Madison vs Southern Miss",
-      "series_ticker": "KXNCAAFGAME",
-      "category": "Sports"
-    },
     "SENATEAK-26-D": {
       "title": "Alaska Senate winner?",
       "series_ticker": "SENATEAK",
       "category": "Elections"
     },
-    "KXNFLSPREAD-26NOV05JACBAL-JAC7": {
-      "title": "Jacksonville vs Baltimore: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXNCAAFGAME-26NOV05SCSTHOW-SCST": {
-      "title": "South Carolina St. vs Howard",
-      "series_ticker": "KXNCAAFGAME",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26NOV05JACBAL-JAC4": {
-      "title": "Jacksonville vs Baltimore: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
+    "KXBTC15M-26NOV060545-45": {
+      "title": "BTC 15 min · $76,077.49 target",
+      "series_ticker": "KXBTC15M",
+      "category": "Crypto"
     },
     "SENATEMS-26-D": {
       "title": "Mississippi Senate winner?",
       "series_ticker": "SENATEMS",
       "category": "Elections"
     },
-    "KXNCAAFTOTAL-26NOV05UTSAFAU-73": {
-      "title": "UTSA vs Florida Atlantic: Total Points",
-      "series_ticker": "KXNCAAFTOTAL",
-      "category": "Sports"
-    },
-    "KXNCAAFSPREAD-26NOV05UTSAFAU-UTSA8": {
-      "title": "UTSA vs Florida Atlantic: Spread",
-      "series_ticker": "KXNCAAFSPREAD",
+    "KXITFWMATCH-26NOV05OZXCHE-CHE": {
+      "title": "Oz vs Cherubini",
+      "series_ticker": "KXITFWMATCH",
       "category": "Sports"
     },
     "KXHOUSERACE-NC03-26-R": {
@@ -223,49 +138,9 @@
       "series_ticker": "KXHOUSERACE",
       "category": "Elections"
     },
-    "KXNFLSPREAD-26NOV05JACBAL-JAC14": {
-      "title": "Jacksonville vs Baltimore: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXITFWMATCH-26NOV05OZXCHE-CHE": {
-      "title": "Oz vs Cherubini",
-      "series_ticker": "KXITFWMATCH",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26NOV05JACBAL-JAC21": {
-      "title": "Jacksonville vs Baltimore: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26NOV05JACBAL-JAC15": {
-      "title": "Jacksonville vs Baltimore: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXNCAAFTOTAL-26NOV05JMUUSM-58": {
-      "title": "James Madison vs Southern Miss: Total Points",
-      "series_ticker": "KXNCAAFTOTAL",
-      "category": "Sports"
-    },
     "KXITFWMATCH-26NOV05OZXCHE-OZX": {
       "title": "Oz vs Cherubini",
       "series_ticker": "KXITFWMATCH",
-      "category": "Sports"
-    },
-    "KXNHLGAME-26NOV05NSHCOL-COL": {
-      "title": "Nashville vs Colorado",
-      "series_ticker": "KXNHLGAME",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26NOV05JACBAL-JAC18": {
-      "title": "Jacksonville vs Baltimore: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXNFLTD-26NOV05JACBAL-JACBTUTEN33-2": {
-      "title": "Jacksonville vs Baltimore: Touchdowns",
-      "series_ticker": "KXNFLTD",
       "category": "Sports"
     },
     "KXAKSENATE-26NOV03-DSUL": {
@@ -273,19 +148,29 @@
       "series_ticker": "KXAKSENATE",
       "category": "Elections"
     },
-    "KXNFLTD-26NOV05JACBAL-BALDHENRY22-2": {
-      "title": "Jacksonville vs Baltimore: Touchdowns",
-      "series_ticker": "KXNFLTD",
-      "category": "Sports"
-    },
     "KXSB-27-NYG": {
       "title": "2027 Pro Football Champion",
       "series_ticker": "KXSB",
       "category": "Sports"
     },
-    "KXNFLSPREAD-26NOV05JACBAL-JAC24": {
-      "title": "Jacksonville vs Baltimore: Spread",
-      "series_ticker": "KXNFLSPREAD",
+    "KXITFWMATCH-26NOV06NGUMAT-NGU": {
+      "title": "Nguyen Tan vs Matoula",
+      "series_ticker": "KXITFWMATCH",
+      "category": "Sports"
+    },
+    "KXPGATOUR-WOWTC26-NDUN": {
+      "title": "World Wide Technology Championship Winner",
+      "series_ticker": "KXPGATOUR",
+      "category": "Sports"
+    },
+    "KXPRESNOMD-28-CHOL": {
+      "title": "2028 Democratic presidential nominee",
+      "series_ticker": "KXPRESNOMD",
+      "category": "Elections"
+    },
+    "KXPGATOUR-WOWTC26-MPAV": {
+      "title": "World Wide Technology Championship Winner",
+      "series_ticker": "KXPGATOUR",
       "category": "Sports"
     },
     "KXHOUSERACE-NC03-26-D": {
@@ -293,104 +178,24 @@
       "series_ticker": "KXHOUSERACE",
       "category": "Elections"
     },
-    "KXITFWMATCH-26NOV05SWAYAO-YAO": {
-      "title": "Swan vs Yao",
-      "series_ticker": "KXITFWMATCH",
-      "category": "Sports"
-    },
-    "KXNFLTOTAL-26NOV05JACBAL-43": {
-      "title": "Jacksonville vs Baltimore: Total Points",
-      "series_ticker": "KXNFLTOTAL",
-      "category": "Sports"
-    },
-    "KXNCAAFGAME-26NOV05JMUUSM-JMU": {
-      "title": "James Madison vs Southern Miss",
-      "series_ticker": "KXNCAAFGAME",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26NOV05JACBAL-JAC8": {
-      "title": "Jacksonville vs Baltimore: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXNBASPREAD-26NOV05MIAGSW-GSW4": {
-      "title": "Miami vs Golden State: Spread",
-      "series_ticker": "KXNBASPREAD",
-      "category": "Sports"
-    },
-    "KXNHLGAME-26NOV05NSHCOL-NSH": {
-      "title": "Nashville vs Colorado",
-      "series_ticker": "KXNHLGAME",
-      "category": "Sports"
-    },
-    "KXPGATOUR-WOWTC26-MPAV": {
-      "title": "World Wide Technology Championship Winner",
-      "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
-    "KXNBASPREAD-26NOV05ORLPHX-PHX2": {
-      "title": "Orlando vs Phoenix: Spread",
-      "series_ticker": "KXNBASPREAD",
-      "category": "Sports"
-    },
-    "KXNCAAMBGAME-26NOV05CPARIZ-CP": {
-      "title": "Cal Poly vs Arizona",
-      "series_ticker": "KXNCAAMBGAME",
-      "category": "Sports"
-    },
-    "KXNFLTD-26NOV05JACBAL-JACTLAWRENCE16-1": {
-      "title": "Jacksonville vs Baltimore: Touchdowns",
-      "series_ticker": "KXNFLTD",
-      "category": "Sports"
-    },
-    "KXNFLTD-26NOV05JACBAL-JACJMEYERS3-1": {
-      "title": "Jacksonville vs Baltimore: Touchdowns",
-      "series_ticker": "KXNFLTD",
-      "category": "Sports"
-    },
-    "KXITFWMATCH-26NOV05ITOTSA-ITO": {
-      "title": "Ito vs Tsao",
-      "series_ticker": "KXITFWMATCH",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26NOV05JACBAL-JAC17": {
-      "title": "Jacksonville vs Baltimore: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26NOV05JACBAL-JAC28": {
-      "title": "Jacksonville vs Baltimore: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXPRESNOMD-28-JOSS": {
-      "title": "2028 Democratic presidential nominee",
-      "series_ticker": "KXPRESNOMD",
-      "category": "Elections"
-    },
-    "KXNFLTD-26NOV05JACBAL-BALZFLOWERS4-1": {
-      "title": "Jacksonville vs Baltimore: Touchdowns",
-      "series_ticker": "KXNFLTD",
-      "category": "Sports"
-    },
-    "KXMIDTERMMOV-FLGOVR-P12": {
-      "title": "Florida Governor margin of victory",
-      "series_ticker": "KXMIDTERMMOV",
-      "category": "Elections"
-    },
-    "KXPGATOUR-WOWTC26-NDUN": {
-      "title": "World Wide Technology Championship Winner",
-      "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
     "KXNFLGAME-26NOV08NYGPHI-NYG": {
       "title": "New York G vs Philadelphia",
       "series_ticker": "KXNFLGAME",
       "category": "Sports"
     },
-    "KXNCAAFSPREAD-26NOV05JMUUSM-JMU14": {
-      "title": "James Madison vs Southern Miss: Spread",
-      "series_ticker": "KXNCAAFSPREAD",
+    "KXPRESNOMR-28-MR": {
+      "title": "2028 Republican presidential nominee",
+      "series_ticker": "KXPRESNOMR",
+      "category": "Elections"
+    },
+    "KXWT20MATCH-26NOV060310SS-WMS-W-SS-W": {
+      "title": "Melbourne Stars Women vs Sydney Sixers Women",
+      "series_ticker": "KXWT20MATCH",
+      "category": "Sports"
+    },
+    "KXITFWMATCH-26NOV06NGUMAT-MAT": {
+      "title": "Nguyen Tan vs Matoula",
+      "series_ticker": "KXITFWMATCH",
       "category": "Sports"
     },
     "KXBLUEWAVECOMBO-27FEB": {
@@ -398,15 +203,30 @@
       "series_ticker": "KXBLUEWAVECOMBO",
       "category": "Politics"
     },
-    "KXNCAAFSPREAD-26NOV05UTSAFAU-UTSA7": {
-      "title": "UTSA vs Florida Atlantic: Spread",
-      "series_ticker": "KXNCAAFSPREAD",
+    "KXPRESNOMD-28-JOSS": {
+      "title": "2028 Democratic presidential nominee",
+      "series_ticker": "KXPRESNOMD",
+      "category": "Elections"
+    },
+    "KXITFWMATCH-26NOV06FITOKT-FIT": {
+      "title": "Fita Boluda vs Oktiabreva",
+      "series_ticker": "KXITFWMATCH",
       "category": "Sports"
     },
-    "KXAAAGASD-26NOV06-4.0750": {
-      "title": "US gas prices tomorrow",
-      "series_ticker": "KXAAAGASD",
-      "category": "Economics"
+    "KXNBA-27-GSW": {
+      "title": "2027 Pro Basketball Champion",
+      "series_ticker": "KXNBA",
+      "category": "Sports"
+    },
+    "KXPGATOUR-WOWTC26-JKOI": {
+      "title": "World Wide Technology Championship Winner",
+      "series_ticker": "KXPGATOUR",
+      "category": "Sports"
+    },
+    "KXWT20MATCH-26NOV060310SS-WMS-W-MS-W": {
+      "title": "Melbourne Stars Women vs Sydney Sixers Women",
+      "series_ticker": "KXWT20MATCH",
+      "category": "Sports"
     },
     "KXNFLTOTAL-26NOV08LARWAS-50": {
       "title": "Los Angeles R vs Washington: Total Points",
@@ -418,69 +238,24 @@
       "series_ticker": "KXNFLSPREAD",
       "category": "Sports"
     },
-    "KXNFLPASSYDS-26NOV05JACBAL-JACTLAWRENCE16-175": {
-      "title": "Jacksonville vs Baltimore: Passing Yards",
-      "series_ticker": "KXNFLPASSYDS",
-      "category": "Sports"
-    },
-    "KXPGATOUR-WOWTC26-JKOI": {
-      "title": "World Wide Technology Championship Winner",
-      "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
     "KXPRESNOMD-28-JTAL": {
       "title": "2028 Democratic presidential nominee",
       "series_ticker": "KXPRESNOMD",
       "category": "Elections"
     },
-    "KXPGATOUR-WOWTC26-ZBAU": {
-      "title": "World Wide Technology Championship Winner",
-      "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
-    "KXPRESNOMR-28-MR": {
-      "title": "2028 Republican presidential nominee",
-      "series_ticker": "KXPRESNOMR",
+    "KXPRESNOMD-28-EWAR": {
+      "title": "2028 Democratic presidential nominee",
+      "series_ticker": "KXPRESNOMD",
       "category": "Elections"
-    },
-    "KXSB-27-CHI": {
-      "title": "2027 Pro Football Champion",
-      "series_ticker": "KXSB",
-      "category": "Sports"
-    },
-    "KXCAWEALTHTAX-26": {
-      "title": "Will the California billionaire wealth tax pass?",
-      "series_ticker": "KXCAWEALTHTAX",
-      "category": "Elections"
-    },
-    "KXITFWMATCH-26NOV05SHICEN-CEN": {
-      "title": "Shi vs Cengiz",
-      "series_ticker": "KXITFWMATCH",
-      "category": "Sports"
-    },
-    "KXNFLTOTAL-26NOV05JACBAL-46": {
-      "title": "Jacksonville vs Baltimore: Total Points",
-      "series_ticker": "KXNFLTOTAL",
-      "category": "Sports"
     },
     "KXEPLGAME-26NOV07NFOMCI-MCI": {
       "title": "Nottingham Forest vs Manchester City",
       "series_ticker": "KXEPLGAME",
       "category": "Sports"
     },
-    "KXPGATOUR-WOWTC26-BKOH": {
+    "KXPGATOUR-WOWTC26-ZBAU": {
       "title": "World Wide Technology Championship Winner",
       "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
-    "KXNCAAFTOTAL-26NOV05JMUUSM-57": {
-      "title": "James Madison vs Southern Miss: Total Points",
-      "series_ticker": "KXNCAAFTOTAL",
-      "category": "Sports"
-    },
-    "KXNCAAFGAME-26NOV07MIAND-MIA": {
-      "title": "Miami (FL) vs Notre Dame",
-      "series_ticker": "KXNCAAFGAME",
       "category": "Sports"
     },
     "KXPGATOUR-WOWTC26-BGRI": {
@@ -488,39 +263,34 @@
       "series_ticker": "KXPGATOUR",
       "category": "Sports"
     },
+    "KXNCAAFGAME-26NOV07MIAND-MIA": {
+      "title": "Miami (FL) vs Notre Dame",
+      "series_ticker": "KXNCAAFGAME",
+      "category": "Sports"
+    },
+    "KXNBAGAME-26NOV06PHICLE-PHI": {
+      "title": "Philadelphia vs Cleveland",
+      "series_ticker": "KXNBAGAME",
+      "category": "Sports"
+    },
     "KXFEDDECISION-26DEC-H25": {
       "title": "Fed decision in Dec 2026?",
       "series_ticker": "KXFEDDECISION",
       "category": "Economics"
     },
-    "KXNFLSPREAD-26NOV05JACBAL-JAC31": {
-      "title": "Jacksonville vs Baltimore: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
+    "KXCAWEALTHTAX-26": {
+      "title": "Will the California billionaire wealth tax pass?",
+      "series_ticker": "KXCAWEALTHTAX",
+      "category": "Elections"
     },
     "KXPGAR1LEAD-WOWTC26-CKIR": {
       "title": "World Wide Technology Championship End of Round 1 Leader",
       "series_ticker": "KXPGAR1LEAD",
       "category": "Sports"
     },
-    "KXNFLSPREAD-26NOV05JACBAL-JAC6": {
-      "title": "Jacksonville vs Baltimore: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "HOUSEAZ2-26-R": {
-      "title": "AZ-02 House winner?",
-      "series_ticker": "HOUSEAZ2",
-      "category": "Elections"
-    },
-    "KXPRESNOMD-28-PB": {
-      "title": "2028 Democratic presidential nominee",
-      "series_ticker": "KXPRESNOMD",
-      "category": "Elections"
-    },
-    "KXNFLRSHYDS-26NOV05JACBAL-BALDHENRY22-70": {
-      "title": "Jacksonville vs Baltimore: Rushing Yards",
-      "series_ticker": "KXNFLRSHYDS",
+    "KXATPCHALLENGERMATCH-26NOV06MRVMAR-MRV": {
+      "title": "Maxim Mrva vs Matteo Martineau",
+      "series_ticker": "KXATPCHALLENGERMATCH",
       "category": "Sports"
     },
     "KXALIENS-26DEC": {
@@ -528,79 +298,309 @@
       "series_ticker": "KXALIENS",
       "category": "Science and Technology"
     },
-    "KXNFLTD-26NOV05JACBAL-JACTHUNTER12-1": {
-      "title": "Jacksonville vs Baltimore: Touchdowns",
-      "series_ticker": "KXNFLTD",
+    "KXPRESNOMD-28-PB": {
+      "title": "2028 Democratic presidential nominee",
+      "series_ticker": "KXPRESNOMD",
+      "category": "Elections"
+    },
+    "KXSB-27-JAC": {
+      "title": "2027 Pro Football Champion",
+      "series_ticker": "KXSB",
       "category": "Sports"
+    },
+    "KXPGATOUR-WOWTC26-BKOH": {
+      "title": "World Wide Technology Championship Winner",
+      "series_ticker": "KXPGATOUR",
+      "category": "Sports"
+    },
+    "KXTRUMPADMINLEAVE-26DEC31-MRUB": {
+      "title": "Who will leave their role in the Trump administration in 2026?",
+      "series_ticker": "KXTRUMPADMINLEAVE",
+      "category": "Politics"
     },
     "KXPRESNOMD-28-AOC": {
       "title": "2028 Democratic presidential nominee",
       "series_ticker": "KXPRESNOMD",
       "category": "Elections"
     },
-    "KXNFLTD-26NOV05JACBAL-BALDHENRY22-3": {
-      "title": "Jacksonville vs Baltimore: Touchdowns",
-      "series_ticker": "KXNFLTD",
-      "category": "Sports"
-    },
-    "KXNFLPASSTDS-26NOV05JACBAL-JACTLAWRENCE16-2": {
-      "title": "Jacksonville vs Baltimore: Passing Touchdowns",
-      "series_ticker": "KXNFLPASSTDS",
-      "category": "Sports"
-    },
-    "KXNCAAFTOTAL-26NOV05UTSAFAU-72": {
-      "title": "UTSA vs Florida Atlantic: Total Points",
-      "series_ticker": "KXNCAAFTOTAL",
-      "category": "Sports"
-    },
-    "KXNBATOTAL-26NOV05ORLPHX-223": {
-      "title": "Orlando vs Phoenix: Total Points",
-      "series_ticker": "KXNBATOTAL",
-      "category": "Sports"
-    },
     "KXNFLTOTAL-26NOV08LVSF-52": {
       "title": "Las Vegas vs San Francisco: Total Points",
       "series_ticker": "KXNFLTOTAL",
       "category": "Sports"
-    },
-    "KXNFLTD-26NOV05JACBAL-JACBSTRANGE85-1": {
-      "title": "Jacksonville vs Baltimore: Touchdowns",
-      "series_ticker": "KXNFLTD",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26NOV05JACBAL-BAL2": {
-      "title": "Jacksonville vs Baltimore: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXMIDTERMMOV-MISEND-P4": {
-      "title": "Michigan Senate margin of victory",
-      "series_ticker": "KXMIDTERMMOV",
-      "category": "Elections"
     },
     "KXPRESPERSON-28-JOSS": {
       "title": "2028 U.S. Presidential Election winner?",
       "series_ticker": "KXPRESPERSON",
       "category": "Elections"
     },
-    "KXPRESNOMD-28-WM": {
+    "KXATPCHALLENGERMATCH-26NOV06MRVMAR-MAR": {
+      "title": "Maxim Mrva vs Matteo Martineau",
+      "series_ticker": "KXATPCHALLENGERMATCH",
+      "category": "Sports"
+    },
+    "HOUSEAZ2-26-R": {
+      "title": "AZ-02 House winner?",
+      "series_ticker": "HOUSEAZ2",
+      "category": "Elections"
+    },
+    "KXFEDDECISION-26DEC-H0": {
+      "title": "Fed decision in Dec 2026?",
+      "series_ticker": "KXFEDDECISION",
+      "category": "Economics"
+    },
+    "KXNFLGAME-26NOV08LVSF-LV": {
+      "title": "Las Vegas vs San Francisco",
+      "series_ticker": "KXNFLGAME",
+      "category": "Sports"
+    },
+    "KXSB-27-CHI": {
+      "title": "2027 Pro Football Champion",
+      "series_ticker": "KXSB",
+      "category": "Sports"
+    },
+    "KXNCAAFGAME-26NOV07MRMKWAKE-MRMK": {
+      "title": "Merrimack vs Wake Forest",
+      "series_ticker": "KXNCAAFGAME",
+      "category": "Sports"
+    },
+    "KXPRESNOMR-28-TCAR": {
+      "title": "2028 Republican presidential nominee",
+      "series_ticker": "KXPRESNOMR",
+      "category": "Elections"
+    },
+    "KXPGATOUR-WOWTC26-BJAM": {
+      "title": "World Wide Technology Championship Winner",
+      "series_ticker": "KXPGATOUR",
+      "category": "Sports"
+    },
+    "KXWALLSTBONUS-27MAR31-T200000": {
+      "title": "Average Wall Street bonus in 2026",
+      "series_ticker": "KXWALLSTBONUS",
+      "category": "Economics"
+    },
+    "KXNEXTTEAMNFL-26ARODGERS8-NONE": {
+      "title": "Aaron Rodgers's Next Team",
+      "series_ticker": "KXNEXTTEAMNFL",
+      "category": "Sports"
+    },
+    "KXPGATOUR-WOWTC26-KHIR": {
+      "title": "World Wide Technology Championship Winner",
+      "series_ticker": "KXPGATOUR",
+      "category": "Sports"
+    },
+    "KXPRESNOMD-28-RGAL": {
       "title": "2028 Democratic presidential nominee",
       "series_ticker": "KXPRESNOMD",
       "category": "Elections"
     },
-    "KXNCAAFTOTAL-26NOV05JMUUSM-60": {
-      "title": "James Madison vs Southern Miss: Total Points",
-      "series_ticker": "KXNCAAFTOTAL",
+    "KXNCAAF-27-USC": {
+      "title": "College Football National Championship Winner",
+      "series_ticker": "KXNCAAF",
       "category": "Sports"
     },
-    "KXNCAAMBGAME-26NOV05COOKTTU-COOK": {
-      "title": "Bethune-Cookman vs Texas Tech",
-      "series_ticker": "KXNCAAMBGAME",
+    "KXPGATOUR-WOWTC26-MGRE": {
+      "title": "World Wide Technology Championship Winner",
+      "series_ticker": "KXPGATOUR",
       "category": "Sports"
     },
-    "KXSB-27-JAC": {
-      "title": "2027 Pro Football Champion",
-      "series_ticker": "KXSB",
+    "KXPRESNOMR-28-TSCO": {
+      "title": "2028 Republican presidential nominee",
+      "series_ticker": "KXPRESNOMR",
+      "category": "Elections"
+    },
+    "KXHEGSETHOUT-26AUG-26DEC01": {
+      "title": "Pete Hegseth out as Secretary of Defense?",
+      "series_ticker": "KXHEGSETHOUT",
+      "category": "Politics"
+    },
+    "KXPRESNOMD-28-AELS": {
+      "title": "2028 Democratic presidential nominee",
+      "series_ticker": "KXPRESNOMD",
+      "category": "Elections"
+    },
+    "KXPGATOUR-WOWTC26-TCRO": {
+      "title": "World Wide Technology Championship Winner",
+      "series_ticker": "KXPGATOUR",
+      "category": "Sports"
+    },
+    "KXITFWMATCH-26NOV06FITOKT-OKT": {
+      "title": "Fita Boluda vs Oktiabreva",
+      "series_ticker": "KXITFWMATCH",
+      "category": "Sports"
+    },
+    "KXWTAMATCH-26NOV06TJEKUD-KUD": {
+      "title": "Tjen vs Kudermetova",
+      "series_ticker": "KXWTAMATCH",
+      "category": "Sports"
+    },
+    "KXBTC50VS100-BTC-26DEC31": {
+      "title": "Will BTC hit $50,000 before $100,000?",
+      "series_ticker": "KXBTC50VS100",
+      "category": "Crypto"
+    },
+    "KXPRESNOMR-28-RDS": {
+      "title": "2028 Republican presidential nominee",
+      "series_ticker": "KXPRESNOMR",
+      "category": "Elections"
+    },
+    "HOUSEME2-26-D": {
+      "title": "ME-02 House winner?",
+      "series_ticker": "HOUSEME2",
+      "category": "Elections"
+    },
+    "KXPRESPERSON-28-JVAN": {
+      "title": "2028 U.S. Presidential Election winner?",
+      "series_ticker": "KXPRESPERSON",
+      "category": "Elections"
+    },
+    "KXPGATOUR-WOWTC26-CDAV": {
+      "title": "World Wide Technology Championship Winner",
+      "series_ticker": "KXPGATOUR",
+      "category": "Sports"
+    },
+    "KXPRESPERSON-28-JKEN": {
+      "title": "2028 U.S. Presidential Election winner?",
+      "series_ticker": "KXPRESPERSON",
+      "category": "Elections"
+    },
+    "KXNFLGAME-26NOV08CINATL-CIN": {
+      "title": "Cincinnati vs Atlanta",
+      "series_ticker": "KXNFLGAME",
+      "category": "Sports"
+    },
+    "KXDSENATESEATSH-27-E56": {
+      "title": "How many Senate seats will Democrats hold after the Midterms? (Higher strikes)",
+      "series_ticker": "KXDSENATESEATSH",
+      "category": "Elections"
+    },
+    "HOUSEAZ2-26-D": {
+      "title": "AZ-02 House winner?",
+      "series_ticker": "HOUSEAZ2",
+      "category": "Elections"
+    },
+    "KXATPMATCH-26NOV06SHEPAU-SHE": {
+      "title": "Shelton vs Paul",
+      "series_ticker": "KXATPMATCH",
+      "category": "Sports"
+    },
+    "KXISRAELPM-26OCT27-GEIZ": {
+      "title": "Prime Minister of Israel after the 2026 election?",
+      "series_ticker": "KXISRAELPM",
+      "category": "Elections"
+    },
+    "KXISRAELPM-26OCT27-BNET": {
+      "title": "Prime Minister of Israel after the 2026 election?",
+      "series_ticker": "KXISRAELPM",
+      "category": "Elections"
+    },
+    "KXGOLFMAJOR-27-MPEN": {
+      "title": "Golfers to win a PGA Tour Major in 2027 ",
+      "series_ticker": "KXGOLFMAJOR",
+      "category": "Sports"
+    },
+    "KXNFLTOTAL-26NOV08LVSF-36": {
+      "title": "Las Vegas vs San Francisco: Total Points",
+      "series_ticker": "KXNFLTOTAL",
+      "category": "Sports"
+    },
+    "KXPGATOUR-WOWTC26-PMAL": {
+      "title": "World Wide Technology Championship Winner",
+      "series_ticker": "KXPGATOUR",
+      "category": "Sports"
+    },
+    "KXLASTWORDMENTION-26NOV05-OIL": {
+      "title": "What will Chuck Schumer say during The Last Word with Lawrence O'Donnell?",
+      "series_ticker": "KXLASTWORDMENTION",
+      "category": "Mentions"
+    },
+    "KXPRESNOMR-28-JKEN": {
+      "title": "2028 Republican presidential nominee",
+      "series_ticker": "KXPRESNOMR",
+      "category": "Elections"
+    },
+    "KXPGATOUR-WOWTC26-CKIR": {
+      "title": "World Wide Technology Championship Winner",
+      "series_ticker": "KXPGATOUR",
+      "category": "Sports"
+    },
+    "KXPRESNOMD-28-JBP": {
+      "title": "2028 Democratic presidential nominee",
+      "series_ticker": "KXPRESNOMD",
+      "category": "Elections"
+    },
+    "KXLOLGAME-26NOV061700T1KC-T1": {
+      "title": "T1 vs. Karmine Corp",
+      "series_ticker": "KXLOLGAME",
+      "category": "Sports"
+    },
+    "KXLALIGAGAME-26NOV07VCFRMA-RMA": {
+      "title": "Valencia vs Real Madrid",
+      "series_ticker": "KXLALIGAGAME",
+      "category": "Sports"
+    },
+    "KXOMARCITIZENSHIP-27-IOMA": {
+      "title": "Will Ilhan Omar's citizenship be revoked in 2026?",
+      "series_ticker": "KXOMARCITIZENSHIP",
+      "category": "Politics"
+    },
+    "KXEPLGAME-26NOV06EVECOV-EVE": {
+      "title": "Everton vs Coventry",
+      "series_ticker": "KXEPLGAME",
+      "category": "Sports"
+    },
+    "KXITFMATCH-26NOV06BAIJON-BAI": {
+      "title": "Bailly vs Jones",
+      "series_ticker": "KXITFMATCH",
+      "category": "Sports"
+    },
+    "KXRT-FOC-85": {
+      "title": "Focker-In-Law · Rotten Tomatoes score",
+      "series_ticker": "KXRT",
+      "category": "Entertainment"
+    },
+    "KXPRESNOMD-28-GR": {
+      "title": "2028 Democratic presidential nominee",
+      "series_ticker": "KXPRESNOMD",
+      "category": "Elections"
+    },
+    "KXNFLNFCEAST-27-NYG": {
+      "title": "NFC East Division Winner",
+      "series_ticker": "KXNFLNFCEAST",
+      "category": "Sports"
+    },
+    "KXTRUMPADMINLEAVE-26DEC31-PHEG": {
+      "title": "Who will leave their role in the Trump administration in 2026?",
+      "series_ticker": "KXTRUMPADMINLEAVE",
+      "category": "Politics"
+    },
+    "KXPGATOUR-WOWTC26-BHOS": {
+      "title": "World Wide Technology Championship Winner",
+      "series_ticker": "KXPGATOUR",
+      "category": "Sports"
+    },
+    "KXDPWORLDTOUR-ABDAC26-FLAP": {
+      "title": "Abu Dhabi Aldar Championship Winner",
+      "series_ticker": "KXDPWORLDTOUR",
+      "category": "Sports"
+    },
+    "KXDSENATESEATSH-27-E57": {
+      "title": "How many Senate seats will Democrats hold after the Midterms? (Higher strikes)",
+      "series_ticker": "KXDSENATESEATSH",
+      "category": "Elections"
+    },
+    "KXNCAAFGAME-26NOV07ALALSU-ALA": {
+      "title": "Alabama vs LSU",
+      "series_ticker": "KXNCAAFGAME",
+      "category": "Sports"
+    },
+    "KXITFMATCH-26NOV06BAIJON-JON": {
+      "title": "Bailly vs Jones",
+      "series_ticker": "KXITFMATCH",
+      "category": "Sports"
+    },
+    "KXPGATOUR-WOWTC26-LCLA": {
+      "title": "World Wide Technology Championship Winner",
+      "series_ticker": "KXPGATOUR",
       "category": "Sports"
     }
   }
