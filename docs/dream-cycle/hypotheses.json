@@ -910,6 +910,15 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "pair.bothSidesFracNetPositive = 0.141 on n=156, below the n>=300 needed"
+      },
+      {
+        "date": "2026-11-06",
+        "ticks": 249,
+        "value": 0.141,
+        "n": 156,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "pair.bothSidesFracNetPositive = 0.141 on n=156, below the n>=300 needed"
       }
     ]
   },
@@ -945,6 +954,15 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "resolution.netCentsPer10 = 15.9 on n=35, below the n>=100 needed"
+      },
+      {
+        "date": "2026-11-06",
+        "ticks": 165,
+        "value": 14.5,
+        "n": 64,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "resolution.netCentsPer10 = 14.5 on n=64, below the n>=100 needed"
       }
     ]
   },
@@ -969,6 +987,38 @@
     "baseline": {
       "value": -3.132,
       "n": 23407
+    },
+    "status": "REFUTED",
+    "retests": [
+      {
+        "date": "2026-11-06",
+        "ticks": 87,
+        "value": -2.911,
+        "n": 1499,
+        "verdict": "REFUTED",
+        "by": "code",
+        "note": "maker.netCentsPerAttempt = -2.911 vs > 0 on n=1499"
+      }
+    ],
+    "settledOn": "2026-11-06"
+  },
+  {
+    "id": "2026-11-06",
+    "date": "2026-11-06",
+    "deep": "cross-venue-divergence",
+    "issue": "#33",
+    "text": "Given the matched 2026 House Republican-control pair, when evaluating simultaneous purchases of YES on both venues at recorded asks, then `pair.bothSidesFracNetPositive` should be **> 0.10** vs the recorded **0.14**, subject to identical YES resolution rules and per-order taker fees, including Kalshi’s cent rounding on a roughly $10 order.",
+    "spec": {
+      "metric": "pair.bothSidesFracNetPositive",
+      "pair": "house-2026-republican",
+      "op": ">",
+      "threshold": 0.1,
+      "minN": 300
+    },
+    "frozenAt": "2026-11-06T16:15Z",
+    "baseline": {
+      "value": 0.14,
+      "n": 2120
     },
     "status": "open",
     "retests": []
