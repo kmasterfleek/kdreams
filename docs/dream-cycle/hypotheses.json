@@ -919,6 +919,15 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "pair.bothSidesFracNetPositive = 0.141 on n=156, below the n>=300 needed"
+      },
+      {
+        "date": "2026-11-07",
+        "ticks": 336,
+        "value": 0.141,
+        "n": 156,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "pair.bothSidesFracNetPositive = 0.141 on n=156, below the n>=300 needed"
       }
     ]
   },
@@ -944,7 +953,7 @@
       "value": 7.3,
       "n": 735
     },
-    "status": "open",
+    "status": "REFUTED",
     "retests": [
       {
         "date": "2026-11-05",
@@ -963,8 +972,18 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "resolution.netCentsPer10 = 14.5 on n=64, below the n>=100 needed"
+      },
+      {
+        "date": "2026-11-07",
+        "ticks": 252,
+        "value": -3.7,
+        "n": 108,
+        "verdict": "REFUTED",
+        "by": "code",
+        "note": "resolution.netCentsPer10 = -3.7 vs > 1 on n=108"
       }
-    ]
+    ],
+    "settledOn": "2026-11-07"
   },
   {
     "id": "2026-11-05",
@@ -1019,6 +1038,43 @@
     "baseline": {
       "value": 0.14,
       "n": 2120
+    },
+    "status": "open",
+    "retests": [
+      {
+        "date": "2026-11-07",
+        "ticks": 87,
+        "value": null,
+        "n": 0,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "pair.bothSidesFracNetPositive not measurable on post-freeze data (n=0)"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-07",
+    "date": "2026-11-07",
+    "deep": "liquidity-by-hour",
+    "issue": "#34",
+    "text": "Given Polymarket markets observed during 12h–13h UTC, when modeling a one-tick maker entry and exit, then maker.netCentsPerAttempt should be > 0c vs the all-hour baseline of -1.187c per attempt, subject to the invariant that marks and maker fees remain included.",
+    "spec": {
+      "metric": "maker.netCentsPerAttempt",
+      "venue": "pm",
+      "slice": {
+        "hoursUtc": [
+          12,
+          13
+        ]
+      },
+      "op": ">",
+      "threshold": 0,
+      "minN": 300
+    },
+    "frozenAt": "2026-11-07T15:15Z",
+    "baseline": {
+      "value": -0.842,
+      "n": 3825
     },
     "status": "open",
     "retests": []
