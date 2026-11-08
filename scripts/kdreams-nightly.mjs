@@ -89,14 +89,34 @@ export function extractSpec(text) {
 }
 
 /** The spec contract the model must follow, built from the live metric catalog and pair names. */
-export function specInstructions(pairs = []) {
+export function specInstructions(pairs = [], retired = []) {
   const metrics = Object.entries(SPEC_METRICS).map(([k, d]) => `  - ${k} (${d.kind === 'venue' ? 'needs "venue": "pm"|"ks"' : 'needs "pair"'}; n = ${d.n}): ${d.unit}`).join('\n');
   return `Metrics a spec may name (nothing else is measured):\n${metrics}\n` +
     `Configured pair names: ${pairs.map((p) => p.name).join(', ') || 'none'}.\n` +
+    (retired.length ? `Retired pairs (settled or no longer quoted; a spec naming one is rejected): ${retired.map((p) => p.name).join(', ')}.\n` : '') +
     `Optional "slice": {"hoursUtc": [from, to] (whole UTC hours, from <= hour < to, wraps past midnight), "midMin": 0..1, "midMax": 0..1}. Maker slices apply at order entry.\n` +
     `resolution.* metrics slice instead on "priceMin"/"priceMax" (0.5..1, entry price of the favored side bought, min <= p < max) and "hoursToClose": [min, max) hours before the scheduled close, plus hoursUtc; they never take midMin/midMax.\n` +
     `Required: "op": ">" or "<", numeric "threshold". Optional "minN": the sample the metric needs before it is graded (a floor still applies).\n` +
     `The spec must say exactly what the Hypothesis sentence says; anything the catalog cannot express (volume tiers, cadence, depth beyond the touch, queue position) belongs in Next observation, not in the hypothesis.`;
+}
+
+/** Why a spec names a retired pair, or null. `retired` is computeReport's retiredPairs. */
+export function deadPairReason(spec, retired = []) {
+  const dead = spec?.pair ? retired.find((p) => p.name === spec.pair) : null;
+  return dead ? `pair ${dead.name} can produce no new evidence (${dead.reason})` : null;
+}
+
+/**
+ * A hypothesis on a pair that died before its sample filled can never be graded: turn its
+ * INCONCLUSIVE grade into UNGRADEABLE so it settles instead of waiting out the window.
+ * SUPPORTED and REFUTED grades stand: post-freeze data recorded before the pair died still counts.
+ */
+export function settleDeadPairGrades(grades, hyps, retired = []) {
+  return grades.map((gr) => {
+    if (gr.verdict !== 'INCONCLUSIVE') return gr;
+    const why = deadPairReason(hyps.find((h) => h.id === gr.id)?.spec, retired);
+    return why ? { ...gr, verdict: 'UNGRADEABLE', by: 'rule', note: cell(`${why}; ${gr.note}`) } : gr;
+  });
 }
 
 /** Specs that predict money made after fees: the only kind allowed to already hold before the freeze. */
@@ -186,7 +206,7 @@ async function research(ctx, ev, history = [], rules = '', retry = '') {
     (history.length
       ? `EARLIER HYPOTHESES (graded by code on snapshots recorded after each was frozen; do not re-propose a REFUTED one unchanged):\n${history.join('\n')}\n${scorecard(ctx.hyps || [])}\n\n`
       : '') +
-    `HYPOTHESIS SPEC CONTRACT:\n${specInstructions(ev.watchlist.pairs)}\n${rules}\n\n` +
+    `HYPOTHESIS SPEC CONTRACT:\n${specInstructions(ev.livePairs, ev.retired)}\n${rules}\n\n` +
     (retry ? `${retry}\n\n` : '') +
     `Produce, in under 450 words, with these exact headings:\n` +
     `## Observations — 2-4 bullets about "${ctx.deep}", each citing a number from EVIDENCE.\n` +
@@ -278,7 +298,9 @@ async function main() {
   const settled = { resolutions: loadResolutions(ev.dataDir), catalogs: loadCatalogs(ev.dataDir) };
   const after = (t) => allRows.filter((x) => x.t > t);
   const ticksAfter = (t) => new Set(after(t).map((x) => x.t)).size;
-  const grades = [];
+  let grades = [];
+  const retired = ev.report.retiredPairs || [];
+  const livePairs = (ev.watchlist.pairs || []).filter((p) => !retired.some((x) => x.name === p.name));
   for (const h of hyps.filter((x) => x.status === 'open' && x.date !== ctx.date)) {
     const why = validateSpec(h.spec, ev.watchlist.pairs);
     if (why) grades.push({ id: h.id, verdict: 'UNGRADEABLE', note: cell(h.specNote || why), by: 'rule' });
@@ -292,6 +314,7 @@ async function main() {
   }
   for (const { h, ticks } of plan.tooSoon) grades.push({ id: h.id, ticks, verdict: 'INCONCLUSIVE', note: `only ${ticks} post-freeze ticks (< ${minTicks})`, by: 'rule' });
   for (const h of plan.expired) grades.push({ id: h.id, verdict: 'EXPIRED', note: `frozen before the ${ev.days}-day window without a grade`, by: 'rule' });
+  grades = settleDeadPairGrades(grades, hyps, retired);
   console.log(`Grades: ${grades.map((x) => `${x.id} ${x.verdict}`).join(', ') || 'none'}`);
 
   // What the model sees of the past: tonight's grades plus the most recent settled hypotheses.
@@ -308,10 +331,11 @@ async function main() {
   const rules = `A spec that the pre-freeze data already satisfies is rejected unless it predicts profit (resolution.netCentsPer10 or maker.netCentsPerAttempt > a threshold >= 0, or pair.bothSidesFracNetPositive > a threshold > 0); a non-profit prediction must claim a change from the recorded value.` +
     (requireProfit ? ` The previous hypothesis (${prev.id}) did not predict profit, so TONIGHT'S SPEC MUST be a profit prediction: choose the metric family whose EVIDENCE is closest to net positive per $10, find the slice where it is most plausible, and say why.` : '');
   ctx.hyps = hyps;
+  ev.livePairs = livePairs; ev.retired = retired;
   const freeze = (res) => {
     if (!res.hypothesis) return null;
     const spec = extractSpec(res.content);
-    const invalid = validateSpec(spec, ev.watchlist.pairs);
+    const invalid = deadPairReason(spec, retired) || validateSpec(spec, livePairs);
     const baseline = invalid ? null : measureSpecRows(allRows, spec, ev.watchlist, settled);
     const specError = invalid || specRejection(spec, baseline, { requireProfit });
     return { id: ctx.date, date: ctx.date, deep: ctx.deep, issue: 'LOCAL', text: res.hypothesis, spec, frozenAt: g.lastTick,

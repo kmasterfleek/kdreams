@@ -5,10 +5,10 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { bestOfBook, mapPolymarket, mapKalshi, isPlainBinary, round, pmResolution, ksResolution, resolutionCandidates } from './kdreams-collect.mjs';
 import {
-  parseRows, groupSeries, spreadStats, makerSpreadProxy, sumProxies, crossVenue, byBucket, candidates, feeTable, quantile, corr, medianGapMinutes, mid, sliceFilter, parseResolutions, holdToResolution,
+  parseRows, groupSeries, spreadStats, makerSpreadProxy, sumProxies, crossVenue, byBucket, candidates, feeTable, quantile, corr, medianGapMinutes, mid, sliceFilter, parseResolutions, holdToResolution, pairStatus,
 } from './lib/kdreams-metrics.mjs';
 import { computeReport, renderSummary, renderMarkdown, validateSpec, measureSpecRows, gradeSpec, describeSpec, pairFees } from './kdreams-backtest.mjs';
-import { priorNightFates, reasoningFor, extractHypothesis, extractSpec, specInstructions, planRetests, fatesSummary, cell, isProfitSpec, specRejection, scorecard } from './kdreams-nightly.mjs';
+import { priorNightFates, reasoningFor, extractHypothesis, extractSpec, specInstructions, planRetests, fatesSummary, cell, isProfitSpec, specRejection, scorecard, deadPairReason, settleDeadPairGrades } from './kdreams-nightly.mjs';
 
 test('nightly: importing the module never runs the pipeline, and helpers behave', () => {
   // Importing above must not have filed anything or touched the ledger: the guard is the test.
@@ -329,4 +329,47 @@ test('specs: resolution metrics validate their own slice keys and count as profi
   // A profit prediction may already hold before the freeze: persistence is the claim.
   assert.equal(specRejection(r, { value: 15, n: 80 }), null);
   assert.match(specInstructions([]), /hoursToClose/);
+});
+
+test('pairs: a retired, settled or silent pair leaves the report and settles its open hypotheses', () => {
+  const live = { name: 'p1', polymarketId: 'c1', kalshiTicker: 'KX-1' };
+  const rows = [];
+  for (let i = 0; i < 10; i++) { rows.push(pm(i, 0.5, 0.51)); rows.push(ks(i, 0.5, 0.51)); }
+  const series = groupSeries(rows);
+  const last = T(9);
+  assert.equal(pairStatus(live, series, new Map(), { lastTick: last }), null);
+  assert.match(pairStatus({ ...live, retired: 'settled 11-04' }, series, new Map(), { lastTick: last }), /retired in the watchlist: settled 11-04/);
+  const settled = new Map([['pm:c1', { v: 'pm', id: 'c1', y: 1, at: T(5) }]]);
+  assert.match(pairStatus(live, series, settled, { lastTick: last }), /Polymarket leg settled at/);
+  assert.match(pairStatus({ ...live, kalshiTicker: 'KX-GONE' }, series, new Map(), { lastTick: last }), /Kalshi leg has no two-sided quote in the window/);
+  // Kalshi keeps emitting bid 0 / ask 1 rows after settlement; those are not quotes.
+  const quiet = [...rows.filter((r) => r.v === 'pm'), ks(0, 0.5, 0.51), ...[1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => ks(i, 0, 1))];
+  assert.match(pairStatus(live, groupSeries(quiet), new Map(), { lastTick: last, staleHours: 1 }), /Kalshi leg has no two-sided quote since 2026-10-14T10:00Z/);
+  assert.equal(pairStatus(live, groupSeries(quiet), new Map(), { lastTick: last, staleHours: 24 }), null);
+  assert.equal(pairStatus(live, new Map(), new Map(), {}), null);
+
+  const dir = mkdtempSync(join(tmpdir(), 'kdreams-pairs-'));
+  mkdirSync(join(dir, 'snapshots'));
+  writeFileSync(join(dir, 'snapshots', '2026-10-14.ndjson'), rows.map((r) => JSON.stringify(r)).join('\n') + '\n');
+  const r = computeReport({ dataDir: dir, watchlist: { pairs: [{ ...live, retired: 'settled' }, { ...live, name: 'p2' }], fees: {} }, days: 14 });
+  assert.deepEqual(r.crossVenue.map((p) => p.name), ['p2']);
+  assert.deepEqual(r.retiredPairs.map((p) => p.name), ['p1']);
+  assert.match(renderSummary(r), /Retired pairs \(no new evidence possible[^)]*\): p1 — retired in the watchlist: settled/);
+  const none = computeReport({ dataDir: dir, watchlist: { pairs: [{ ...live, retired: 'settled' }], fees: {} }, days: 14 });
+  assert.match(renderSummary(none), /no live pairs/);
+
+  const retired = [{ name: 'p1', reason: 'Polymarket leg settled at 2026-11-04T09:57Z' }];
+  const onDead = { metric: 'pair.bothSidesFracNetPositive', pair: 'p1', op: '>', threshold: 0.1 };
+  assert.match(deadPairReason(onDead, retired), /pair p1 can produce no new evidence \(Polymarket leg settled/);
+  assert.equal(deadPairReason({ ...onDead, pair: 'p2' }, retired), null);
+  assert.equal(deadPairReason({ metric: 'maker.fillRate', venue: 'pm' }, retired), null);
+  assert.match(specInstructions([{ name: 'p2' }], retired), /Configured pair names: p2\.\nRetired pairs[^\n]*: p1\./);
+  const hyps = [{ id: 'a', spec: onDead }, { id: 'b', spec: onDead }, { id: 'c', spec: { ...onDead, pair: 'p2' } }];
+  const out = settleDeadPairGrades([
+    { id: 'a', verdict: 'INCONCLUSIVE', note: 'n=0', by: 'code' },
+    { id: 'b', verdict: 'REFUTED', note: 'x', by: 'code' },
+    { id: 'c', verdict: 'INCONCLUSIVE', note: 'n=5', by: 'code' },
+  ], hyps, retired);
+  assert.deepEqual(out.map((g) => `${g.id} ${g.verdict} ${g.by}`), ['a UNGRADEABLE rule', 'b REFUTED code', 'c INCONCLUSIVE code']);
+  assert.match(out[0].note, /^pair p1 can produce no new evidence .*; n=0$/);
 });

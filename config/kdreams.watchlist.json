@@ -1,11 +1,9 @@
 {
-  "$comment": "kdreams observation watchlist. Observe-only: nothing in this repo places orders. pairs[] maps the same real-world event across venues; polymarketId is the Gamma conditionId, kalshiTicker is the Kalshi market ticker; a pair's polymarketTakerRate overrides fees.polymarketTakerRate because Polymarket sets taker rates per market. Fee rates are published venue schedules as of 2026-10 and must be re-verified before any edge claim. backtest.horizonMinutes bounds the maker proxy in wall-clock time (snapshots are irregular); retestMinTicks is how many post-freeze ticks a frozen hypothesis needs before it is graded; retestMinN is the smallest sample a spec metric may be graded on.",
+  "$comment": "kdreams observation watchlist. Observe-only: nothing in this repo places orders. pairs[] maps the same real-world event across venues; polymarketId is the Gamma conditionId, kalshiTicker is the Kalshi market ticker; a pair's polymarketTakerRate overrides fees.polymarketTakerRate because Polymarket sets taker rates per market. Fee rates are published venue schedules as of 2026-10 and must be re-verified before any edge claim. backtest.horizonMinutes bounds the maker proxy in wall-clock time (snapshots are irregular); retestMinTicks is how many post-freeze ticks a frozen hypothesis needs before it is graded; retestMinN is the smallest sample a spec metric may be graded on. A pair with a retired reason, a settled leg, or a leg with no two-sided quote for backtest.pairStaleHours (default 24) is dropped from the report and from what hypotheses may name; keep retired pairs listed so earlier specs still resolve.",
   "polymarket": {
     "topByVolume24h": 100,
     "bookDepthTop": 100,
     "extraSlugs": [
-      "will-the-republican-party-control-the-house-after-the-2026-midterm-elections",
-      "will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
       "will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
       "will-there-be-no-change-in-fed-interest-rates-after-the-december-2026-meeting-20260729232808635"
     ]
@@ -14,8 +12,6 @@
     "topByVolume24h": 100,
     "rescanEveryMinutes": 360,
     "extraTickers": [
-      "CONTROLH-2026-R",
-      "CONTROLH-2026-D",
       "KXFEDDECISION-26DEC-H25",
       "KXFEDDECISION-26DEC-H0"
     ]
@@ -25,13 +21,15 @@
       "name": "house-2026-republican",
       "polymarketId": "0x4e4f77e7dbf4cab666e9a1943674d7ae66348e862df03ea6f44b11eb95731928",
       "kalshiTicker": "CONTROLH-2026-R",
-      "note": "Same outcome (Republican House control after the 2026 midterms). Resolution timing differs: Polymarket endDate 2026-11-04, Kalshi close 2027-02-01. Check both rule texts before any edge claim."
+      "note": "Same outcome (Republican House control after the 2026 midterms). Resolution timing differs: Polymarket endDate 2026-11-04, Kalshi close 2027-02-01. Check both rule texts before any edge claim.",
+      "retired": "2026-11-04: both legs settled (Kalshi 05:02Z, Polymarket 09:57Z; Democrats won the House). Kept so earlier hypotheses still resolve; dropped from the collector extras."
     },
     {
       "name": "house-2026-democratic",
       "polymarketId": "0xd5d9fc47718bd553592d126b1fa5e87183d27f3936975b0c04cc0f2dec1f1bb4",
       "kalshiTicker": "CONTROLH-2026-D",
-      "note": "Mirror of house-2026-republican."
+      "note": "Mirror of house-2026-republican.",
+      "retired": "2026-11-04: both legs settled (Kalshi 05:02Z, Polymarket 13:06Z). Kept so earlier hypotheses still resolve; dropped from the collector extras."
     },
     {
       "name": "fed-2026-12-hike25",
@@ -60,6 +58,7 @@
     "horizonMinutes": 60,
     "retestMinTicks": 48,
     "retestMaxOpen": 5,
-    "retestMinN": 100
+    "retestMinN": 100,
+    "pairStaleHours": 24
   }
 }
