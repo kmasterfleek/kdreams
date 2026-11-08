@@ -928,6 +928,15 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "pair.bothSidesFracNetPositive = 0.141 on n=156, below the n>=300 needed"
+      },
+      {
+        "date": "2026-11-08",
+        "ticks": 432,
+        "value": 0.141,
+        "n": 156,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "pair.bothSidesFracNetPositive = 0.141 on n=156, below the n>=300 needed"
       }
     ]
   },
@@ -1049,6 +1058,15 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "pair.bothSidesFracNetPositive not measurable on post-freeze data (n=0)"
+      },
+      {
+        "date": "2026-11-08",
+        "ticks": 183,
+        "value": null,
+        "n": 0,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "pair.bothSidesFracNetPositive not measurable on post-freeze data (n=0)"
       }
     ]
   },
@@ -1075,6 +1093,38 @@
     "baseline": {
       "value": -0.842,
       "n": 3825
+    },
+    "status": "REFUTED",
+    "retests": [
+      {
+        "date": "2026-11-08",
+        "ticks": 96,
+        "value": -2.687,
+        "n": 308,
+        "verdict": "REFUTED",
+        "by": "code",
+        "note": "maker.netCentsPerAttempt = -2.687 vs > 0 on n=308"
+      }
+    ],
+    "settledOn": "2026-11-08"
+  },
+  {
+    "id": "2026-11-08",
+    "date": "2026-11-08",
+    "deep": "lead-lag",
+    "issue": "#35",
+    "text": "Given the configured Republican House pair, when checking both sides at the recorded touches, then pair.bothSidesFracNetPositive should be > 0.1 vs the recorded 0.16, subject to taker fees and per-order rounding; a positive check does not establish executable profit on about $10.",
+    "spec": {
+      "metric": "pair.bothSidesFracNetPositive",
+      "pair": "house-2026-republican",
+      "op": ">",
+      "threshold": 0.1,
+      "minN": 300
+    },
+    "frozenAt": "2026-11-08T15:30Z",
+    "baseline": {
+      "value": 0.16,
+      "n": 1736
     },
     "status": "open",
     "retests": []
