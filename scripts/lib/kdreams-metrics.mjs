@@ -241,6 +241,30 @@ export function crossVenue(pmSeries, ksSeries, fees = {}) {
   };
 }
 
+/**
+ * Why a cross-venue pair can no longer produce new evidence, or null while both legs are live.
+ * A pair is dead when the watchlist retires it, when either leg has settled, or when either leg
+ * has shown no real two-sided quote for `staleHours` before `lastTick` (a market that closed
+ * without a recorded resolution, or that the collector stopped returning).
+ */
+export function pairStatus(pair, seriesMap, resolutions = new Map(), { lastTick = null, staleHours = 24 } = {}) {
+  if (pair.retired) return `retired in the watchlist: ${pair.retired}`;
+  const legs = [['pm', pair.polymarketId, 'Polymarket'], ['ks', pair.kalshiTicker, 'Kalshi']];
+  for (const [v, id, name] of legs) {
+    const res = resolutions.get(`${v}:${id}`);
+    if (res) return `${name} leg settled at ${res.at}`;
+  }
+  if (!lastTick) return null;
+  for (const [v, id, name] of legs) {
+    const series = seriesMap.get(`${v}:${id}`) || [];
+    let lastQuoted = null;
+    for (let i = series.length - 1; i >= 0 && !lastQuoted; i--) if (twoSided(series[i])) lastQuoted = series[i].t;
+    if (!lastQuoted) return `${name} leg has no two-sided quote in the window`;
+    if (minutesBetween(lastQuoted, lastTick) > staleHours * 60) return `${name} leg has no two-sided quote since ${lastQuoted}`;
+  }
+  return null;
+}
+
 /** Spread by UTC hour (0-23) and weekday (0=Sun) for a flat list of rows. */
 export function byBucket(rows, which = 'hour') {
   const buckets = new Map();

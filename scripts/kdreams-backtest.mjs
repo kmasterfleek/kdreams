@@ -13,7 +13,7 @@ import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import {
   parseRows, groupSeries, spreadStats, makerSpreadProxy, sumProxies, crossVenue, byBucket, candidates, feeTable, mid, round, medianGapMinutes, sliceFilter,
-  parseResolutions, holdToResolution,
+  parseResolutions, holdToResolution, pairStatus,
 } from './lib/kdreams-metrics.mjs';
 
 function loadJson(path, fallback) {
@@ -61,12 +61,21 @@ export function computeReport({ dataDir = 'data', watchlist = {}, days = 14, sin
     proxy[v].push(makerSpreadProxy(s, { horizon, horizonMinutes, tick: 0.01, makerFeeRate: v === 'pm' ? (fees.polymarketMakerRate ?? 0) : (fees.kalshiMakerRate ?? 0.0175) }));
   }
 
-  const pairs = (watchlist.pairs || []).map((p) => {
+  const lastT = ticks[ticks.length - 1];
+  // A pair whose legs settled or went quiet cannot produce new evidence: it leaves the report and the
+  // model's menu, and is listed with the reason instead.
+  const staleHours = watchlist.backtest?.pairStaleHours ?? 24;
+  const retiredPairs = [], livePairs = [];
+  for (const p of watchlist.pairs || []) {
+    const reason = pairStatus(p, series, resolutions, { lastTick: lastT, staleHours });
+    if (reason) retiredPairs.push({ name: p.name, polymarketId: p.polymarketId, kalshiTicker: p.kalshiTicker, reason });
+    else livePairs.push(p);
+  }
+  const pairs = livePairs.map((p) => {
     const pm = series.get(`pm:${p.polymarketId}`) || [], ks = series.get(`ks:${p.kalshiTicker}`) || [];
     return { ...p, pmTitle: catalogs.pm[p.polymarketId]?.title || null, ksTitle: catalogs.ks[p.kalshiTicker]?.title || null, ...crossVenue(pm, ks, pairFees(fees, p)) };
   });
 
-  const lastT = ticks[ticks.length - 1];
   const topMarkets = (v) => rows.filter((r) => r.v === v && r.t === lastT)
     .sort((x, y) => (y.v24 || 0) - (x.v24 || 0)).slice(0, 30)
     .map((r) => ({ id: r.id, title: catalogs[v][r.id]?.title || r.id, mid: round(mid(r), 3), spreadCents: r.a !== null && r.b !== null ? round((r.a - r.b) * 100) : null, v24: round(r.v24) }));
@@ -77,6 +86,7 @@ export function computeReport({ dataDir = 'data', watchlist = {}, days = 14, sin
     spread: { pm: spreadStats(pmRows), ks: spreadStats(ksRows) },
     makerSpreadProxy: { horizonTicks: horizon, horizonMinutes, pm: sumProxies(proxy.pm), ks: sumProxies(proxy.ks) },
     crossVenue: pairs,
+    retiredPairs,
     byHour: { pm: byBucket(pmRows, 'hour'), ks: byBucket(ksRows, 'hour') },
     byWeekday: { pm: byBucket(pmRows, 'weekday'), ks: byBucket(ksRows, 'weekday') },
     candidates: candidates(series, catalogs, { top: 10 }),
@@ -207,10 +217,11 @@ export function renderSummary(r) {
     L.push(`${name} spread: median ${num(s.medianCents)}c (p25 ${num(s.p25Cents)}, p75 ${num(s.p75Cents)}), one-tick ${pct(s.fracOneCent)} of ${s.twoSided} two-sided rows; touch median bid ${num(s.medianBidSize)} / ask ${num(s.medianAskSize)}.`);
     L.push(`${name} maker proxy (${h} horizon): ${m.attempts} attempts (${m.unobserved ?? 0} unobservable: no later snapshot inside the horizon), fill ${pct(m.fillRate)}, round-trip ${pct(m.roundTripRate)}, net ${num(m.netCents)}c total = ${num(m.netCentsPerAttempt)}c/attempt (gross ${num(m.grossCents)}, fees ${num(m.feeCents)}, mark ${num(m.mtmCents)}).`);
   }
-  if (r.crossVenue.length === 0) L.push('Cross-venue: no pairs configured in config/kdreams.watchlist.json yet.');
+  if (r.crossVenue.length === 0) L.push(r.retiredPairs?.length ? 'Cross-venue: no live pairs; every configured pair is retired (below).' : 'Cross-venue: no pairs configured in config/kdreams.watchlist.json yet.');
   for (const p of r.crossVenue) {
     L.push(`Pair ${p.kalshiTicker} vs ${p.polymarketId.slice(0, 10)}: n=${p.n}, mean |diff| ${num(p.meanAbsCents)}c, max ${num(p.maxAbsCents)}c, >2c ${pct(p.fracAbsGt2c)}; both-sides net-positive ${pct(p.bothSides.fracNetPositive)} (max ${num(p.bothSides.maxNetCents)}c); leads: ${p.leads || 'n/a'} (lag ${p.bestLag?.lag ?? 'n/a'}, r=${num(p.bestLag?.corr)}).`);
   }
+  if (r.retiredPairs?.length) L.push(`Retired pairs (no new evidence possible, not available to hypotheses): ${r.retiredPairs.map((p) => `${p.name || p.kalshiTicker} — ${p.reason.replace(/\.$/, '')}`).join('; ')}.`);
   const hrs = r.byHour.pm.length ? r.byHour.pm.slice().sort((a, b) => b.fracOneCent - a.fracOneCent) : [];
   if (hrs.length) L.push(`Polymarket tightest UTC hours: ${hrs.slice(0, 3).map((h) => `${h.hour}h ${pct(h.fracOneCent)}`).join(', ')}; loosest: ${hrs.slice(-2).map((h) => `${h.hour}h ${pct(h.fracOneCent)}`).join(', ')}.`);
   if (r.candidates.length) L.push(`Top one-tick candidates: ${r.candidates.slice(0, 5).map((c) => `[${c.venue}] ${c.title.slice(0, 50)} (one-tick ${pct(c.fracOneCent)}, touch ${num(c.medianTouch)}, mid ${num(c.mid)})`).join('; ')}.`);
