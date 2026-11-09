@@ -31,6 +31,14 @@
       ]
     },
     {
+      "deep": "informed-flow",
+      "scan": [
+        "large-trades",
+        "fresh-wallets",
+        "late-drift"
+      ]
+    },
+    {
       "deep": "fee-modeling",
       "scan": [
         "maker-rebates",

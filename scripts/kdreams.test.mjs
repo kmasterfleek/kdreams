@@ -490,3 +490,32 @@ test('tape: rows, signed flow, windows, paging and wallet selection', async () =
   // The next run starts where this one ended.
   assert.equal(await collectTape({}, { dataDir: dir, t: 'x', nowSec: now, fetchJson: fake }), null);
 });
+
+test('tape: summary shows where large money went and flags fresh wallets', async () => {
+  const { parseTape, tapeSummary } = await import('./lib/kdreams-metrics.mjs');
+  const { tapeEvidence } = await import('./kdreams-backtest.mjs');
+  const trades = parseTape([
+    JSON.stringify({ t: '2026-11-09T10:00:00Z', v: 'pm', id: 'c1', o: 0, s: 'B', p: 0.2, n: 10000, usd: 2000, w: '0xnew' }),
+    JSON.stringify({ t: '2026-11-09T10:05:00Z', v: 'pm', id: 'c1', o: 1, s: 'B', p: 0.8, n: 1250, usd: 1000, w: '0xold' }),
+    JSON.stringify({ t: '2026-11-09T11:00:00Z', v: 'ks', id: 'KX-1', o: 1, s: 'B', p: 0.5, n: 3000, usd: 1500 }),
+    'junk',
+  ].join('\n'));
+  assert.equal(trades.length, 3);
+  const wallets = { '0xnew': { join: '2026-11-07T00:00:00Z' }, '0xold': { join: '2025-01-01T00:00:00Z' } };
+  const s = tapeSummary(trades, wallets, { pm: { c1: { title: 'Will X?' } } }, { freshDays: 7 });
+  assert.deepEqual(s.venues, { pm: { trades: 2, usd: 3000 }, ks: { trades: 1, usd: 1500 } });
+  assert.deepEqual(s.topMarkets.map((m) => `${m.venue} ${m.title} ${m.usd} ${m.yesShare}`), ['pm Will X? 3000 0.67', 'ks KX-1 1500 0']);
+  assert.deepEqual([s.fresh.trades, s.fresh.usd, s.fresh.wallets, s.fresh.profiledWallets, s.fresh.topMarkets[0].yesShare], [1, 2000, 1, 2, 1]);
+  assert.deepEqual([s.first, s.last], ['2026-11-09T10:00:00Z', '2026-11-09T11:00:00Z']);
+
+  // The report reads the 24 hours before the last snapshot tick and nothing after it.
+  const dir = mkdtempSync(join(tmpdir(), 'kdreams-tape-ev-'));
+  mkdirSync(join(dir, 'trades')); mkdirSync(join(dir, 'catalog'));
+  writeFileSync(join(dir, 'trades', '2026-11-09.ndjson'), trades.map((r) => JSON.stringify(r)).join('\n') + '\n');
+  writeFileSync(join(dir, 'catalog', 'wallets.json'), JSON.stringify(wallets));
+  assert.equal(tapeEvidence(dir, '2026-11-09T10:30Z', {}).venues.pm.trades, 2);
+  assert.equal(tapeEvidence(dir, '2026-11-09T10:30Z', {}).venues.ks, undefined);
+  assert.equal(tapeEvidence(dir, '2026-11-11T00:00Z', {}), null);
+  assert.equal(tapeEvidence(join(dir, 'nope'), '2026-11-09T10:30Z', {}), null);
+  assert.match(renderSummary({ ...computeReport({ dataDir: join(dir, 'nope') }), tape: s }), /Trade tape, last 24h[\s\S]*Fresh wallets \(joined within 7 days[^)]*\): 1 large trades, \$2000, 1 wallets; most in Will X\? \$2000 in 1 \(100% adding YES\)/);
+});

@@ -13,7 +13,7 @@ import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import {
   parseRows, groupSeries, spreadStats, makerSpreadProxy, sumProxies, crossVenue, byBucket, candidates, feeTable, mid, round, medianGapMinutes, sliceFilter,
-  parseResolutions, holdToResolution, pairStatus, driftToResolution,
+  parseResolutions, holdToResolution, pairStatus, driftToResolution, parseTape, tapeSummary,
 } from './lib/kdreams-metrics.mjs';
 
 function loadJson(path, fallback) {
@@ -35,6 +35,24 @@ export function loadRows(dataDir, days, since = null) {
 export function loadResolutions(dataDir) {
   const path = join(dataDir, 'resolutions.ndjson');
   return existsSync(path) ? parseResolutions(readFileSync(path, 'utf8')) : new Map();
+}
+
+/** Large trades from data/trades/ after `since` (ISO) up to `until` (ISO, inclusive), and the wallet catalog. */
+export function loadTape(dataDir, since, until) {
+  const dir = join(dataDir, 'trades');
+  if (!existsSync(dir)) return { trades: [], wallets: {} };
+  const files = readdirSync(dir).filter((f) => /^\d{4}-\d{2}-\d{2}\.ndjson$/.test(f) && f.slice(0, 10) >= since.slice(0, 10)).sort();
+  const trades = files.flatMap((f) => parseTape(readFileSync(join(dir, f), 'utf8'))).filter((r) => r.t > since && r.t <= until);
+  return { trades, wallets: loadJson(join(dataDir, 'catalog', 'wallets.json'), {}) };
+}
+
+/** The last 24 hours of the trade tape before `lastTick`, summarized; null when nothing is recorded. */
+export function tapeEvidence(dataDir, lastTick, catalogs) {
+  if (!lastTick) return null;
+  const until = `${lastTick.slice(0, 16)}:59Z`;
+  const since = new Date(Date.parse(lastTick) - 24 * 3600000).toISOString().slice(0, 19) + 'Z';
+  const { trades, wallets } = loadTape(dataDir, since, until);
+  return trades.length ? tapeSummary(trades, wallets, catalogs) : null;
 }
 
 export function loadCatalogs(dataDir) {
@@ -106,6 +124,7 @@ export function computeReport({ dataDir = 'data', watchlist = {}, days = 14, sin
       }))),
     },
     drift: ['pm', 'ks'].flatMap((v) => DRIFT_SLICES.map((slice) => ({ venue: v, slice, ...driftToResolution(v === 'pm' ? pmRows : ksRows, resolutions, catalogs, { fees, slice }) }))),
+    tape: tapeEvidence(dataDir, lastT, catalogs),
   };
 }
 
@@ -263,6 +282,14 @@ export function renderSummary(r) {
   if (dr.length) {
     L.push('Drift continuation (buy the side the mid moved toward, hold to settlement; excess is payout minus price per contract before fees, about minus half the spread if moves carry no information): ' +
       dr.map((d) => `${d.venue} ${driftLabel(d.slice)} n=${d.markets} excess ${num(d.excessCents)}c ± ${num(d.seCents)} net ${num(d.netCentsPer10)}c/$10`).join('; ') + '.');
+  }
+  const tp = r.tape;
+  if (tp) {
+    const vol = (k) => (tp.venues[k] ? `${tp.venues[k].trades} trades / $${tp.venues[k].usd}` : 'none');
+    const lean = (m) => `${m.title.slice(0, 50)} $${m.usd} in ${m.trades} (${pct(m.yesShare)} adding YES)`;
+    L.push(`Trade tape, last 24h of large taker trades (${tp.first} .. ${tp.last}): Polymarket ${vol('pm')}, Kalshi ${vol('ks')}. Most large-trade dollars: ${tp.topMarkets.map((m) => `[${m.venue}] ${lean(m)}`).join('; ')}.`);
+    L.push(`Fresh wallets (joined within ${tp.fresh.days} days of the trade; ${tp.fresh.profiledWallets} wallets in these trades profiled so far): ${tp.fresh.trades} large trades, $${tp.fresh.usd}, ${tp.fresh.wallets} wallets` +
+      `${tp.fresh.topMarkets.length ? `; most in ${tp.fresh.topMarkets.slice(0, 3).map(lean).join('; ')}` : ''}. Whether these bets win is not graded yet.`);
   }
   if (f50) L.push(`Fees at 50c per contract: PM taker ${f50.pmTaker}c / maker ${f50.pmMaker}c; Kalshi taker ${f50.ksTaker}c / maker ${f50.ksMaker}c. One-cent maker round trip nets ${f50.oneCentMakerRoundTripNet.polymarket}c on PM, ${f50.oneCentMakerRoundTripNet.kalshi}c on Kalshi.`);
   return L.join('\n');

@@ -170,7 +170,7 @@ top 100. Only then does the cross-venue surface measure it.
 
 ## Safety
 
-- **Observe-only.** No order endpoint, wallet, or venue credential exists anywhere in this repository or its workflows.
+- **Observe-only.** No order endpoint or venue credential exists anywhere in this repository or its workflows. No wallet of our own exists either; one may be added only with the owner's express approval for that specific wallet, recorded in the PR that adds it. The trade tape records other traders' public wallet addresses from the venues' public feeds, which is observation.
 - **Human authority over code.** Auto-merge is off. The bots commit only data (collector) and research artifacts (report, ledger row, hypothesis registry; nightly) to main; code and config change only by a human.
 - **Witnessed provenance.** Every report is bound to its commit by a reproducible double-sha256.
 - **Honest degradation.** No API key, or every model route failing, produces a recorded `LLM_EVAL=blocked` night that still grades frozen hypotheses; a venue that fails is logged and skipped for that tick, and a failed resolution check never stops a snapshot. Nothing is fabricated to fill the gap.

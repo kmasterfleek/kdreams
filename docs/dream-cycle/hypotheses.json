@@ -1128,5 +1128,69 @@
     },
     "status": "open",
     "retests": []
+  },
+  {
+    "id": "2026-11-09-h1-ks",
+    "date": "2026-11-09",
+    "deep": "informed-flow",
+    "issue": "registered",
+    "text": "Given settled Kalshi markets whose mid moved at least 3c in the hour before an entry inside the last 6 hours before close, when buying the side the move pointed to at the touch and holding to settlement, then drift.excessCents should be > 0 vs about minus half the spread if late moves carry no information (pre-freeze 1.84c on n=452), subject to one entry per market (per event on Kalshi) and no conditioning on the outcome.",
+    "spec": {
+      "metric": "drift.excessCents",
+      "venue": "ks",
+      "slice": {
+        "lookbackHours": 1,
+        "minMoveCents": 3,
+        "hoursToClose": [
+          0,
+          6
+        ]
+      },
+      "op": ">",
+      "threshold": 0,
+      "minN": 300
+    },
+    "frozenAt": "2026-11-09T00:00Z",
+    "baseline": {
+      "value": 1.84,
+      "n": 452
+    },
+    "status": "open",
+    "pinned": true,
+    "windowDays": 28,
+    "registeredBy": "hand-registered hypothesis 1 (informed flow), slice chosen a priori rather than the best-looking pre-freeze slice",
+    "retests": []
+  },
+  {
+    "id": "2026-11-09-h1-pm",
+    "date": "2026-11-09",
+    "deep": "informed-flow",
+    "issue": "registered",
+    "text": "Given settled Polymarket markets whose mid moved at least 3c in the hour before an entry inside the last 6 hours before close, when buying the side the move pointed to at the touch and holding to settlement, then drift.excessCents should be > 0 vs about minus half the spread if late moves carry no information (pre-freeze -1.73c on n=270), subject to one entry per market (per event on Kalshi) and no conditioning on the outcome.",
+    "spec": {
+      "metric": "drift.excessCents",
+      "venue": "pm",
+      "slice": {
+        "lookbackHours": 1,
+        "minMoveCents": 3,
+        "hoursToClose": [
+          0,
+          6
+        ]
+      },
+      "op": ">",
+      "threshold": 0,
+      "minN": 300
+    },
+    "frozenAt": "2026-11-09T00:00Z",
+    "baseline": {
+      "value": -1.73,
+      "n": 270
+    },
+    "status": "open",
+    "pinned": true,
+    "windowDays": 28,
+    "registeredBy": "hand-registered hypothesis 1 (informed flow), slice chosen a priori rather than the best-looking pre-freeze slice",
+    "retests": []
   }
 ]

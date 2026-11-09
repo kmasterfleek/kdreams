@@ -362,7 +362,7 @@ Repo-specific disciplines that bind every quantitative claim tonight:
 \`\`\`bash
 DATE=$(date -u +%Y-%m-%d)
 DAYINT=$(date -u +%Y%m%d)
-SLOT=$(( DAYINT % 5 ))
+SLOT=$(( DAYINT % 6 ))
 SESSION_COMMIT=$(git rev-parse HEAD)
 \`\`\`
 
@@ -381,7 +381,10 @@ Slot map:
 3: DEEP=lead-lag
    SCAN=price-discovery,news-latency
 
-4: DEEP=fee-modeling
+4: DEEP=informed-flow
+   SCAN=large-trades,fresh-wallets,late-drift
+
+5: DEEP=fee-modeling
    SCAN=maker-rebates,category-fees
 \`\`\`
 

@@ -471,3 +471,62 @@ export function driftToResolution(rows, resolutions, catalogs = {}, { fees = {},
     meanAbsMoveCents: entries.length ? round(mean(entries.map((e) => Math.abs(e.move))), 1) : null,
   };
 }
+
+/** Tape rows (data/trades/*.ndjson text) parsed; junk lines skipped. */
+export function parseTape(text) {
+  const out = [];
+  for (const line of String(text).split('\n')) {
+    if (!line.trim()) continue;
+    try {
+      const r = JSON.parse(line);
+      if (r && r.t && r.v && r.id) out.push(r);
+    } catch { /* skip */ }
+  }
+  return out;
+}
+
+/** +1 when a taker trade adds YES exposure (buys YES or sells NO), -1 when it adds NO, 0 unknown. */
+function tapeSign(r) {
+  if (r.o !== 0 && r.o !== 1) return 0;
+  return (r.o === 0) === (r.s === 'B') ? 1 : -1;
+}
+
+/**
+ * Where large money went over the trades given: totals per venue, the markets that drew the most
+ * large-trade dollars and which way it leaned, and large Polymarket trades from wallets that
+ * joined within `freshDays` of the trade (the pattern an insider leaves). Description only.
+ */
+export function tapeSummary(trades, wallets = {}, catalogs = {}, { freshDays = 7, top = 5 } = {}) {
+  const venues = {};
+  const markets = new Map(), freshMarkets = new Map();
+  const fresh = [];
+  const add = (map, k, r) => {
+    const m = map.get(k) || { venue: r.v, id: r.id, usd: 0, yesUsd: 0, trades: 0 };
+    m.usd += r.usd || 0;
+    m.trades += 1;
+    if (tapeSign(r) > 0) m.yesUsd += r.usd || 0;
+    map.set(k, m);
+  };
+  for (const r of trades) {
+    if (!venues[r.v]) venues[r.v] = { trades: 0, usd: 0 };
+    venues[r.v].trades += 1;
+    venues[r.v].usd += r.usd || 0;
+    add(markets, `${r.v}:${r.id}`, r);
+    const join = r.w ? Date.parse(wallets[r.w]?.join || '') : NaN;
+    if (Number.isFinite(join) && Date.parse(r.t) - join <= freshDays * 86400000) { fresh.push(r); add(freshMarkets, `${r.v}:${r.id}`, r); }
+  }
+  const rank = (map) => [...map.values()].sort((a, b) => b.usd - a.usd || a.id.localeCompare(b.id)).slice(0, top)
+    .map((m) => ({ venue: m.venue, id: m.id, title: catalogs[m.venue]?.[m.id]?.title || m.id, usd: round(m.usd, 0), trades: m.trades, yesShare: m.usd ? round(m.yesUsd / m.usd, 2) : null }));
+  const times = trades.map((r) => r.t).sort();
+  return {
+    first: times[0] || null, last: times.at(-1) || null,
+    venues: Object.fromEntries(Object.entries(venues).map(([k, v]) => [k, { trades: v.trades, usd: round(v.usd, 0) }])),
+    topMarkets: rank(markets),
+    fresh: {
+      days: freshDays, trades: fresh.length, usd: round(fresh.reduce((a, r) => a + (r.usd || 0), 0), 0),
+      wallets: new Set(fresh.map((r) => r.w)).size,
+      profiledWallets: new Set(trades.filter((r) => r.w && wallets[r.w]?.join).map((r) => r.w)).size,
+      topMarkets: rank(freshMarkets),
+    },
+  };
+}
