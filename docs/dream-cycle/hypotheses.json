@@ -937,6 +937,15 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "pair.bothSidesFracNetPositive = 0.141 on n=156, below the n>=300 needed"
+      },
+      {
+        "date": "2026-11-09",
+        "ticks": 527,
+        "value": 0.141,
+        "n": 156,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "pair.bothSidesFracNetPositive = 0.141 on n=156, below the n>=300 needed"
       }
     ]
   },
@@ -1067,6 +1076,15 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "pair.bothSidesFracNetPositive not measurable on post-freeze data (n=0)"
+      },
+      {
+        "date": "2026-11-09",
+        "ticks": 278,
+        "value": null,
+        "n": 0,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "pair.bothSidesFracNetPositive not measurable on post-freeze data (n=0)"
       }
     ]
   },
@@ -1125,6 +1143,41 @@
     "baseline": {
       "value": 0.16,
       "n": 1736
+    },
+    "status": "open",
+    "retests": [
+      {
+        "date": "2026-11-09",
+        "ticks": 95,
+        "value": null,
+        "n": 0,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "pair.bothSidesFracNetPositive not measurable on post-freeze data (n=0)"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-09",
+    "date": "2026-11-09",
+    "deep": "fee-modeling",
+    "issue": "#36",
+    "text": "Given Kalshi markets with favored-side entry prices from 0.9 to below 0.95, when modeling a $10 buy at the touch held to settlement, then resolution.netCentsPer10 should be > 1c versus the recorded 6.7c baseline, subject to taker fees and order-level fee rounding.",
+    "spec": {
+      "metric": "resolution.netCentsPer10",
+      "venue": "ks",
+      "slice": {
+        "priceMin": 0.9,
+        "priceMax": 0.95
+      },
+      "op": ">",
+      "threshold": 1,
+      "minN": 100
+    },
+    "frozenAt": "2026-11-09T19:15Z",
+    "baseline": {
+      "value": 6.7,
+      "n": 394
     },
     "status": "open",
     "retests": []
