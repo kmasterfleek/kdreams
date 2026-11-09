@@ -399,3 +399,75 @@ export function holdToResolution(rows, resolutions, catalogs = {}, { fees = {}, 
     medianHoldHours: entries.length ? round(quantile(entries.map((e) => e.holdHours), 0.5), 1) : null,
   };
 }
+
+/**
+ * Drift continuation ("does a late move know something?"). For each settled market, find the
+ * first snapshot inside the slice where the mid has moved at least `minMoveCents` since the
+ * snapshot `lookbackHours` earlier, buy the side it moved toward at that snapshot's touch with
+ * `stake` dollars, and hold to settlement. Only data recorded before the entry is used to pick it.
+ *
+ * Conditioning on the outcome makes every market look like it drifts toward its answer; this does
+ * not condition on the outcome. Under efficient prices the side a move points to wins about as
+ * often as its price implies, so excessCents (payout minus entry price, per contract, before fees)
+ * sits near minus half the spread. A clearly positive excess means moves under-react: someone knew
+ * more than the price showed. seCents is the standard error of that mean, to read it against zero.
+ *
+ * Slice keys: lookbackHours (default 6), minMoveCents (default 5), hoursToClose [min, max) to the
+ * catalog close, hoursUtc, priceMin/priceMax on the entry price of the side bought (0..1).
+ * Kalshi markets are entered once per event, as in holdToResolution.
+ */
+export function driftToResolution(rows, resolutions, catalogs = {}, { fees = {}, stake = 10, slice = {} } = {}) {
+  const pmT = fees.polymarketTakerRate ?? 0.04, ksT = fees.kalshiTakerRate ?? 0.07;
+  const lookMs = (slice.lookbackHours ?? 6) * 3600000, minMove = slice.minMoveCents ?? 5;
+  const toleranceMs = 3600000; // the reference snapshot may sit up to an hour before the lookback point
+  const inHours = sliceFilter({ hoursUtc: slice.hoursUtc });
+  const pMin = slice.priceMin ?? 0, pMax = slice.priceMax ?? 1;
+  const entries = [], events = new Set();
+  for (const [key, series] of groupSeries(rows)) {
+    const res = resolutions.get(key);
+    if (!res) continue;
+    const v = key.slice(0, 2), id = key.slice(3);
+    const meta = catalogs[v]?.[id] || {};
+    const event = v === 'ks' && meta.event ? `ks:${meta.event}` : null;
+    if (event && events.has(event)) continue;
+    const close = Date.parse(meta.closeTime || '');
+    const quoted = series.filter((r) => twoSided(r) && r.t < res.at);
+    let ref = -1;
+    for (let i = 0; i < quoted.length; i++) {
+      const r = quoted[i], at = Date.parse(r.t);
+      while (ref + 1 < i && Date.parse(quoted[ref + 1].t) <= at - lookMs) ref++;
+      if (ref < 0 || Date.parse(quoted[ref].t) > at - lookMs || Date.parse(quoted[ref].t) < at - lookMs - toleranceMs) continue;
+      if (!inHours(r)) continue;
+      if (slice.hoursToClose) {
+        const h = (close - at) / 3600000;
+        if (!Number.isFinite(h) || h < slice.hoursToClose[0] || h >= slice.hoursToClose[1]) continue;
+      }
+      const move = (mid(r) - mid(quoted[ref])) * 100;
+      if (Math.abs(move) < minMove - EPS) continue;
+      const yes = move > 0;
+      const p = yes ? r.a : 1 - r.b, size = yes ? r.as : r.bs;
+      if (p < pMin - EPS || p >= pMax - EPS || p <= EPS || p >= 1 - EPS) continue;
+      if (size !== null && size !== undefined && !(size * p >= stake)) continue;
+      const n = Math.floor(stake / p + EPS);
+      const rawFee = (v === 'pm' ? pmT : ksT) * n * p * (1 - p) * 100;
+      const fee = v === 'ks' ? Math.ceil(rawFee - EPS) : rawFee;
+      const payout = yes ? res.y : 1 - res.y;
+      entries.push({ key, p, move, sized: size !== null && size !== undefined, win: payout > p, excess: (payout - p) * 100, net: n * (payout - p) * 100 - fee });
+      if (event) events.add(event);
+      break;
+    }
+  }
+  const ex = entries.map((e) => e.excess);
+  const m = mean(ex);
+  const sd = ex.length > 1 ? Math.sqrt(ex.reduce((a, x) => a + (x - m) ** 2, 0) / (ex.length - 1)) : null;
+  return {
+    markets: entries.length,
+    unsized: entries.filter((e) => !e.sized).length,
+    winRate: entries.length ? round(entries.filter((e) => e.win).length / entries.length, 3) : null,
+    excessCents: round(m, 2),
+    seCents: sd === null ? null : round(sd / Math.sqrt(ex.length), 2),
+    netCentsPer10: entries.length ? round((mean(entries.map((e) => e.net)) * 10) / stake, 1) : null,
+    meanPrice: entries.length ? round(mean(entries.map((e) => e.p)), 3) : null,
+    meanAbsMoveCents: entries.length ? round(mean(entries.map((e) => Math.abs(e.move))), 1) : null,
+  };
+}

@@ -1,11 +1,11 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtempSync, writeFileSync, mkdirSync } from 'node:fs';
+import { mkdtempSync, writeFileSync, mkdirSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { bestOfBook, mapPolymarket, mapKalshi, isPlainBinary, round, pmResolution, ksResolution, resolutionCandidates } from './kdreams-collect.mjs';
 import {
-  parseRows, groupSeries, spreadStats, makerSpreadProxy, sumProxies, crossVenue, byBucket, candidates, feeTable, quantile, corr, medianGapMinutes, mid, sliceFilter, parseResolutions, holdToResolution, pairStatus,
+  parseRows, groupSeries, spreadStats, makerSpreadProxy, sumProxies, crossVenue, byBucket, candidates, feeTable, quantile, corr, medianGapMinutes, mid, sliceFilter, parseResolutions, holdToResolution, pairStatus, driftToResolution,
 } from './lib/kdreams-metrics.mjs';
 import { computeReport, renderSummary, renderMarkdown, validateSpec, measureSpecRows, gradeSpec, describeSpec, pairFees } from './kdreams-backtest.mjs';
 import { priorNightFates, reasoningFor, extractHypothesis, extractSpec, specInstructions, planRetests, fatesSummary, cell, isProfitSpec, specRejection, scorecard, deadPairReason, settleDeadPairGrades } from './kdreams-nightly.mjs';
@@ -50,6 +50,11 @@ test('nightly: hypothesis extraction, re-test parsing, planning and ledger summa
   assert.equal(planRetests(hyps, { date: '2026-10-16' }, () => 99).due.some((x) => x.h.id === '2026-10-16'), false);
   assert.equal(fatesSummary([{ id: '2026-10-15', verdict: 'REFUTED', ticks: 50 }, { id: '2026-09-01', verdict: 'EXPIRED' }]), '10-15 REFUTED (50t); 09-01 EXPIRED');
   assert.equal(fatesSummary([]), '');
+  // Pinned hypotheses skip the maxOpen cap and expire on their own window.
+  const pinned = [...hyps, { id: '2026-09-20-h1', date: '2026-09-20', frozenAt: '2026-09-20T00:00Z', status: 'open', pinned: true, windowDays: 28 }];
+  const p2 = planRetests(pinned, { date: '2026-10-17', days: 14, minTicks: 48, maxOpen: 1 }, () => 99);
+  assert.deepEqual(p2.due.map((x) => x.h.id), ['2026-09-20-h1', '2026-10-16']);
+  assert.deepEqual(planRetests(pinned, { date: '2026-10-19', days: 14, maxOpen: 1 }, () => 99).expired.map((h) => h.id), ['2026-09-01', '2026-09-20-h1']);
 });
 
 const T = (i) => `2026-10-14T${String(10 + Math.floor(i / 4)).padStart(2, '0')}:${String((i % 4) * 15).padStart(2, '0')}Z`;
@@ -372,4 +377,116 @@ test('pairs: a retired, settled or silent pair leaves the report and settles its
   ], hyps, retired);
   assert.deepEqual(out.map((g) => `${g.id} ${g.verdict} ${g.by}`), ['a UNGRADEABLE rule', 'b REFUTED code', 'c INCONCLUSIVE code']);
   assert.match(out[0].note, /^pair p1 can produce no new evidence .*; n=0$/);
+});
+
+test('metrics: driftToResolution buys the side a move points to, using only data before entry', () => {
+  // 15-minute ticks starting 10:00; resolutions settle long after.
+  const at = (i) => new Date(Date.parse('2026-10-14T10:00Z') + i * 900000).toISOString().slice(0, 16) + 'Z';
+  const row = (v, id, i, b, a) => ({ t: at(i), v, id, b, a, bs: 1000, as: 1000, last: null, v24: 1, oi: 1 });
+  const rows = [];
+  // up: mid 0.40 -> 0.46 over 1h, then on to 0.80. Settles YES.
+  for (let i = 0; i < 12; i++) rows.push(row('pm', 'up', i, 0.4 + Math.min(i, 4) * 0.015 + Math.max(0, i - 4) * 0.04, 0.41 + Math.min(i, 4) * 0.015 + Math.max(0, i - 4) * 0.04));
+  // down: mid 0.60 -> 0.54 over 1h. Settles YES anyway, so the NO bought on the move loses.
+  for (let i = 0; i < 12; i++) rows.push(row('pm', 'down', i, 0.595 - Math.min(i, 4) * 0.015, 0.605 - Math.min(i, 4) * 0.015));
+  // flat: never moves 5c. Never entered.
+  for (let i = 0; i < 12; i++) rows.push(row('pm', 'flat', i, 0.5, 0.51));
+  const res = new Map([
+    ['pm:up', { v: 'pm', id: 'up', y: 1, at: '2026-10-15T00:00Z' }],
+    ['pm:down', { v: 'pm', id: 'down', y: 1, at: '2026-10-15T00:00Z' }],
+    ['pm:flat', { v: 'pm', id: 'flat', y: 1, at: '2026-10-15T00:00Z' }],
+  ]);
+  const d = driftToResolution(rows, res, {}, { fees: { polymarketTakerRate: 0 }, slice: { lookbackHours: 1, minMoveCents: 5 } });
+  assert.equal(d.markets, 2);
+  assert.equal(d.winRate, 0.5);
+  // up: bought YES at ask 0.47 (mid moved 6c by i=4), paid 1 -> +53c. down: bought NO at 1 - 0.535 = 0.465, paid 0 -> -46.5c.
+  assert.equal(d.excessCents, round2((53 - 46.5) / 2));
+  assert.ok(d.seCents > 40);
+  assert.equal(d.meanAbsMoveCents, 6);
+  // A bigger required move is never reached by "down" (6c), and "up" enters later at a higher price.
+  const big = driftToResolution(rows, res, {}, { fees: { polymarketTakerRate: 0 }, slice: { lookbackHours: 1, minMoveCents: 10 } });
+  assert.equal(big.markets, 1); assert.ok(big.meanPrice > 0.47);
+  // Settlement before the move means no entry: only snapshots before res.at count.
+  const early = new Map([...res].map(([k, r]) => [k, { ...r, at: at(3) }]));
+  assert.equal(driftToResolution(rows, early, {}, { slice: { lookbackHours: 1, minMoveCents: 5 } }).markets, 0);
+  // With no snapshot an hour back, nothing qualifies.
+  assert.equal(driftToResolution(rows, res, {}, { slice: { lookbackHours: 6, minMoveCents: 5 } }).markets, 0);
+
+  const spec = { metric: 'drift.excessCents', venue: 'pm', slice: { lookbackHours: 1, minMoveCents: 5, hoursToClose: [0, 24], priceMin: 0.1 }, op: '>', threshold: 0 };
+  assert.equal(validateSpec(spec), null);
+  assert.match(validateSpec({ ...spec, slice: { midMin: 0.2 } }), /drift\.\* metrics slice on priceMin/);
+  assert.match(validateSpec({ ...spec, slice: { lookbackHours: 0 } }), /lookbackHours/);
+  assert.match(validateSpec({ ...spec, slice: { minMoveCents: 80 } }), /minMoveCents/);
+  assert.match(validateSpec({ metric: 'maker.fillRate', venue: 'pm', op: '>', threshold: 0, slice: { lookbackHours: 2 } }), /only applies to drift/);
+  assert.match(validateSpec({ metric: 'resolution.winRate', venue: 'pm', op: '>', threshold: 0, slice: { priceMin: 0.2 } }), /0\.5\.\.1/);
+  assert.equal(describeSpec(spec), 'drift.excessCents > 0 (venue pm, entry 0.1..1, 0-24h to close, move >= 5c over 1h)');
+  assert.deepEqual(measureSpecRows(rows, spec, { fees: { polymarketTakerRate: 0 } }, { resolutions: res }), { value: null, n: 0 });
+  assert.deepEqual(measureSpecRows(rows, { ...spec, slice: { lookbackHours: 1, minMoveCents: 5 } }, { fees: { polymarketTakerRate: 0 } }, { resolutions: res }), { value: 3.25, n: 2 });
+  assert.equal(isProfitSpec({ ...spec, metric: 'drift.netCentsPer10' }), true);
+  assert.equal(isProfitSpec(spec), false);
+  assert.match(specInstructions([]), /drift\.\* metrics buy the side/);
+});
+
+test('tape: rows, signed flow, windows, paging and wallet selection', async () => {
+  const { yesSign, tapeWindow, mapPmTrade, mapKsTrade, aggregateFlow, walletsToLookup, mapWalletStats, pageBack, collectTape } = await import('./kdreams-tape.mjs');
+  assert.deepEqual([yesSign(0, 'B'), yesSign(0, 'S'), yesSign(1, 'B'), yesSign(1, 'S'), yesSign(null, 'B')], [1, -1, -1, 1, 0]);
+
+  // Windows chain end to end; a long outage is clipped to maxWindowMinutes and reported.
+  assert.deepEqual(tapeWindow({}, 10000, { lagSeconds: 100, firstWindowMinutes: 15 }), { start: 9000, end: 9900, gapSeconds: 0 });
+  assert.deepEqual(tapeWindow({ end: 9000 }, 10000, { lagSeconds: 100 }), { start: 9000, end: 9900, gapSeconds: 0 });
+  assert.deepEqual(tapeWindow({ end: 1000 }, 10000, { lagSeconds: 100, maxWindowMinutes: 60 }), { start: 6300, end: 9900, gapSeconds: 5300 });
+
+  const pmT = { proxy_wallet: '0xabc', side: 'SELL', token_id: 'tokNo', condition_id: '0xc1', size: 2000, price: 0.6, timestamp: 1794182059, outcome_index: 999 };
+  assert.deepEqual(mapPmTrade(pmT, { '0xc1': { yesToken: 'tokYes', noToken: 'tokNo' } }), { t: '2026-11-08T23:54:19Z', v: 'pm', id: '0xc1', o: 1, s: 'S', p: 0.6, n: 2000, usd: 1200, w: '0xabc' });
+  assert.equal(mapPmTrade(pmT).o, null);
+  assert.equal(mapPmTrade({ ...pmT, outcome_index: 0, side: 'BUY' }).o, 0);
+  const ksT = { count_fp: '9.39', created_time: '2026-11-08T23:54:16.056171Z', no_price_dollars: '0.7100', taker_outcome_side: 'no', ticker: 'KX-1', yes_price_dollars: '0.2900' };
+  assert.deepEqual(mapKsTrade(ksT), { t: '2026-11-08T23:54:16Z', v: 'ks', id: 'KX-1', o: 1, s: 'B', p: 0.71, n: 9.39, usd: 6.67 });
+
+  const flow = aggregateFlow([
+    { v: 'ks', id: 'KX-1', o: 0, s: 'B', usd: 1500 }, { v: 'ks', id: 'KX-1', o: 1, s: 'B', usd: 20 },
+    { v: 'pm', id: '0xc1', o: 1, s: 'S', usd: 30 }, { v: 'pm', id: '0xc1', o: null, s: 'B', usd: 5 },
+  ], { t: 'T', from: 'F', minUsd: 1000, capped: new Set(['pm:0xc1']) });
+  assert.deepEqual(flow, [
+    { t: 'T', v: 'ks', id: 'KX-1', from: 'F', k: 2, yu: 1500, nu: 20, big: 1, cap: false },
+    { t: 'T', v: 'pm', id: '0xc1', from: 'F', k: 2, yu: 30, nu: 0, big: 0, cap: true },
+  ]);
+
+  const now = Date.parse('2026-11-09T00:00Z') / 1000;
+  const wallets = { '0xold': { statsAt: '2026-10-01T00:00Z' }, '0xfresh': { statsAt: '2026-11-08T00:00Z' } };
+  assert.deepEqual(walletsToLookup([{ w: '0xnew', usd: 10 }, { w: '0xold', usd: 50 }, { w: '0xfresh', usd: 99 }, { w: '0xnew', usd: 70 }, { usd: 1e6 }], wallets, now, { refreshDays: 7 }), ['0xnew', '0xold']);
+  assert.deepEqual(mapWalletStats({ trades: 199, join_date: 1784477815, all_time_pnl: { trade_count: 980, volume_usdc: 50834.1226, realized_pnl: -1939.469 } }, 'T'),
+    { join: '2026-07-19T16:16:55Z', trades: 980, markets: 199, volume: 50834.12, pnl: -1939.47, statsAt: 'T' });
+  assert.deepEqual(mapWalletStats(null, 'T'), { statsAt: 'T', missing: true });
+
+  // Newest-first paging stops at the window start, and says when the page cap cut it short.
+  const feed = [50, 40, 30, 20, 10].map((s) => ({ s }));
+  const page = (size) => async (cursor) => { const i = cursor ?? 0; const rows = feed.slice(i, i + size); return { rows, cursor: i + size < feed.length ? i + size : null, oldestSec: Math.min(...rows.map((x) => x.s)) }; };
+  const full = await pageBack(page(2), { start: 20, end: 45, maxPages: 10, timeOf: (x) => x.s });
+  assert.deepEqual([full.rows.map((x) => x.s), full.capped, full.pages], [[40, 30], false, 2]);
+  const cut = await pageBack(page(1), { start: 0, end: 99, maxPages: 2, timeOf: (x) => x.s });
+  assert.deepEqual([cut.rows.length, cut.capped], [2, true]);
+
+  // End to end against a fake venue: writes trades, flow, wallets and the window state.
+  const dir = mkdtempSync(join(tmpdir(), 'kdreams-tape-'));
+  mkdirSync(join(dir, 'catalog'));
+  const end = now - 120;
+  const fake = async (url) => {
+    if (url.includes('filter_type=CASH')) return { data: [{ ...pmT, condition_id: '0xother', outcome_index: 0, side: 'BUY', timestamp: end - 10, title: 'Other market?' }], pagination: { next_cursor: null } };
+    if (url.includes('/trades?condition=')) return { data: [{ ...pmT, outcome_index: 1, size: 10, timestamp: end - 5 }, { ...pmT, outcome_index: 1, timestamp: end - 900 - 1 }], pagination: { next_cursor: null } };
+    if (url.includes('/markets/trades')) return { trades: [{ ...ksT, count_fp: '2000', created_time: new Date((end - 30) * 1000).toISOString() }], cursor: '' };
+    if (url.includes('/user-stats')) return { data: { trades: 1, join_date: end - 3600, all_time_pnl: { trade_count: 1 } } };
+    throw new Error(`unexpected ${url}`);
+  };
+  const out = await collectTape({ kalshi: { pauseMs: 0 }, polymarket: { pauseMs: 0 }, wallets: { pauseMs: 0 } }, { dataDir: dir, t: '2026-11-09T00:00Z', nowSec: now, pmIds: ['0xc1'], ksTickers: ['KX-1'], fetchJson: fake });
+  assert.deepEqual([out.big, out.flow, out.capped], [2, 2, 0]);
+  const trades = readFileSync(join(dir, 'trades', '2026-11-09.ndjson'), 'utf8').trim().split('\n').map((l) => JSON.parse(l));
+  assert.deepEqual(trades.map((r) => `${r.v} ${r.id} ${r.usd}`), ['ks KX-1 1420', 'pm 0xother 1200']);
+  const flowRows = readFileSync(join(dir, 'flow', '2026-11-09.ndjson'), 'utf8').trim().split('\n').map((l) => JSON.parse(l));
+  assert.deepEqual(flowRows.map((r) => `${r.v} ${r.k} ${r.yu} ${r.nu}`), ['pm 1 6 0', 'ks 1 0 1420']);
+  const w = JSON.parse(readFileSync(join(dir, 'catalog', 'wallets.json'), 'utf8'));
+  assert.equal(w['0xabc'].trades, 1); assert.equal(w['0xabc'].firstSeen, '2026-11-09T00:00Z');
+  assert.equal(JSON.parse(readFileSync(join(dir, 'catalog', 'polymarket.json'), 'utf8'))['0xother'].title, 'Other market?');
+  assert.equal(JSON.parse(readFileSync(join(dir, 'catalog', 'tape-state.json'), 'utf8')).end, end);
+  // The next run starts where this one ended.
+  assert.equal(await collectTape({}, { dataDir: dir, t: 'x', nowSec: now, fetchJson: fake }), null);
 });

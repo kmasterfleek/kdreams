@@ -1,5 +1,5 @@
 {
-  "$comment": "kdreams observation watchlist. Observe-only: nothing in this repo places orders. pairs[] maps the same real-world event across venues; polymarketId is the Gamma conditionId, kalshiTicker is the Kalshi market ticker; a pair's polymarketTakerRate overrides fees.polymarketTakerRate because Polymarket sets taker rates per market. Fee rates are published venue schedules as of 2026-10 and must be re-verified before any edge claim. backtest.horizonMinutes bounds the maker proxy in wall-clock time (snapshots are irregular); retestMinTicks is how many post-freeze ticks a frozen hypothesis needs before it is graded; retestMinN is the smallest sample a spec metric may be graded on. A pair with a retired reason, a settled leg, or a leg with no two-sided quote for backtest.pairStaleHours (default 24) is dropped from the report and from what hypotheses may name; keep retired pairs listed so earlier specs still resolve.",
+  "$comment": "kdreams observation watchlist. Observe-only: nothing in this repo places orders. pairs[] maps the same real-world event across venues; polymarketId is the Gamma conditionId, kalshiTicker is the Kalshi market ticker; a pair's polymarketTakerRate overrides fees.polymarketTakerRate because Polymarket sets taker rates per market. Fee rates are published venue schedules as of 2026-10 and must be re-verified before any edge claim. backtest.horizonMinutes bounds the maker proxy in wall-clock time (snapshots are irregular); retestMinTicks is how many post-freeze ticks a frozen hypothesis needs before it is graded; retestMinN is the smallest sample a spec metric may be graded on. A pair with a retired reason, a settled leg, or a leg with no two-sided quote for backtest.pairStaleHours (default 24) is dropped from the report and from what hypotheses may name; keep retired pairs listed so earlier specs still resolve. tape: large trades (>= minUsd) and per-market taker flow are read from the public trade feeds each tick over (last window end, now - lagSeconds]; the wallets behind large Polymarket trades are profiled from the venue's public user stats (lookupsPerTick, refreshed every refreshDays).",
   "polymarket": {
     "topByVolume24h": 100,
     "bookDepthTop": 100,
@@ -51,6 +51,27 @@
     "polymarketMakerRate": 0,
     "kalshiTakerRate": 0.07,
     "kalshiMakerRate": 0.0175
+  },
+  "tape": {
+    "enabled": true,
+    "lagSeconds": 120,
+    "maxWindowMinutes": 60,
+    "polymarket": {
+      "minUsd": 1000,
+      "maxPages": 10,
+      "maxFlowPages": 3,
+      "pauseMs": 150
+    },
+    "kalshi": {
+      "minUsd": 1000,
+      "maxPagesPerTicker": 3,
+      "pauseMs": 250
+    },
+    "wallets": {
+      "lookupsPerTick": 40,
+      "refreshDays": 7,
+      "pauseMs": 150
+    }
   },
   "backtest": {
     "days": 14,

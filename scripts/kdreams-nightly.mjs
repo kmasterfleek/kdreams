@@ -96,6 +96,7 @@ export function specInstructions(pairs = [], retired = []) {
     (retired.length ? `Retired pairs (settled or no longer quoted; a spec naming one is rejected): ${retired.map((p) => p.name).join(', ')}.\n` : '') +
     `Optional "slice": {"hoursUtc": [from, to] (whole UTC hours, from <= hour < to, wraps past midnight), "midMin": 0..1, "midMax": 0..1}. Maker slices apply at order entry.\n` +
     `resolution.* metrics slice instead on "priceMin"/"priceMax" (0.5..1, entry price of the favored side bought, min <= p < max) and "hoursToClose": [min, max) hours before the scheduled close, plus hoursUtc; they never take midMin/midMax.\n` +
+    `drift.* metrics buy the side the mid just moved toward and hold to settlement; they slice on "lookbackHours" (0.25..72, default 6), "minMoveCents" (default 5), "hoursToClose", hoursUtc and "priceMin"/"priceMax" (0..1, entry price of the side bought). drift.excessCents near minus half the spread means moves carry no information; above zero means the price under-reacted to someone's information.\n` +
     `Required: "op": ">" or "<", numeric "threshold". Optional "minN": the sample the metric needs before it is graded (a floor still applies).\n` +
     `The spec must say exactly what the Hypothesis sentence says; anything the catalog cannot express (volume tiers, cadence, depth beyond the touch, queue position) belongs in Next observation, not in the hypothesis.`;
 }
@@ -122,7 +123,7 @@ export function settleDeadPairGrades(grades, hyps, retired = []) {
 /** Specs that predict money made after fees: the only kind allowed to already hold before the freeze. */
 export function isProfitSpec(spec) {
   if (spec?.op !== '>') return false;
-  if (spec.metric === 'maker.netCentsPerAttempt' || spec.metric === 'resolution.netCentsPer10') return spec.threshold >= 0;
+  if (spec.metric === 'maker.netCentsPerAttempt' || spec.metric === 'resolution.netCentsPer10' || spec.metric === 'drift.netCentsPer10') return spec.threshold >= 0;
   if (spec.metric === 'pair.bothSidesFracNetPositive') return spec.threshold > 0;
   return false;
 }
@@ -138,7 +139,7 @@ export function holds(spec, value) {
  * already satisfies is a restatement; after a non-profit night the next one must predict profit.
  */
 export function specRejection(spec, baseline, { requireProfit = false } = {}) {
-  if (requireProfit && !isProfitSpec(spec)) return 'the previous hypothesis did not predict profit, so tonight\'s must (resolution.netCentsPer10 or maker.netCentsPerAttempt > a threshold >= 0, or pair.bothSidesFracNetPositive > a threshold > 0, in some slice)';
+  if (requireProfit && !isProfitSpec(spec)) return 'the previous hypothesis did not predict profit, so tonight\'s must (resolution.netCentsPer10, drift.netCentsPer10 or maker.netCentsPerAttempt > a threshold >= 0, or pair.bothSidesFracNetPositive > a threshold > 0, in some slice)';
   if (!isProfitSpec(spec) && holds(spec, baseline?.value)) return `already true before the freeze (${spec.metric} = ${baseline.value} on n=${baseline.n}); a non-profit prediction must claim a change from the recorded value`;
   return null;
 }
@@ -160,14 +161,17 @@ export function cell(text, max = 160) {
 /**
  * Split open hypotheses into ones old enough to grade and ones that are not.
  * `ticksSince(h)` returns how many ticks were recorded after h.frozenAt.
- * Hypotheses frozen before the backtest window are expired, never graded.
+ * Hypotheses frozen before their window (h.windowDays, else the backtest window) are expired,
+ * never graded. Pinned hypotheses (registered by hand for a multi-week test) are always graded;
+ * the rest are capped at the `maxOpen` most recent.
  */
 export function planRetests(hyps, { date, days = 14, minTicks = 48, maxOpen = 5 }, ticksSince) {
-  const cutoff = new Date(Date.parse(`${date}T00:00:00Z`) - days * 86400000).toISOString();
+  const cutoff = (h) => new Date(Date.parse(`${date}T00:00:00Z`) - (h.windowDays ?? days) * 86400000).toISOString();
   const expired = [], due = [], tooSoon = [];
   const open = hyps.filter((h) => h.status === 'open' && h.date !== date);
-  for (const h of open) if (h.frozenAt < cutoff) expired.push(h);
-  const live = open.filter((h) => !expired.includes(h)).sort((a, b) => (a.date < b.date ? 1 : -1)).slice(0, maxOpen);
+  for (const h of open) if (h.frozenAt < cutoff(h)) expired.push(h);
+  const fresh = open.filter((h) => !expired.includes(h));
+  const live = [...fresh.filter((h) => h.pinned), ...fresh.filter((h) => !h.pinned).sort((a, b) => (a.date < b.date ? 1 : -1)).slice(0, maxOpen)];
   for (const h of live) {
     const ticks = ticksSince(h);
     (ticks >= minTicks ? due : tooSoon).push({ h, ticks });
@@ -294,7 +298,9 @@ async function main() {
   const bt = ev.watchlist.backtest || {};
   const minTicks = bt.retestMinTicks ?? 48, minN = bt.retestMinN ?? 100;
   const hyps = loadJson(HYPOTHESES, []);
-  const allRows = loadRows(ev.dataDir, ev.days).rows;
+  // Pinned hypotheses may run longer than the evidence window; load enough days to grade them.
+  const gradeDays = Math.max(ev.days, ...hyps.filter((h) => h.status === 'open' && h.windowDays).map((h) => h.windowDays));
+  const allRows = loadRows(ev.dataDir, gradeDays).rows;
   const settled = { resolutions: loadResolutions(ev.dataDir), catalogs: loadCatalogs(ev.dataDir) };
   const after = (t) => allRows.filter((x) => x.t > t);
   const ticksAfter = (t) => new Set(after(t).map((x) => x.t)).size;
@@ -313,7 +319,7 @@ async function main() {
     grades.push({ id: h.id, ticks, ...gr, value: m.value, n: m.n, by: 'code' });
   }
   for (const { h, ticks } of plan.tooSoon) grades.push({ id: h.id, ticks, verdict: 'INCONCLUSIVE', note: `only ${ticks} post-freeze ticks (< ${minTicks})`, by: 'rule' });
-  for (const h of plan.expired) grades.push({ id: h.id, verdict: 'EXPIRED', note: `frozen before the ${ev.days}-day window without a grade`, by: 'rule' });
+  for (const h of plan.expired) grades.push({ id: h.id, verdict: 'EXPIRED', note: `frozen before the ${h.windowDays ?? ev.days}-day window without a grade`, by: 'rule' });
   grades = settleDeadPairGrades(grades, hyps, retired);
   console.log(`Grades: ${grades.map((x) => `${x.id} ${x.verdict}`).join(', ') || 'none'}`);
 
@@ -326,9 +332,9 @@ async function main() {
   });
 
   // Tonight's rules: no restating what the data already shows, and profit at least every other night.
-  const prev = hyps.filter((h) => h.date < ctx.date).at(-1);
+  const prev = hyps.filter((h) => h.date < ctx.date && !h.pinned).at(-1);
   const requireProfit = !!prev && !isProfitSpec(prev.spec);
-  const rules = `A spec that the pre-freeze data already satisfies is rejected unless it predicts profit (resolution.netCentsPer10 or maker.netCentsPerAttempt > a threshold >= 0, or pair.bothSidesFracNetPositive > a threshold > 0); a non-profit prediction must claim a change from the recorded value.` +
+  const rules = `A spec that the pre-freeze data already satisfies is rejected unless it predicts profit (resolution.netCentsPer10, drift.netCentsPer10 or maker.netCentsPerAttempt > a threshold >= 0, or pair.bothSidesFracNetPositive > a threshold > 0); a non-profit prediction must claim a change from the recorded value.` +
     (requireProfit ? ` The previous hypothesis (${prev.id}) did not predict profit, so TONIGHT'S SPEC MUST be a profit prediction: choose the metric family whose EVIDENCE is closest to net positive per $10, find the slice where it is most plausible, and say why.` : '');
   ctx.hyps = hyps;
   ev.livePairs = livePairs; ev.retired = retired;

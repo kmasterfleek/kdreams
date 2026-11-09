@@ -13,7 +13,7 @@ import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import {
   parseRows, groupSeries, spreadStats, makerSpreadProxy, sumProxies, crossVenue, byBucket, candidates, feeTable, mid, round, medianGapMinutes, sliceFilter,
-  parseResolutions, holdToResolution, pairStatus,
+  parseResolutions, holdToResolution, pairStatus, driftToResolution,
 } from './lib/kdreams-metrics.mjs';
 
 function loadJson(path, fallback) {
@@ -43,6 +43,13 @@ export function loadCatalogs(dataDir) {
 
 /** Entry-price bands the report always shows for hold-to-resolution. */
 export const RESOLUTION_BANDS = [[0.5, 0.9], [0.9, 0.95], [0.95, 0.97], [0.97, 0.99], [0.99, 1]];
+
+/** Drift-continuation slices the report always shows: a 5c move over 6h, any time and in the last day before close. */
+export const DRIFT_SLICES = [
+  { lookbackHours: 6, minMoveCents: 5 },
+  { lookbackHours: 6, minMoveCents: 5, hoursToClose: [0, 24] },
+  { lookbackHours: 1, minMoveCents: 3, hoursToClose: [0, 6] },
+];
 
 export function computeReport({ dataDir = 'data', watchlist = {}, days = 14, since = null } = {}) {
   const { rows, files } = loadRows(dataDir, days, since);
@@ -98,6 +105,7 @@ export function computeReport({ dataDir = 'data', watchlist = {}, days = 14, sin
         venue: v, priceMin: lo, priceMax: hi, ...holdToResolution(v === 'pm' ? pmRows : ksRows, resolutions, catalogs, { fees, slice: { priceMin: lo, priceMax: hi } }),
       }))),
     },
+    drift: ['pm', 'ks'].flatMap((v) => DRIFT_SLICES.map((slice) => ({ venue: v, slice, ...driftToResolution(v === 'pm' ? pmRows : ksRows, resolutions, catalogs, { fees, slice }) }))),
   };
 }
 
@@ -118,9 +126,13 @@ export const SPEC_METRICS = {
   'pair.bothSidesFracNetPositive': { kind: 'pair', n: 'both-sides checks', unit: 'share 0..1 of buy-both-sides checks net positive after taker fees' },
   'resolution.netCentsPer10': { kind: 'venue', n: 'resolved markets entered', unit: 'net cents per $10 bought at the touch on the favored side and held to settlement, after taker fees' },
   'resolution.winRate': { kind: 'venue', n: 'resolved markets entered', unit: 'share 0..1 of those entries whose side paid more than its price' },
+  'drift.excessCents': { kind: 'venue', n: 'resolved markets entered after a move', unit: 'cents per contract that the side the mid moved toward paid above its ask, before fees (about minus half the spread if moves carry no information)' },
+  'drift.netCentsPer10': { kind: 'venue', n: 'resolved markets entered after a move', unit: 'net cents per $10 bought on the side the mid moved toward and held to settlement, after taker fees' },
+  'drift.winRate': { kind: 'venue', n: 'resolved markets entered after a move', unit: 'share 0..1 of those entries whose side paid more than its price' },
 };
 
 const RESOLUTION_SLICE_KEYS = ['priceMin', 'priceMax', 'hoursToClose'];
+const DRIFT_SLICE_KEYS = ['lookbackHours', 'minMoveCents'];
 
 /** Why a spec cannot be graded, or null when it can. */
 export function validateSpec(spec, pairs = []) {
@@ -132,11 +144,16 @@ export function validateSpec(spec, pairs = []) {
   if (!['>', '<'].includes(spec.op)) return 'op must be ">" or "<"';
   if (!Number.isFinite(spec.threshold)) return 'threshold must be a number';
   const sl = spec.slice || {};
-  for (const k of Object.keys(sl)) if (!['hoursUtc', 'midMin', 'midMax', ...RESOLUTION_SLICE_KEYS].includes(k)) return `unknown slice key "${k}"`;
+  for (const k of Object.keys(sl)) if (!['hoursUtc', 'midMin', 'midMax', ...RESOLUTION_SLICE_KEYS, ...DRIFT_SLICE_KEYS].includes(k)) return `unknown slice key "${k}"`;
+  const isDrift = spec.metric.startsWith('drift.');
   const isRes = spec.metric.startsWith('resolution.');
-  for (const k of RESOLUTION_SLICE_KEYS) if (sl[k] !== undefined && !isRes) return `slice.${k} only applies to resolution.* metrics`;
-  if (isRes && (sl.midMin !== undefined || sl.midMax !== undefined)) return 'resolution.* metrics slice on priceMin/priceMax (the entry price of the side bought), not mid';
-  for (const k of ['priceMin', 'priceMax']) if (sl[k] !== undefined && !(Number.isFinite(sl[k]) && sl[k] >= 0.5 && sl[k] <= 1)) return `slice.${k} must be within 0.5..1 (the favored side)`;
+  for (const k of RESOLUTION_SLICE_KEYS) if (sl[k] !== undefined && !isRes && !isDrift) return `slice.${k} only applies to resolution.* and drift.* metrics`;
+  for (const k of DRIFT_SLICE_KEYS) if (sl[k] !== undefined && !isDrift) return `slice.${k} only applies to drift.* metrics`;
+  if ((isRes || isDrift) && (sl.midMin !== undefined || sl.midMax !== undefined)) return `${isRes ? 'resolution' : 'drift'}.* metrics slice on priceMin/priceMax (the entry price of the side bought), not mid`;
+  const lo = isDrift ? 0 : 0.5;
+  for (const k of ['priceMin', 'priceMax']) if (sl[k] !== undefined && !(Number.isFinite(sl[k]) && sl[k] >= lo && sl[k] <= 1)) return `slice.${k} must be within ${lo}..1${isDrift ? '' : ' (the favored side)'}`;
+  if (sl.lookbackHours !== undefined && !(Number.isFinite(sl.lookbackHours) && sl.lookbackHours >= 0.25 && sl.lookbackHours <= 72)) return 'slice.lookbackHours must be within 0.25..72';
+  if (sl.minMoveCents !== undefined && !(Number.isFinite(sl.minMoveCents) && sl.minMoveCents > 0 && sl.minMoveCents <= 50)) return 'slice.minMoveCents must be above 0 and at most 50';
   if (sl.priceMin !== undefined && sl.priceMax !== undefined && !(sl.priceMin < sl.priceMax)) return 'slice.priceMin must be below priceMax';
   if (sl.hoursToClose !== undefined && !(Array.isArray(sl.hoursToClose) && sl.hoursToClose.length === 2 && sl.hoursToClose.every((x) => Number.isFinite(x) && x >= 0) && sl.hoursToClose[0] < sl.hoursToClose[1])) return 'slice.hoursToClose must be [min, max) hours with 0 <= min < max';
   if (sl.hoursUtc !== undefined && !(Array.isArray(sl.hoursUtc) && sl.hoursUtc.length === 2 && sl.hoursUtc.every((x) => Number.isInteger(x) && x >= 0 && x <= 24) && sl.hoursUtc[0] !== sl.hoursUtc[1])) return 'slice.hoursUtc must be [from, to] whole UTC hours, from != to';
@@ -164,6 +181,10 @@ export function measureSpecRows(rows, spec, watchlist = {}, { resolutions = new 
     return { value: cv[field], n: cv.n };
   }
   const venueRows = rows.filter((r) => r.v === spec.venue);
+  if (spec.metric.startsWith('drift.')) {
+    const d = driftToResolution(venueRows, resolutions, catalogs, { fees, slice: spec.slice || {} });
+    return { value: d[field], n: d.markets };
+  }
   if (spec.metric.startsWith('resolution.')) {
     const h = holdToResolution(venueRows, resolutions, catalogs, { fees, slice: spec.slice || {} });
     return { value: h[field], n: h.markets };
@@ -201,7 +222,12 @@ export function describeSpec(spec) {
   if (sl.midMin !== undefined || sl.midMax !== undefined) parts.push(`mid ${sl.midMin ?? 0}..${sl.midMax ?? 1}`);
   if (sl.priceMin !== undefined || sl.priceMax !== undefined) parts.push(`entry ${sl.priceMin ?? 0.5}..${sl.priceMax ?? 1}`);
   if (sl.hoursToClose) parts.push(`${sl.hoursToClose[0]}-${sl.hoursToClose[1]}h to close`);
+  if (sl.lookbackHours !== undefined || sl.minMoveCents !== undefined) parts.push(`move >= ${sl.minMoveCents ?? 5}c over ${sl.lookbackHours ?? 6}h`);
   return `${spec.metric} ${spec.op} ${spec.threshold} (${parts.join(', ')}${spec.minN ? `, n>=${spec.minN}` : ''})`;
+}
+
+function driftLabel(sl) {
+  return `${sl.minMoveCents}c/${sl.lookbackHours}h${sl.hoursToClose ? ` ${sl.hoursToClose[0]}-${sl.hoursToClose[1]}h to close` : ''}`;
 }
 
 function pct(x) { return x === null || x === undefined ? 'n/a' : `${Math.round(x * 100)}%`; }
@@ -233,6 +259,11 @@ export function renderSummary(r) {
       hr.bands.filter((b) => b.markets).map((b) => `${b.venue} ${b.priceMin}-${b.priceMax} n=${b.markets} win ${pct(b.winRate)} net ${num(b.netCentsPer10)}c/$10`).join('; ') +
       (best ? `. Best net-positive band with n >= 20: ${best.venue} ${best.priceMin}-${best.priceMax}.` : '. No band with n >= 20 is net positive yet.'));
   }
+  const dr = (r.drift || []).filter((d) => d.markets);
+  if (dr.length) {
+    L.push('Drift continuation (buy the side the mid moved toward, hold to settlement; excess is payout minus price per contract before fees, about minus half the spread if moves carry no information): ' +
+      dr.map((d) => `${d.venue} ${driftLabel(d.slice)} n=${d.markets} excess ${num(d.excessCents)}c ± ${num(d.seCents)} net ${num(d.netCentsPer10)}c/$10`).join('; ') + '.');
+  }
   if (f50) L.push(`Fees at 50c per contract: PM taker ${f50.pmTaker}c / maker ${f50.pmMaker}c; Kalshi taker ${f50.ksTaker}c / maker ${f50.ksMaker}c. One-cent maker round trip nets ${f50.oneCentMakerRoundTripNet.polymarket}c on PM, ${f50.oneCentMakerRoundTripNet.kalshi}c on Kalshi.`);
   return L.join('\n');
 }
@@ -249,6 +280,11 @@ export function renderMarkdown(r) {
     out.push('| venue | entry price | markets | unsized | win rate | net c per $10 | worst c | median hold h |', '|---|---|---|---|---|---|---|---|');
     for (const b of hr.bands) if (b.markets) out.push(`| ${b.venue} | ${b.priceMin}-${b.priceMax} | ${b.markets} | ${b.unsized} | ${pct(b.winRate)} | ${num(b.netCentsPer10)} | ${num(b.worstCents)} | ${num(b.medianHoldHours)} |`);
     out.push('', '_Hold to resolution counts only markets that have already settled, so long-dated markets are under-represented; one entry per market (per event on Kalshi)._', '');
+  }
+  if ((r.drift || []).some((d) => d.markets)) {
+    out.push('| venue | move / lookback | window | markets | win rate | mean price | excess c | ± se | net c per $10 |', '|---|---|---|---|---|---|---|---|---|');
+    for (const d of r.drift) if (d.markets) out.push(`| ${d.venue} | ${d.slice.minMoveCents}c / ${d.slice.lookbackHours}h | ${d.slice.hoursToClose ? `${d.slice.hoursToClose[0]}-${d.slice.hoursToClose[1]}h to close` : 'any'} | ${d.markets} | ${pct(d.winRate)} | ${num(d.meanPrice)} | ${num(d.excessCents)} | ${num(d.seCents)} | ${num(d.netCentsPer10)} |`);
+    out.push('', '_Drift continuation enters once per settled market (per event on Kalshi) at the first move that qualifies; it does not condition on the outcome._', '');
   }
   out.push('_Maker model is a proxy: a resting order counts as filled only when the recorded price trades through its level; no queue position is modeled._');
   return out.join('\n');

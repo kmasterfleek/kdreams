@@ -18,6 +18,10 @@
  * Candidates are catalog markets past their close time or no longer in the watched
  * set; each is re-checked at most every `resolutions.recheckMinutes`.
  *
+ * Large trades, per-market taker flow and the wallets behind large Polymarket trades go to
+ * data/trades/, data/flow/ and data/catalog/wallets.json (see kdreams-tape.mjs). The tape never
+ * fails the snapshot run.
+ *
  * Env:   KDREAMS_WATCHLIST (default config/kdreams.watchlist.json)
  *        KDREAMS_DATA      (default data)
  *        KDREAMS_NOW       (ISO override, for reproducible runs)
@@ -26,6 +30,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync, appendFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { collectTape } from './kdreams-tape.mjs';
 
 export const GAMMA = 'https://gamma-api.polymarket.com';
 export const CLOB = 'https://clob.polymarket.com';
@@ -291,9 +296,14 @@ export async function main(argv = process.argv.slice(2)) {
   const all = [...pm, ...ks];
   log(`t=${t} pm=${pm.length} ks=${ks.length}`);
 
+  const tape = () => collectTape(wl.tape || {}, {
+    dataDir, t, nowSec: Math.floor(now.getTime() / 1000), pmIds: pm.map((x) => x.row.id), ksTickers: ks.map((x) => x.row.id), fetchJson, dryRun: flags.dryRun, log,
+  }).catch((e) => log(`tape failed: ${e.message}`));
+
   if (flags.dryRun) {
     for (const x of all.slice(0, 3)) console.log(JSON.stringify(x.row));
     const settled = await collectResolutions(wl.resolutions || {}, dataDir, t, flags, log).catch((e) => (log(`resolutions failed: ${e.message}`), 0));
+    await tape();
     log(`dry run: ${all.length} rows and ${settled} resolutions not written`);
     return { t, pm: pm.length, ks: ks.length };
   }
@@ -307,6 +317,7 @@ export async function main(argv = process.argv.slice(2)) {
     log(`tick ${t} already recorded in ${day}; snapshot skipped`);
     const settled = await collectResolutions(wl.resolutions || {}, dataDir, t, flags, log).catch((e) => (log(`resolutions failed: ${e.message}`), 0));
     if (settled) log(`appended ${settled} resolutions`);
+    await tape();
     return { t, pm: 0, ks: 0, skipped: true };
   }
   appendFileSync(day, all.map((x) => JSON.stringify(x.row)).join('\n') + '\n');
@@ -321,6 +332,7 @@ export async function main(argv = process.argv.slice(2)) {
   log(`wrote ${all.length} rows to ${day}`);
   const settled = await collectResolutions(wl.resolutions || {}, dataDir, t, flags, log).catch((e) => (log(`resolutions failed: ${e.message}`), 0));
   if (settled) log(`appended ${settled} resolutions`);
+  await tape();
   return { t, pm: pm.length, ks: ks.length };
 }
 
