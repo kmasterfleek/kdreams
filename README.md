@@ -46,7 +46,10 @@ about 12 hours) and the metric's sample reaches `max(spec.minN,
 backtest.retestMinN)` (at least 100 attempts, rows, checks or settled markets). Before that it
 stays **INCONCLUSIVE**. A hypothesis whose spec is missing or names something
 the evaluator cannot measure (volume tiers, sub-15-minute cadence, depth beyond
-the touch) is frozen as **UNGRADEABLE** and never graded. Grades land in the
+the touch) is frozen as **UNGRADEABLE** and never graded. A pair spec is
+**EXPIRED** once both of the pair's markets have settled short of its sample,
+since no more data can arrive, and a new spec on a settled pair is rejected.
+Grades land in the
 ledger's prior-night fates column, in `docs/dream-cycle/hypotheses.json`, and
 as a comment on the hypothesis's issue, which is then closed. The model sees
 past grades the next night so it does not re-propose a refuted idea.
@@ -160,7 +163,9 @@ report proposes candidates; a human confirms a pair by adding
 `{ "name": "<name>", "polymarketId": "<conditionId>", "kalshiTicker": "<ticker>" }`
 to `pairs` in the watchlist, and pins both markets with `polymarket.extraSlugs`
 and `kalshi.extraTickers` so they are collected even when they fall out of the
-top 100. Only then does the cross-venue surface measure it.
+top 100. Only then does the cross-venue surface measure it. Polymarket sets
+taker rates per market (Gamma's `feeSchedule.rate`), so a pair can carry its
+own `polymarketTakerRate`.
 
 ## Setup on a fork
 

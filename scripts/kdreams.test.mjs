@@ -7,7 +7,7 @@ import { bestOfBook, mapPolymarket, mapKalshi, isPlainBinary, round, pmResolutio
 import {
   parseRows, groupSeries, spreadStats, makerSpreadProxy, sumProxies, crossVenue, byBucket, candidates, feeTable, quantile, corr, medianGapMinutes, mid, sliceFilter, parseResolutions, holdToResolution,
 } from './lib/kdreams-metrics.mjs';
-import { computeReport, renderSummary, renderMarkdown, validateSpec, measureSpecRows, gradeSpec, describeSpec, pairFees } from './kdreams-backtest.mjs';
+import { computeReport, renderSummary, renderMarkdown, validateSpec, measureSpecRows, gradeSpec, describeSpec, pairFees, pairSettledAt } from './kdreams-backtest.mjs';
 import { priorNightFates, reasoningFor, extractHypothesis, extractSpec, specInstructions, planRetests, fatesSummary, cell, isProfitSpec, specRejection, scorecard } from './kdreams-nightly.mjs';
 
 test('nightly: importing the module never runs the pipeline, and helpers behave', () => {
@@ -151,6 +151,17 @@ test('metrics: crossVenue computes divergence, both-sides net, and lead-lag', ()
   const g = crossVenue([pm(0, 0.39, 0.4)], [ks(0, 0.5, 0.51)], { polymarketTakerRate: 0.04, kalshiTakerRate: 0.07 });
   assert.equal(g.bothSides.fracGrossPositive, 0.5); assert.ok(g.bothSides.maxNetCents > 7 && g.bothSides.maxNetCents < 10);
   assert.equal(corr([1, 2, 3], [1, 1, 1]), null);
+  // A pair is settled only once both legs have resolved, at the later of the two times.
+  const pair = { name: 'house-d', polymarketId: '0xd', kalshiTicker: 'CONTROLH-D' };
+  const res = new Map([['ks:CONTROLH-D', { y: 1, at: '2026-11-04T05:02Z' }]]);
+  assert.equal(pairSettledAt(pair, res), null);
+  res.set('pm:0xd', { y: 1, at: '2026-11-04T13:06Z' });
+  assert.equal(pairSettledAt(pair, res), '2026-11-04T13:06Z');
+  const settledPairs = new Map([['house-d', '2026-11-04T13:06Z']]);
+  assert.match(specRejection({ metric: 'pair.bothSidesFracNetPositive', pair: 'house-d', op: '>', threshold: 0.1 }, { value: 0.14, n: 2000 }, { settledPairs }), /settled at 2026-11-04T13:06Z/);
+  assert.equal(specRejection({ metric: 'pair.bothSidesFracNetPositive', pair: 'fed-h25', op: '>', threshold: 0.1 }, { value: 0.03, n: 500 }, { settledPairs }), null);
+  const instr = specInstructions([pair, { name: 'fed-h25' }], settledPairs);
+  assert.match(instr, /Configured pair names: fed-h25\./); assert.match(instr, /Settled pairs[^\n]*house-d/);
   // A pair's own Polymarket taker rate replaces the default; a higher rate shrinks the same gap's net.
   const fees = { polymarketTakerRate: 0.04, kalshiTakerRate: 0.07 };
   assert.equal(pairFees(fees, { name: 'x' }), fees);

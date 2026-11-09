@@ -36,7 +36,7 @@ import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
-import { computeReport, renderMarkdown, loadRows, loadResolutions, loadCatalogs, SPEC_METRICS, validateSpec, measureSpecRows, gradeSpec, describeSpec } from './kdreams-backtest.mjs';
+import { computeReport, renderMarkdown, loadRows, loadResolutions, loadCatalogs, SPEC_METRICS, validateSpec, measureSpecRows, gradeSpec, describeSpec, pairSettledAt } from './kdreams-backtest.mjs';
 
 const DRY = process.argv.includes('--dry-run');
 const CONFIG = process.env.DREAM_CONFIG || 'dream.config.json';
@@ -89,10 +89,11 @@ export function extractSpec(text) {
 }
 
 /** The spec contract the model must follow, built from the live metric catalog and pair names. */
-export function specInstructions(pairs = []) {
+export function specInstructions(pairs = [], settledPairs = new Map()) {
   const metrics = Object.entries(SPEC_METRICS).map(([k, d]) => `  - ${k} (${d.kind === 'venue' ? 'needs "venue": "pm"|"ks"' : 'needs "pair"'}; n = ${d.n}): ${d.unit}`).join('\n');
   return `Metrics a spec may name (nothing else is measured):\n${metrics}\n` +
-    `Configured pair names: ${pairs.map((p) => p.name).join(', ') || 'none'}.\n` +
+    `Configured pair names: ${pairs.filter((p) => !settledPairs.has(p.name)).map((p) => p.name).join(', ') || 'none'}.\n` +
+    (settledPairs.size ? `Settled pairs (both markets resolved; a spec on them is rejected): ${[...settledPairs.keys()].join(', ')}.\n` : '') +
     `Optional "slice": {"hoursUtc": [from, to] (whole UTC hours, from <= hour < to, wraps past midnight), "midMin": 0..1, "midMax": 0..1}. Maker slices apply at order entry.\n` +
     `resolution.* metrics slice instead on "priceMin"/"priceMax" (0.5..1, entry price of the favored side bought, min <= p < max) and "hoursToClose": [min, max) hours before the scheduled close, plus hoursUtc; they never take midMin/midMax.\n` +
     `Required: "op": ">" or "<", numeric "threshold". Optional "minN": the sample the metric needs before it is graded (a floor still applies).\n` +
@@ -117,7 +118,8 @@ export function holds(spec, value) {
  * Why a valid spec would teach nothing, or null. A non-profit prediction the pre-freeze data
  * already satisfies is a restatement; after a non-profit night the next one must predict profit.
  */
-export function specRejection(spec, baseline, { requireProfit = false } = {}) {
+export function specRejection(spec, baseline, { requireProfit = false, settledPairs = new Map() } = {}) {
+  if (spec?.pair && settledPairs.has(spec.pair)) return `pair ${spec.pair} settled at ${settledPairs.get(spec.pair)}, so no post-freeze data can arrive to grade it; pick a pair that is still trading or another metric`;
   if (requireProfit && !isProfitSpec(spec)) return 'the previous hypothesis did not predict profit, so tonight\'s must (resolution.netCentsPer10 or maker.netCentsPerAttempt > a threshold >= 0, or pair.bothSidesFracNetPositive > a threshold > 0, in some slice)';
   if (!isProfitSpec(spec) && holds(spec, baseline?.value)) return `already true before the freeze (${spec.metric} = ${baseline.value} on n=${baseline.n}); a non-profit prediction must claim a change from the recorded value`;
   return null;
@@ -186,7 +188,7 @@ async function research(ctx, ev, history = [], rules = '', retry = '') {
     (history.length
       ? `EARLIER HYPOTHESES (graded by code on snapshots recorded after each was frozen; do not re-propose a REFUTED one unchanged):\n${history.join('\n')}\n${scorecard(ctx.hyps || [])}\n\n`
       : '') +
-    `HYPOTHESIS SPEC CONTRACT:\n${specInstructions(ev.watchlist.pairs)}\n${rules}\n\n` +
+    `HYPOTHESIS SPEC CONTRACT:\n${specInstructions(ev.watchlist.pairs, ev.settledPairs)}\n${rules}\n\n` +
     (retry ? `${retry}\n\n` : '') +
     `Produce, in under 450 words, with these exact headings:\n` +
     `## Observations — 2-4 bullets about "${ctx.deep}", each citing a number from EVIDENCE.\n` +
@@ -278,10 +280,16 @@ async function main() {
   const settled = { resolutions: loadResolutions(ev.dataDir), catalogs: loadCatalogs(ev.dataDir) };
   const after = (t) => allRows.filter((x) => x.t > t);
   const ticksAfter = (t) => new Set(after(t).map((x) => x.t)).size;
+  const settledPairs = new Map((ev.watchlist.pairs || []).map((p) => [p.name, pairSettledAt(p, settled.resolutions)]).filter(([, at]) => at));
+  ev.settledPairs = settledPairs;
   const grades = [];
   for (const h of hyps.filter((x) => x.status === 'open' && x.date !== ctx.date)) {
     const why = validateSpec(h.spec, ev.watchlist.pairs);
-    if (why) grades.push({ id: h.id, verdict: 'UNGRADEABLE', note: cell(h.specNote || why), by: 'rule' });
+    if (why) { grades.push({ id: h.id, verdict: 'UNGRADEABLE', note: cell(h.specNote || why), by: 'rule' }); continue; }
+    // A pair that settled short of the sample can never be graded: retire it instead of holding a re-test slot.
+    if (!settledPairs.has(h.spec.pair)) continue;
+    const m = measureSpecRows(after(h.frozenAt), h.spec, ev.watchlist, settled), need = Math.max(h.spec.minN ?? 0, minN);
+    if ((m.n ?? 0) < need) grades.push({ id: h.id, verdict: 'EXPIRED', value: m.value, n: m.n, note: `pair ${h.spec.pair} settled at ${settledPairs.get(h.spec.pair)} with n=${m.n ?? 0} post-freeze, below the n>=${need} needed`, by: 'rule' });
   }
   const plan = planRetests(hyps.filter((x) => !grades.some((gr) => gr.id === x.id)), { date: ctx.date, days: ev.days, minTicks, maxOpen: bt.retestMaxOpen ?? 5 }, (h) => ticksAfter(h.frozenAt));
   for (const { h, ticks } of plan.due) {
@@ -313,7 +321,7 @@ async function main() {
     const spec = extractSpec(res.content);
     const invalid = validateSpec(spec, ev.watchlist.pairs);
     const baseline = invalid ? null : measureSpecRows(allRows, spec, ev.watchlist, settled);
-    const specError = invalid || specRejection(spec, baseline, { requireProfit });
+    const specError = invalid || specRejection(spec, baseline, { requireProfit, settledPairs });
     return { id: ctx.date, date: ctx.date, deep: ctx.deep, issue: 'LOCAL', text: res.hypothesis, spec, frozenAt: g.lastTick,
       baseline, status: specError ? 'UNGRADEABLE' : 'open', ...(specError ? { specNote: specError } : {}), retests: [] };
   };

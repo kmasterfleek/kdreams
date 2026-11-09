@@ -63,7 +63,7 @@ export function computeReport({ dataDir = 'data', watchlist = {}, days = 14, sin
 
   const pairs = (watchlist.pairs || []).map((p) => {
     const pm = series.get(`pm:${p.polymarketId}`) || [], ks = series.get(`ks:${p.kalshiTicker}`) || [];
-    return { ...p, pmTitle: catalogs.pm[p.polymarketId]?.title || null, ksTitle: catalogs.ks[p.kalshiTicker]?.title || null, ...crossVenue(pm, ks, pairFees(fees, p)) };
+    return { ...p, pmTitle: catalogs.pm[p.polymarketId]?.title || null, ksTitle: catalogs.ks[p.kalshiTicker]?.title || null, settledAt: pairSettledAt(p, resolutions), ...crossVenue(pm, ks, pairFees(fees, p)) };
   });
 
   const lastT = ticks[ticks.length - 1];
@@ -133,6 +133,12 @@ export function validateSpec(spec, pairs = []) {
   for (const k of ['midMin', 'midMax']) if (sl[k] !== undefined && !(Number.isFinite(sl[k]) && sl[k] >= 0 && sl[k] <= 1)) return `slice.${k} must be within 0..1`;
   if (spec.minN !== undefined && !(Number.isInteger(spec.minN) && spec.minN > 0)) return 'minN must be a positive integer';
   return null;
+}
+
+/** When both legs of a pair have settled (the later settlement time), else null: no new data can arrive after it. */
+export function pairSettledAt(pair, resolutions = new Map()) {
+  const a = resolutions.get(`pm:${pair.polymarketId}`)?.at, b = resolutions.get(`ks:${pair.kalshiTicker}`)?.at;
+  return a && b ? (a > b ? a : b) : null;
 }
 
 /** Venue fee rates for one pair: Polymarket sets taker rates per market, so a pair may override the default. */
@@ -209,7 +215,7 @@ export function renderSummary(r) {
   }
   if (r.crossVenue.length === 0) L.push('Cross-venue: no pairs configured in config/kdreams.watchlist.json yet.');
   for (const p of r.crossVenue) {
-    L.push(`Pair ${p.kalshiTicker} vs ${p.polymarketId.slice(0, 10)}: n=${p.n}, mean |diff| ${num(p.meanAbsCents)}c, max ${num(p.maxAbsCents)}c, >2c ${pct(p.fracAbsGt2c)}; both-sides net-positive ${pct(p.bothSides.fracNetPositive)} (max ${num(p.bothSides.maxNetCents)}c); leads: ${p.leads || 'n/a'} (lag ${p.bestLag?.lag ?? 'n/a'}, r=${num(p.bestLag?.corr)}).`);
+    L.push(`Pair ${p.name ? `${p.name} (` : ''}${p.kalshiTicker} vs ${p.polymarketId.slice(0, 10)}${p.name ? ')' : ''}${p.settledAt ? ` SETTLED ${p.settledAt}, no new data can arrive` : ''}: n=${p.n}, mean |diff| ${num(p.meanAbsCents)}c, max ${num(p.maxAbsCents)}c, >2c ${pct(p.fracAbsGt2c)}; both-sides net-positive ${pct(p.bothSides.fracNetPositive)} (max ${num(p.bothSides.maxNetCents)}c); leads: ${p.leads || 'n/a'} (lag ${p.bestLag?.lag ?? 'n/a'}, r=${num(p.bestLag?.corr)}).`);
   }
   const hrs = r.byHour.pm.length ? r.byHour.pm.slice().sort((a, b) => b.fracOneCent - a.fracOneCent) : [];
   if (hrs.length) L.push(`Polymarket tightest UTC hours: ${hrs.slice(0, 3).map((h) => `${h.hour}h ${pct(h.fracOneCent)}`).join(', ')}; loosest: ${hrs.slice(-2).map((h) => `${h.hour}h ${pct(h.fracOneCent)}`).join(', ')}.`);
