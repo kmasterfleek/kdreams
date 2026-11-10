@@ -1,0 +1,155 @@
+{
+ "scannedAt": "2026-11-10T06:00Z",
+ "horizonDays": 42,
+ "pmMarkets": 242,
+ "ksMarkets": 1095,
+ "pairs": [
+  {
+   "pmId": "0x2d858f0a25a61dfde6485f3d8e75aed397bed616c3e458b66e10e642fb2f9759",
+   "pmSlug": "pete-hegseth-out-as-secretary-of-defense-by-october-31-20261001003401433",
+   "pmTitle": "Pete Hegseth out as Secretary of Defense by November 30?",
+   "ksTicker": "KXHEGSETHOUT-26AUG-26DEC01",
+   "ksTitle": "Pete Hegseth out as Secretary of Defense? — Before Dec 1, 2026",
+   "pmClose": "2026-12-01T04:59:00Z",
+   "ksClose": "2026-12-01T04:59:00Z",
+   "score": 0.71,
+   "midDiffCents": -4,
+   "pmFeeRate": 0.04,
+   "pmV24": 70371,
+   "ksV24": 76777,
+   "best": {
+    "dir": "pm YES + ks NO",
+    "cost": 0.97,
+    "contracts": 10,
+    "netCents": 10.8,
+    "sizeOk": true
+   }
+  },
+  {
+   "pmId": "0xd64b917e1f7cdf1ad3f51326cf8985ce80e140291d2eaf2bf62821ef02231550",
+   "pmSlug": "strait-of-hormuz-traffic-returns-to-normal-by-november-30-20260810151158765",
+   "pmTitle": "Strait of Hormuz traffic returns to normal by November 30?",
+   "ksTicker": "KXHORMUZNORM-26MAR17-B261201",
+   "ksTitle": "When will traffic at the Strait of Hormuz return to normal? — Before Dec 1, 2026",
+   "pmClose": "2026-12-01T04:59:00Z",
+   "ksClose": "2026-12-01T14:59:00Z",
+   "score": 0.63,
+   "midDiffCents": -0.4,
+   "pmFeeRate": 0,
+   "pmV24": 195747,
+   "ksV24": 247098,
+   "best": {
+    "dir": "pm YES + ks NO",
+    "cost": 1.002,
+    "contracts": 9,
+    "netCents": -3.8,
+    "sizeOk": true
+   }
+  },
+  {
+   "pmId": "0xf17ad24eb4ad57926495b114149c765b9b95bc286eadc91cbbfa901ceb10d0b8",
+   "pmSlug": "will-the-fed-decrease-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808634",
+   "pmTitle": "Will the Fed decrease interest rates by 25 bps after the December 2026 meeting?",
+   "ksTicker": "KXFEDDECISION-26DEC-C25",
+   "ksTitle": "Fed decision in Dec 2026? — Cut 25bps",
+   "pmClose": "2026-12-09T23:59:00Z",
+   "ksClose": "2026-12-09T18:59:00Z",
+   "score": 0.43,
+   "midDiffCents": -0.3,
+   "pmFeeRate": 0.05,
+   "pmV24": 40569,
+   "ksV24": 213243,
+   "best": {
+    "dir": "pm YES + ks NO",
+    "cost": 1.008,
+    "contracts": 9,
+    "netCents": -7.6,
+    "sizeOk": false
+   }
+  },
+  {
+   "pmId": "0xa94d6d38aadfed1c9705800330db2cf11deea1b7086ab1aad647abcc6337651f",
+   "pmSlug": "us-iran-final-nuclear-deal-by-november-30-2026",
+   "pmTitle": "US-Iran Final Nuclear Deal by November 30, 2026?",
+   "ksTicker": "KXUSAIRANAGREEMENT-27-26DEC",
+   "ksTitle": "US-Iran nuclear deal? — Before Dec 1, 2026",
+   "pmClose": "2026-12-01T04:59:00Z",
+   "ksClose": "2026-12-01T15:00:00Z",
+   "score": 0.57,
+   "midDiffCents": -0.2,
+   "pmFeeRate": 0,
+   "pmV24": 157772,
+   "ksV24": 59238,
+   "best": {
+    "dir": "pm YES + ks NO",
+    "cost": 1.012,
+    "contracts": 9,
+    "netCents": -13.8,
+    "sizeOk": true
+   }
+  },
+  {
+   "pmId": "0x723822eb2b143cee54c0bd7c1efba322b21f0051984c266df8879c394f1011c0",
+   "pmSlug": "will-there-be-no-change-in-fed-interest-rates-after-the-december-2026-meeting-20260729232808635",
+   "pmTitle": "Will there be no change in Fed interest rates after the December 2026 meeting?",
+   "ksTicker": "KXFEDDECISION-26DEC-H0",
+   "ksTitle": "Fed decision in Dec 2026? — Fed maintains rate",
+   "pmClose": "2026-12-09T23:59:00Z",
+   "ksClose": "2026-12-09T18:59:00Z",
+   "score": 0.5,
+   "midDiffCents": -1,
+   "pmFeeRate": 0.05,
+   "pmV24": 328727,
+   "ksV24": 99697,
+   "best": {
+    "dir": "pm YES + ks NO",
+    "cost": 1,
+    "contracts": 10,
+    "netCents": -18.7,
+    "sizeOk": true
+   }
+  },
+  {
+   "pmId": "0x8a4196617dcb703e49d9bb36d3847bf6a75fd364dbd19f8d408ac944bf1a03d8",
+   "pmSlug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
+   "pmTitle": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
+   "ksTicker": "KXFEDDECISION-26DEC-H25",
+   "ksTitle": "Fed decision in Dec 2026? — Hike 25bps",
+   "pmClose": "2026-12-09T23:59:00Z",
+   "ksClose": "2026-12-09T18:59:00Z",
+   "score": 0.43,
+   "midDiffCents": -1,
+   "pmFeeRate": 0.05,
+   "pmV24": 162013,
+   "ksV24": 119365,
+   "best": {
+    "dir": "pm YES + ks NO",
+    "cost": 1,
+    "contracts": 10,
+    "netCents": -20,
+    "sizeOk": true
+   }
+  },
+  {
+   "pmId": "0x6db92cee58b72e61b3874cce633a0457ade010ef377a0eeeaf1fcf88ad0c3fd4",
+   "pmSlug": "next-us-iran-senior-diplomatic-meeting-by-november-30-2026",
+   "pmTitle": "Next US-Iran senior diplomatic meeting by November 30, 2026?",
+   "ksTicker": "KXUSIRANMEETING-27-26DEC01",
+   "ksTitle": "When will the U.S. and Iran hold a diplomatic meeting? — Before Dec 1, 2026",
+   "pmClose": "2026-12-01T04:59:00Z",
+   "ksClose": "2026-12-01T04:59:00Z",
+   "score": 0.3,
+   "midDiffCents": -2,
+   "pmFeeRate": 0,
+   "pmV24": 124127,
+   "ksV24": 9511,
+   "best": {
+    "dir": "pm YES + ks NO",
+    "cost": 1.01,
+    "contracts": 9,
+    "netCents": -20,
+    "sizeOk": true
+   }
+  }
+ ]
+}
