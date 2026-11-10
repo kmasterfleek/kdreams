@@ -1,112 +1,127 @@
 {
-  "scannedAt": "2026-11-10T09:39Z",
+  "scannedAt": "2026-11-10T15:45Z",
   "tickers": [
     "SENATEAK-26-R",
+    "KXATPCHALLENGERMATCH-26NOV10TSICRE-TSI",
+    "KXFEDDECISION-26DEC-H26",
+    "KXATPCHALLENGERMATCH-26NOV10TSICRE-CRE",
     "KXSB-27-JAC",
     "SENATEMS-26-R",
     "KXNEXTPRESSECPERM-29JAN20-DWHI",
-    "KXODIMATCH-26NOV092100INDNZ-IND",
     "SENATEAK-26-D",
-    "KXSB-27-GB",
+    "KXNBAGAME-26NOV10BOSPHI-PHI",
+    "KXFEDDECISION-26DEC-H25",
+    "KXATPMATCH-26NOV09RINKEC-RIN",
     "KXNFLNFCNORTH-27-MIN",
-    "KXFEDDECISION-26DEC-H26",
+    "KXSB-27-GB",
+    "KXATPCHALLENGERMATCH-26NOV10CLAJAN-JAN",
+    "KXATPMATCH-26NOV09RINKEC-KEC",
     "KXPRESNOMR-28-JMCE",
-    "KXPRESNOMD-28-EWAR",
     "KXSB-27-SF",
-    "KXATPCHALLENGERMATCH-26NOV10GEEMAR-MAR",
+    "KXNBAGAME-26NOV10BOSPHI-BOS",
+    "KXATPCHALLENGERMATCH-26NOV10GOBALT-ALT",
+    "KXPRESNOMD-28-EWAR",
     "KXNBA-27-DAL",
+    "KXFEDDECISION-26DEC-H0",
     "KXAKSENATE-26NOV03-DSUL",
     "KXSB-27-BUF",
-    "KXATPCHALLENGERMATCH-26NOV10GEEMAR-GEE",
-    "KXSENATEDEMLEAD-28JAN01-CSHU",
     "KXSB-27-LAR",
-    "KXPRESPERSON-28-JMCE",
-    "KXNBAGAME-26NOV10BOSPHI-PHI",
-    "KXPRESPERSON-28-AELS",
-    "KXNFLGAME-26NOV12WASNYG-NYG",
-    "KXPRESNOMD-28-AFOR",
-    "KXUFCFIGHT-26NOV14GANHOK-HOK",
-    "KXPGATOUR-AUCPBCS26-THOG",
-    "KXATPCHALLENGERMATCH-26NOV10XILFOM-XIL",
-    "KXODIMATCH-26NOV092100INDNZ-NZ",
-    "KXSB-27-CHI",
-    "KXHORMUZNORM-26MAR17-B261201",
-    "KXNEXTTEAMNFL-26ARODGERS8-NONE",
-    "KXSB-27-MIN",
-    "KXMLBALMOTY-26-KCAS",
-    "KXFEDDECISION-26DEC-C25",
-    "KXNFLNEXTTEAM-26JTAYLOR28-NE",
-    "KXPRESNOMD-28-SFAI",
-    "KXBLUEWAVECOMBO-27FEB",
     "KXIPOANTHROPIC-DATE-26NOV16",
-    "KXBLUETSUNAMICOMBO-27FEB",
+    "KXATPCHALLENGERMATCH-26NOV10CLAJAN-CLA",
+    "KXSENATEDEMLEAD-28JAN01-CSHU",
+    "KXATPCHALLENGERMATCH-26NOV10CANARN-ARN",
+    "KXUFCFIGHT-26NOV14GANHOK-HOK",
+    "KXATPCHALLENGERMATCH-26NOV10ANDPIE-PIE",
+    "KXATPCHALLENGERMATCH-26NOV10RINDLF-RIN",
+    "KXPRESPERSON-28-JMCE",
+    "KXPRESNOMD-28-AFOR",
+    "KXPGATOUR-AUCPBCS26-THOG",
+    "KXATPCHALLENGERMATCH-26NOV10KIMPLA-KIM",
+    "KXPRESPERSON-28-AELS",
+    "KXSB-27-CHI",
+    "KXUCLWGAME-26NOV10RMAPAR-RMA",
+    "KXSB-27-MIN",
+    "KXITFMATCH-26NOV10PERSPE-PER",
+    "KXATPCHALLENGERMATCH-26NOV10GOBALT-GOB",
+    "KXNFLGAME-26NOV12WASNYG-NYG",
     "KXHOUSERACE-NC03-26-R",
-    "KXITFMATCH-26NOV10KIKZHA-ZHA",
-    "KXPRESNOMR-28-JDV",
+    "KXNEXTTEAMNFL-26ARODGERS8-NONE",
+    "KXNFLNEXTTEAM-26JTAYLOR28-NE",
+    "KXCEONVDA-01JAN33-01JAN27",
+    "KXATPCHALLENGERMATCH-26NOV10ANDPIE-AND",
+    "KXMLBALMOTY-26-KCAS",
+    "KXHORMUZNORM-26MAR17-B261201",
+    "KXFEDDECISION-26DEC-C25",
+    "KXBLUEWAVECOMBO-27FEB",
+    "KXBLUETSUNAMICOMBO-27FEB",
+    "KXNFLNEXTTEAM-26JTAYLOR28-IND",
     "KXPGATOUR-AUCPBCS26-DGHI",
     "KXNBA-27-GSW",
-    "KXCEONVDA-01JAN33-01JAN27",
-    "KXALIENS-27",
-    "KXSENATEDEMLEAD-28JAN01-CHOL",
+    "KXATPCHALLENGERMATCH-26NOV10MAXBAR-MAX",
+    "KXPRESNOMD-28-SFAI",
+    "KXPRESNOMR-28-JDV",
+    "KXNHLGAME-26NOV10NSHLA-NSH",
+    "KXATPSETWINNER-26NOV09RINKEC-1-RIN",
+    "KXATPMATCH-26NOV09RUNBER-RUN",
     "KXNFLNFCNORTH-27-GB",
-    "KXATPCHALLENGERMATCH-26NOV10XILFOM-FOM",
-    "KXTRUMPADMINLEAVE-26DEC31-PHEG",
-    "KXPRESNOMR-28-TC",
-    "KXNFLNEXTTEAM-26JTAYLOR28-IND",
     "KXSENMAJ-27-CSCH",
-    "KXPRESPERSON-28-MRUB",
-    "KXNFLNFCCHAMP-27-MIN",
-    "KXPRESNOMD-28-CHOL",
-    "KXBTC15M-26NOV100445-45",
-    "KXNFLNEXTTEAM-26JTAYLOR28-NYG",
-    "KXNEXTPRESSECPERM-29JAN20-DWWH",
-    "KXWT20MATCH-26NOV100310AS-WHH-W-HH-W",
-    "KXFEDDECISION-26DEC-H25",
-    "KXSB-27-SEA",
-    "KXNBA-27-LAL",
     "KXNFLNEXTTEAM-26JTAYLOR28-GB",
-    "KXNCAAF-27-UGA",
-    "KXPRESNOMD-28-AELS",
-    "KXNFLMVP-27-JLOV",
-    "KXHEGSETHOUT-26APR-27JAN01",
-    "KXPRESNOMD-28-JOSS",
-    "KXPRESPERSON-28-RDES",
-    "KXPRESNOMD-28-AOC",
+    "KXNFLNEXTTEAM-26JTAYLOR28-NYG",
+    "KXPRESNOMR-28-TC",
     "KXNBAGAME-26NOV10OKCPOR-OKC",
-    "KXPRESPERSON-28-RWAR",
-    "KXNFLOPOTY-27-CLAM",
-    "KXPRESNOMR-28-MR",
+    "KXPRESPERSON-28-MRUB",
     "KXNBAGAME-26NOV10MILNYK-NYK",
-    "KXUEFANLGAME-26NOV12TURBEL-BEL",
-    "KXUCLWGAME-26NOV10RMAPAR-RMA",
-    "KXPRESPERSON-28-CBOO",
-    "KXHORMUZNORM-26MAR17-B270101",
-    "KXHOUSERACE-NC03-26-D",
-    "KXFEDDECISION-26DEC-H0",
-    "KXUEFANLGAME-26NOV12ITAFRA-FRA",
-    "KXHOUSERACE-CO04-26-R",
-    "KXNFLAFCEAST-27-NE",
-    "KXNFLNEXTTEAM-26JTAYLOR28-MIN",
-    "KXITFMATCH-26NOV10KIKZHA-KIK",
-    "KXRT-EBE-90",
-    "KXPRESNOMR-28-RDS",
-    "KXLLM1-26DEC31-GOOG",
-    "KXNFLGAME-26NOV15NEDET-DET",
-    "KXMLBALMOTY-26-WVEN",
+    "KXNFLNFCCHAMP-27-MIN",
+    "KXSENATEDEMLEAD-28JAN01-CHOL",
+    "KXTRUMPADMINLEAVE-26DEC31-PHEG",
+    "KXSB-27-SEA",
+    "KXPRESNOMD-28-CHOL",
+    "KXUCLWGAME-26NOV10RMAPAR-PAR",
+    "KXUCLWGAME-26NOV10PSGBMU-PSG",
+    "KXATPCHALLENGERMATCH-26NOV10RINDLF-DLF",
+    "KXHEGSETHOUT-26APR-27JAN01",
+    "KXNCAAF-27-UGA",
+    "KXALIENS-27",
+    "KXNBA-27-LAL",
+    "KXATPCHALLENGERMATCH-26NOV10CANARN-CAN",
+    "KXATPCHALLENGERMATCH-26NOV10PIRNAR-PIR",
+    "KXPRESNOMD-28-AELS",
     "KXCEONVDA-01JAN33-01JUL27",
-    "KXPGATOUR-AUCPBCS26-PCOO",
-    "KXNFLDPOTY-27-AREESE52",
-    "KXPRESNOMD-28-GN",
+    "KXNFLGAME-26NOV15SFDAL-SF",
+    "KXNFLNEXTTEAM-26JTAYLOR28-MIN",
+    "KXATPCHALLENGERMATCH-26NOV10PIRNAR-NAR",
+    "KXPRESPERSON-28-RDES",
+    "KXNBAGAME-26NOV10MILNYK-MIL",
     "KXNCAAFGAME-26NOV14TEXLSU-TEX",
-    "KXWTIMAX-26DEC31-T115",
-    "KXSB-27-CIN",
-    "KXPRESPERSON-28-JTAL"
+    "KXPRESNOMD-28-AOC",
+    "KXPRESNOMD-28-MC",
+    "KXITFMATCH-26NOV10PERSPE-SPE",
+    "KXITFMATCH-26NOV10BARSEG-SEG",
+    "KXNFLOPOTY-27-CLAM",
+    "KXNEXTPRESSECPERM-29JAN20-DWWH",
+    "KXNBAGAME-26NOV10OKCPOR-POR",
+    "KXLLM1-26DEC31-GOOG"
   ],
   "events": {
     "SENATEAK-26-R": {
       "title": "Alaska Senate winner?",
       "series_ticker": "SENATEAK",
       "category": "Elections"
+    },
+    "KXATPCHALLENGERMATCH-26NOV10TSICRE-TSI": {
+      "title": "Tsitsipas vs Cretu",
+      "series_ticker": "KXATPCHALLENGERMATCH",
+      "category": "Sports"
+    },
+    "KXFEDDECISION-26DEC-H26": {
+      "title": "Fed decision in Dec 2026?",
+      "series_ticker": "KXFEDDECISION",
+      "category": "Economics"
+    },
+    "KXATPCHALLENGERMATCH-26NOV10TSICRE-CRE": {
+      "title": "Tsitsipas vs Cretu",
+      "series_ticker": "KXATPCHALLENGERMATCH",
+      "category": "Sports"
     },
     "KXSB-27-JAC": {
       "title": "2027 Pro Football Champion",
@@ -123,19 +138,24 @@
       "series_ticker": "KXNEXTPRESSECPERM",
       "category": "Politics"
     },
-    "KXODIMATCH-26NOV092100INDNZ-IND": {
-      "title": "New Zealand vs India",
-      "series_ticker": "KXODIMATCH",
-      "category": "Sports"
-    },
     "SENATEAK-26-D": {
       "title": "Alaska Senate winner?",
       "series_ticker": "SENATEAK",
       "category": "Elections"
     },
-    "KXSB-27-GB": {
-      "title": "2027 Pro Football Champion",
-      "series_ticker": "KXSB",
+    "KXNBAGAME-26NOV10BOSPHI-PHI": {
+      "title": "Boston vs Philadelphia",
+      "series_ticker": "KXNBAGAME",
+      "category": "Sports"
+    },
+    "KXFEDDECISION-26DEC-H25": {
+      "title": "Fed decision in Dec 2026?",
+      "series_ticker": "KXFEDDECISION",
+      "category": "Economics"
+    },
+    "KXATPMATCH-26NOV09RINKEC-RIN": {
+      "title": "Arthur Rinderknech vs Miomir Kecmanovic",
+      "series_ticker": "KXATPMATCH",
       "category": "Sports"
     },
     "KXNFLNFCNORTH-27-MIN": {
@@ -143,19 +163,24 @@
       "series_ticker": "KXNFLNFCNORTH",
       "category": "Sports"
     },
-    "KXFEDDECISION-26DEC-H26": {
-      "title": "Fed decision in Dec 2026?",
-      "series_ticker": "KXFEDDECISION",
-      "category": "Economics"
+    "KXSB-27-GB": {
+      "title": "2027 Pro Football Champion",
+      "series_ticker": "KXSB",
+      "category": "Sports"
+    },
+    "KXATPCHALLENGERMATCH-26NOV10CLAJAN-JAN": {
+      "title": "Clarke vs Janvier",
+      "series_ticker": "KXATPCHALLENGERMATCH",
+      "category": "Sports"
+    },
+    "KXATPMATCH-26NOV09RINKEC-KEC": {
+      "title": "Arthur Rinderknech vs Miomir Kecmanovic",
+      "series_ticker": "KXATPMATCH",
+      "category": "Sports"
     },
     "KXPRESNOMR-28-JMCE": {
       "title": "2028 Republican presidential nominee",
       "series_ticker": "KXPRESNOMR",
-      "category": "Elections"
-    },
-    "KXPRESNOMD-28-EWAR": {
-      "title": "2028 Democratic presidential nominee",
-      "series_ticker": "KXPRESNOMD",
       "category": "Elections"
     },
     "KXSB-27-SF": {
@@ -163,15 +188,30 @@
       "series_ticker": "KXSB",
       "category": "Sports"
     },
-    "KXATPCHALLENGERMATCH-26NOV10GEEMAR-MAR": {
-      "title": "Geerts vs Martin Manzano",
+    "KXNBAGAME-26NOV10BOSPHI-BOS": {
+      "title": "Boston vs Philadelphia",
+      "series_ticker": "KXNBAGAME",
+      "category": "Sports"
+    },
+    "KXATPCHALLENGERMATCH-26NOV10GOBALT-ALT": {
+      "title": "Gobat vs Altmaier",
       "series_ticker": "KXATPCHALLENGERMATCH",
       "category": "Sports"
+    },
+    "KXPRESNOMD-28-EWAR": {
+      "title": "2028 Democratic presidential nominee",
+      "series_ticker": "KXPRESNOMD",
+      "category": "Elections"
     },
     "KXNBA-27-DAL": {
       "title": "2027 Pro Basketball Champion",
       "series_ticker": "KXNBA",
       "category": "Sports"
+    },
+    "KXFEDDECISION-26DEC-H0": {
+      "title": "Fed decision in Dec 2026?",
+      "series_ticker": "KXFEDDECISION",
+      "category": "Economics"
     },
     "KXAKSENATE-26NOV03-DSUL": {
       "title": "Alaska Senate winner? (Person)",
@@ -183,8 +223,18 @@
       "series_ticker": "KXSB",
       "category": "Sports"
     },
-    "KXATPCHALLENGERMATCH-26NOV10GEEMAR-GEE": {
-      "title": "Geerts vs Martin Manzano",
+    "KXSB-27-LAR": {
+      "title": "2027 Pro Football Champion",
+      "series_ticker": "KXSB",
+      "category": "Sports"
+    },
+    "KXIPOANTHROPIC-DATE-26NOV16": {
+      "title": "When will Anthropic officially announce an IPO?",
+      "series_ticker": "KXIPOANTHROPIC",
+      "category": "Companies"
+    },
+    "KXATPCHALLENGERMATCH-26NOV10CLAJAN-CLA": {
+      "title": "Clarke vs Janvier",
       "series_ticker": "KXATPCHALLENGERMATCH",
       "category": "Sports"
     },
@@ -193,9 +243,24 @@
       "series_ticker": "KXSENATEDEMLEAD",
       "category": "Elections"
     },
-    "KXSB-27-LAR": {
-      "title": "2027 Pro Football Champion",
-      "series_ticker": "KXSB",
+    "KXATPCHALLENGERMATCH-26NOV10CANARN-ARN": {
+      "title": "Caniato vs Bailly",
+      "series_ticker": "KXATPCHALLENGERMATCH",
+      "category": "Sports"
+    },
+    "KXUFCFIGHT-26NOV14GANHOK-HOK": {
+      "title": "334: Ciryl Gane vs Josh Hokit",
+      "series_ticker": "KXUFCFIGHT",
+      "category": "Sports"
+    },
+    "KXATPCHALLENGERMATCH-26NOV10ANDPIE-PIE": {
+      "title": "Andreev vs Pietri",
+      "series_ticker": "KXATPCHALLENGERMATCH",
+      "category": "Sports"
+    },
+    "KXATPCHALLENGERMATCH-26NOV10RINDLF-RIN": {
+      "title": "Rincon vs De la Fuente",
+      "series_ticker": "KXATPCHALLENGERMATCH",
       "category": "Sports"
     },
     "KXPRESPERSON-28-JMCE": {
@@ -203,9 +268,19 @@
       "series_ticker": "KXPRESPERSON",
       "category": "Elections"
     },
-    "KXNBAGAME-26NOV10BOSPHI-PHI": {
-      "title": "Boston vs Philadelphia",
-      "series_ticker": "KXNBAGAME",
+    "KXPRESNOMD-28-AFOR": {
+      "title": "2028 Democratic presidential nominee",
+      "series_ticker": "KXPRESNOMD",
+      "category": "Elections"
+    },
+    "KXPGATOUR-AUCPBCS26-THOG": {
+      "title": "Austin Championship presented by Compliance Solutions Winner",
+      "series_ticker": "KXPGATOUR",
+      "category": "Sports"
+    },
+    "KXATPCHALLENGERMATCH-26NOV10KIMPLA-KIM": {
+      "title": "Kimhi vs Planinsek",
+      "series_ticker": "KXATPCHALLENGERMATCH",
       "category": "Sports"
     },
     "KXPRESPERSON-28-AELS": {
@@ -213,49 +288,14 @@
       "series_ticker": "KXPRESPERSON",
       "category": "Elections"
     },
-    "KXNFLGAME-26NOV12WASNYG-NYG": {
-      "title": "Washington vs New York G",
-      "series_ticker": "KXNFLGAME",
-      "category": "Sports"
-    },
-    "KXPRESNOMD-28-AFOR": {
-      "title": "2028 Democratic presidential nominee",
-      "series_ticker": "KXPRESNOMD",
-      "category": "Elections"
-    },
-    "KXUFCFIGHT-26NOV14GANHOK-HOK": {
-      "title": "334: Ciryl Gane vs Josh Hokit",
-      "series_ticker": "KXUFCFIGHT",
-      "category": "Sports"
-    },
-    "KXPGATOUR-AUCPBCS26-THOG": {
-      "title": "Austin Championship presented by Compliance Solutions Winner",
-      "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
-    "KXATPCHALLENGERMATCH-26NOV10XILFOM-XIL": {
-      "title": "Xilas vs Fomin",
-      "series_ticker": "KXATPCHALLENGERMATCH",
-      "category": "Sports"
-    },
-    "KXODIMATCH-26NOV092100INDNZ-NZ": {
-      "title": "New Zealand vs India",
-      "series_ticker": "KXODIMATCH",
-      "category": "Sports"
-    },
     "KXSB-27-CHI": {
       "title": "2027 Pro Football Champion",
       "series_ticker": "KXSB",
       "category": "Sports"
     },
-    "KXHORMUZNORM-26MAR17-B261201": {
-      "title": "When will traffic at the Strait of Hormuz return to normal?",
-      "series_ticker": "KXHORMUZNORM",
-      "category": "Politics"
-    },
-    "KXNEXTTEAMNFL-26ARODGERS8-NONE": {
-      "title": "Aaron Rodgers's Next Team",
-      "series_ticker": "KXNEXTTEAMNFL",
+    "KXUCLWGAME-26NOV10RMAPAR-RMA": {
+      "title": "Real Madrid vs Paris FC",
+      "series_ticker": "KXUCLWGAME",
       "category": "Sports"
     },
     "KXSB-27-MIN": {
@@ -263,55 +303,75 @@
       "series_ticker": "KXSB",
       "category": "Sports"
     },
-    "KXMLBALMOTY-26-KCAS": {
-      "title": "AL Manager of the Year Winner",
-      "series_ticker": "KXMLBALMOTY",
+    "KXITFMATCH-26NOV10PERSPE-PER": {
+      "title": "Perez Contri vs Sperle",
+      "series_ticker": "KXITFMATCH",
       "category": "Sports"
     },
-    "KXFEDDECISION-26DEC-C25": {
-      "title": "Fed decision in Dec 2026?",
-      "series_ticker": "KXFEDDECISION",
-      "category": "Economics"
-    },
-    "KXNFLNEXTTEAM-26JTAYLOR28-NE": {
-      "title": "Jonathan Taylor Next Team",
-      "series_ticker": "KXNFLNEXTTEAM",
+    "KXATPCHALLENGERMATCH-26NOV10GOBALT-GOB": {
+      "title": "Gobat vs Altmaier",
+      "series_ticker": "KXATPCHALLENGERMATCH",
       "category": "Sports"
     },
-    "KXPRESNOMD-28-SFAI": {
-      "title": "2028 Democratic presidential nominee",
-      "series_ticker": "KXPRESNOMD",
-      "category": "Elections"
-    },
-    "KXBLUEWAVECOMBO-27FEB": {
-      "title": "Blue wave in 2026?",
-      "series_ticker": "KXBLUEWAVECOMBO",
-      "category": "Politics"
-    },
-    "KXIPOANTHROPIC-DATE-26NOV16": {
-      "title": "When will Anthropic officially announce an IPO?",
-      "series_ticker": "KXIPOANTHROPIC",
-      "category": "Companies"
-    },
-    "KXBLUETSUNAMICOMBO-27FEB": {
-      "title": "Blue tsunami in 2026?",
-      "series_ticker": "KXBLUETSUNAMICOMBO",
-      "category": "Politics"
+    "KXNFLGAME-26NOV12WASNYG-NYG": {
+      "title": "Washington vs New York G",
+      "series_ticker": "KXNFLGAME",
+      "category": "Sports"
     },
     "KXHOUSERACE-NC03-26-R": {
       "title": "NC-03 House winner?",
       "series_ticker": "KXHOUSERACE",
       "category": "Elections"
     },
-    "KXITFMATCH-26NOV10KIKZHA-ZHA": {
-      "title": "Kikuchi vs Zhao",
-      "series_ticker": "KXITFMATCH",
+    "KXNEXTTEAMNFL-26ARODGERS8-NONE": {
+      "title": "Aaron Rodgers's Next Team",
+      "series_ticker": "KXNEXTTEAMNFL",
       "category": "Sports"
     },
-    "KXPRESNOMR-28-JDV": {
-      "title": "2028 Republican presidential nominee",
-      "series_ticker": "KXPRESNOMR",
-      "category": "Elections"
+    "KXNFLNEXTTEAM-26JTAYLOR28-NE": {
+      "title": "Jonathan Taylor Next Team",
+      "series_ticker": "KXNFLNEXTTEAM",
+      "category": "Sports"
+    },
+    "KXCEONVDA-01JAN33-01JAN27": {
+      "title": "When will Jensen Huang leave as Nvidia CEO?",
+      "series_ticker": "KXCEONVDA",
+      "category": "Financials"
+    },
+    "KXATPCHALLENGERMATCH-26NOV10ANDPIE-AND": {
+      "title": "Andreev vs Pietri",
+      "series_ticker": "KXATPCHALLENGERMATCH",
+      "category": "Sports"
+    },
+    "KXMLBALMOTY-26-KCAS": {
+      "title": "AL Manager of the Year Winner",
+      "series_ticker": "KXMLBALMOTY",
+      "category": "Sports"
+    },
+    "KXHORMUZNORM-26MAR17-B261201": {
+      "title": "When will traffic at the Strait of Hormuz return to normal?",
+      "series_ticker": "KXHORMUZNORM",
+      "category": "Politics"
+    },
+    "KXFEDDECISION-26DEC-C25": {
+      "title": "Fed decision in Dec 2026?",
+      "series_ticker": "KXFEDDECISION",
+      "category": "Economics"
+    },
+    "KXBLUEWAVECOMBO-27FEB": {
+      "title": "Blue wave in 2026?",
+      "series_ticker": "KXBLUEWAVECOMBO",
+      "category": "Politics"
+    },
+    "KXBLUETSUNAMICOMBO-27FEB": {
+      "title": "Blue tsunami in 2026?",
+      "series_ticker": "KXBLUETSUNAMICOMBO",
+      "category": "Politics"
+    },
+    "KXNFLNEXTTEAM-26JTAYLOR28-IND": {
+      "title": "Jonathan Taylor Next Team",
+      "series_ticker": "KXNFLNEXTTEAM",
+      "category": "Sports"
     },
     "KXPGATOUR-AUCPBCS26-DGHI": {
       "title": "Austin Championship presented by Compliance Solutions Winner",
@@ -323,44 +383,39 @@
       "series_ticker": "KXNBA",
       "category": "Sports"
     },
-    "KXCEONVDA-01JAN33-01JAN27": {
-      "title": "When will Jensen Huang leave as Nvidia CEO?",
-      "series_ticker": "KXCEONVDA",
-      "category": "Financials"
-    },
-    "KXALIENS-27": {
-      "title": "Will the U.S. confirm that aliens exist?",
-      "series_ticker": "KXALIENS",
-      "category": "Science and Technology"
-    },
-    "KXSENATEDEMLEAD-28JAN01-CHOL": {
-      "title": "Next Senate Democratic Leader?",
-      "series_ticker": "KXSENATEDEMLEAD",
-      "category": "Elections"
-    },
-    "KXNFLNFCNORTH-27-GB": {
-      "title": "NFC North Division Winner",
-      "series_ticker": "KXNFLNFCNORTH",
-      "category": "Sports"
-    },
-    "KXATPCHALLENGERMATCH-26NOV10XILFOM-FOM": {
-      "title": "Xilas vs Fomin",
+    "KXATPCHALLENGERMATCH-26NOV10MAXBAR-MAX": {
+      "title": "Maxted vs Barton",
       "series_ticker": "KXATPCHALLENGERMATCH",
       "category": "Sports"
     },
-    "KXTRUMPADMINLEAVE-26DEC31-PHEG": {
-      "title": "Who will leave their role in the Trump administration in 2026?",
-      "series_ticker": "KXTRUMPADMINLEAVE",
-      "category": "Politics"
+    "KXPRESNOMD-28-SFAI": {
+      "title": "2028 Democratic presidential nominee",
+      "series_ticker": "KXPRESNOMD",
+      "category": "Elections"
     },
-    "KXPRESNOMR-28-TC": {
+    "KXPRESNOMR-28-JDV": {
       "title": "2028 Republican presidential nominee",
       "series_ticker": "KXPRESNOMR",
       "category": "Elections"
     },
-    "KXNFLNEXTTEAM-26JTAYLOR28-IND": {
-      "title": "Jonathan Taylor Next Team",
-      "series_ticker": "KXNFLNEXTTEAM",
+    "KXNHLGAME-26NOV10NSHLA-NSH": {
+      "title": "Nashville vs Los Angeles",
+      "series_ticker": "KXNHLGAME",
+      "category": "Sports"
+    },
+    "KXATPSETWINNER-26NOV09RINKEC-1-RIN": {
+      "title": "Arthur Rinderknech vs Miomir Kecmanovic: Set 1 Winner",
+      "series_ticker": "KXATPSETWINNER",
+      "category": "Sports"
+    },
+    "KXATPMATCH-26NOV09RUNBER-RUN": {
+      "title": "Holger Rune vs Zizou Bergs",
+      "series_ticker": "KXATPMATCH",
+      "category": "Sports"
+    },
+    "KXNFLNFCNORTH-27-GB": {
+      "title": "NFC North Division Winner",
+      "series_ticker": "KXNFLNFCNORTH",
       "category": "Sports"
     },
     "KXSENMAJ-27-CSCH": {
@@ -368,94 +423,19 @@
       "series_ticker": "KXSENMAJ",
       "category": "Elections"
     },
-    "KXPRESPERSON-28-MRUB": {
-      "title": "2028 U.S. Presidential Election winner?",
-      "series_ticker": "KXPRESPERSON",
-      "category": "Elections"
-    },
-    "KXNFLNFCCHAMP-27-MIN": {
-      "title": "NFC Championship Winner",
-      "series_ticker": "KXNFLNFCCHAMP",
+    "KXNFLNEXTTEAM-26JTAYLOR28-GB": {
+      "title": "Jonathan Taylor Next Team",
+      "series_ticker": "KXNFLNEXTTEAM",
       "category": "Sports"
-    },
-    "KXPRESNOMD-28-CHOL": {
-      "title": "2028 Democratic presidential nominee",
-      "series_ticker": "KXPRESNOMD",
-      "category": "Elections"
-    },
-    "KXBTC15M-26NOV100445-45": {
-      "title": "BTC 15 min · $74,365.55 target",
-      "series_ticker": "KXBTC15M",
-      "category": "Crypto"
     },
     "KXNFLNEXTTEAM-26JTAYLOR28-NYG": {
       "title": "Jonathan Taylor Next Team",
       "series_ticker": "KXNFLNEXTTEAM",
       "category": "Sports"
     },
-    "KXNEXTPRESSECPERM-29JAN20-DWWH": {
-      "title": "Who will be Trump's next Press Secretary?",
-      "series_ticker": "KXNEXTPRESSECPERM",
-      "category": "Politics"
-    },
-    "KXWT20MATCH-26NOV100310AS-WHH-W-HH-W": {
-      "title": "Hobart Hurricanes Women vs Adelaide Strikers Women",
-      "series_ticker": "KXWT20MATCH",
-      "category": "Sports"
-    },
-    "KXFEDDECISION-26DEC-H25": {
-      "title": "Fed decision in Dec 2026?",
-      "series_ticker": "KXFEDDECISION",
-      "category": "Economics"
-    },
-    "KXSB-27-SEA": {
-      "title": "2027 Pro Football Champion",
-      "series_ticker": "KXSB",
-      "category": "Sports"
-    },
-    "KXNBA-27-LAL": {
-      "title": "2027 Pro Basketball Champion",
-      "series_ticker": "KXNBA",
-      "category": "Sports"
-    },
-    "KXNFLNEXTTEAM-26JTAYLOR28-GB": {
-      "title": "Jonathan Taylor Next Team",
-      "series_ticker": "KXNFLNEXTTEAM",
-      "category": "Sports"
-    },
-    "KXNCAAF-27-UGA": {
-      "title": "College Football National Championship Winner",
-      "series_ticker": "KXNCAAF",
-      "category": "Sports"
-    },
-    "KXPRESNOMD-28-AELS": {
-      "title": "2028 Democratic presidential nominee",
-      "series_ticker": "KXPRESNOMD",
-      "category": "Elections"
-    },
-    "KXNFLMVP-27-JLOV": {
-      "title": "MVP Winner?",
-      "series_ticker": "KXNFLMVP",
-      "category": "Sports"
-    },
-    "KXHEGSETHOUT-26APR-27JAN01": {
-      "title": "Pete Hegseth out as Secretary of Defense?",
-      "series_ticker": "KXHEGSETHOUT",
-      "category": "Politics"
-    },
-    "KXPRESNOMD-28-JOSS": {
-      "title": "2028 Democratic presidential nominee",
-      "series_ticker": "KXPRESNOMD",
-      "category": "Elections"
-    },
-    "KXPRESPERSON-28-RDES": {
-      "title": "2028 U.S. Presidential Election winner?",
-      "series_ticker": "KXPRESPERSON",
-      "category": "Elections"
-    },
-    "KXPRESNOMD-28-AOC": {
-      "title": "2028 Democratic presidential nominee",
-      "series_ticker": "KXPRESNOMD",
+    "KXPRESNOMR-28-TC": {
+      "title": "2028 Republican presidential nominee",
+      "series_ticker": "KXPRESNOMR",
       "category": "Elections"
     },
     "KXNBAGAME-26NOV10OKCPOR-OKC": {
@@ -463,19 +443,9 @@
       "series_ticker": "KXNBAGAME",
       "category": "Sports"
     },
-    "KXPRESPERSON-28-RWAR": {
+    "KXPRESPERSON-28-MRUB": {
       "title": "2028 U.S. Presidential Election winner?",
       "series_ticker": "KXPRESPERSON",
-      "category": "Elections"
-    },
-    "KXNFLOPOTY-27-CLAM": {
-      "title": "Offensive Player of the Year Winner?",
-      "series_ticker": "KXNFLOPOTY",
-      "category": "Sports"
-    },
-    "KXPRESNOMR-28-MR": {
-      "title": "2028 Republican presidential nominee",
-      "series_ticker": "KXPRESNOMR",
       "category": "Elections"
     },
     "KXNBAGAME-26NOV10MILNYK-NYK": {
@@ -483,49 +453,89 @@
       "series_ticker": "KXNBAGAME",
       "category": "Sports"
     },
-    "KXUEFANLGAME-26NOV12TURBEL-BEL": {
-      "title": "Turkiye vs Belgium",
-      "series_ticker": "KXUEFANLGAME",
+    "KXNFLNFCCHAMP-27-MIN": {
+      "title": "NFC Championship Winner",
+      "series_ticker": "KXNFLNFCCHAMP",
       "category": "Sports"
     },
-    "KXUCLWGAME-26NOV10RMAPAR-RMA": {
+    "KXSENATEDEMLEAD-28JAN01-CHOL": {
+      "title": "Next Senate Democratic Leader?",
+      "series_ticker": "KXSENATEDEMLEAD",
+      "category": "Elections"
+    },
+    "KXTRUMPADMINLEAVE-26DEC31-PHEG": {
+      "title": "Who will leave their role in the Trump administration in 2026?",
+      "series_ticker": "KXTRUMPADMINLEAVE",
+      "category": "Politics"
+    },
+    "KXSB-27-SEA": {
+      "title": "2027 Pro Football Champion",
+      "series_ticker": "KXSB",
+      "category": "Sports"
+    },
+    "KXPRESNOMD-28-CHOL": {
+      "title": "2028 Democratic presidential nominee",
+      "series_ticker": "KXPRESNOMD",
+      "category": "Elections"
+    },
+    "KXUCLWGAME-26NOV10RMAPAR-PAR": {
       "title": "Real Madrid vs Paris FC",
       "series_ticker": "KXUCLWGAME",
       "category": "Sports"
     },
-    "KXPRESPERSON-28-CBOO": {
-      "title": "2028 U.S. Presidential Election winner?",
-      "series_ticker": "KXPRESPERSON",
-      "category": "Elections"
-    },
-    "KXHORMUZNORM-26MAR17-B270101": {
-      "title": "When will traffic at the Strait of Hormuz return to normal?",
-      "series_ticker": "KXHORMUZNORM",
-      "category": "Politics"
-    },
-    "KXHOUSERACE-NC03-26-D": {
-      "title": "NC-03 House winner?",
-      "series_ticker": "KXHOUSERACE",
-      "category": "Elections"
-    },
-    "KXFEDDECISION-26DEC-H0": {
-      "title": "Fed decision in Dec 2026?",
-      "series_ticker": "KXFEDDECISION",
-      "category": "Economics"
-    },
-    "KXUEFANLGAME-26NOV12ITAFRA-FRA": {
-      "title": "Italy vs France",
-      "series_ticker": "KXUEFANLGAME",
+    "KXUCLWGAME-26NOV10PSGBMU-PSG": {
+      "title": "PSG vs Bayern",
+      "series_ticker": "KXUCLWGAME",
       "category": "Sports"
     },
-    "KXHOUSERACE-CO04-26-R": {
-      "title": "CO-04 House winner?",
-      "series_ticker": "KXHOUSERACE",
+    "KXATPCHALLENGERMATCH-26NOV10RINDLF-DLF": {
+      "title": "Rincon vs De la Fuente",
+      "series_ticker": "KXATPCHALLENGERMATCH",
+      "category": "Sports"
+    },
+    "KXHEGSETHOUT-26APR-27JAN01": {
+      "title": "Pete Hegseth out as Secretary of Defense?",
+      "series_ticker": "KXHEGSETHOUT",
+      "category": "Politics"
+    },
+    "KXNCAAF-27-UGA": {
+      "title": "College Football National Championship Winner",
+      "series_ticker": "KXNCAAF",
+      "category": "Sports"
+    },
+    "KXALIENS-27": {
+      "title": "Will the U.S. confirm that aliens exist?",
+      "series_ticker": "KXALIENS",
+      "category": "Science and Technology"
+    },
+    "KXNBA-27-LAL": {
+      "title": "2027 Pro Basketball Champion",
+      "series_ticker": "KXNBA",
+      "category": "Sports"
+    },
+    "KXATPCHALLENGERMATCH-26NOV10CANARN-CAN": {
+      "title": "Caniato vs Bailly",
+      "series_ticker": "KXATPCHALLENGERMATCH",
+      "category": "Sports"
+    },
+    "KXATPCHALLENGERMATCH-26NOV10PIRNAR-PIR": {
+      "title": "Piros vs Nardi",
+      "series_ticker": "KXATPCHALLENGERMATCH",
+      "category": "Sports"
+    },
+    "KXPRESNOMD-28-AELS": {
+      "title": "2028 Democratic presidential nominee",
+      "series_ticker": "KXPRESNOMD",
       "category": "Elections"
     },
-    "KXNFLAFCEAST-27-NE": {
-      "title": "AFC East Division Winner",
-      "series_ticker": "KXNFLAFCEAST",
+    "KXCEONVDA-01JAN33-01JUL27": {
+      "title": "When will Jensen Huang leave as Nvidia CEO?",
+      "series_ticker": "KXCEONVDA",
+      "category": "Financials"
+    },
+    "KXNFLGAME-26NOV15SFDAL-SF": {
+      "title": "San Francisco vs Dallas",
+      "series_ticker": "KXNFLGAME",
       "category": "Sports"
     },
     "KXNFLNEXTTEAM-26JTAYLOR28-MIN": {
@@ -533,75 +543,65 @@
       "series_ticker": "KXNFLNEXTTEAM",
       "category": "Sports"
     },
-    "KXITFMATCH-26NOV10KIKZHA-KIK": {
-      "title": "Kikuchi vs Zhao",
-      "series_ticker": "KXITFMATCH",
+    "KXATPCHALLENGERMATCH-26NOV10PIRNAR-NAR": {
+      "title": "Piros vs Nardi",
+      "series_ticker": "KXATPCHALLENGERMATCH",
       "category": "Sports"
     },
-    "KXRT-EBE-90": {
-      "title": "Ebenezer · Rotten Tomatoes score",
-      "series_ticker": "KXRT",
-      "category": "Entertainment"
-    },
-    "KXPRESNOMR-28-RDS": {
-      "title": "2028 Republican presidential nominee",
-      "series_ticker": "KXPRESNOMR",
+    "KXPRESPERSON-28-RDES": {
+      "title": "2028 U.S. Presidential Election winner?",
+      "series_ticker": "KXPRESPERSON",
       "category": "Elections"
     },
-    "KXLLM1-26DEC31-GOOG": {
-      "title": "Best AI at the end of 2026?",
-      "series_ticker": "KXLLM1",
-      "category": "Science and Technology"
-    },
-    "KXNFLGAME-26NOV15NEDET-DET": {
-      "title": "New England vs Detroit",
-      "series_ticker": "KXNFLGAME",
+    "KXNBAGAME-26NOV10MILNYK-MIL": {
+      "title": "Milwaukee vs New York",
+      "series_ticker": "KXNBAGAME",
       "category": "Sports"
-    },
-    "KXMLBALMOTY-26-WVEN": {
-      "title": "AL Manager of the Year Winner",
-      "series_ticker": "KXMLBALMOTY",
-      "category": "Sports"
-    },
-    "KXCEONVDA-01JAN33-01JUL27": {
-      "title": "When will Jensen Huang leave as Nvidia CEO?",
-      "series_ticker": "KXCEONVDA",
-      "category": "Financials"
-    },
-    "KXPGATOUR-AUCPBCS26-PCOO": {
-      "title": "Austin Championship presented by Compliance Solutions Winner",
-      "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
-    "KXNFLDPOTY-27-AREESE52": {
-      "title": "Defensive Player of the Year Winner?",
-      "series_ticker": "KXNFLDPOTY",
-      "category": "Sports"
-    },
-    "KXPRESNOMD-28-GN": {
-      "title": "2028 Democratic presidential nominee",
-      "series_ticker": "KXPRESNOMD",
-      "category": "Elections"
     },
     "KXNCAAFGAME-26NOV14TEXLSU-TEX": {
       "title": "Texas vs LSU",
       "series_ticker": "KXNCAAFGAME",
       "category": "Sports"
     },
-    "KXWTIMAX-26DEC31-T115": {
-      "title": "How high will oil (WTI) get by Dec 31, 2026?",
-      "series_ticker": "KXWTIMAX",
-      "category": "Financials"
+    "KXPRESNOMD-28-AOC": {
+      "title": "2028 Democratic presidential nominee",
+      "series_ticker": "KXPRESNOMD",
+      "category": "Elections"
     },
-    "KXSB-27-CIN": {
-      "title": "2027 Pro Football Champion",
-      "series_ticker": "KXSB",
+    "KXPRESNOMD-28-MC": {
+      "title": "2028 Democratic presidential nominee",
+      "series_ticker": "KXPRESNOMD",
+      "category": "Elections"
+    },
+    "KXITFMATCH-26NOV10PERSPE-SPE": {
+      "title": "Perez Contri vs Sperle",
+      "series_ticker": "KXITFMATCH",
       "category": "Sports"
     },
-    "KXPRESPERSON-28-JTAL": {
-      "title": "2028 U.S. Presidential Election winner?",
-      "series_ticker": "KXPRESPERSON",
-      "category": "Elections"
+    "KXITFMATCH-26NOV10BARSEG-SEG": {
+      "title": "Barroso Campos vs Seghetti",
+      "series_ticker": "KXITFMATCH",
+      "category": "Sports"
+    },
+    "KXNFLOPOTY-27-CLAM": {
+      "title": "Offensive Player of the Year Winner?",
+      "series_ticker": "KXNFLOPOTY",
+      "category": "Sports"
+    },
+    "KXNEXTPRESSECPERM-29JAN20-DWWH": {
+      "title": "Who will be Trump's next Press Secretary?",
+      "series_ticker": "KXNEXTPRESSECPERM",
+      "category": "Politics"
+    },
+    "KXNBAGAME-26NOV10OKCPOR-POR": {
+      "title": "Oklahoma City vs Portland",
+      "series_ticker": "KXNBAGAME",
+      "category": "Sports"
+    },
+    "KXLLM1-26DEC31-GOOG": {
+      "title": "Best AI at the end of 2026?",
+      "series_ticker": "KXLLM1",
+      "category": "Science and Technology"
     }
   }
 }
