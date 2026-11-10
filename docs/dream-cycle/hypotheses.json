@@ -891,7 +891,7 @@
       "value": 0.087,
       "n": 2552
     },
-    "status": "open",
+    "status": "EXPIRED",
     "retests": [
       {
         "date": "2026-11-04",
@@ -946,8 +946,18 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "pair.bothSidesFracNetPositive = 0.141 on n=156, below the n>=300 needed"
+      },
+      {
+        "date": "2026-11-10",
+        "ticks": null,
+        "value": 0.141,
+        "n": 156,
+        "verdict": "EXPIRED",
+        "by": "rule",
+        "note": "pair house-2026-democratic settled at 2026-11-04T13:06Z with n=156 post-freeze, below the n>=300 needed"
       }
-    ]
+    ],
+    "settledOn": "2026-11-10"
   },
   {
     "id": "2026-11-04",
@@ -1057,7 +1067,7 @@
       "value": 0.14,
       "n": 2120
     },
-    "status": "open",
+    "status": "EXPIRED",
     "retests": [
       {
         "date": "2026-11-07",
@@ -1085,8 +1095,18 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "pair.bothSidesFracNetPositive not measurable on post-freeze data (n=0)"
+      },
+      {
+        "date": "2026-11-10",
+        "ticks": null,
+        "value": null,
+        "n": 0,
+        "verdict": "EXPIRED",
+        "by": "rule",
+        "note": "pair house-2026-republican settled at 2026-11-04T09:57Z with n=0 post-freeze, below the n>=300 needed"
       }
-    ]
+    ],
+    "settledOn": "2026-11-10"
   },
   {
     "id": "2026-11-07",
@@ -1144,7 +1164,7 @@
       "value": 0.16,
       "n": 1736
     },
-    "status": "open",
+    "status": "EXPIRED",
     "retests": [
       {
         "date": "2026-11-09",
@@ -1154,8 +1174,18 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "pair.bothSidesFracNetPositive not measurable on post-freeze data (n=0)"
+      },
+      {
+        "date": "2026-11-10",
+        "ticks": null,
+        "value": null,
+        "n": 0,
+        "verdict": "EXPIRED",
+        "by": "rule",
+        "note": "pair house-2026-republican settled at 2026-11-04T09:57Z with n=0 post-freeze, below the n>=300 needed"
       }
-    ]
+    ],
+    "settledOn": "2026-11-10"
   },
   {
     "id": "2026-11-09",
@@ -1178,6 +1208,41 @@
     "baseline": {
       "value": 6.7,
       "n": 394
+    },
+    "status": "open",
+    "retests": [
+      {
+        "date": "2026-11-10",
+        "ticks": 69,
+        "value": 81.7,
+        "n": 17,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "resolution.netCentsPer10 = 81.7 on n=17, below the n>=100 needed"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-10",
+    "date": "2026-11-10",
+    "deep": "maker-spread-capture",
+    "issue": "#37",
+    "text": "Given Polymarket markets with entry midpoints from 0.7 to below 0.9, when simulating a one-tick maker spread capture, then maker.netCentsPerAttempt should be > 1c vs the recorded Polymarket baseline of −1.214c/attempt, subject to including unfilled attempts and adverse marks.",
+    "spec": {
+      "metric": "maker.netCentsPerAttempt",
+      "venue": "pm",
+      "slice": {
+        "midMin": 0.7,
+        "midMax": 0.9
+      },
+      "op": ">",
+      "threshold": 1,
+      "minN": 300
+    },
+    "frozenAt": "2026-11-10T16:30Z",
+    "baseline": {
+      "value": -1.884,
+      "n": 8123
     },
     "status": "open",
     "retests": []
