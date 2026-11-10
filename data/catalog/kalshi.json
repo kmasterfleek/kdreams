@@ -57,7 +57,7 @@
   "event": "CONTROLH-2026",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXMLBGAME-26OCT142000MILLAD-LAD": {
   "title": "Game 3: Milwaukee vs Los Angeles D — Los Angeles D",
@@ -381,7 +381,7 @@
   "event": "KXNBA-27",
   "category": "Sports",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "GOVPARTYFL-26-D": {
   "title": "Florida Governor winner? — David Jolly",
@@ -501,7 +501,7 @@
   "event": "CONTROLH-2026",
   "category": "Elections",
   "firstSeen": "2026-10-14T19:13Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXMAYORLA-26-KBAS": {
   "title": "Los Angeles Mayor winner? — Karen Bass",
@@ -1557,7 +1557,7 @@
   "event": "KXSB-27",
   "category": "Sports",
   "firstSeen": "2026-10-15T05:16Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLOPOTY-27-DLON": {
   "title": "Offensive Player of the Year Winner? — Drake London",
@@ -3873,7 +3873,7 @@
   "event": "KXSB-27",
   "category": "Sports",
   "firstSeen": "2026-10-16T14:15Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLSPREAD-26OCT18CARPHI-CAR3": {
   "title": "Carolina vs Philadelphia: Spread — Carolina wins by over 2.5 points",
@@ -8073,7 +8073,7 @@
   "event": "KXSB-27",
   "category": "Sports",
   "firstSeen": "2026-10-19T02:45Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLTOTAL-26OCT18DALGB-55": {
   "title": "Dallas vs Green Bay: Total Points — Over 54.5 points",
@@ -9369,7 +9369,7 @@
   "event": "KXSB-27",
   "category": "Sports",
   "firstSeen": "2026-10-19T09:00Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXUCLGAME-26OCT20PSGBAR-PSG": {
   "title": "PSG vs Barcelona — PSG",
@@ -10677,7 +10677,7 @@
   "event": "KXSB-27",
   "category": "Sports",
   "firstSeen": "2026-10-20T04:00Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXAAAGASW-26OCT26-4.3000": {
   "title": "US gas prices this week — Above 4.3000",
@@ -19797,7 +19797,7 @@
   "event": "SENATEAK-26",
   "category": "Elections",
   "firstSeen": "2026-10-25T09:00Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXODIMATCH-26OCT250400ENGPAK-ENG": {
   "title": "Pakistan vs England — England",
@@ -21393,7 +21393,7 @@
   "event": "KXNFLNFCEAST-27",
   "category": "Sports",
   "firstSeen": "2026-10-26T03:45Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLNFCCHAMP-27-DET": {
   "title": "NFC Championship Winner — Detroit",
@@ -23157,7 +23157,7 @@
   "event": "SENATEAK-26",
   "category": "Elections",
   "firstSeen": "2026-10-27T04:45Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXPGATOUR-VIMO26-NDUN": {
   "title": "VidantaWorld Mexico Open Winner — Nick Dunlap",
@@ -24369,7 +24369,7 @@
   "event": "KXHOUSERACE-NC03-26",
   "category": "Elections",
   "firstSeen": "2026-10-27T23:30Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXMLBHR-26OCT272000MILTB-TBYDIAZ2-1": {
   "title": "Milwaukee vs Tampa Bay: Home Runs — Yandy Díaz: 1+",
@@ -26373,7 +26373,7 @@
   "event": "KXFEDDECISION-26DEC",
   "category": "Economics",
   "firstSeen": "2026-10-29T06:45Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLGAME-26OCT29CARGB-CAR": {
   "title": "Carolina vs Green Bay — Carolina",
@@ -26457,7 +26457,7 @@
   "event": "KXFEDDECISION-26DEC",
   "category": "Economics",
   "firstSeen": "2026-10-29T06:45Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXPGATOUR-VIMO26-ANOV": {
   "title": "VidantaWorld Mexico Open Winner — Andrew Novak",
@@ -28113,7 +28113,7 @@
   "event": "SENATEMS-26",
   "category": "Elections",
   "firstSeen": "2026-10-30T07:45Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXTESTMATCH-26OCT270430AUSSA-AUS": {
   "title": "South Africa vs Australia — Australia",
@@ -34737,7 +34737,7 @@
   "event": "KXNFLTOTAL-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-04T03:30Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNCAAFSPREAD-26NOV03OHIOAKR-OHIO10": {
   "title": "Ohio vs Akron: Spread — Ohio wins by over 9.5 points",
@@ -35877,7 +35877,7 @@
   "event": "KXAKSENATE-26NOV03",
   "category": "Elections",
   "firstSeen": "2026-11-04T17:07Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXUCLGAME-26NOV04SLAARS-ARS": {
   "title": "Slavia Prague vs Arsenal — Arsenal",
@@ -36885,7 +36885,7 @@
   "event": "KXNFLSPREAD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-05T15:23Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNBAGAME-26NOV05MIAGSW-GSW": {
   "title": "Miami vs Golden State — Golden State",
@@ -38517,7 +38517,7 @@
   "event": "KXPRESNOMD-28",
   "category": "Elections",
   "firstSeen": "2026-11-06T10:43Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNBAGAME-26NOV06PHICLE-PHI": {
   "title": "Philadelphia vs Cleveland — Philadelphia",
@@ -39201,7 +39201,7 @@
   "event": "KXPRESNOMR-28",
   "category": "Elections",
   "firstSeen": "2026-11-06T17:54Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXLALIGAGAME-26NOV06SEVALA-SEV": {
   "title": "Sevilla vs Alaves — Sevilla",
@@ -39321,7 +39321,7 @@
   "event": "KXPRESPERSON-28",
   "category": "Elections",
   "firstSeen": "2026-11-06T17:54Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXT20MATCH-26NOV060930KHURBGUJCC-KHURB": {
   "title": "Gujrat CC vs Khulna Royal Bengals — Khulna Royal Bengals",
@@ -39933,7 +39933,7 @@
   "event": "KXPRESPERSON-28",
   "category": "Elections",
   "firstSeen": "2026-11-07T00:00Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNBAGAME-26NOV06PORLAL-LAL": {
   "title": "Portland vs Los Angeles L — Los Angeles L",
@@ -41481,7 +41481,7 @@
   "event": "KXNEXTPRESSECPERM-29JAN20",
   "category": "Politics",
   "firstSeen": "2026-11-08T01:00Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNBAGAME-26NOV07NYKCLE-CLE": {
   "title": "New York vs Cleveland — Cleveland",
@@ -42189,7 +42189,7 @@
   "event": "KXNFLSPREAD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-08T07:15Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXCS2GAME-26NOV080230MOUZMGLZ-MGLZ": {
   "title": "MOUZ vs. TheMongolz — TheMongolz",
@@ -43041,7 +43041,7 @@
   "event": "KXNEXTPRESSECPERM-29JAN20",
   "category": "Politics",
   "firstSeen": "2026-11-08T13:30Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLTD-26NOV08CLENO-NOAKAMARA41-1": {
   "title": "Cleveland vs New Orleans: Touchdowns — Alvin Kamara: 1+",
@@ -44277,7 +44277,7 @@
   "event": "KXNFLGAME-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-09T02:00Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNBATOTAL-26NOV08UTAMIN-223": {
   "title": "Utah vs Minnesota: Total Points — Over 222.5 points",
@@ -44301,7 +44301,7 @@
   "event": "KXNFLGAME-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-09T02:00Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNHLGAME-26NOV08NJTOR-NJ": {
   "title": "New Jersey vs Toronto — New Jersey",
@@ -44445,7 +44445,7 @@
   "event": "KXATPCHALLENGERMATCH-26NOV08HARBRO",
   "category": "Sports",
   "firstSeen": "2026-11-09T08:15Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXATPCHALLENGERMATCH-26NOV08HARBRO-HAR": {
   "title": "Billy Harris vs Liam Broady — Billy Harris",
@@ -44457,7 +44457,7 @@
   "event": "KXATPCHALLENGERMATCH-26NOV08HARBRO",
   "category": "Sports",
   "firstSeen": "2026-11-09T08:15Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXITFWMATCH-26NOV08NUGMIY-MIY": {
   "title": "Nugroho vs Miyamoto — Ayumi Miyamoto",
@@ -44517,7 +44517,7 @@
   "event": "KXNFLSPREAD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-09T08:15Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXTRUMPSAY-26NOV09-RIGG": {
   "title": "What will Trump say this week? — Rigged Election / Stolen Election",
@@ -44541,7 +44541,7 @@
   "event": "KXPRESPERSON-28",
   "category": "Elections",
   "firstSeen": "2026-11-09T08:15Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXITFWMATCH-26NOV08NUGMIY-NUG": {
   "title": "Nugroho vs Miyamoto — Priska Madelyn Nugroho",
@@ -44649,7 +44649,7 @@
   "event": "KXNFLSPREAD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-09T08:15Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNHL-27-CAR": {
   "title": "2026-27 Stanley Cup® Final Winner — Carolina Hurricanes",
@@ -44762,14 +44762,14 @@
  "KXNBAGAME-26NOV09LALATL-LAL": {
   "title": "Los Angeles L vs Atlanta — Los Angeles L",
   "sub": "Los Angeles L",
-  "closeTime": "2026-11-12T00:00:00Z",
+  "closeTime": "2026-11-10T02:23:59Z",
   "tick": 0.01,
   "minSize": 1,
   "series": "KXNBAGAME",
   "event": "KXNBAGAME-26NOV09LALATL",
   "category": "Sports",
   "firstSeen": "2026-11-09T08:15Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXMARMAD-27-CONN": {
   "title": "Men's 2027 College Basketball Champion — UConn",
@@ -44817,7 +44817,7 @@
   "event": "KXUFCFIGHT-26NOV14GANHOK",
   "category": "Sports",
   "firstSeen": "2026-11-09T08:15Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXTESTMATCH-26NOV050000ZIMAFG-ZIM": {
   "title": "Afghanistan vs Zimbabwe — Zimbabwe",
@@ -44858,14 +44858,14 @@
  "KXNBAGAME-26NOV09LALATL-ATL": {
   "title": "Los Angeles L vs Atlanta — Atlanta",
   "sub": "Atlanta",
-  "closeTime": "2026-11-12T00:00:00Z",
+  "closeTime": "2026-11-10T02:23:59Z",
   "tick": 0.01,
   "minSize": 1,
   "series": "KXNBAGAME",
   "event": "KXNBAGAME-26NOV09LALATL",
   "category": "Sports",
   "firstSeen": "2026-11-09T08:15Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLNFCCHAMP-27-GB": {
   "title": "NFC Championship Winner — Green Bay",
@@ -44901,7 +44901,7 @@
   "event": "KXSENATEDEMLEAD-28JAN01",
   "category": "Elections",
   "firstSeen": "2026-11-09T08:15Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXITFWMATCH-26NOV08SHISAG-SAG": {
   "title": "Shibahara vs Sagawa — Ayane Sagawa",
@@ -45045,7 +45045,7 @@
   "event": "KXNFLTOTAL-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-09T17:24Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXATPCHALLENGERMATCH-26NOV09SANDLF-DLF": {
   "title": "Carlos Sanchez Jover vs Santiago De la Fuente — Santiago De la Fuente",
@@ -45225,7 +45225,7 @@
   "event": "KXNFLTD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-09T17:24Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXBTCD-26NOV0917-T73499.99": {
   "title": "BTC price on Nov 9, 2026 at 5pm EST? — $73,500 or above",
@@ -45285,7 +45285,7 @@
   "event": "KXNBAGAME-26NOV09SASPHX",
   "category": "Sports",
   "firstSeen": "2026-11-09T17:24Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXWTAMATCH-26NOV09SABMUC-SAB": {
   "title": "Aryna Sabalenka vs Karolina Muchova — Aryna Sabalenka",
@@ -45381,7 +45381,7 @@
   "event": "KXCEONVDA-01JAN33",
   "category": "Financials",
   "firstSeen": "2026-11-09T17:24Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXBTCD-26NOV0917-T75999.99": {
   "title": "BTC price on Nov 9, 2026 at 5pm EST? — $76,000 or above",
@@ -45405,19 +45405,19 @@
   "event": "KXNBAGAME-26NOV09DENHOU",
   "category": "Sports",
   "firstSeen": "2026-11-09T17:24Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNBAGAME-26NOV09CLECHA-CLE": {
   "title": "Cleveland vs Charlotte — Cleveland",
   "sub": "Cleveland",
-  "closeTime": "2026-11-12T00:00:00Z",
+  "closeTime": "2026-11-10T02:20:48Z",
   "tick": 0.01,
   "minSize": 1,
   "series": "KXNBAGAME",
   "event": "KXNBAGAME-26NOV09CLECHA",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXBTC15M-26NOV092030-30": {
   "title": "BTC 15 min · $75,116.66 target — Target Price: $75,116.66",
@@ -45429,7 +45429,7 @@
   "event": "KXBTC15M-26NOV092030",
   "category": "Crypto",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNBAGAME-26NOV09WASDET-WAS": {
   "title": "Washington vs Detroit — Washington",
@@ -45441,7 +45441,7 @@
   "event": "KXNBAGAME-26NOV09WASDET",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLTD-26NOV09BUFMIN-MINJMASON27-1": {
   "title": "Buffalo vs Minnesota: Touchdowns — Jordan Mason: 1+",
@@ -45453,7 +45453,7 @@
   "event": "KXNFLTD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNBAGAME-26NOV09INDDAL-DAL": {
   "title": "Indiana vs Dallas — Dallas",
@@ -45465,19 +45465,19 @@
   "event": "KXNBAGAME-26NOV09INDDAL",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNBAGAME-26NOV09CLECHA-CHA": {
   "title": "Cleveland vs Charlotte — Charlotte",
   "sub": "Charlotte",
-  "closeTime": "2026-11-12T00:00:00Z",
+  "closeTime": "2026-11-10T02:20:48Z",
   "tick": 0.01,
   "minSize": 1,
   "series": "KXNBAGAME",
   "event": "KXNBAGAME-26NOV09CLECHA",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNCAAMBGAME-26NOV09SYRIND-IND": {
   "title": "Syracuse vs Indiana — Indiana",
@@ -45489,7 +45489,7 @@
   "event": "KXNCAAMBGAME-26NOV09SYRIND",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNBAGAME-26NOV09MEMTOR-MEM": {
   "title": "Memphis vs Toronto — Memphis",
@@ -45501,7 +45501,7 @@
   "event": "KXNBAGAME-26NOV09MEMTOR",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNCAAMBGAME-26NOV09SYRIND-SYR": {
   "title": "Syracuse vs Indiana — Syracuse",
@@ -45513,7 +45513,7 @@
   "event": "KXNCAAMBGAME-26NOV09SYRIND",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNBAGAME-26NOV09WASDET-DET": {
   "title": "Washington vs Detroit — Detroit",
@@ -45525,7 +45525,7 @@
   "event": "KXNBAGAME-26NOV09WASDET",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLFIRSTTD-26NOV09BUFMIN-MINJJEFFERSON18": {
   "title": "Buffalo vs Minnesota: 1st Touchdown — Justin Jefferson",
@@ -45537,7 +45537,7 @@
   "event": "KXNFLFIRSTTD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXDIMAYORGAME-26NOV09JUNCUC-CUC": {
   "title": "Junior vs Cucuta — Cucuta",
@@ -45549,7 +45549,7 @@
   "event": "KXDIMAYORGAME-26NOV09JUNCUC",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLTD-26NOV09BUFMIN-BUFJALLEN17-1": {
   "title": "Buffalo vs Minnesota: Touchdowns — Josh Allen: 1+",
@@ -45561,7 +45561,7 @@
   "event": "KXNFLTD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFL1HSPREAD-26NOV09BUFMIN-BUF3": {
   "title": "Buffalo vs Minnesota: 1st Half Spread — Buffalo wins by over 2.5 points",
@@ -45573,7 +45573,7 @@
   "event": "KXNFL1HSPREAD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLTOTAL-26NOV09BUFMIN-44": {
   "title": "Buffalo vs Minnesota: Total Points — Over 43.5 points",
@@ -45585,7 +45585,7 @@
   "event": "KXNFLTOTAL-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLTD-26NOV09BUFMIN-BUFJCOOK4-1": {
   "title": "Buffalo vs Minnesota: Touchdowns — James Cook III: 1+",
@@ -45597,7 +45597,7 @@
   "event": "KXNFLTD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXITFWMATCH-26NOV09REGCHA-REG": {
   "title": "Regalado Macias vs Chavez — Fernanda Guadalupe Regalado Macias",
@@ -45609,7 +45609,7 @@
   "event": "KXITFWMATCH-26NOV09REGCHA",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLFIRSTTD-26NOV09BUFMIN-MINTHOCKENSON87": {
   "title": "Buffalo vs Minnesota: 1st Touchdown — T.J. Hockenson",
@@ -45621,7 +45621,7 @@
   "event": "KXNFLFIRSTTD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLFIRSTTD-26NOV09BUFMIN-BUFDKINCAID86": {
   "title": "Buffalo vs Minnesota: 1st Touchdown — Dalton Kincaid",
@@ -45633,7 +45633,7 @@
   "event": "KXNFLFIRSTTD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLTD-26NOV09BUFMIN-MINAJONES33-1": {
   "title": "Buffalo vs Minnesota: Touchdowns — Aaron Jones Sr.: 1+",
@@ -45645,7 +45645,7 @@
   "event": "KXNFLTD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNCAAMBGAME-26NOV09HOWPENN-PENN": {
   "title": "Howard vs Penn — Penn",
@@ -45657,7 +45657,7 @@
   "event": "KXNCAAMBGAME-26NOV09HOWPENN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXITFWMATCH-26NOV09REGCHA-CHA": {
   "title": "Regalado Macias vs Chavez — Sara Lillian Chavez",
@@ -45669,7 +45669,7 @@
   "event": "KXITFWMATCH-26NOV09REGCHA",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNBAGAME-26NOV09MEMTOR-TOR": {
   "title": "Memphis vs Toronto — Toronto",
@@ -45681,7 +45681,7 @@
   "event": "KXNBAGAME-26NOV09MEMTOR",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLTD-26NOV09BUFMIN-MINCWENTZ11-1": {
   "title": "Buffalo vs Minnesota: Touchdowns — Carson Wentz: 1+",
@@ -45693,19 +45693,19 @@
   "event": "KXNFLTD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNBASPREAD-26NOV09LALATL-ATL3": {
   "title": "Los Angeles L vs Atlanta: Spread — Atlanta wins by over 2.5 points",
   "sub": "Atlanta wins by over 2.5 points",
-  "closeTime": "2026-11-12T00:00:00Z",
+  "closeTime": "2026-11-10T02:25:28Z",
   "tick": 0.01,
   "minSize": 1,
   "series": "KXNBASPREAD",
   "event": "KXNBASPREAD-26NOV09LALATL",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLFIRSTTD-26NOV09BUFMIN-BUFJALLEN17": {
   "title": "Buffalo vs Minnesota: 1st Touchdown — Josh Allen",
@@ -45717,7 +45717,7 @@
   "event": "KXNFLFIRSTTD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLFIRSTTD-26NOV09BUFMIN-BUFDKNOX88": {
   "title": "Buffalo vs Minnesota: 1st Touchdown — Dawson Knox",
@@ -45729,7 +45729,7 @@
   "event": "KXNFLFIRSTTD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXDIMAYORGAME-26NOV09JUNCUC-JUN": {
   "title": "Junior vs Cucuta — Junior",
@@ -45741,7 +45741,7 @@
   "event": "KXDIMAYORGAME-26NOV09JUNCUC",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLFIRSTTD-26NOV09BUFMIN-BUFJCOOK4": {
   "title": "Buffalo vs Minnesota: 1st Touchdown — James Cook III",
@@ -45753,7 +45753,7 @@
   "event": "KXNFLFIRSTTD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLFIRSTTD-26NOV09BUFMIN-BUFDMOORE2": {
   "title": "Buffalo vs Minnesota: 1st Touchdown — DJ Moore",
@@ -45765,7 +45765,7 @@
   "event": "KXNFLFIRSTTD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNBAGAME-26NOV09DENHOU-HOU": {
   "title": "Denver vs Houston — Houston",
@@ -45777,7 +45777,7 @@
   "event": "KXNBAGAME-26NOV09DENHOU",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXPRESNOMD-28-AFOR": {
   "title": "2028 Democratic presidential nominee — Aaron Ford",
@@ -45789,7 +45789,7 @@
   "event": "KXPRESNOMD-28",
   "category": "Elections",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLTOTAL-26NOV09BUFMIN-53": {
   "title": "Buffalo vs Minnesota: Total Points — Over 52.5 points",
@@ -45801,7 +45801,7 @@
   "event": "KXNFLTOTAL-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLTD-26NOV09BUFMIN-MINJJEFFERSON18-2": {
   "title": "Buffalo vs Minnesota: Touchdowns — Justin Jefferson: 2+",
@@ -45813,7 +45813,7 @@
   "event": "KXNFLTD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXODIMATCH-26NOV092100INDNZ-IND": {
   "title": "New Zealand vs India — India",
@@ -45825,7 +45825,7 @@
   "event": "KXODIMATCH-26NOV092100INDNZ",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNCAAMBGAME-26NOV09RADTENN-RAD": {
   "title": "Radford vs Tennessee — Radford",
@@ -45837,7 +45837,7 @@
   "event": "KXNCAAMBGAME-26NOV09RADTENN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNCAAMBSPREAD-26NOV09SYRIND-IND6": {
   "title": "Syracuse vs Indiana: Spread — Indiana wins by over 5.5 points",
@@ -45849,7 +45849,7 @@
   "event": "KXNCAAMBSPREAD-26NOV09SYRIND",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNCAAMBGAME-26NOV09HOWPENN-HOW": {
   "title": "Howard vs Penn — Howard",
@@ -45861,7 +45861,7 @@
   "event": "KXNCAAMBGAME-26NOV09HOWPENN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLSPREAD-26NOV09BUFMIN-MIN4": {
   "title": "Buffalo vs Minnesota: Spread — Minnesota wins by over 3.5 points",
@@ -45873,7 +45873,7 @@
   "event": "KXNFLSPREAD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNBATOTAL-26NOV09WASDET-219": {
   "title": "Washington vs Detroit: Total Points — Over 218.5 points",
@@ -45885,7 +45885,7 @@
   "event": "KXNBATOTAL-26NOV09WASDET",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXHORMUZNORM-26MAR17-B261201": {
   "title": "When will traffic at the Strait of Hormuz return to normal? — Before Dec 1, 2026",
@@ -45897,7 +45897,7 @@
   "event": "KXHORMUZNORM-26MAR17",
   "category": "Politics",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNHLGAME-26NOV09NYREDM-EDM": {
   "title": "New York R vs Edmonton — Edmonton",
@@ -45909,7 +45909,7 @@
   "event": "KXNHLGAME-26NOV09NYREDM",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLFIRSTTD-26NOV09BUFMIN-BUFKSHAKIR10": {
   "title": "Buffalo vs Minnesota: 1st Touchdown — Khalil Shakir",
@@ -45921,7 +45921,7 @@
   "event": "KXNFLFIRSTTD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLSPREAD-26NOV09BUFMIN-BUF6": {
   "title": "Buffalo vs Minnesota: Spread — Buffalo wins by over 5.5 points",
@@ -45933,7 +45933,7 @@
   "event": "KXNFLSPREAD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNCAAMBGAME-26NOV09EIUND-EIU": {
   "title": "Eastern Illinois vs Notre Dame — Eastern Illinois",
@@ -45945,7 +45945,7 @@
   "event": "KXNCAAMBGAME-26NOV09EIUND",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXFEDDECISION-26DEC-C25": {
   "title": "Fed decision in Dec 2026? — Cut 25bps",
@@ -45957,7 +45957,7 @@
   "event": "KXFEDDECISION-26DEC",
   "category": "Economics",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFL1H-26NOV09BUFMIN-BUF": {
   "title": "Buffalo vs Minnesota: 1st Half Winner — Buffalo",
@@ -45969,7 +45969,7 @@
   "event": "KXNFL1H-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFL1HTOTAL-26NOV09BUFMIN-23": {
   "title": "Buffalo vs Minnesota: 1st Half Total — Over 22.5 points",
@@ -45981,7 +45981,7 @@
   "event": "KXNFL1HTOTAL-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLTD-26NOV09BUFMIN-MINOBECKHAM13-1": {
   "title": "Buffalo vs Minnesota: Touchdowns — Odell Beckham Jr.: 1+",
@@ -45993,7 +45993,7 @@
   "event": "KXNFLTD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNBAGAME-26NOV09NOPGSW-GSW": {
   "title": "New Orleans vs Golden State — Golden State",
@@ -46005,7 +46005,7 @@
   "event": "KXNBAGAME-26NOV09NOPGSW",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLTOTAL-26NOV09BUFMIN-56": {
   "title": "Buffalo vs Minnesota: Total Points — Over 55.5 points",
@@ -46017,7 +46017,7 @@
   "event": "KXNFLTOTAL-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLFIRSTTD-26NOV09BUFMIN-BUFKCOLEMAN0": {
   "title": "Buffalo vs Minnesota: 1st Touchdown — Keon Coleman",
@@ -46029,7 +46029,7 @@
   "event": "KXNFLFIRSTTD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNCAAMBGAME-26NOV09UNFMIA-UNF": {
   "title": "North Florida vs Miami (FL) — North Florida",
@@ -46041,7 +46041,7 @@
   "event": "KXNCAAMBGAME-26NOV09UNFMIA",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLRECYDS-26NOV09BUFMIN-MINJJEFFERSON18-80": {
   "title": "Buffalo vs Minnesota: Receiving Yards — Justin Jefferson: 80+",
@@ -46053,7 +46053,7 @@
   "event": "KXNFLRECYDS-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLTD-26NOV09BUFMIN-MINJADDISON3-1": {
   "title": "Buffalo vs Minnesota: Touchdowns — Jordan Addison: 1+",
@@ -46065,7 +46065,7 @@
   "event": "KXNFLTD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLTOTAL-26NOV09BUFMIN-47": {
   "title": "Buffalo vs Minnesota: Total Points — Over 46.5 points",
@@ -46077,7 +46077,7 @@
   "event": "KXNFLTOTAL-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLREC-26NOV09BUFMIN-MINJJEFFERSON18-7": {
   "title": "Buffalo vs Minnesota: Receptions — Justin Jefferson: 7+",
@@ -46089,7 +46089,7 @@
   "event": "KXNFLREC-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLTD-26NOV09BUFMIN-BUFJALLEN17-2": {
   "title": "Buffalo vs Minnesota: Touchdowns — Josh Allen: 2+",
@@ -46101,7 +46101,7 @@
   "event": "KXNFLTD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLSPREAD-26NOV09BUFMIN-BUF8": {
   "title": "Buffalo vs Minnesota: Spread — Buffalo wins by over 7.5 points",
@@ -46113,7 +46113,7 @@
   "event": "KXNFLSPREAD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLTD-26NOV09BUFMIN-BUFJCOOK4-2": {
   "title": "Buffalo vs Minnesota: Touchdowns — James Cook III: 2+",
@@ -46125,7 +46125,7 @@
   "event": "KXNFLTD-26NOV09BUFMIN",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNFLNEXTTEAM-26JTAYLOR28-NE": {
   "title": "Jonathan Taylor Next Team — New England",
@@ -46137,7 +46137,7 @@
   "event": "KXNFLNEXTTEAM-26JTAYLOR28",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXPGATOUR-AUCPBCS26-DGHI": {
   "title": "Austin Championship presented by Compliance Solutions Winner — Doug Ghim",
@@ -46149,7 +46149,7 @@
   "event": "KXPGATOUR-AUCPBCS26",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  },
  "KXNBASPREAD-26NOV09DENHOU-HOU5": {
   "title": "Denver vs Houston: Spread — Houston wins by over 4.5 points",
@@ -46161,6 +46161,6 @@
   "event": "KXNBASPREAD-26NOV09DENHOU",
   "category": "Sports",
   "firstSeen": "2026-11-10T01:27Z",
-  "lastSeen": "2026-11-10T02:15Z"
+  "lastSeen": "2026-11-10T02:30Z"
  }
 }
