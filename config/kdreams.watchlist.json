@@ -7,7 +7,9 @@
       "will-the-republican-party-control-the-house-after-the-2026-midterm-elections",
       "will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
       "will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
-      "will-there-be-no-change-in-fed-interest-rates-after-the-december-2026-meeting-20260729232808635"
+      "will-there-be-no-change-in-fed-interest-rates-after-the-december-2026-meeting-20260729232808635",
+      "will-the-fed-decrease-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808634",
+      "strait-of-hormuz-traffic-returns-to-normal-by-november-30-20260810151158765"
     ]
   },
   "kalshi": {
@@ -17,7 +19,9 @@
       "CONTROLH-2026-R",
       "CONTROLH-2026-D",
       "KXFEDDECISION-26DEC-H25",
-      "KXFEDDECISION-26DEC-H0"
+      "KXFEDDECISION-26DEC-H0",
+      "KXFEDDECISION-26DEC-C25",
+      "KXHORMUZNORM-26MAR17-B261201"
     ]
   },
   "scan": {
@@ -57,6 +61,20 @@
       "kalshiTicker": "KXFEDDECISION-26DEC-H0",
       "polymarketTakerRate": 0.05,
       "note": "Sibling bracket of fed-2026-12-hike25: Polymarket 'no change' and Kalshi 'Fed maintains rate' are the same outcome; same rules and fee notes."
+    },
+    {
+      "name": "fed-2026-12-cut25",
+      "polymarketId": "0xf17ad24eb4ad57926495b114149c765b9b95bc286eadc91cbbfa901ceb10d0b8",
+      "kalshiTicker": "KXFEDDECISION-26DEC-C25",
+      "polymarketTakerRate": 0.05,
+      "note": "Sibling bracket of fed-2026-12-hike25 (Polymarket 'decrease by 25 bps', Kalshi 'Cut 25bps'): same rules and edge cases. Found by the 2026-11-10 scan. Polymarket taker rate 0.05 is this market's feeSchedule.rate from Gamma, checked 2026-11-10."
+    },
+    {
+      "name": "hormuz-2026-11-normal",
+      "polymarketId": "0xd64b917e1f7cdf1ad3f51326cf8985ce80e140291d2eaf2bf62821ef02231550",
+      "kalshiTicker": "KXHORMUZNORM-26MAR17-B261201",
+      "polymarketTakerRate": 0,
+      "note": "Near-same outcome: both read the IMF PortWatch 7-day moving average of Strait of Hormuz transit calls for dates through 2026-11-30. Threshold wording differs: Polymarket resolves YES at 'equal to or above 60', Kalshi at 'above 60', so a maximum of exactly 60.0 resolves Polymarket YES and Kalshi NO, which loses both legs of 'ks YES + pm NO' (the direction that was positive on 2026-11-10). Polymarket also spells out revisions and a 14-day late-data window; Kalshi's market rules do not. Polymarket fees are off for this market (Gamma feesEnabled false, checked 2026-11-10). Found by the 2026-11-10 scan."
     }
   ],
   "fees": {

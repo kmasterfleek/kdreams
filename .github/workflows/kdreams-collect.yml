@@ -7,8 +7,12 @@ name: kdreams collect
 # GitHub drops most runs of a high-frequency cron (a */15 schedule landed
 # about every 4-5 hours), so each run is a long-lived loop instead: it takes a
 # snapshot on every quarter hour for up to LOOP_MINUTES, committing each one.
-# The hourly cron only has to land once every ~6 hours to keep coverage
-# continuous; the concurrency group queues at most one run behind the live one.
+# Each run also queues its successor (workflow_dispatch, which GITHUB_TOKEN may
+# trigger) as soon as it starts, because the hourly cron has gone 4-11 hours
+# without firing. The concurrency group holds at most one queued run behind the
+# live one, so the chain and the cron never stack up; a newer queued run
+# replaces an older one. Set the repo variable KDREAMS_CHAIN to 'off' to stop
+# chaining and fall back to the cron alone.
 
 on:
   schedule:
@@ -30,6 +34,7 @@ on:
 
 permissions:
   contents: write
+  actions: write # queue the next collector run
 
 concurrency:
   group: kdreams-collect
@@ -46,6 +51,12 @@ jobs:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
         with: { node-version: 24 }
+      - name: Queue the next run
+        # Queued now, it starts the moment this run ends, so a crash or timeout still has a successor.
+        if: ${{ !inputs.dry_run && vars.KDREAMS_CHAIN != 'off' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run kdreams-collect.yml --repo "$GITHUB_REPOSITORY" --ref main || echo "::warning::could not queue the next run; the hourly cron is the fallback"
       - name: Snapshot both venues on every quarter hour
         run: |
           git config user.name 'kdreams[bot]'
