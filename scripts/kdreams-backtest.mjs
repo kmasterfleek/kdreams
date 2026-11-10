@@ -11,6 +11,7 @@
 import { readFileSync, readdirSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { latestScan } from './kdreams-collect.mjs';
 import {
   parseRows, groupSeries, spreadStats, makerSpreadProxy, sumProxies, crossVenue, byBucket, candidates, feeTable, mid, round, medianGapMinutes, sliceFilter,
   parseResolutions, holdToResolution,
@@ -82,6 +83,11 @@ export function computeReport({ dataDir = 'data', watchlist = {}, days = 14, sin
     candidates: candidates(series, catalogs, { top: 10 }),
     feeTable: feeTable(fees),
     topMarkets: { pm: topMarkets('pm'), ks: topMarkets('ks') },
+    pairScan: (() => {
+      const scan = latestScan(dataDir);
+      const known = new Set((watchlist.pairs || []).map((p) => `${p.polymarketId}|${p.kalshiTicker}`));
+      return scan && { ...scan, pairs: scan.pairs.map((p) => ({ ...p, configured: known.has(`${p.pmId}|${p.ksTicker}`) })) };
+    })(),
     holdToResolution: {
       settled: resolutions.size,
       bands: ['pm', 'ks'].flatMap((v) => RESOLUTION_BANDS.map(([lo, hi]) => ({
@@ -217,6 +223,13 @@ export function renderSummary(r) {
   for (const p of r.crossVenue) {
     L.push(`Pair ${p.name ? `${p.name} (` : ''}${p.kalshiTicker} vs ${p.polymarketId.slice(0, 10)}${p.name ? ')' : ''}${p.settledAt ? ` SETTLED ${p.settledAt}, no new data can arrive` : ''}: n=${p.n}, mean |diff| ${num(p.meanAbsCents)}c, max ${num(p.maxAbsCents)}c, >2c ${pct(p.fracAbsGt2c)}; both-sides net-positive ${pct(p.bothSides.fracNetPositive)} (max ${num(p.bothSides.maxNetCents)}c); leads: ${p.leads || 'n/a'} (lag ${p.bestLag?.lag ?? 'n/a'}, r=${num(p.bestLag?.corr)}).`);
   }
+  const sc = r.pairScan;
+  if (sc) {
+    const fresh = sc.pairs.filter((p) => !p.configured), hits = sc.pairs.filter((p) => (p.best?.netCents ?? -Infinity) >= 1);
+    L.push(`Pair scanner (${sc.scannedAt}): ${sc.pairs.length} same-event pairs among ${sc.pmMarkets} Polymarket + ${sc.ksMarkets} Kalshi non-sports markets closing within ${sc.horizonDays} days, ${fresh.length} not yet configured; ${hits.length} netted >= 1c per $10 buying both sides at scan time.` +
+      (sc.pairs.length ? ` Closest: ${sc.pairs.slice(0, 3).map((p) => `${num(p.best?.netCents)}c/$10 ${p.ksTicker} vs ${p.pmTitle.slice(0, 50)}`).join('; ')}.` : '') +
+      ' Scanned pairs are candidates: a human confirms one into config before a spec can name it.');
+  }
   const hrs = r.byHour.pm.length ? r.byHour.pm.slice().sort((a, b) => b.fracOneCent - a.fracOneCent) : [];
   if (hrs.length) L.push(`Polymarket tightest UTC hours: ${hrs.slice(0, 3).map((h) => `${h.hour}h ${pct(h.fracOneCent)}`).join(', ')}; loosest: ${hrs.slice(-2).map((h) => `${h.hour}h ${pct(h.fracOneCent)}`).join(', ')}.`);
   if (r.candidates.length) L.push(`Top one-tick candidates: ${r.candidates.slice(0, 5).map((c) => `[${c.venue}] ${c.title.slice(0, 50)} (one-tick ${pct(c.fracOneCent)}, touch ${num(c.medianTouch)}, mid ${num(c.mid)})`).join('; ')}.`);
@@ -244,6 +257,11 @@ export function renderMarkdown(r) {
     out.push('| venue | entry price | markets | unsized | win rate | net c per $10 | worst c | median hold h |', '|---|---|---|---|---|---|---|---|');
     for (const b of hr.bands) if (b.markets) out.push(`| ${b.venue} | ${b.priceMin}-${b.priceMax} | ${b.markets} | ${b.unsized} | ${pct(b.winRate)} | ${num(b.netCentsPer10)} | ${num(b.worstCents)} | ${num(b.medianHoldHours)} |`);
     out.push('', '_Hold to resolution counts only markets that have already settled, so long-dated markets are under-represented; one entry per market (per event on Kalshi)._', '');
+  }
+  if (r.pairScan?.pairs.length) {
+    out.push(`| net c per $10 | direction | size ok | Polymarket | Kalshi | mid diff c | PM fee | closes |`, '|---|---|---|---|---|---|---|---|');
+    for (const p of r.pairScan.pairs.slice(0, 10)) out.push(`| ${num(p.best?.netCents)} | ${p.best?.dir || 'n/a'} | ${p.best?.sizeOk ?? 'n/a'} | ${p.pmTitle.slice(0, 60).replace(/\|/g, '/')} | ${p.ksTicker}${p.configured ? ' (configured)' : ''} | ${num(p.midDiffCents)} | ${num(p.pmFeeRate)} | ${String(p.ksClose).slice(0, 10)} |`);
+    out.push('', '_Pair scanner prices one $10 buy-both-sides at the touch when the scan ran (Kalshi fee rounded up per order, Polymarket at the market\'s own rate); the top `scan.pinTop` pairs are recorded every tick from then on._', '');
   }
   out.push('_Maker model is a proxy: a resting order counts as filled only when the recorded price trades through its level; no queue position is modeled._');
   return out.join('\n');

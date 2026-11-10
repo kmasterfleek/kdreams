@@ -16,6 +16,7 @@ Observe-only nightly research loop over Polymarket and Kalshi, built on the Drea
 - `config/kdreams.watchlist.json` — venue limits, fee rates, hand-confirmed cross-venue pairs
 - `scripts/kdreams-collect.mjs` — snapshot collector
 - `scripts/lib/kdreams-metrics.mjs` — pure metrics
+- `scripts/lib/kdreams-pairs.mjs` — pair scanner matching and pricing (imported by the collector)
 - `scripts/kdreams-backtest.mjs` — evaluator and report renderer
 - `scripts/kdreams-nightly.mjs` — nightly research runner
 - `docs/dream-cycle/LEDGER.md` — one row per night

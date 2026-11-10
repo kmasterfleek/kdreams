@@ -150,6 +150,7 @@ data/catalog/kalshi-top.json       the 100 Kalshi tickers currently watched (res
 data/resolutions.ndjson            one line per settled market: {t,v,id,y,at}, y = what a YES share paid
 data/catalog/resolution-checks.json  when each unsettled past-close market was last checked
 config/kdreams.watchlist.json      venue limits, fee rates, and hand-confirmed cross-venue pairs
+scripts/lib/kdreams-pairs.mjs      pair scanner: title matching and $10 both-sides pricing
 docs/dream-cycle/LEDGER.md         one row per night
 docs/dream-cycle/hypotheses.json   every frozen hypothesis: spec, pre-freeze value, grades, status
 docs/dream-cycle/*-report.md       each night's witnessed report
@@ -158,8 +159,20 @@ docs/dream-cycle/*-report.md       each night's witnessed report
 The ledger, the hypothesis registry and the data files are the loop's whole
 memory; all of it lives in this repository.
 
-Pairs are the one thing the loop cannot discover safely on its own. The nightly
-report proposes candidates; a human confirms a pair by adding
+Pairs are the one thing the loop cannot discover safely on its own, so it
+finds candidates and a human confirms them. Once a day (the first collector
+tick at or after `scan.hourUtc`, 06:00 UTC) the collector scans both venues for
+non-sports markets closing within `scan.horizonDays` (42) with real 24-hour
+volume, and matches them by title: closes within `scan.maxCloseHours`, the same
+figures on both sides (price levels, "25 bps", ">25", "50+"), Kalshi's outcome
+words present in the Polymarket question, and mids within `scan.maxMidDiff` so
+YES means the same thing. Kalshi combos and sports are skipped. Each match is
+priced as one $10 buy-both-sides at the touch, with Kalshi's fee rounded up
+per order and Polymarket's at that market's own rate (fee-free markets at 0),
+and the scan is written to `data/scans/YYYY-MM-DD.json`. From then on the
+collector records the `scan.pinTop` (20) pairs closest to net positive every
+tick, so a pair has history by the time anyone confirms it, and the nightly
+evidence lists the scan. A human confirms a pair by adding
 `{ "name": "<name>", "polymarketId": "<conditionId>", "kalshiTicker": "<ticker>" }`
 to `pairs` in the watchlist, and pins both markets with `polymarket.extraSlugs`
 and `kalshi.extraTickers` so they are collected even when they fall out of the

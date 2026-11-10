@@ -1,5 +1,5 @@
 {
-  "$comment": "kdreams observation watchlist. Observe-only: nothing in this repo places orders. pairs[] maps the same real-world event across venues; polymarketId is the Gamma conditionId, kalshiTicker is the Kalshi market ticker; a pair's polymarketTakerRate overrides fees.polymarketTakerRate because Polymarket sets taker rates per market. Fee rates are published venue schedules as of 2026-10 and must be re-verified before any edge claim. backtest.horizonMinutes bounds the maker proxy in wall-clock time (snapshots are irregular); retestMinTicks is how many post-freeze ticks a frozen hypothesis needs before it is graded; retestMinN is the smallest sample a spec metric may be graded on.",
+  "$comment": "kdreams observation watchlist. Observe-only: nothing in this repo places orders. pairs[] maps the same real-world event across venues; polymarketId is the Gamma conditionId, kalshiTicker is the Kalshi market ticker; a pair's polymarketTakerRate overrides fees.polymarketTakerRate because Polymarket sets taker rates per market. scan finds candidate pairs once a day (see scripts/kdreams-collect.mjs) and pins the pinTop closest to net positive; a scanned pair is a candidate, not a confirmed pair. Fee rates are published venue schedules as of 2026-10 and must be re-verified before any edge claim. backtest.horizonMinutes bounds the maker proxy in wall-clock time (snapshots are irregular); retestMinTicks is how many post-freeze ticks a frozen hypothesis needs before it is graded; retestMinN is the smallest sample a spec metric may be graded on.",
   "polymarket": {
     "topByVolume24h": 100,
     "bookDepthTop": 100,
@@ -19,6 +19,17 @@
       "KXFEDDECISION-26DEC-H25",
       "KXFEDDECISION-26DEC-H0"
     ]
+  },
+  "scan": {
+    "hourUtc": 6,
+    "horizonDays": 42,
+    "pmPages": 10,
+    "pmMinVolume24h": 5000,
+    "ksMinVolume24h": 500,
+    "maxCloseHours": 12,
+    "minScore": 0.3,
+    "maxMidDiff": 0.06,
+    "pinTop": 20
   },
   "pairs": [
     {

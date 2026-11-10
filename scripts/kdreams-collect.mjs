@@ -18,14 +18,20 @@
  * Candidates are catalog markets past their close time or no longer in the watched
  * set; each is re-checked at most every `resolutions.recheckMinutes`.
  *
+ * Once a day (first tick at or after `scan.hourUtc`) both venues are scanned for
+ * non-sports markets that close within `scan.horizonDays` and name the same event;
+ * the matched pairs, priced as a $10 buy-both-sides, go to data/scans/YYYY-MM-DD.json.
+ * The `scan.pinTop` pairs closest to net positive are then recorded every tick.
+ *
  * Env:   KDREAMS_WATCHLIST (default config/kdreams.watchlist.json)
  *        KDREAMS_DATA      (default data)
  *        KDREAMS_NOW       (ISO override, for reproducible runs)
- * Usage: node scripts/kdreams-collect.mjs [--dry-run] [--rescan]
+ * Usage: node scripts/kdreams-collect.mjs [--dry-run] [--rescan] [--scan]
  */
-import { readFileSync, writeFileSync, mkdirSync, existsSync, appendFileSync } from 'node:fs';
+import { readFileSync, readdirSync, writeFileSync, mkdirSync, existsSync, appendFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { matchPairs, bothSidesPer10, scanPins } from './lib/kdreams-pairs.mjs';
 
 export const GAMMA = 'https://gamma-api.polymarket.com';
 export const CLOB = 'https://clob.polymarket.com';
@@ -166,14 +172,22 @@ function stripNull(o) {
   return Object.fromEntries(Object.entries(o).filter(([, v]) => v !== null && v !== undefined));
 }
 
-async function collectPolymarket(cfg, t, log) {
+async function collectPolymarket(cfg, t, log, pins = []) {
   const n = cfg.topByVolume24h ?? 100;
   const markets = await fetchJson(`${GAMMA}/markets?limit=${n}&active=true&closed=false&order=volume24hr&ascending=false`);
+  const top = markets.length;
   for (const slug of cfg.extraSlugs || []) {
     try {
       const extra = await fetchJson(`${GAMMA}/markets?slug=${encodeURIComponent(slug)}`);
       for (const m of extra) if (!markets.some((x) => x.id === m.id)) markets.push(m);
     } catch (e) { log(`polymarket slug ${slug} skipped: ${e.message}`); }
+  }
+  const pinIds = pins.filter((id) => !markets.some((x) => x.conditionId === id));
+  for (let i = 0; i < pinIds.length; i += 50) {
+    try {
+      const got = await fetchJson(`${GAMMA}/markets?${pinIds.slice(i, i + 50).map((id) => `condition_ids=${id}`).join('&')}&closed=false&limit=100`);
+      for (const m of got) if (!markets.some((x) => x.id === m.id)) markets.push(m);
+    } catch (e) { log(`polymarket pins skipped: ${e.message}`); }
   }
   const depthTop = cfg.bookDepthTop ?? 0;
   const out = [];
@@ -181,7 +195,8 @@ async function collectPolymarket(cfg, t, log) {
     const m = markets[i];
     let book = null;
     const yes = parseJsonField(m.clobTokenIds)[0];
-    if (i < depthTop && yes) {
+    // Extras and pins are watched for their prices, so they always get the book.
+    if ((i < depthTop || i >= top) && yes) {
       try { book = await fetchJson(`${CLOB}/book?token_id=${yes}`); await sleep(120); }
       catch (e) { log(`book ${m.slug} skipped: ${e.message}`); }
     }
@@ -190,22 +205,28 @@ async function collectPolymarket(cfg, t, log) {
   return out;
 }
 
-/** Full open-events scan (~70 pages). Only run when the top list is stale. */
-async function scanKalshiTop(n, log) {
-  const seen = [];
+/** Every open Kalshi event with its markets (~70 pages). */
+async function fetchKalshiEvents() {
+  const events = [];
   let cursor = null;
   for (let page = 0; page < 200; page++) {
-    const q = `${KALSHI}/events?limit=200&status=open&with_nested_markets=true${cursor ? `&cursor=${cursor}` : ''}`;
-    const d = await fetchJson(q);
-    for (const e of d.events || []) {
-      for (const m of e.markets || []) {
-        if (!isPlainBinary(m)) continue;
-        seen.push({ ticker: m.ticker, v24: Number(m.volume_24h_fp || 0), event: { title: e.title, series_ticker: e.series_ticker, category: e.category } });
-      }
-    }
+    const d = await fetchJson(`${KALSHI}/events?limit=200&status=open&with_nested_markets=true${cursor ? `&cursor=${cursor}` : ''}`);
+    events.push(...(d.events || []));
     cursor = d.cursor;
     if (!cursor) break;
     await sleep(100);
+  }
+  return events;
+}
+
+/** Full open-events scan. Only run when the top list is stale. */
+async function scanKalshiTop(n, log) {
+  const seen = [];
+  for (const e of await fetchKalshiEvents()) {
+    for (const m of e.markets || []) {
+      if (!isPlainBinary(m)) continue;
+      seen.push({ ticker: m.ticker, v24: Number(m.volume_24h_fp || 0), event: { title: e.title, series_ticker: e.series_ticker, category: e.category } });
+    }
   }
   seen.sort((x, y) => y.v24 - x.v24);
   log(`kalshi rescan: ${seen.length} plain binary markets scanned`);
@@ -213,7 +234,7 @@ async function scanKalshiTop(n, log) {
   return { tickers: top.map((x) => x.ticker), events: Object.fromEntries(top.map((x) => [x.ticker, x.event])) };
 }
 
-async function collectKalshi(cfg, t, dataDir, flags, log) {
+async function collectKalshi(cfg, t, dataDir, flags, log, pins = []) {
   const topPath = join(dataDir, 'catalog', 'kalshi-top.json');
   let top = loadJson(topPath, null);
   const stale = !top || !top.scannedAt || (Date.parse(t) - Date.parse(top.scannedAt)) > (cfg.rescanEveryMinutes ?? 360) * 60000;
@@ -222,7 +243,7 @@ async function collectKalshi(cfg, t, dataDir, flags, log) {
     top = { scannedAt: t, ...scanned };
     if (!flags.dryRun) { mkdirSync(join(dataDir, 'catalog'), { recursive: true }); writeFileSync(topPath, JSON.stringify(top, null, 2) + '\n'); }
   }
-  const tickers = [...new Set([...(top.tickers || []), ...(cfg.extraTickers || [])])];
+  const tickers = [...new Set([...(top.tickers || []), ...(cfg.extraTickers || []), ...pins])];
   const out = [];
   for (let i = 0; i < tickers.length; i += 50) {
     const batch = tickers.slice(i, i + 50);
@@ -231,6 +252,60 @@ async function collectKalshi(cfg, t, dataDir, flags, log) {
     await sleep(100);
   }
   return out;
+}
+
+/**
+ * Non-sports markets on both venues that close within the horizon, matched into same-event
+ * pairs and priced as a $10 buy-both-sides at the current touch. Read-only, like everything here.
+ */
+export async function scanPairs(cfg, fees, t, log) {
+  const horizonDays = cfg.horizonDays ?? 42, from = new Date(Date.parse(t)).toISOString(), until = new Date(Date.parse(t) + horizonDays * 864e5).toISOString();
+  const pmMin = cfg.pmMinVolume24h ?? 5000, ksMin = cfg.ksMinVolume24h ?? 500;
+  const pm = [];
+  for (let page = 0; page < (cfg.pmPages ?? 10); page++) {
+    const got = await fetchJson(`${GAMMA}/markets?limit=100&offset=${page * 100}&active=true&closed=false&order=volume24hr&ascending=false&end_date_min=${from}&end_date_max=${until}`);
+    for (const m of got) {
+      if (m.sportsMarketType || m.gameStartTime || !m.enableOrderBook || Number(m.volume24hr || 0) < pmMin) continue;
+      pm.push({ id: String(m.conditionId), slug: m.slug, title: m.question, close: m.endDate, b: round(m.bestBid), a: round(m.bestAsk),
+        v24: round(m.volume24hr, 0), yesToken: parseJsonField(m.clobTokenIds)[0] ?? null,
+        feeRate: m.feesEnabled === false ? 0 : (m.feeSchedule?.rate ?? fees.polymarketTakerRate ?? 0.04) });
+    }
+    if (got.length < 100 || Number(got.at(-1)?.volume24hr || 0) < pmMin) break;
+    await sleep(150);
+  }
+  const ks = [];
+  for (const e of await fetchKalshiEvents()) {
+    // Combos settle on several conditions at once, so they never mirror a single Polymarket question.
+    if (e.category === 'Sports' || /combo/i.test(`${e.series_ticker} ${e.title}`)) continue;
+    for (const m of e.markets || []) {
+      if (!isPlainBinary(m) || !m.close_time || m.close_time > until || Number(m.volume_24h_fp || 0) < ksMin) continue;
+      ks.push({ id: m.ticker, title: `${e.title} — ${m.yes_sub_title || m.title}`, sub: m.yes_sub_title || null, close: m.close_time,
+        b: round(m.yes_bid_dollars), a: round(m.yes_ask_dollars), bs: round(m.yes_bid_size_fp, 2), as: round(m.yes_ask_size_fp, 2), v24: round(m.volume_24h_fp, 0) });
+    }
+  }
+  const matches = matchPairs(pm, ks, cfg);
+  const pairs = [];
+  for (const x of matches) {
+    let q = { b: x.pm.b, a: x.pm.a, bs: null, as: null };
+    if (x.pm.yesToken) {
+      try { const touch = bestOfBook(await fetchJson(`${CLOB}/book?token_id=${x.pm.yesToken}`)); if (touch.b != null && touch.a != null) q = touch; await sleep(120); }
+      catch (e) { log(`scan book ${x.pm.slug} skipped: ${e.message}`); }
+    }
+    pairs.push({ pmId: x.pm.id, pmSlug: x.pm.slug, pmTitle: x.pm.title, ksTicker: x.ks.id, ksTitle: x.ks.title,
+      pmClose: x.pm.close, ksClose: x.ks.close, score: x.score, midDiffCents: x.midDiffCents, pmFeeRate: x.pm.feeRate,
+      pmV24: x.pm.v24, ksV24: x.ks.v24, best: bothSidesPer10(q, x.ks, { pmFeeRate: x.pm.feeRate, ksFeeRate: fees.kalshiTakerRate ?? 0.07 }) });
+  }
+  pairs.sort((x, y) => (y.best?.netCents ?? -Infinity) - (x.best?.netCents ?? -Infinity));
+  log(`pair scan: ${pm.length} pm + ${ks.length} ks markets closing by ${until.slice(0, 10)}; ${pairs.length} pairs`);
+  return { scannedAt: t, horizonDays, pmMarkets: pm.length, ksMarkets: ks.length, pairs };
+}
+
+/** The most recent scan written under data/scans, or null. */
+export function latestScan(dataDir) {
+  const dir = join(dataDir, 'scans');
+  if (!existsSync(dir)) return null;
+  const last = readdirSync(dir).filter((f) => /^\d{4}-\d{2}-\d{2}\.json$/.test(f)).sort().at(-1);
+  return last ? loadJson(join(dir, last), null) : null;
 }
 
 async function fetchResolutions(venue, ids, t) {
@@ -275,16 +350,17 @@ async function collectResolutions(cfg, dataDir, t, flags, log) {
 }
 
 export async function main(argv = process.argv.slice(2)) {
-  const flags = { dryRun: argv.includes('--dry-run'), rescan: argv.includes('--rescan') };
+  const flags = { dryRun: argv.includes('--dry-run'), rescan: argv.includes('--rescan'), scan: argv.includes('--scan') };
   const log = (s) => console.log(`[kdreams-collect] ${s}`);
   const wl = loadJson(process.env.KDREAMS_WATCHLIST || 'config/kdreams.watchlist.json', {});
   const dataDir = process.env.KDREAMS_DATA || 'data';
   const now = process.env.KDREAMS_NOW ? new Date(process.env.KDREAMS_NOW) : new Date();
   const t = now.toISOString().slice(0, 16) + 'Z';
 
+  const pins = scanPins(latestScan(dataDir), wl.scan?.pinTop ?? 20);
   const results = await Promise.allSettled([
-    collectPolymarket(wl.polymarket || {}, t, log),
-    collectKalshi(wl.kalshi || {}, t, dataDir, flags, log),
+    collectPolymarket(wl.polymarket || {}, t, log, pins.pm),
+    collectKalshi(wl.kalshi || {}, t, dataDir, flags, log, pins.ks),
   ]);
   const pm = results[0].status === 'fulfilled' ? results[0].value : (log(`polymarket failed: ${results[0].reason?.message}`), []);
   const ks = results[1].status === 'fulfilled' ? results[1].value : (log(`kalshi failed: ${results[1].reason?.message}`), []);
@@ -293,6 +369,10 @@ export async function main(argv = process.argv.slice(2)) {
 
   if (flags.dryRun) {
     for (const x of all.slice(0, 3)) console.log(JSON.stringify(x.row));
+    if (flags.scan) {
+      const scan = await scanPairs(wl.scan || {}, wl.fees || {}, t, log);
+      for (const p of scan.pairs.slice(0, 15)) console.log(`${p.best?.netCents ?? 'n/a'}c/$10 | ${p.pmTitle} || ${p.ksTitle} | d${p.midDiffCents}c fee ${p.pmFeeRate}`);
+    }
     const settled = await collectResolutions(wl.resolutions || {}, dataDir, t, flags, log).catch((e) => (log(`resolutions failed: ${e.message}`), 0));
     log(`dry run: ${all.length} rows and ${settled} resolutions not written`);
     return { t, pm: pm.length, ks: ks.length };
@@ -321,6 +401,14 @@ export async function main(argv = process.argv.slice(2)) {
   log(`wrote ${all.length} rows to ${day}`);
   const settled = await collectResolutions(wl.resolutions || {}, dataDir, t, flags, log).catch((e) => (log(`resolutions failed: ${e.message}`), 0));
   if (settled) log(`appended ${settled} resolutions`);
+  const scanFile = join(dataDir, 'scans', `${t.slice(0, 10)}.json`);
+  if (flags.scan || (wl.scan?.enabled !== false && !existsSync(scanFile) && Number(t.slice(11, 13)) >= (wl.scan?.hourUtc ?? 6))) {
+    try {
+      const scan = await scanPairs(wl.scan || {}, wl.fees || {}, t, log);
+      mkdirSync(join(dataDir, 'scans'), { recursive: true });
+      writeFileSync(scanFile, JSON.stringify(scan, null, 1) + '\n');
+    } catch (e) { log(`pair scan failed: ${e.message}`); }
+  }
   return { t, pm: pm.length, ks: ks.length };
 }
 

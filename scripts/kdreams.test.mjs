@@ -341,3 +341,37 @@ test('specs: resolution metrics validate their own slice keys and count as profi
   assert.equal(specRejection(r, { value: 15, n: 80 }), null);
   assert.match(specInstructions([]), /hoursToClose/);
 });
+
+test('pairs: the scanner matches same-event markets, prices $10 both sides, and pins the closest', async () => {
+  const { titleTokens, matchPairs, bothSidesPer10, scanPins } = await import('./lib/kdreams-pairs.mjs');
+  assert.deepEqual([...titleTokens('Will the Fed increase interest rates by 25 bps after the December 2026 meeting?')].sort(), ['bp25', 'fed', 'increase', 'interest', 'meeting', 'rate']);
+  assert.ok(titleTokens('Fed decision? — Hike >25bps').has('gt25')); assert.ok(titleTokens('Fed hikes 50+ bps?').has('ge50'));
+  assert.ok(titleTokens('BTC above $72,500?').has('72500'));
+  const pm = [
+    { id: 'p-fed', title: 'Will the Fed hike rates by 25 bps at the December 2026 meeting?', close: '2026-12-09T23:59:00Z', b: 0.77, a: 0.78 },
+    { id: 'p-btc', title: 'Will the price of Bitcoin be above $68,000 on November 10?', close: '2026-11-10T17:00:00Z', b: 0.9, a: 0.91 },
+    { id: 'p-btc2', title: 'Will the price of Bitcoin be above $72,250 on November 10?', close: '2026-11-10T17:00:00Z', b: 0.6, a: 0.61 },
+    { id: 'p-cut50', title: 'Will the Fed decrease interest rates by 50+ bps after the December 2026 meeting?', close: '2026-12-09T23:59:00Z', b: 0.01, a: 0.02 },
+    { id: 'p-r', title: 'Will Republicans win the House?', close: '2026-11-04T05:00:00Z', b: 0.07, a: 0.08 },
+  ];
+  const ks = [
+    { id: 'KXFED-H25', title: 'Fed decision in Dec 2026? — Hike 25bps', sub: 'Hike 25bps', close: '2026-12-09T18:59:00Z', b: 0.8, a: 0.81 },
+    // Same move, different size: never matched to the 50+ bps market even though both mids sit near 0.
+    { id: 'KXFED-C25', title: 'Fed decision in Dec 2026? — Cut 25bps', sub: 'Cut 25bps', close: '2026-12-09T18:59:00Z', b: 0, a: 0.01 },
+    // Same threshold as p-btc2 but read at 5pm, not noon: another event.
+    { id: 'KXBTC-72250', title: 'BTC price on Nov 10, 2026 at 5pm EST? — $72,250 or above', sub: '$72,250 or above', close: '2026-11-10T22:00:00Z', b: 0.6, a: 0.62 },
+    // Mirror wording: Kalshi YES is the Democratic side, so the mids disagree and it is dropped.
+    { id: 'CONTROLH-D', title: 'Will Republicans or Democrats win the House? — Democrats', sub: 'Republicans', close: '2026-11-04T05:02:00Z', b: 0.92, a: 0.93 },
+  ];
+  const m = matchPairs(pm, ks);
+  assert.deepEqual(m.map((x) => [x.pm.id, x.ks.id]), [['p-fed', 'KXFED-H25']]);
+  assert.equal(m[0].midDiffCents, -3);
+  // House pair on 2026-10-30: Kalshi YES at 0.92 + Polymarket NO at 0.07 = 0.99 for 10 pairs;
+  // 10c gross - Kalshi fee ceil(5.15) = 6c - Polymarket 0.04 * 10 * 0.07 * 0.93 = 2.6c.
+  const b = bothSidesPer10({ b: 0.93, a: 0.94, bs: 5e5, as: 2e6 }, { b: 0.919, a: 0.92, bs: 1e4, as: 1e4 }, { pmFeeRate: 0.04 });
+  assert.deepEqual(b, { dir: 'ks YES + pm NO', cost: 0.99, contracts: 10, netCents: 1.4, sizeOk: true });
+  assert.equal(bothSidesPer10({ b: 0.93, a: 0.94, bs: 5e5, as: 2e6 }, { b: 0.919, a: 0.92, bs: 1e4, as: 1e4 }, { pmFeeRate: 0 }).netCents, 4);
+  assert.equal(bothSidesPer10({ b: null, a: null }, { b: 0.5, a: 0.51 }), null);
+  assert.deepEqual(scanPins({ pairs: [{ pmId: 'a', ksTicker: 'A', best: { netCents: -3 } }, { pmId: 'b', ksTicker: 'B', best: { netCents: 2 } }, { pmId: 'c', ksTicker: 'C', best: null }] }, 2), { pm: ['b', 'a'], ks: ['B', 'A'] });
+  assert.deepEqual(scanPins(null), { pm: [], ks: [] });
+});
