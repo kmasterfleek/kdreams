@@ -1219,6 +1219,15 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "resolution.netCentsPer10 = 81.7 on n=17, below the n>=100 needed"
+      },
+      {
+        "date": "2026-11-11",
+        "ticks": 167,
+        "value": -12.1,
+        "n": 35,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "resolution.netCentsPer10 = -12.1 on n=35, below the n>=100 needed"
       }
     ]
   },
@@ -1243,6 +1252,38 @@
     "baseline": {
       "value": -1.884,
       "n": 8123
+    },
+    "status": "REFUTED",
+    "retests": [
+      {
+        "date": "2026-11-11",
+        "ticks": 98,
+        "value": -2.031,
+        "n": 586,
+        "verdict": "REFUTED",
+        "by": "code",
+        "note": "maker.netCentsPerAttempt = -2.031 vs > 1 on n=586"
+      }
+    ],
+    "settledOn": "2026-11-11"
+  },
+  {
+    "id": "2026-11-11",
+    "date": "2026-11-11",
+    "deep": "cross-venue-divergence",
+    "issue": "#38",
+    "text": "Given the configured Fed December hold pair, when simulating complementary-side purchases at recorded touches, then pair.bothSidesFracNetPositive should be > 0.02 vs the recorded 0.01 baseline, subject to both venues’ taker fees and equivalent resolution outcomes.",
+    "spec": {
+      "metric": "pair.bothSidesFracNetPositive",
+      "pair": "fed-2026-12-hold",
+      "op": ">",
+      "threshold": 0.02,
+      "minN": 100
+    },
+    "frozenAt": "2026-11-11T16:45Z",
+    "baseline": {
+      "value": 0.008,
+      "n": 1316
     },
     "status": "open",
     "retests": []
