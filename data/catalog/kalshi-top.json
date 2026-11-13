@@ -1,106 +1,106 @@
 {
-  "scannedAt": "2026-11-12T23:45Z",
+  "scannedAt": "2026-11-13T06:00Z",
   "tickers": [
     "SENATEAK-26-R",
-    "KXWTAMATCH-26NOV12PEGNOS-PEG",
-    "KXWTAMATCH-26NOV12PEGNOS-NOS",
-    "KXNFLGAME-26NOV12WASNYG-NYG",
-    "KXNFLGAME-26NOV12WASNYG-WAS",
+    "KXODIMATCH-26NOV122100INDNZ-IND",
     "KXPRESNOMD-28-MSHE",
-    "KXNHLGAME-26NOV12DETFLA-FLA",
-    "KXNBAGAME-26NOV12TORPHI-PHI",
     "SENATEAK-26-D",
-    "KXATPCHALLENGERMATCH-26NOV12GIRSHE-SHE",
+    "KXATPCHALLENGERMATCH-26NOV12TOMHOL-TOM",
+    "KXODIMATCH-26NOV122100INDNZ-NZ",
+    "KXUFCFIGHT-26NOV14GANHOK-GAN",
     "KXNFLMVP-27-KCOUSINS8",
-    "KXATPCHALLENGERMATCH-26NOV12GIRSHE-GIR",
-    "KXNFLSPREAD-26NOV12WASNYG-NYG2",
-    "KXNFLSPREAD-26NOV12WASNYG-NYG3",
-    "KXAKSENATE-26NOV03-DSUL",
     "KXFEDDECISION-26DEC-H0",
-    "KXNBAGAME-26NOV12DALMIN-DAL",
-    "KXITFMATCH-26NOV12CAZGAI-GAI",
-    "KXPGATOUR-AUCPBCS26-JKOI",
-    "KXPRESNOMR-28-JDV",
-    "KXNFLSPREAD-26NOV12WASNYG-NYG8",
+    "KXUFCFIGHT-26NOV14GANHOK-HOK",
+    "KXATPCHALLENGERMATCH-26NOV12UCHHAR-UCH",
     "KXPRESPERSON-28-ASPA",
+    "KXAKSENATE-26NOV03-DSUL",
     "KXNVDACEO-29JAN-TCOO",
+    "KXSENMAJ-27-CSCH",
+    "KXODIMATCH-26NOV122230ENGAUS-AUS",
     "KXFEDDECISION-26DEC-H25",
     "KXNVDACEO-29JAN-CKRE",
-    "KXFEDDECISION-26DEC-H26",
-    "KXUFCFIGHT-26NOV14GANHOK-HOK",
-    "KXPGATOUR-AUCPBCS26-BKOH",
-    "KXNCAAMBGAME-26NOV12JWRIBU-JWRI",
-    "KXPGATOUR-AUCPBCS26-DGHI",
-    "KXNFLTD-26NOV12WASNYG-WASAWILLIAMS14-1",
+    "KXSENATEDEMLEAD-28JAN01-CSHU",
+    "KXODIMATCH-26NOV122230ENGAUS-ENG",
+    "KXSB-27-NYG",
     "KXNVDACEO-29JAN-JENS",
-    "KXPGATOUR-AUCPBCS26-NDUN",
-    "KXNFLTD-26NOV12WASNYG-WASAEKELER30-1",
-    "KXPGATOUR-AUCPBCS26-BBRO",
-    "KXTESTMATCH-26NOV082330SRIPAK-PAK",
+    "KXFEDDECISION-26DEC-H26",
+    "KXSENATEDEMLEAD-28JAN01-CHOL",
+    "KXITFMATCH-26NOV12OKIJAV-OKI",
+    "KXNFLSPREAD-26NOV15JACTEN-JAC11",
+    "KXPGATOUR-AUCPBCS26-GSAR",
+    "KXPGATOUR-AUCPBCS26-JKOI",
+    "KXPGATOUR-AUCPBCS26-AWIS",
+    "KXPGATOUR-AUCPBCS26-BKOH",
     "KXPGATOUR-AUCPBCS26-JLOW",
-    "KXNBAGAME-26NOV12TORPHI-TOR",
-    "KXNFLTOTAL-26NOV12WASNYG-42",
-    "KXCONCACAFNLGAME-26NOV12ARUMTQ-ARU",
+    "KXPGATOUR-AUCPBCS26-BBRO",
+    "KXPRESNOMR-28-MPEN",
     "KXPGATOUR-AUCPBCS26-MHUB",
     "KXOSCARPIC-27-INV",
-    "KXPRESNOMR-28-MPEN",
-    "KXNHLSPREAD-26NOV12DETFLA-FLA2",
-    "KXNFLFIRSTTD-26NOV12WASNYG-WASCOKONKWO85",
-    "KXPGATOUR-AUCPBCS26-GSAR",
-    "KXNBAGAME-26NOV12DETWAS-DET",
-    "KXPGATOUR-AUCPBCS26-MHOM",
-    "KXNCAAWBGAME-26NOV12OKSTTLSA-TLSA",
-    "KXPGATOUR-AUCPBCS26-ASMO",
-    "KXPGAR1LEAD-AUCPBCS26-BBRO",
-    "KXPGATOUR-AUCPBCS26-AWIS",
+    "KXATPCHALLENGERMATCH-26NOV12TOMHOL-HOL",
+    "KXNFLTOTAL-26NOV15MINGB-42",
+    "KXITFWMATCH-26NOV12NAKYAM-YAM",
     "KXPGAR1LEAD-AUCPBCS26-TCRO",
     "KXPGATOUR-AUCPBCS26-HLI",
-    "KXSENMAJ-27-CSCH",
-    "KXPRESPERSON-28-JVAN",
-    "KXPGATOUR-AUCPBCS26-ECOL",
-    "KXOSCARPIC-27-DEB",
-    "KXPGATOUR-AUCPBCS26-LCLA",
-    "KXITFMATCH-26NOV12CAZGAI-CAZ",
-    "KXITFMATCH-26NOV12DEATHO-DEA",
-    "KXNVDACEO-29JAN-IBUC",
-    "KXNHLGAME-26NOV12MTLBOS-MTL",
-    "KXSB-27-MIN",
-    "KXPGATOUR-AUCPBCS26-BHAR",
-    "KXPGATOUR-AUCPBCS26-NSHI",
-    "KXPGATOUR-AUCPBCS26-KHIR",
-    "KXNFLSPREAD-26NOV12WASNYG-NYG4",
-    "KXNCAAFGAME-26NOV14DUKEMIA-DUKE",
-    "RSENATESEATS-27-B45",
-    "KXPRESPERSON-28-MOBA",
-    "KXDIMAYORGAME-26NOV12PASJUN-PAS",
-    "KXNCAAFGAME-26NOV12MEMUSF-MEM",
-    "KXPRESNOMR-28-JMCE",
-    "KXPGATOUR-AUCPBCS26-TMOR",
-    "KXTRUMPADMINLEAVE-26DEC31-HLUT",
-    "KXNCAAMBGAME-26NOV12MORGUMBC-MORG",
+    "KXPGATOUR-AUCPBCS26-ASMO",
+    "KXPGATOUR-AUCPBCS26-DGHI",
+    "KXPGATOUR-AUCPBCS26-NDUN",
+    "KXSENMAJ-27-CHOL",
+    "KXPGAR1LEAD-AUCPBCS26-BBRO",
     "KXPGATOUR-AUCPBCS26-TCRO",
-    "KXCONCACAFNLGAME-26NOV12CUWPAN-PAN",
-    "KXPGATOUR-AUCPBCS26-MRUS",
+    "KXTESTMATCH-26NOV082330SRIPAK-PAK",
+    "KXSB-27-MIN",
+    "KXPRESNOMR-28-JDV",
+    "KXOSCARPIC-27-DEB",
+    "KXATPCHALLENGERMATCH-26NOV12UCHHAR-HAR",
+    "KXPGATOUR-AUCPBCS26-MHOM",
+    "KXNVDACEO-29JAN-IBUC",
+    "KXPGATOUR-AUCPBCS26-NSHI",
+    "KXNFLNFCEAST-27-WAS",
+    "KXITFMATCH-26NOV12OKIJAV-JAV",
     "KXBLUEWAVECOMBO-27FEB",
-    "KXNFL1HTOTAL-26NOV12WASNYG-29",
-    "KXNFLTD-26NOV12WASNYG-NYGCSKATTEBO44-1",
-    "KXNFLTD-26NOV12WASNYG-NYGJMCCARTHY9-1",
+    "KXPGATOUR-AUCPBCS26-MGRE",
+    "KXPRESNOMR-28-JMCE",
+    "KXPRESPERSON-28-MOBA",
+    "KXBTCD-26NOV1317-T69999.99",
+    "KXPRESNOMD-28-CHOL",
+    "KXTRUMPADMINLEAVE-26DEC31-HLUT",
+    "KXPGATOUR-AUCPBCS26-NLIN",
+    "KXNFLGAME-26NOV15MIAIND-IND",
     "KXNBA-27-DAL",
-    "KXCONCACAFNLGAME-26NOV12ARUMTQ-MTQ",
+    "KXPGATOUR-AUCPBCS26-RCAM",
+    "KXSENATEDEMLEAD-28JAN01-BSCH",
+    "KXPRESPERSON-28-RCOO",
+    "KXBTC50VS100-BTC-26DEC31",
+    "KXIPOANTHROPIC-DATE-26NOV16",
+    "KXBTCD-26NOV1317-T70999.99",
+    "KXPGATOUR-AUCPBCS26-BHAR",
     "KXPGATOUR-AUCPBCS26-KVEN",
-    "KXPGATOUR-AUCPBCS26-PCOO",
-    "KXNCAAMBGAME-26NOV12MORGUMBC-UMBC",
-    "KXWTASETWINNER-26NOV12PEGNOS-2-NOS",
-    "KXNBASPREAD-26NOV12TORPHI-PHI8",
+    "KXDSENATESEATS-27-ABOVE52",
+    "KXPGATOUR-AUCPBCS26-JSTA",
+    "KXPGATOUR-AUCPBCS26-TMOR",
+    "KXNCAAFGAME-26NOV14DUKEMIA-DUKE",
+    "KXBTCD-26NOV1317-T68499.99",
     "KXPRESNOMD-28-SFAI",
-    "KXSENATEDEMLEAD-28JAN01-CSHU",
-    "KXCONCACAFNLGAME-26NOV12ARUMTQ-TIE",
-    "KXWTASETWINNER-26NOV12PEGNOS-2-PEG",
-    "KXITFMATCH-26NOV12VELJIR-JIR",
-    "KXBTCD-26NOV1219-T71299.99",
-    "KXITFMATCH-26NOV12DEATHO-THO",
-    "KXBTCD-26NOV1219-T71199.99",
-    "KXPGATOUR-AUCPBCS26-MMCC"
+    "KXHUANGTESTIFY-27JUL-26DEC",
+    "KXNBAGAME-26NOV13GSWSAS-GSW",
+    "KXPGATOUR-AUCPBCS26-MMCC",
+    "KXBTCD-26NOV1317-T68999.99",
+    "KXSENMAJ-27-BSCH",
+    "KXNCAAFGAME-26NOV14TEXLSU-TEX",
+    "KXPGATOUR-AUCPBCS26-LCLA",
+    "KXPGATOUR-AUCPBCS26-ECOL",
+    "KXAKSENATE-26NOV03-DJSUL",
+    "KXPGATOUR-AUCPBCS26-KYU",
+    "KXNCAAMBGAME-26NOV14ULLUNCW-UNCW",
+    "KXINTLFRIENDLYGAME-26NOV13SINPAR-SIN",
+    "KXOSCARPIC-27-YOU",
+    "KXRT-EBE-70",
+    "KXPGATOUR-AUCPBCS26-JSMI",
+    "KXDPWORLDTOUR-DPWTC26-JLUI",
+    "KXNEXTTEAMNFL-26ARODGERS8-NONE",
+    "KXCONCACAFNLGAME-26NOV13GTMCAN-GTM",
+    "KXTESTMATCH-26NOV082330SRIPAK-SRI",
+    "KXJOINJENSENHUANG-27JAN-SPACEX"
   ],
   "events": {
     "SENATEAK-26-R": {
@@ -108,24 +108,9 @@
       "series_ticker": "SENATEAK",
       "category": "Elections"
     },
-    "KXWTAMATCH-26NOV12PEGNOS-PEG": {
-      "title": "Pegula vs Noskova",
-      "series_ticker": "KXWTAMATCH",
-      "category": "Sports"
-    },
-    "KXWTAMATCH-26NOV12PEGNOS-NOS": {
-      "title": "Pegula vs Noskova",
-      "series_ticker": "KXWTAMATCH",
-      "category": "Sports"
-    },
-    "KXNFLGAME-26NOV12WASNYG-NYG": {
-      "title": "Washington vs New York G",
-      "series_ticker": "KXNFLGAME",
-      "category": "Sports"
-    },
-    "KXNFLGAME-26NOV12WASNYG-WAS": {
-      "title": "Washington vs New York G",
-      "series_ticker": "KXNFLGAME",
+    "KXODIMATCH-26NOV122100INDNZ-IND": {
+      "title": "New Zealand vs India",
+      "series_ticker": "KXODIMATCH",
       "category": "Sports"
     },
     "KXPRESNOMD-28-MSHE": {
@@ -133,24 +118,24 @@
       "series_ticker": "KXPRESNOMD",
       "category": "Elections"
     },
-    "KXNHLGAME-26NOV12DETFLA-FLA": {
-      "title": "Detroit vs Florida",
-      "series_ticker": "KXNHLGAME",
-      "category": "Sports"
-    },
-    "KXNBAGAME-26NOV12TORPHI-PHI": {
-      "title": "Toronto vs Philadelphia",
-      "series_ticker": "KXNBAGAME",
-      "category": "Sports"
-    },
     "SENATEAK-26-D": {
       "title": "Alaska Senate winner?",
       "series_ticker": "SENATEAK",
       "category": "Elections"
     },
-    "KXATPCHALLENGERMATCH-26NOV12GIRSHE-SHE": {
-      "title": "Giron vs Shelbayh",
+    "KXATPCHALLENGERMATCH-26NOV12TOMHOL-TOM": {
+      "title": "Tomic vs Holmgren",
       "series_ticker": "KXATPCHALLENGERMATCH",
+      "category": "Sports"
+    },
+    "KXODIMATCH-26NOV122100INDNZ-NZ": {
+      "title": "New Zealand vs India",
+      "series_ticker": "KXODIMATCH",
+      "category": "Sports"
+    },
+    "KXUFCFIGHT-26NOV14GANHOK-GAN": {
+      "title": "334: Ciryl Gane vs Josh Hokit",
+      "series_ticker": "KXUFCFIGHT",
       "category": "Sports"
     },
     "KXNFLMVP-27-KCOUSINS8": {
@@ -158,54 +143,19 @@
       "series_ticker": "KXNFLMVP",
       "category": "Sports"
     },
-    "KXATPCHALLENGERMATCH-26NOV12GIRSHE-GIR": {
-      "title": "Giron vs Shelbayh",
-      "series_ticker": "KXATPCHALLENGERMATCH",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26NOV12WASNYG-NYG2": {
-      "title": "Washington vs New York G: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26NOV12WASNYG-NYG3": {
-      "title": "Washington vs New York G: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXAKSENATE-26NOV03-DSUL": {
-      "title": "Alaska Senate winner? (Person)",
-      "series_ticker": "KXAKSENATE",
-      "category": "Elections"
-    },
     "KXFEDDECISION-26DEC-H0": {
       "title": "Fed decision in Dec 2026?",
       "series_ticker": "KXFEDDECISION",
       "category": "Economics"
     },
-    "KXNBAGAME-26NOV12DALMIN-DAL": {
-      "title": "Dallas vs Minnesota",
-      "series_ticker": "KXNBAGAME",
+    "KXUFCFIGHT-26NOV14GANHOK-HOK": {
+      "title": "334: Ciryl Gane vs Josh Hokit",
+      "series_ticker": "KXUFCFIGHT",
       "category": "Sports"
     },
-    "KXITFMATCH-26NOV12CAZGAI-GAI": {
-      "title": "Cazacu vs Gaines Jr",
-      "series_ticker": "KXITFMATCH",
-      "category": "Sports"
-    },
-    "KXPGATOUR-AUCPBCS26-JKOI": {
-      "title": "Austin Championship presented by Compliance Solutions Winner",
-      "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
-    "KXPRESNOMR-28-JDV": {
-      "title": "2028 Republican presidential nominee",
-      "series_ticker": "KXPRESNOMR",
-      "category": "Elections"
-    },
-    "KXNFLSPREAD-26NOV12WASNYG-NYG8": {
-      "title": "Washington vs New York G: Spread",
-      "series_ticker": "KXNFLSPREAD",
+    "KXATPCHALLENGERMATCH-26NOV12UCHHAR-UCH": {
+      "title": "Uchida vs Harris",
+      "series_ticker": "KXATPCHALLENGERMATCH",
       "category": "Sports"
     },
     "KXPRESPERSON-28-ASPA": {
@@ -213,10 +163,25 @@
       "series_ticker": "KXPRESPERSON",
       "category": "Elections"
     },
+    "KXAKSENATE-26NOV03-DSUL": {
+      "title": "Alaska Senate winner? (Person)",
+      "series_ticker": "KXAKSENATE",
+      "category": "Elections"
+    },
     "KXNVDACEO-29JAN-TCOO": {
       "title": "Who will be the next CEO of NVIDIA?",
       "series_ticker": "KXNVDACEO",
       "category": "Financials"
+    },
+    "KXSENMAJ-27-CSCH": {
+      "title": "120th Congress: Who will be Senate Majority Leader?",
+      "series_ticker": "KXSENMAJ",
+      "category": "Elections"
+    },
+    "KXODIMATCH-26NOV122230ENGAUS-AUS": {
+      "title": "Australia vs England",
+      "series_ticker": "KXODIMATCH",
+      "category": "Sports"
     },
     "KXFEDDECISION-26DEC-H25": {
       "title": "Fed decision in Dec 2026?",
@@ -228,34 +193,19 @@
       "series_ticker": "KXNVDACEO",
       "category": "Financials"
     },
-    "KXFEDDECISION-26DEC-H26": {
-      "title": "Fed decision in Dec 2026?",
-      "series_ticker": "KXFEDDECISION",
-      "category": "Economics"
+    "KXSENATEDEMLEAD-28JAN01-CSHU": {
+      "title": "Next Senate Democratic Leader?",
+      "series_ticker": "KXSENATEDEMLEAD",
+      "category": "Elections"
     },
-    "KXUFCFIGHT-26NOV14GANHOK-HOK": {
-      "title": "334: Ciryl Gane vs Josh Hokit",
-      "series_ticker": "KXUFCFIGHT",
+    "KXODIMATCH-26NOV122230ENGAUS-ENG": {
+      "title": "Australia vs England",
+      "series_ticker": "KXODIMATCH",
       "category": "Sports"
     },
-    "KXPGATOUR-AUCPBCS26-BKOH": {
-      "title": "Austin Championship presented by Compliance Solutions Winner",
-      "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
-    "KXNCAAMBGAME-26NOV12JWRIBU-JWRI": {
-      "title": "Johnson & Wales (RI) vs Boston University",
-      "series_ticker": "KXNCAAMBGAME",
-      "category": "Sports"
-    },
-    "KXPGATOUR-AUCPBCS26-DGHI": {
-      "title": "Austin Championship presented by Compliance Solutions Winner",
-      "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
-    "KXNFLTD-26NOV12WASNYG-WASAWILLIAMS14-1": {
-      "title": "Washington vs New York G: Touchdowns",
-      "series_ticker": "KXNFLTD",
+    "KXSB-27-NYG": {
+      "title": "2027 Pro Football Champion",
+      "series_ticker": "KXSB",
       "category": "Sports"
     },
     "KXNVDACEO-29JAN-JENS": {
@@ -263,24 +213,44 @@
       "series_ticker": "KXNVDACEO",
       "category": "Financials"
     },
-    "KXPGATOUR-AUCPBCS26-NDUN": {
+    "KXFEDDECISION-26DEC-H26": {
+      "title": "Fed decision in Dec 2026?",
+      "series_ticker": "KXFEDDECISION",
+      "category": "Economics"
+    },
+    "KXSENATEDEMLEAD-28JAN01-CHOL": {
+      "title": "Next Senate Democratic Leader?",
+      "series_ticker": "KXSENATEDEMLEAD",
+      "category": "Elections"
+    },
+    "KXITFMATCH-26NOV12OKIJAV-OKI": {
+      "title": "Oki vs Javia",
+      "series_ticker": "KXITFMATCH",
+      "category": "Sports"
+    },
+    "KXNFLSPREAD-26NOV15JACTEN-JAC11": {
+      "title": "Jacksonville vs Tennessee: Spread",
+      "series_ticker": "KXNFLSPREAD",
+      "category": "Sports"
+    },
+    "KXPGATOUR-AUCPBCS26-GSAR": {
       "title": "Austin Championship presented by Compliance Solutions Winner",
       "series_ticker": "KXPGATOUR",
       "category": "Sports"
     },
-    "KXNFLTD-26NOV12WASNYG-WASAEKELER30-1": {
-      "title": "Washington vs New York G: Touchdowns",
-      "series_ticker": "KXNFLTD",
-      "category": "Sports"
-    },
-    "KXPGATOUR-AUCPBCS26-BBRO": {
+    "KXPGATOUR-AUCPBCS26-JKOI": {
       "title": "Austin Championship presented by Compliance Solutions Winner",
       "series_ticker": "KXPGATOUR",
       "category": "Sports"
     },
-    "KXTESTMATCH-26NOV082330SRIPAK-PAK": {
-      "title": "Pakistan vs Sri Lanka",
-      "series_ticker": "KXTESTMATCH",
+    "KXPGATOUR-AUCPBCS26-AWIS": {
+      "title": "Austin Championship presented by Compliance Solutions Winner",
+      "series_ticker": "KXPGATOUR",
+      "category": "Sports"
+    },
+    "KXPGATOUR-AUCPBCS26-BKOH": {
+      "title": "Austin Championship presented by Compliance Solutions Winner",
+      "series_ticker": "KXPGATOUR",
       "category": "Sports"
     },
     "KXPGATOUR-AUCPBCS26-JLOW": {
@@ -288,20 +258,15 @@
       "series_ticker": "KXPGATOUR",
       "category": "Sports"
     },
-    "KXNBAGAME-26NOV12TORPHI-TOR": {
-      "title": "Toronto vs Philadelphia",
-      "series_ticker": "KXNBAGAME",
+    "KXPGATOUR-AUCPBCS26-BBRO": {
+      "title": "Austin Championship presented by Compliance Solutions Winner",
+      "series_ticker": "KXPGATOUR",
       "category": "Sports"
     },
-    "KXNFLTOTAL-26NOV12WASNYG-42": {
-      "title": "Washington vs New York G: Total Points",
-      "series_ticker": "KXNFLTOTAL",
-      "category": "Sports"
-    },
-    "KXCONCACAFNLGAME-26NOV12ARUMTQ-ARU": {
-      "title": "Aruba vs Martinique",
-      "series_ticker": "KXCONCACAFNLGAME",
-      "category": "Sports"
+    "KXPRESNOMR-28-MPEN": {
+      "title": "2028 Republican presidential nominee",
+      "series_ticker": "KXPRESNOMR",
+      "category": "Elections"
     },
     "KXPGATOUR-AUCPBCS26-MHUB": {
       "title": "Austin Championship presented by Compliance Solutions Winner",
@@ -313,54 +278,19 @@
       "series_ticker": "KXOSCARPIC",
       "category": "Entertainment"
     },
-    "KXPRESNOMR-28-MPEN": {
-      "title": "2028 Republican presidential nominee",
-      "series_ticker": "KXPRESNOMR",
-      "category": "Elections"
-    },
-    "KXNHLSPREAD-26NOV12DETFLA-FLA2": {
-      "title": "Detroit vs Florida: Spread",
-      "series_ticker": "KXNHLSPREAD",
+    "KXATPCHALLENGERMATCH-26NOV12TOMHOL-HOL": {
+      "title": "Tomic vs Holmgren",
+      "series_ticker": "KXATPCHALLENGERMATCH",
       "category": "Sports"
     },
-    "KXNFLFIRSTTD-26NOV12WASNYG-WASCOKONKWO85": {
-      "title": "Washington vs New York G: 1st Touchdown",
-      "series_ticker": "KXNFLFIRSTTD",
+    "KXNFLTOTAL-26NOV15MINGB-42": {
+      "title": "Minnesota vs Green Bay: Total Points",
+      "series_ticker": "KXNFLTOTAL",
       "category": "Sports"
     },
-    "KXPGATOUR-AUCPBCS26-GSAR": {
-      "title": "Austin Championship presented by Compliance Solutions Winner",
-      "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
-    "KXNBAGAME-26NOV12DETWAS-DET": {
-      "title": "Detroit vs Washington",
-      "series_ticker": "KXNBAGAME",
-      "category": "Sports"
-    },
-    "KXPGATOUR-AUCPBCS26-MHOM": {
-      "title": "Austin Championship presented by Compliance Solutions Winner",
-      "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
-    "KXNCAAWBGAME-26NOV12OKSTTLSA-TLSA": {
-      "title": "Oklahoma St. vs Tulsa",
-      "series_ticker": "KXNCAAWBGAME",
-      "category": "Sports"
-    },
-    "KXPGATOUR-AUCPBCS26-ASMO": {
-      "title": "Austin Championship presented by Compliance Solutions Winner",
-      "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
-    "KXPGAR1LEAD-AUCPBCS26-BBRO": {
-      "title": "Austin Championship presented by Compliance Solutions End of Round 1 Leader",
-      "series_ticker": "KXPGAR1LEAD",
-      "category": "Sports"
-    },
-    "KXPGATOUR-AUCPBCS26-AWIS": {
-      "title": "Austin Championship presented by Compliance Solutions Winner",
-      "series_ticker": "KXPGATOUR",
+    "KXITFWMATCH-26NOV12NAKYAM-YAM": {
+      "title": "Naklo vs Yamazaki",
+      "series_ticker": "KXITFWMATCH",
       "category": "Sports"
     },
     "KXPGAR1LEAD-AUCPBCS26-TCRO": {
@@ -373,119 +303,29 @@
       "series_ticker": "KXPGATOUR",
       "category": "Sports"
     },
-    "KXSENMAJ-27-CSCH": {
+    "KXPGATOUR-AUCPBCS26-ASMO": {
+      "title": "Austin Championship presented by Compliance Solutions Winner",
+      "series_ticker": "KXPGATOUR",
+      "category": "Sports"
+    },
+    "KXPGATOUR-AUCPBCS26-DGHI": {
+      "title": "Austin Championship presented by Compliance Solutions Winner",
+      "series_ticker": "KXPGATOUR",
+      "category": "Sports"
+    },
+    "KXPGATOUR-AUCPBCS26-NDUN": {
+      "title": "Austin Championship presented by Compliance Solutions Winner",
+      "series_ticker": "KXPGATOUR",
+      "category": "Sports"
+    },
+    "KXSENMAJ-27-CHOL": {
       "title": "120th Congress: Who will be Senate Majority Leader?",
       "series_ticker": "KXSENMAJ",
       "category": "Elections"
     },
-    "KXPRESPERSON-28-JVAN": {
-      "title": "2028 U.S. Presidential Election winner?",
-      "series_ticker": "KXPRESPERSON",
-      "category": "Elections"
-    },
-    "KXPGATOUR-AUCPBCS26-ECOL": {
-      "title": "Austin Championship presented by Compliance Solutions Winner",
-      "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
-    "KXOSCARPIC-27-DEB": {
-      "title": "Oscar Winner: Best Picture",
-      "series_ticker": "KXOSCARPIC",
-      "category": "Entertainment"
-    },
-    "KXPGATOUR-AUCPBCS26-LCLA": {
-      "title": "Austin Championship presented by Compliance Solutions Winner",
-      "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
-    "KXITFMATCH-26NOV12CAZGAI-CAZ": {
-      "title": "Cazacu vs Gaines Jr",
-      "series_ticker": "KXITFMATCH",
-      "category": "Sports"
-    },
-    "KXITFMATCH-26NOV12DEATHO-DEA": {
-      "title": "De Alba vs Thompson",
-      "series_ticker": "KXITFMATCH",
-      "category": "Sports"
-    },
-    "KXNVDACEO-29JAN-IBUC": {
-      "title": "Who will be the next CEO of NVIDIA?",
-      "series_ticker": "KXNVDACEO",
-      "category": "Financials"
-    },
-    "KXNHLGAME-26NOV12MTLBOS-MTL": {
-      "title": "Montreal vs Boston",
-      "series_ticker": "KXNHLGAME",
-      "category": "Sports"
-    },
-    "KXSB-27-MIN": {
-      "title": "2027 Pro Football Champion",
-      "series_ticker": "KXSB",
-      "category": "Sports"
-    },
-    "KXPGATOUR-AUCPBCS26-BHAR": {
-      "title": "Austin Championship presented by Compliance Solutions Winner",
-      "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
-    "KXPGATOUR-AUCPBCS26-NSHI": {
-      "title": "Austin Championship presented by Compliance Solutions Winner",
-      "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
-    "KXPGATOUR-AUCPBCS26-KHIR": {
-      "title": "Austin Championship presented by Compliance Solutions Winner",
-      "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
-    "KXNFLSPREAD-26NOV12WASNYG-NYG4": {
-      "title": "Washington vs New York G: Spread",
-      "series_ticker": "KXNFLSPREAD",
-      "category": "Sports"
-    },
-    "KXNCAAFGAME-26NOV14DUKEMIA-DUKE": {
-      "title": "Duke vs Miami (FL)",
-      "series_ticker": "KXNCAAFGAME",
-      "category": "Sports"
-    },
-    "RSENATESEATS-27-B45": {
-      "title": "How many Senate seats will Republicans hold after the Midterms?",
-      "series_ticker": "RSENATESEATS",
-      "category": "Elections"
-    },
-    "KXPRESPERSON-28-MOBA": {
-      "title": "2028 U.S. Presidential Election winner?",
-      "series_ticker": "KXPRESPERSON",
-      "category": "Elections"
-    },
-    "KXDIMAYORGAME-26NOV12PASJUN-PAS": {
-      "title": "Pasto vs Junior",
-      "series_ticker": "KXDIMAYORGAME",
-      "category": "Sports"
-    },
-    "KXNCAAFGAME-26NOV12MEMUSF-MEM": {
-      "title": "Memphis vs South Florida",
-      "series_ticker": "KXNCAAFGAME",
-      "category": "Sports"
-    },
-    "KXPRESNOMR-28-JMCE": {
-      "title": "2028 Republican presidential nominee",
-      "series_ticker": "KXPRESNOMR",
-      "category": "Elections"
-    },
-    "KXPGATOUR-AUCPBCS26-TMOR": {
-      "title": "Austin Championship presented by Compliance Solutions Winner",
-      "series_ticker": "KXPGATOUR",
-      "category": "Sports"
-    },
-    "KXTRUMPADMINLEAVE-26DEC31-HLUT": {
-      "title": "Who will leave their role in the Trump administration in 2026?",
-      "series_ticker": "KXTRUMPADMINLEAVE",
-      "category": "Politics"
-    },
-    "KXNCAAMBGAME-26NOV12MORGUMBC-MORG": {
-      "title": "Morgan St. vs UMBC",
-      "series_ticker": "KXNCAAMBGAME",
+    "KXPGAR1LEAD-AUCPBCS26-BBRO": {
+      "title": "Austin Championship presented by Compliance Solutions End of Round 1 Leader",
+      "series_ticker": "KXPGAR1LEAD",
       "category": "Sports"
     },
     "KXPGATOUR-AUCPBCS26-TCRO": {
@@ -493,14 +333,54 @@
       "series_ticker": "KXPGATOUR",
       "category": "Sports"
     },
-    "KXCONCACAFNLGAME-26NOV12CUWPAN-PAN": {
-      "title": "Curacao vs Panama",
-      "series_ticker": "KXCONCACAFNLGAME",
+    "KXTESTMATCH-26NOV082330SRIPAK-PAK": {
+      "title": "Pakistan vs Sri Lanka",
+      "series_ticker": "KXTESTMATCH",
       "category": "Sports"
     },
-    "KXPGATOUR-AUCPBCS26-MRUS": {
+    "KXSB-27-MIN": {
+      "title": "2027 Pro Football Champion",
+      "series_ticker": "KXSB",
+      "category": "Sports"
+    },
+    "KXPRESNOMR-28-JDV": {
+      "title": "2028 Republican presidential nominee",
+      "series_ticker": "KXPRESNOMR",
+      "category": "Elections"
+    },
+    "KXOSCARPIC-27-DEB": {
+      "title": "Oscar Winner: Best Picture",
+      "series_ticker": "KXOSCARPIC",
+      "category": "Entertainment"
+    },
+    "KXATPCHALLENGERMATCH-26NOV12UCHHAR-HAR": {
+      "title": "Uchida vs Harris",
+      "series_ticker": "KXATPCHALLENGERMATCH",
+      "category": "Sports"
+    },
+    "KXPGATOUR-AUCPBCS26-MHOM": {
       "title": "Austin Championship presented by Compliance Solutions Winner",
       "series_ticker": "KXPGATOUR",
+      "category": "Sports"
+    },
+    "KXNVDACEO-29JAN-IBUC": {
+      "title": "Who will be the next CEO of NVIDIA?",
+      "series_ticker": "KXNVDACEO",
+      "category": "Financials"
+    },
+    "KXPGATOUR-AUCPBCS26-NSHI": {
+      "title": "Austin Championship presented by Compliance Solutions Winner",
+      "series_ticker": "KXPGATOUR",
+      "category": "Sports"
+    },
+    "KXNFLNFCEAST-27-WAS": {
+      "title": "NFC East Division Winner",
+      "series_ticker": "KXNFLNFCEAST",
+      "category": "Sports"
+    },
+    "KXITFMATCH-26NOV12OKIJAV-JAV": {
+      "title": "Oki vs Javia",
+      "series_ticker": "KXITFMATCH",
       "category": "Sports"
     },
     "KXBLUEWAVECOMBO-27FEB": {
@@ -508,19 +388,44 @@
       "series_ticker": "KXBLUEWAVECOMBO",
       "category": "Politics"
     },
-    "KXNFL1HTOTAL-26NOV12WASNYG-29": {
-      "title": "Washington vs New York G: 1st Half Total",
-      "series_ticker": "KXNFL1HTOTAL",
+    "KXPGATOUR-AUCPBCS26-MGRE": {
+      "title": "Austin Championship presented by Compliance Solutions Winner",
+      "series_ticker": "KXPGATOUR",
       "category": "Sports"
     },
-    "KXNFLTD-26NOV12WASNYG-NYGCSKATTEBO44-1": {
-      "title": "Washington vs New York G: Touchdowns",
-      "series_ticker": "KXNFLTD",
+    "KXPRESNOMR-28-JMCE": {
+      "title": "2028 Republican presidential nominee",
+      "series_ticker": "KXPRESNOMR",
+      "category": "Elections"
+    },
+    "KXPRESPERSON-28-MOBA": {
+      "title": "2028 U.S. Presidential Election winner?",
+      "series_ticker": "KXPRESPERSON",
+      "category": "Elections"
+    },
+    "KXBTCD-26NOV1317-T69999.99": {
+      "title": "BTC price on Nov 13, 2026 at 5pm EST?",
+      "series_ticker": "KXBTCD",
+      "category": "Crypto"
+    },
+    "KXPRESNOMD-28-CHOL": {
+      "title": "2028 Democratic presidential nominee",
+      "series_ticker": "KXPRESNOMD",
+      "category": "Elections"
+    },
+    "KXTRUMPADMINLEAVE-26DEC31-HLUT": {
+      "title": "Who will leave their role in the Trump administration in 2026?",
+      "series_ticker": "KXTRUMPADMINLEAVE",
+      "category": "Politics"
+    },
+    "KXPGATOUR-AUCPBCS26-NLIN": {
+      "title": "Austin Championship presented by Compliance Solutions Winner",
+      "series_ticker": "KXPGATOUR",
       "category": "Sports"
     },
-    "KXNFLTD-26NOV12WASNYG-NYGJMCCARTHY9-1": {
-      "title": "Washington vs New York G: Touchdowns",
-      "series_ticker": "KXNFLTD",
+    "KXNFLGAME-26NOV15MIAIND-IND": {
+      "title": "Miami vs Indianapolis",
+      "series_ticker": "KXNFLGAME",
       "category": "Sports"
     },
     "KXNBA-27-DAL": {
@@ -528,9 +433,39 @@
       "series_ticker": "KXNBA",
       "category": "Sports"
     },
-    "KXCONCACAFNLGAME-26NOV12ARUMTQ-MTQ": {
-      "title": "Aruba vs Martinique",
-      "series_ticker": "KXCONCACAFNLGAME",
+    "KXPGATOUR-AUCPBCS26-RCAM": {
+      "title": "Austin Championship presented by Compliance Solutions Winner",
+      "series_ticker": "KXPGATOUR",
+      "category": "Sports"
+    },
+    "KXSENATEDEMLEAD-28JAN01-BSCH": {
+      "title": "Next Senate Democratic Leader?",
+      "series_ticker": "KXSENATEDEMLEAD",
+      "category": "Elections"
+    },
+    "KXPRESPERSON-28-RCOO": {
+      "title": "2028 U.S. Presidential Election winner?",
+      "series_ticker": "KXPRESPERSON",
+      "category": "Elections"
+    },
+    "KXBTC50VS100-BTC-26DEC31": {
+      "title": "Will BTC hit $50,000 before $100,000?",
+      "series_ticker": "KXBTC50VS100",
+      "category": "Crypto"
+    },
+    "KXIPOANTHROPIC-DATE-26NOV16": {
+      "title": "When will Anthropic officially announce an IPO?",
+      "series_ticker": "KXIPOANTHROPIC",
+      "category": "Companies"
+    },
+    "KXBTCD-26NOV1317-T70999.99": {
+      "title": "BTC price on Nov 13, 2026 at 5pm EST?",
+      "series_ticker": "KXBTCD",
+      "category": "Crypto"
+    },
+    "KXPGATOUR-AUCPBCS26-BHAR": {
+      "title": "Austin Championship presented by Compliance Solutions Winner",
+      "series_ticker": "KXPGATOUR",
       "category": "Sports"
     },
     "KXPGATOUR-AUCPBCS26-KVEN": {
@@ -538,70 +473,135 @@
       "series_ticker": "KXPGATOUR",
       "category": "Sports"
     },
-    "KXPGATOUR-AUCPBCS26-PCOO": {
+    "KXDSENATESEATS-27-ABOVE52": {
+      "title": "How many Senate seats will Democrats hold after the Midterms?",
+      "series_ticker": "KXDSENATESEATS",
+      "category": "Elections"
+    },
+    "KXPGATOUR-AUCPBCS26-JSTA": {
       "title": "Austin Championship presented by Compliance Solutions Winner",
       "series_ticker": "KXPGATOUR",
       "category": "Sports"
     },
-    "KXNCAAMBGAME-26NOV12MORGUMBC-UMBC": {
-      "title": "Morgan St. vs UMBC",
-      "series_ticker": "KXNCAAMBGAME",
+    "KXPGATOUR-AUCPBCS26-TMOR": {
+      "title": "Austin Championship presented by Compliance Solutions Winner",
+      "series_ticker": "KXPGATOUR",
       "category": "Sports"
     },
-    "KXWTASETWINNER-26NOV12PEGNOS-2-NOS": {
-      "title": "Jessica Pegula vs Linda Noskova: Set 2 Winner",
-      "series_ticker": "KXWTASETWINNER",
+    "KXNCAAFGAME-26NOV14DUKEMIA-DUKE": {
+      "title": "Duke vs Miami (FL)",
+      "series_ticker": "KXNCAAFGAME",
       "category": "Sports"
     },
-    "KXNBASPREAD-26NOV12TORPHI-PHI8": {
-      "title": "Toronto vs Philadelphia: Spread",
-      "series_ticker": "KXNBASPREAD",
-      "category": "Sports"
+    "KXBTCD-26NOV1317-T68499.99": {
+      "title": "BTC price on Nov 13, 2026 at 5pm EST?",
+      "series_ticker": "KXBTCD",
+      "category": "Crypto"
     },
     "KXPRESNOMD-28-SFAI": {
       "title": "2028 Democratic presidential nominee",
       "series_ticker": "KXPRESNOMD",
       "category": "Elections"
     },
-    "KXSENATEDEMLEAD-28JAN01-CSHU": {
-      "title": "Next Senate Democratic Leader?",
-      "series_ticker": "KXSENATEDEMLEAD",
-      "category": "Elections"
+    "KXHUANGTESTIFY-27JUL-26DEC": {
+      "title": "Will Jensen Huang testify in front of Congress?",
+      "series_ticker": "KXHUANGTESTIFY",
+      "category": "Politics"
     },
-    "KXCONCACAFNLGAME-26NOV12ARUMTQ-TIE": {
-      "title": "Aruba vs Martinique",
-      "series_ticker": "KXCONCACAFNLGAME",
+    "KXNBAGAME-26NOV13GSWSAS-GSW": {
+      "title": "Golden State vs San Antonio",
+      "series_ticker": "KXNBAGAME",
       "category": "Sports"
-    },
-    "KXWTASETWINNER-26NOV12PEGNOS-2-PEG": {
-      "title": "Jessica Pegula vs Linda Noskova: Set 2 Winner",
-      "series_ticker": "KXWTASETWINNER",
-      "category": "Sports"
-    },
-    "KXITFMATCH-26NOV12VELJIR-JIR": {
-      "title": "Velcz vs Jirousek",
-      "series_ticker": "KXITFMATCH",
-      "category": "Sports"
-    },
-    "KXBTCD-26NOV1219-T71299.99": {
-      "title": "BTC price on Nov 12, 2026 at 7pm EST?",
-      "series_ticker": "KXBTCD",
-      "category": "Crypto"
-    },
-    "KXITFMATCH-26NOV12DEATHO-THO": {
-      "title": "De Alba vs Thompson",
-      "series_ticker": "KXITFMATCH",
-      "category": "Sports"
-    },
-    "KXBTCD-26NOV1219-T71199.99": {
-      "title": "BTC price on Nov 12, 2026 at 7pm EST?",
-      "series_ticker": "KXBTCD",
-      "category": "Crypto"
     },
     "KXPGATOUR-AUCPBCS26-MMCC": {
       "title": "Austin Championship presented by Compliance Solutions Winner",
       "series_ticker": "KXPGATOUR",
       "category": "Sports"
+    },
+    "KXBTCD-26NOV1317-T68999.99": {
+      "title": "BTC price on Nov 13, 2026 at 5pm EST?",
+      "series_ticker": "KXBTCD",
+      "category": "Crypto"
+    },
+    "KXSENMAJ-27-BSCH": {
+      "title": "120th Congress: Who will be Senate Majority Leader?",
+      "series_ticker": "KXSENMAJ",
+      "category": "Elections"
+    },
+    "KXNCAAFGAME-26NOV14TEXLSU-TEX": {
+      "title": "Texas vs LSU",
+      "series_ticker": "KXNCAAFGAME",
+      "category": "Sports"
+    },
+    "KXPGATOUR-AUCPBCS26-LCLA": {
+      "title": "Austin Championship presented by Compliance Solutions Winner",
+      "series_ticker": "KXPGATOUR",
+      "category": "Sports"
+    },
+    "KXPGATOUR-AUCPBCS26-ECOL": {
+      "title": "Austin Championship presented by Compliance Solutions Winner",
+      "series_ticker": "KXPGATOUR",
+      "category": "Sports"
+    },
+    "KXAKSENATE-26NOV03-DJSUL": {
+      "title": "Alaska Senate winner? (Person)",
+      "series_ticker": "KXAKSENATE",
+      "category": "Elections"
+    },
+    "KXPGATOUR-AUCPBCS26-KYU": {
+      "title": "Austin Championship presented by Compliance Solutions Winner",
+      "series_ticker": "KXPGATOUR",
+      "category": "Sports"
+    },
+    "KXNCAAMBGAME-26NOV14ULLUNCW-UNCW": {
+      "title": "Louisiana vs UNC Wilmington",
+      "series_ticker": "KXNCAAMBGAME",
+      "category": "Sports"
+    },
+    "KXINTLFRIENDLYGAME-26NOV13SINPAR-SIN": {
+      "title": "Singapore vs Paraguay",
+      "series_ticker": "KXINTLFRIENDLYGAME",
+      "category": "Sports"
+    },
+    "KXOSCARPIC-27-YOU": {
+      "title": "Oscar Winner: Best Picture",
+      "series_ticker": "KXOSCARPIC",
+      "category": "Entertainment"
+    },
+    "KXRT-EBE-70": {
+      "title": "Ebenezer · Rotten Tomatoes score",
+      "series_ticker": "KXRT",
+      "category": "Entertainment"
+    },
+    "KXPGATOUR-AUCPBCS26-JSMI": {
+      "title": "Austin Championship presented by Compliance Solutions Winner",
+      "series_ticker": "KXPGATOUR",
+      "category": "Sports"
+    },
+    "KXDPWORLDTOUR-DPWTC26-JLUI": {
+      "title": "DP World Tour Championship Winner",
+      "series_ticker": "KXDPWORLDTOUR",
+      "category": "Sports"
+    },
+    "KXNEXTTEAMNFL-26ARODGERS8-NONE": {
+      "title": "Aaron Rodgers's Next Team",
+      "series_ticker": "KXNEXTTEAMNFL",
+      "category": "Sports"
+    },
+    "KXCONCACAFNLGAME-26NOV13GTMCAN-GTM": {
+      "title": "Guatemala vs Canada",
+      "series_ticker": "KXCONCACAFNLGAME",
+      "category": "Sports"
+    },
+    "KXTESTMATCH-26NOV082330SRIPAK-SRI": {
+      "title": "Pakistan vs Sri Lanka",
+      "series_ticker": "KXTESTMATCH",
+      "category": "Sports"
+    },
+    "KXJOINJENSENHUANG-27JAN-SPACEX": {
+      "title": "Where will Jensen Huang work next in 2026?",
+      "series_ticker": "KXJOINJENSENHUANG",
+      "category": "Companies"
     }
   }
 }
