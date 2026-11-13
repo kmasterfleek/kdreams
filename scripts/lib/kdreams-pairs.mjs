@@ -25,6 +25,7 @@ const SYN = {
  */
 export function titleTokens(s) {
   const words = String(s || '').toLowerCase().replace(/[’']/g, '').replace(/\d{4}-\d{2}-\d{2}/g, ' ')
+    .replace(/\b(?:[a-z]\.){2,}/g, (m) => m.replace(/\./g, '')) // u.s. -> us
     .replace(/(\d),(\d{3})/g, '$1$2').replace(/\bno change\b/g, 'nochange')
     .replace(/>\s*(\d+(?:\.\d+)?)/g, ' gt$1 ').replace(/(\d+(?:\.\d+)?)\s*\+/g, ' ge$1 ')
     .replace(/(?<![a-z\d.])(\d+(?:\.\d+)?)\s*(?:bps?|basis points)\b/g, ' bp$1 ')
@@ -38,6 +39,16 @@ export function titleTokens(s) {
     out.add(w);
   }
   return out;
+}
+
+/**
+ * Names in a Kalshi event title (capitalised words after the first, before " — "):
+ * places, people, bodies. Weather and similar series share every other word across
+ * cities, so "Chicago" must not match "New York City".
+ */
+export function nameTokens(title) {
+  const words = String(title || '').split(' — ')[0].trim().split(/\s+/).slice(1).filter((w) => /^[A-Z]/.test(w));
+  return [...titleTokens(words.join(' '))].filter((w) => !/^[\d.]+$/.test(w));
 }
 
 function jaccard(a, b) {
@@ -58,7 +69,7 @@ const mid = (q) => (q.b != null && q.a != null ? (q.b + q.a) / 2 : null);
  * pm: [{ id, title, close, b, a }], ks: [{ id, title, sub, close, b, a }] (close = ISO time).
  * A match needs closes within maxCloseHours, title overlap >= minScore, Kalshi's outcome
  * words present in the Polymarket title, the same figures (price levels, counts) on both sides,
- * and mids within maxMidDiff (so YES means the same thing). A Kalshi market fixed to a clock time
+ * at least half the names in Kalshi's event title, and mids within maxMidDiff (so YES means the same thing). A Kalshi market fixed to a clock time
  * ("at 5pm EST") must close within an hour of its Polymarket match: a noon reading is another event.
  */
 export function matchPairs(pm, ks, { maxCloseHours = 12, minScore = 0.3, maxMidDiff = 0.06 } = {}) {
@@ -67,11 +78,12 @@ export function matchPairs(pm, ks, { maxCloseHours = 12, minScore = 0.3, maxMidD
   for (const k of ks) {
     const c = Date.parse(k.close), kmid = mid(k);
     if (!Number.isFinite(c) || kmid === null) continue;
-    const T = titleTokens(`${k.title} ${k.sub || ''}`), F = figures(T), S = [...titleTokens(k.sub)].filter((w) => !/^[\d.]+$/.test(w));
+    const T = titleTokens(`${k.title} ${k.sub || ''}`), F = figures(T), S = [...titleTokens(k.sub)].filter((w) => !/^[\d.]+$/.test(w)), N = nameTokens(k.title);
     const window = /\b\d{1,2}(:\d\d)?\s?(am|pm)\b/i.test(k.title) ? 1 : maxCloseHours;
     for (const p of P) {
       if (!Number.isFinite(p.c) || p.mid === null || Math.abs(p.c - c) / 36e5 > window || p.F !== F) continue;
       if (S.length && S.filter((w) => p.T.has(w)).length < Math.ceil(S.length / 2)) continue;
+      if (N.length && N.filter((w) => p.T.has(w)).length < Math.ceil(N.length / 2)) continue;
       const score = jaccard(T, p.T);
       if (score < minScore || Math.abs(p.mid - kmid) > maxMidDiff) continue;
       cands.push({ pm: p.m, ks: k, score: Math.round(score * 100) / 100, midDiffCents: Math.round((p.mid - kmid) * 1000) / 10 });

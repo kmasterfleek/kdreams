@@ -343,7 +343,7 @@ test('specs: resolution metrics validate their own slice keys and count as profi
 });
 
 test('pairs: the scanner matches same-event markets, prices $10 both sides, and pins the closest', async () => {
-  const { titleTokens, matchPairs, bothSidesPer10, scanPins } = await import('./lib/kdreams-pairs.mjs');
+  const { titleTokens, nameTokens, matchPairs, bothSidesPer10, scanPins } = await import('./lib/kdreams-pairs.mjs');
   assert.deepEqual([...titleTokens('Will the Fed increase interest rates by 25 bps after the December 2026 meeting?')].sort(), ['bp25', 'fed', 'increase', 'interest', 'meeting', 'rate']);
   assert.ok(titleTokens('Fed decision? — Hike >25bps').has('gt25')); assert.ok(titleTokens('Fed hikes 50+ bps?').has('ge50'));
   assert.ok(titleTokens('BTC above $72,500?').has('72500'));
@@ -353,6 +353,8 @@ test('pairs: the scanner matches same-event markets, prices $10 both sides, and 
     { id: 'p-btc2', title: 'Will the price of Bitcoin be above $72,250 on November 10?', close: '2026-11-10T17:00:00Z', b: 0.6, a: 0.61 },
     { id: 'p-cut50', title: 'Will the Fed decrease interest rates by 50+ bps after the December 2026 meeting?', close: '2026-12-09T23:59:00Z', b: 0.01, a: 0.02 },
     { id: 'p-r', title: 'Will Republicans win the House?', close: '2026-11-04T05:00:00Z', b: 0.07, a: 0.08 },
+    { id: 'p-nyc', title: 'Will the highest temperature in New York City be between 46-47°F on November 13?', close: '2026-11-13T12:00:00Z', b: 0.3, a: 0.31 },
+    { id: 'p-iran', title: 'Next US-Iran senior diplomatic meeting by November 30, 2026?', close: '2026-12-01T04:59:00Z', b: 0.2, a: 0.21 },
   ];
   const ks = [
     { id: 'KXFED-H25', title: 'Fed decision in Dec 2026? — Hike 25bps', sub: 'Hike 25bps', close: '2026-12-09T18:59:00Z', b: 0.8, a: 0.81 },
@@ -362,9 +364,14 @@ test('pairs: the scanner matches same-event markets, prices $10 both sides, and 
     { id: 'KXBTC-72250', title: 'BTC price on Nov 10, 2026 at 5pm EST? — $72,250 or above', sub: '$72,250 or above', close: '2026-11-10T22:00:00Z', b: 0.6, a: 0.62 },
     // Mirror wording: Kalshi YES is the Democratic side, so the mids disagree and it is dropped.
     { id: 'CONTROLH-D', title: 'Will Republicans or Democrats win the House? — Democrats', sub: 'Republicans', close: '2026-11-04T05:02:00Z', b: 0.92, a: 0.93 },
+    // Same bracket, same words, another city (scan of 2026-11-13).
+    { id: 'KXHIGHCHI-B46.5', title: 'Highest temperature in Chicago on Nov 12, 2026? — 46° to 47°', sub: '46° to 47°', close: '2026-11-13T07:00:00Z', b: 0.3, a: 0.32 },
+    { id: 'KXUSIRANMEETING', title: 'When will the U.S. and Iran hold a diplomatic meeting? — Before Dec 1, 2026', sub: 'Before Dec 1, 2026', close: '2026-12-01T04:59:00Z', b: 0.19, a: 0.2 },
   ];
+  assert.deepEqual(nameTokens('Highest temperature in Chicago on Nov 12, 2026? — 46° to 47°'), ['chicago']);
+  assert.deepEqual(nameTokens('When will the U.S. and Iran hold a diplomatic meeting? — Before Dec 1'), ['us', 'iran']);
   const m = matchPairs(pm, ks);
-  assert.deepEqual(m.map((x) => [x.pm.id, x.ks.id]), [['p-fed', 'KXFED-H25']]);
+  assert.deepEqual(m.map((x) => [x.pm.id, x.ks.id]), [['p-fed', 'KXFED-H25'], ['p-iran', 'KXUSIRANMEETING']]);
   assert.equal(m[0].midDiffCents, -3);
   // House pair on 2026-10-30: Kalshi YES at 0.92 + Polymarket NO at 0.07 = 0.99 for 10 pairs;
   // 10c gross - Kalshi fee ceil(5.15) = 6c - Polymarket 0.04 * 10 * 0.07 * 0.93 = 2.6c.
