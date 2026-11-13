@@ -1237,6 +1237,15 @@
         "verdict": "INCONCLUSIVE",
         "by": "code",
         "note": "resolution.netCentsPer10 = -1.3 on n=53, below the n>=100 needed"
+      },
+      {
+        "date": "2026-11-13",
+        "ticks": 366,
+        "value": -3.3,
+        "n": 76,
+        "verdict": "INCONCLUSIVE",
+        "by": "code",
+        "note": "resolution.netCentsPer10 = -3.3 on n=76, below the n>=100 needed"
       }
     ]
   },
@@ -1331,6 +1340,38 @@
     "baseline": {
       "value": -0.542,
       "n": 12796
+    },
+    "status": "REFUTED",
+    "retests": [
+      {
+        "date": "2026-11-13",
+        "ticks": 98,
+        "value": -0.725,
+        "n": 1140,
+        "verdict": "REFUTED",
+        "by": "code",
+        "note": "maker.netCentsPerAttempt = -0.725 vs > 0 on n=1140"
+      }
+    ],
+    "settledOn": "2026-11-13"
+  },
+  {
+    "id": "2026-11-13",
+    "date": "2026-11-13",
+    "deep": "lead-lag",
+    "issue": "#40",
+    "text": "Given the configured Fed December hold pair, when checking the two quoted sides for a buy-both-sides opportunity without placing an order, then pair.bothSidesFracNetPositive should be > 0.1 vs the 6% pre-freeze baseline, subject to both taker fees being included.",
+    "spec": {
+      "metric": "pair.bothSidesFracNetPositive",
+      "pair": "fed-2026-12-hold",
+      "op": ">",
+      "threshold": 0.1,
+      "minN": 100
+    },
+    "frozenAt": "2026-11-13T16:45Z",
+    "baseline": {
+      "value": 0.061,
+      "n": 1612
     },
     "status": "open",
     "retests": []
