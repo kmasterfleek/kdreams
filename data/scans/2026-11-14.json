@@ -1,0 +1,260 @@
+{
+ "scannedAt": "2026-11-14T06:00Z",
+ "horizonDays": 42,
+ "pmMarkets": 268,
+ "ksMarkets": 1124,
+ "pairs": [
+  {
+   "pmId": "0x3c078788ce88708b21c3ba00b2bf069d8dc0a70eb721cf0d3536a48c8a86f493",
+   "pmSlug": "faa-ground-stop-cause-smart-ai-system",
+   "pmTitle": "Will it be confirmed that a problem with the FAA's SMART air traffic management system caused the FAA's nationwide ground stop on November 13?",
+   "ksTicker": "KXGROUNDSTOPCAUSE-26DEC01-SMRT",
+   "ksTitle": "What caused the FAA's nationwide ground stop? — SMART system",
+   "pmClose": "2026-12-01T04:59:00Z",
+   "ksClose": "2026-12-01T04:59:00Z",
+   "score": 0.54,
+   "midDiffCents": -4.4,
+   "pmFeeRate": 0.04,
+   "pmV24": 8722,
+   "ksV24": 68798,
+   "best": {
+    "dir": "pm YES + ks NO",
+    "cost": 0.964,
+    "contracts": 10,
+    "netCents": 31.1,
+    "sizeOk": true
+   }
+  },
+  {
+   "pmId": "0x4e627e660e13cd5e450fcd8675198facd8caf1e99ca3e8577beea2ecd926076e",
+   "pmSlug": "highest-temperature-in-denver-on-november-14-2026-43forbelow",
+   "pmTitle": "Will the highest temperature in Denver be 43°F or below on November 14?",
+   "ksTicker": "KXHIGHDEN-26NOV13-T60",
+   "ksTitle": "Highest temperature in Denver on Nov 13, 2026? — 59° or below",
+   "pmClose": "2026-11-14T12:00:00Z",
+   "ksClose": "2026-11-14T08:00:00Z",
+   "score": 0.44,
+   "midDiffCents": 4.2,
+   "pmFeeRate": 0.05,
+   "pmV24": 5108,
+   "ksV24": 1288,
+   "best": {
+    "dir": "ks YES + pm NO",
+    "cost": 0.967,
+    "contracts": 10,
+    "netCents": 29.9,
+    "sizeOk": false
+   }
+  },
+  {
+   "pmId": "0x35fb8ecfec01157798f670bff8ed9b4d4bf85d2f30d90670fa2a1c6af1f69c7d",
+   "pmSlug": "highest-temperature-in-austin-on-november-15-2026-55forbelow",
+   "pmTitle": "Will the highest temperature in Austin be 55°F or below on November 15?",
+   "ksTicker": "KXHIGHAUS-26NOV14-B71.5",
+   "ksTitle": "Highest temperature in Austin on Nov 14, 2026? — 71° to 72°",
+   "pmClose": "2026-11-15T12:00:00Z",
+   "ksClose": "2026-11-15T07:00:00Z",
+   "score": 0.3,
+   "midDiffCents": -4.7,
+   "pmFeeRate": 0.05,
+   "pmV24": 5847,
+   "ksV24": 526,
+   "best": {
+    "dir": "pm YES + ks NO",
+    "cost": 0.964,
+    "contracts": 10,
+    "netCents": 23.7,
+    "sizeOk": true
+   }
+  },
+  {
+   "pmId": "0x6db92cee58b72e61b3874cce633a0457ade010ef377a0eeeaf1fcf88ad0c3fd4",
+   "pmSlug": "next-us-iran-senior-diplomatic-meeting-by-november-30-2026",
+   "pmTitle": "Next US-Iran senior diplomatic meeting by November 30, 2026?",
+   "ksTicker": "KXUSIRANMEETING-27-26DEC01",
+   "ksTitle": "When will the U.S. and Iran hold a diplomatic meeting? — Before Dec 1, 2026",
+   "pmClose": "2026-12-01T04:59:00Z",
+   "ksClose": "2026-12-01T04:59:00Z",
+   "score": 0.44,
+   "midDiffCents": 2,
+   "pmFeeRate": 0,
+   "pmV24": 6553,
+   "ksV24": 6437,
+   "best": {
+    "dir": "ks YES + pm NO",
+    "cost": 0.99,
+    "contracts": 10,
+    "netCents": 6,
+    "sizeOk": false
+   }
+  },
+  {
+   "pmId": "0xbb2cb1674bddf1352e1c184d5ba60da62e24e962382ef57eb3251321dd8aa446",
+   "pmSlug": "faa-ground-stop-cause-maintenance-or-upgrade-work",
+   "pmTitle": "Will it be confirmed that maintenance, an upgrade or another planned change to an FAA or contractor system caused the FAA's nationwide ground stop on November 13?",
+   "ksTicker": "KXGROUNDSTOPCAUSE-26DEC01-UPGR",
+   "ksTitle": "What caused the FAA's nationwide ground stop? — Maintenance/upgrade",
+   "pmClose": "2026-12-01T04:59:00Z",
+   "ksClose": "2026-12-01T04:59:00Z",
+   "score": 0.47,
+   "midDiffCents": -2.5,
+   "pmFeeRate": 0.04,
+   "pmV24": 8503,
+   "ksV24": 77076,
+   "best": {
+    "dir": "pm YES + ks NO",
+    "cost": 0.99,
+    "contracts": 10,
+    "netCents": -2.8,
+    "sizeOk": true
+   }
+  },
+  {
+   "pmId": "0xd64b917e1f7cdf1ad3f51326cf8985ce80e140291d2eaf2bf62821ef02231550",
+   "pmSlug": "strait-of-hormuz-traffic-returns-to-normal-by-november-30-20260810151158765",
+   "pmTitle": "Strait of Hormuz traffic returns to normal by November 30?",
+   "ksTicker": "KXHORMUZNORM-26MAR17-B261201",
+   "ksTitle": "When will traffic at the Strait of Hormuz return to normal? — Before Dec 1, 2026",
+   "pmClose": "2026-12-01T04:59:00Z",
+   "ksClose": "2026-12-01T14:59:00Z",
+   "score": 0.63,
+   "midDiffCents": -0.3,
+   "pmFeeRate": 0,
+   "pmV24": 20662,
+   "ksV24": 1721,
+   "best": {
+    "dir": "pm YES + ks NO",
+    "cost": 1.003,
+    "contracts": 9,
+    "netCents": -3.7,
+    "sizeOk": true
+   }
+  },
+  {
+   "pmId": "0xf17ad24eb4ad57926495b114149c765b9b95bc286eadc91cbbfa901ceb10d0b8",
+   "pmSlug": "will-the-fed-decrease-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808634",
+   "pmTitle": "Will the Fed decrease interest rates by 25 bps after the December 2026 meeting?",
+   "ksTicker": "KXFEDDECISION-26DEC-C25",
+   "ksTitle": "Fed decision in Dec 2026? — Cut 25bps",
+   "pmClose": "2026-12-09T23:59:00Z",
+   "ksClose": "2026-12-09T18:59:00Z",
+   "score": 0.43,
+   "midDiffCents": 0,
+   "pmFeeRate": 0.05,
+   "pmV24": 332590,
+   "ksV24": 138708,
+   "best": {
+    "dir": "pm YES + ks NO",
+    "cost": 1.005,
+    "contracts": 9,
+    "netCents": -4.7,
+    "sizeOk": false
+   }
+  },
+  {
+   "pmId": "0x723822eb2b143cee54c0bd7c1efba322b21f0051984c266df8879c394f1011c0",
+   "pmSlug": "will-there-be-no-change-in-fed-interest-rates-after-the-december-2026-meeting-20260729232808635",
+   "pmTitle": "Will there be no change in Fed interest rates after the December 2026 meeting?",
+   "ksTicker": "KXFEDDECISION-26DEC-H0",
+   "ksTitle": "Fed decision in Dec 2026? — Fed maintains rate",
+   "pmClose": "2026-12-09T23:59:00Z",
+   "ksClose": "2026-12-09T18:59:00Z",
+   "score": 0.5,
+   "midDiffCents": -0.5,
+   "pmFeeRate": 0.05,
+   "pmV24": 542351,
+   "ksV24": 302495,
+   "best": {
+    "dir": "pm YES + ks NO",
+    "cost": 1.002,
+    "contracts": 9,
+    "netCents": -5.2,
+    "sizeOk": true
+   }
+  },
+  {
+   "pmId": "0x2d858f0a25a61dfde6485f3d8e75aed397bed616c3e458b66e10e642fb2f9759",
+   "pmSlug": "pete-hegseth-out-as-secretary-of-defense-by-october-31-20261001003401433",
+   "pmTitle": "Pete Hegseth out as Secretary of Defense by November 30?",
+   "ksTicker": "KXHEGSETHOUT-26AUG-26DEC01",
+   "ksTitle": "Pete Hegseth out as Secretary of Defense? — Before Dec 1, 2026",
+   "pmClose": "2026-12-01T04:59:00Z",
+   "ksClose": "2026-12-01T04:59:00Z",
+   "score": 0.71,
+   "midDiffCents": 0.2,
+   "pmFeeRate": 0.04,
+   "pmV24": 41270,
+   "ksV24": 13511,
+   "best": {
+    "dir": "ks YES + pm NO",
+    "cost": 1.004,
+    "contracts": 9,
+    "netCents": -8.2,
+    "sizeOk": true
+   }
+  },
+  {
+   "pmId": "0xa94d6d38aadfed1c9705800330db2cf11deea1b7086ab1aad647abcc6337651f",
+   "pmSlug": "us-iran-final-nuclear-deal-by-november-30-2026",
+   "pmTitle": "US-Iran Final Nuclear Deal by November 30, 2026?",
+   "ksTicker": "KXUSAIRANAGREEMENT-27-26DEC",
+   "ksTitle": "US-Iran nuclear deal? — Before Dec 1, 2026",
+   "pmClose": "2026-12-01T04:59:00Z",
+   "ksClose": "2026-12-01T15:00:00Z",
+   "score": 0.57,
+   "midDiffCents": 0,
+   "pmFeeRate": 0,
+   "pmV24": 5710,
+   "ksV24": 44052,
+   "best": {
+    "dir": "pm YES + ks NO",
+    "cost": 1.008,
+    "contracts": 9,
+    "netCents": -8.2,
+    "sizeOk": true
+   }
+  },
+  {
+   "pmId": "0x8a4196617dcb703e49d9bb36d3847bf6a75fd364dbd19f8d408ac944bf1a03d8",
+   "pmSlug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
+   "pmTitle": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
+   "ksTicker": "KXFEDDECISION-26DEC-H25",
+   "ksTitle": "Fed decision in Dec 2026? — Hike 25bps",
+   "pmClose": "2026-12-09T23:59:00Z",
+   "ksClose": "2026-12-09T18:59:00Z",
+   "score": 0.43,
+   "midDiffCents": -1,
+   "pmFeeRate": 0.05,
+   "pmV24": 477053,
+   "ksV24": 247587,
+   "best": {
+    "dir": "pm YES + ks NO",
+    "cost": 1,
+    "contracts": 10,
+    "netCents": -11.9,
+    "sizeOk": true
+   }
+  },
+  {
+   "pmId": "0xdcb431c45911812e13749c7e71f376c97abf70b02f619b6c24558819fecf5766",
+   "pmSlug": "howard-lutnick-out-as-secretary-of-commerce-by-november-30",
+   "pmTitle": "Howard Lutnick out as Secretary of Commerce by November 30?",
+   "ksTicker": "KXLUTNICKOUT-26SEP-26DEC01",
+   "ksTitle": "Howard Lutnick out as Commerce Secretary? — Before Dec 1, 2026",
+   "pmClose": "2026-12-01T04:59:00Z",
+   "ksClose": "2026-12-01T04:59:00Z",
+   "score": 0.71,
+   "midDiffCents": -1.5,
+   "pmFeeRate": 0.04,
+   "pmV24": 16113,
+   "ksV24": 25192,
+   "best": {
+    "dir": "pm YES + ks NO",
+    "cost": 1,
+    "contracts": 10,
+    "netCents": -19.9,
+    "sizeOk": true
+   }
+  }
+ ]
+}
